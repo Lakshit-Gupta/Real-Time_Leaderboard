@@ -5,6 +5,7 @@ import {
     ApiError,
     getNextQuestion,
     submitAnswer as submitAnswerRequest,
+    uuid,
     type PublicUserState,
     type Question,
 } from '@/lib/api';
@@ -83,7 +84,7 @@ export function useQuiz(token: string, onUnauthorized?: () => void) {
         try {
             const data = await getNextQuestion(token);
             setQuestion(data.question);
-            idempotencyKey.current = crypto.randomUUID();
+            idempotencyKey.current = uuid();
             stateVersion.current = data.stateVersion ?? 0;
             if (data.userState) setStats((prev) => ({ ...prev, ...data.userState }));
         } catch (err) {
