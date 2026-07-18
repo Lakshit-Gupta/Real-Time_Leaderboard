@@ -7,67 +7,19 @@ import {
   type UserState,
   type AnswerResponse,
   type AnswerLog,
+  type ProcessAnswerResult,
   getOrCreateUser,
   pushRecentResult,
   markQuestionAnswered,
   clearAnsweredIds,
   updateUser,
   toPublicUserState,
-  logAnswer,
+  processAnswerAtomic,
   saveUser,
 } from "./store";
 
 import { getQuestionById, type Question, getAllQuestions } from "./questions";
 import { nanoid } from "nanoid";
-
-// ─── IRT Scoring Service Integration ───────────────────────────────────────
-
-interface IRTScoreResult {
-  scoreDelta: number;
-  newTheta: number;
-  thetaDelta: number;
-  irtProbability: number;
-  eloExpected: number;
-  streakMultiplier: number;
-  accuracyFactor: number;
-  breakdown: Record<string, number>;
-}
-
-/**
- * Call the Python IRT scoring service to compute adaptive score.
- * Falls back to null if service is unavailable.
- */
-async function getIRTScore(
-  userId: string,
-  difficulty: number,
-  correct: boolean,
-  streak: number,
-  totalAnswers: number,
-  recentResults: boolean[]
-): Promise<IRTScoreResult | null> {
-  const scoringUrl = process.env.SCORING_SERVICE_URL || 'http://localhost:8000';
-  try {
-    const response = await fetch(`${scoringUrl}/score`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        userId,
-        difficulty,
-        correct,
-        streak,
-        totalAnswers,
-        recentResults,
-      }),
-      signal: AbortSignal.timeout(3000), // 3s timeout
-    });
-
-    if (!response.ok) return null;
-    return await response.json();
-  } catch (err) {
-    console.error('[IRT] Scoring service unavailable, using fallback:', err);
-    return null;
-  }
-}
 
 // ─── Rolling Accuracy ───────────────────────────────────────────────────────
 
@@ -105,14 +57,19 @@ function calculateScore(user: UserState): number {
 /**
  * Core adaptive algorithm: process a user's answer.
  *
- * Returns an AnswerResponse with correct flag, score delta,
- * revealed correct index, and updated public user state.
+ * The scoring/hysteresis logic is a *pure* function of the locked UserState — it
+ * mutates the state and builds the response + answer log, but does no I/O. The
+ * store runs it inside a single Postgres transaction (score, answer_log, and the
+ * idempotency key commit together), so the returned result may be a normal `ok`,
+ * an idempotent `replay`, or a `conflict` (optimistic-lock mismatch → 409).
  */
 export async function processAnswer(
   userId: string,
   questionId: string,
-  selectedIndex: number
-): Promise<AnswerResponse> {
+  selectedIndex: number,
+  idempotencyKey: string,
+  expectedVersion: number | undefined
+): Promise<ProcessAnswerResult> {
   const question = getQuestionById(questionId);
   if (!question) {
     throw new Error(`Question not found: ${questionId}`);
@@ -122,100 +79,80 @@ export async function processAnswer(
     throw new Error(`Invalid selectedIndex: ${selectedIndex}`);
   }
 
-  const user = await getOrCreateUser(userId);
-  
-  // Verify answer using hash
-  const expectedHash = createHash('sha256')
-    .update(String(selectedIndex))
-    .digest('hex')
-    .substring(0, 16);
-  const correct = expectedHash === question.correctAnswerHash;
-  
-  let scoreDelta = 0;
-  let irtData: IRTScoreResult | null = null;
+  return processAnswerAtomic(userId, idempotencyKey, expectedVersion, (user) => {
+    // Verify answer using hash
+    const expectedHash = createHash('sha256')
+      .update(String(selectedIndex))
+      .digest('hex')
+      .substring(0, 16);
+    const correct = expectedHash === question.correctAnswerHash;
 
-  if (correct) {
-    // ── Streak ──
-    user.streak += 1;
-    user.maxStreak = Math.max(user.maxStreak, user.streak);
+    let scoreDelta = 0;
 
-    // ── Hysteresis: raise difficulty only with sustained performance ──
-    user.confidence = Math.min(10, user.confidence + 1);
-    if (user.confidence >= 7) {
-      user.difficulty = Math.min(10, user.difficulty + 1);
-      user.confidence = 5; // reset after level change
-    }
+    if (correct) {
+      // ── Streak ──
+      user.streak += 1;
+      user.maxStreak = Math.max(user.maxStreak, user.streak);
 
-    // ── Push result BEFORE calculating score so it's included in accuracy ──
-    pushRecentResult(user, true);
+      // ── Hysteresis: raise difficulty only with sustained performance ──
+      user.confidence = Math.min(10, user.confidence + 1);
+      if (user.confidence >= 7) {
+        user.difficulty = Math.min(10, user.difficulty + 1);
+        user.confidence = 5; // reset after level change
+      }
 
-    // ── Score: try IRT service first, fallback to calculateScore ──
-    const totalAnswers = (user.recentResults?.length || 0) + 1;
-    irtData = await getIRTScore(
-      userId,
-      question.difficulty,
-      correct,
-      user.streak,
-      totalAnswers,
-      user.recentResults || []
-    );
+      // ── Push result BEFORE calculating score so it's included in accuracy ──
+      pushRecentResult(user, true);
 
-    if (irtData) {
-      scoreDelta = Math.round(irtData.scoreDelta);
-    } else {
-      // Fallback if Python service is down
+      // ── Score: difficulty × streak multiplier × rolling accuracy (LLD §7) ──
       scoreDelta = calculateScore(user);
+      user.totalScore += scoreDelta;
+    } else {
+      // ── Streak hard reset ──
+      user.streak = 0;
+
+      // ── Hysteresis: lower difficulty (drops faster: -2) ──
+      user.confidence = Math.max(0, user.confidence - 2);
+      if (user.confidence <= 3) {
+        user.difficulty = Math.max(1, user.difficulty - 1);
+        user.confidence = 5; // reset after level change
+      }
+
+      pushRecentResult(user, false);
+      scoreDelta = 0;
     }
-    user.totalScore += scoreDelta;
-  } else {
-    // ── Streak hard reset ──
-    user.streak = 0;
 
-    // ── Hysteresis: lower difficulty (drops faster: -2) ──
-    user.confidence = Math.max(0, user.confidence - 2);
-    if (user.confidence <= 3) {
-      user.difficulty = Math.max(1, user.difficulty - 1);
-      user.confidence = 5; // reset after level change
-    }
+    // Mark question as answered
+    markQuestionAnswered(user, questionId);
 
-    pushRecentResult(user, false);
-    scoreDelta = 0;
-  }
+    // Increment state version for optimistic locking
+    user.stateVersion += 1;
 
-  // Mark question as answered
-  markQuestionAnswered(user, questionId);
+    // Update lastAnswerAt timestamp
+    user.lastAnswerAt = Date.now();
 
-  // Increment state version for optimistic locking
-  user.stateVersion += 1;
-  
-  // Update lastAnswerAt timestamp
-  user.lastAnswerAt = Date.now();
+    const log: AnswerLog = {
+      id: nanoid(),
+      userId: user.userId,
+      questionId,
+      difficulty: question.difficulty,
+      answer: selectedIndex,
+      correct,
+      scoreDelta,
+      streakAtAnswer: user.streak,
+      answeredAt: Date.now(),
+    };
 
-  // Log answer
-  const answerLog: AnswerLog = {
-    id: nanoid(),
-    userId: user.userId,
-    questionId,
-    difficulty: question.difficulty,
-    answer: selectedIndex,
-    correct,
-    scoreDelta,
-    streakAtAnswer: user.streak,
-    answeredAt: Date.now(),
-  };
+    const response: AnswerResponse = {
+      correct,
+      correctIndex: question.correctIndex,
+      scoreDelta,
+      userState: toPublicUserState(user),
+      stateVersion: user.stateVersion,
+    };
 
-  // Persist (do not await log to avoid blocking)
-  await updateUser(user);
-  logAnswer(answerLog); // Fire and forget
-
-  return {
-    correct,
-    correctIndex: question.correctIndex,
-    scoreDelta,
-    userState: toPublicUserState(user),
-    stateVersion: user.stateVersion,
-    irtData: irtData || undefined,
-  };
+    return { response, log };
+  });
 }
 
 // ─── Get Next Question ──────────────────────────────────────────────────────

@@ -6,10 +6,15 @@ declare global {
 
 function createRedisClient(): Redis {
   const client = new Redis(process.env.REDIS_URL || 'redis://localhost:6379', {
+    // Per-command: fail fast (3 tries) so a request never hangs on a dead Redis —
+    // the store catches the error and serves from Postgres instead.
     maxRetriesPerRequest: 3,
+    // Connection-level: retry forever with capped backoff. Returning null here (the
+    // old behavior) permanently gave up after 3 attempts, so a process that started
+    // without Redis — or outlived a Redis restart — never reconnected and the
+    // rebuild-on-reconnect below could never fire.
     retryStrategy(times) {
-      if (times > 3) return null; // stop retrying, trigger fallback
-      return Math.min(times * 200, 1000);
+      return Math.min(times * 200, 2000);
     },
     lazyConnect: false,
     enableOfflineQueue: false,

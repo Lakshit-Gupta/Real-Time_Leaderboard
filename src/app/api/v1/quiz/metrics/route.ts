@@ -4,6 +4,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAuth } from "@/lib/auth";
 import { getUser, getAnswerLogs } from "@/lib/store";
+import { dbOutageResponse } from "@/lib/db";
 
 export async function GET(request: NextRequest) {
   // Verify authentication
@@ -13,6 +14,7 @@ export async function GET(request: NextRequest) {
   }
   const userId = auth.userId;
 
+  try {
   const user = await getUser(userId);
 
   if (!user) {
@@ -59,4 +61,9 @@ export async function GET(request: NextRequest) {
   };
 
   return NextResponse.json(metrics);
+  } catch (err) {
+    const outage = dbOutageResponse(err);
+    if (outage) return outage;
+    throw err;
+  }
 }

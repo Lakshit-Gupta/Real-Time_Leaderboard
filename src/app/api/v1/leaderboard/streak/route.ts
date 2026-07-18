@@ -3,7 +3,23 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAuth } from "@/lib/auth";
-import { getStreakLeaderboard, getUserRank, getUser } from "@/lib/store";
+import { getStreakLeaderboard, getUserRank, getStreakEntry } from "@/lib/store";
+import { dbOutageResponse } from "@/lib/db";
+
+interface LeaderboardRow {
+  userId: string;
+  username: string;
+  rank: number;
+  maxStreak: number;
+  totalScore: number;
+  difficulty: number;
+}
+
+interface LeaderboardResponse {
+  leaderboard: LeaderboardRow[];
+  currentUser?: LeaderboardRow;
+  updatedAt: string;
+}
 
 export async function GET(request: NextRequest) {
   // Verify authentication
@@ -18,31 +34,37 @@ export async function GET(request: NextRequest) {
     userId = auth.userId;
   }
 
-  const leaderboard = await getStreakLeaderboard(10);
+  try {
+    const entries = await getStreakLeaderboard(10);
 
-  const response: any = {
-    leaderboard,
-    updatedAt: new Date().toISOString(),
-  };
+    // The store already joined in usernames; zset order is the ranking.
+    const leaderboard: LeaderboardRow[] = entries.map((entry, index) => ({
+      ...entry,
+      rank: index + 1,
+    }));
 
-  // If userId provided and user is NOT in top 10, add currentUser
-  if (userId) {
-    const rank = await getUserRank(userId, 'streak');
-    const isInTop10 = leaderboard.some(entry => entry.userId === userId);
+    const response: LeaderboardResponse = {
+      leaderboard,
+      updatedAt: new Date().toISOString(),
+    };
 
-    if (rank > 0 && !isInTop10) {
-      const user = await getUser(userId);
-      if (user) {
-        response.currentUser = {
-          userId: user.userId,
-          maxStreak: user.maxStreak,
-          rank: rank,
-          difficulty: user.difficulty,
-          totalScore: user.totalScore,
-        };
+    // If userId provided and user is NOT in top 10, add currentUser
+    if (userId) {
+      const rank = await getUserRank(userId, "streak");
+      const isInTop10 = leaderboard.some((entry) => entry.userId === userId);
+
+      if (rank > 0 && !isInTop10) {
+        const entry = await getStreakEntry(userId);
+        if (entry) {
+          response.currentUser = { ...entry, rank };
+        }
       }
     }
-  }
 
-  return NextResponse.json(response);
+    return NextResponse.json(response);
+  } catch (err) {
+    const outage = dbOutageResponse(err);
+    if (outage) return outage;
+    throw err;
+  }
 }

@@ -1,155 +1,119 @@
-import { Suspense } from 'react';
+import Link from 'next/link';
+import { Avatar, Card, EmptyState, ErrorState, RankBadge } from '@/components/ui';
+import { AppHeader } from '@/components/layout/AppHeader';
+import { formatScore } from '@/lib/format';
 
-interface LeaderboardEntry {
+// Rendered per request so the board is current on every visit.
+export const dynamic = 'force-dynamic';
+
+interface Row {
     userId: string;
-    username?: string;
-    totalScore?: number;
-    maxStreak?: number;
+    username: string;
     rank: number;
+    totalScore: number;
+    maxStreak?: number;
+    difficulty: number;
 }
 
-async function getLeaderboardData() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+async function getBoards(): Promise<{ scores: Row[]; streaks: Row[]; failed: boolean }> {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+    const headers = { 'x-internal-request': 'true' };
+
     try {
         const [scoreRes, streakRes] = await Promise.all([
-            fetch(`${baseUrl}/api/v1/leaderboard/score`, {
-                cache: 'no-store',
-                headers: { 'x-internal-request': 'true' }
-            }),
-            fetch(`${baseUrl}/api/v1/leaderboard/streak`, {
-                cache: 'no-store',
-                headers: { 'x-internal-request': 'true' }
-            }),
+            fetch(`${baseUrl}/api/v1/leaderboard/score`, { cache: 'no-store', headers }),
+            fetch(`${baseUrl}/api/v1/leaderboard/streak`, { cache: 'no-store', headers }),
         ]);
-        const scoreData = await scoreRes.json();
-        const streakData = await streakRes.json();
+
+        if (!scoreRes.ok || !streakRes.ok) return { scores: [], streaks: [], failed: true };
+
+        const [scoreData, streakData] = await Promise.all([scoreRes.json(), streakRes.json()]);
         return {
-            scores: scoreData.leaderboard || [],
-            streaks: streakData.leaderboard || [],
-            updatedAt: new Date().toISOString(),
+            scores: scoreData.leaderboard ?? [],
+            streaks: streakData.leaderboard ?? [],
+            failed: false,
         };
     } catch {
-        return { scores: [], streaks: [], updatedAt: new Date().toISOString() };
+        // A fetch failure must not masquerade as an empty board.
+        return { scores: [], streaks: [], failed: true };
     }
 }
 
+function Board({
+    title,
+    rows,
+    metric,
+    failed,
+}: {
+    title: string;
+    rows: Row[];
+    metric: 'score' | 'streak';
+    failed: boolean;
+}) {
+    return (
+        <Card className="flex flex-col gap-4">
+            <h2 className="font-mono text-bb-xs uppercase tracking-[0.12em] text-bb-faint">
+                {title}
+            </h2>
+
+            {failed ? (
+                <ErrorState detail="The board didn't load. Refresh the page to try again." />
+            ) : rows.length === 0 ? (
+                <EmptyState
+                    title="No one on the board yet"
+                    hint="Answer a question correctly to claim first place."
+                />
+            ) : (
+                <ol className="flex flex-col gap-1">
+                    {rows.map((row) => (
+                        <li
+                            key={row.userId}
+                            className="flex items-center gap-3 rounded-bb-md px-3 py-2.5 transition-colors hover:bg-bb-raised"
+                        >
+                            <RankBadge rank={row.rank} />
+                            <Avatar name={row.username} size="sm" />
+                            <span className="min-w-0 flex-1 truncate text-bb-sm font-medium text-bb-text">
+                                {row.username}
+                            </span>
+                            <span className="shrink-0 text-right font-mono text-bb-sm font-medium text-bb-text tabular">
+                                {metric === 'score'
+                                    ? formatScore(row.totalScore)
+                                    : (row.maxStreak ?? 0)}
+                            </span>
+                        </li>
+                    ))}
+                </ol>
+            )}
+        </Card>
+    );
+}
+
 export default async function LeaderboardPage() {
-    const { scores, streaks, updatedAt } = await getLeaderboardData();
+    const { scores, streaks, failed } = await getBoards();
 
     return (
-        <main
-            className="min-h-screen"
-            style={{ backgroundColor: 'var(--color-bg-primary)' }}
-        >
-            <div className="max-w-4xl mx-auto px-4 py-12">
-                {/* Header */}
-                <div className="mb-8">
-                    <a
-                        href="/"
-                        className="text-bb-sm text-bb-muted hover:text-bb-text transition-colors mb-4 inline-block"
-                    >
-                        ← Back to Quiz
-                    </a>
-                    <h1
-                        className="text-bb-3xl font-bold"
-                        style={{ color: 'var(--color-text-primary)' }}
-                    >
-                        BrainBolt Leaderboard
+        <div className="min-h-screen">
+            <AppHeader />
+
+            <main className="mx-auto max-w-4xl px-4 py-10">
+                <header className="mb-8 flex flex-col gap-2">
+                    <h1 className="font-display text-bb-3xl font-bold tracking-tight text-bb-text">
+                        Leaderboard
                     </h1>
-                    <p style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--font-size-sm)' }}>
-                        Server-rendered • Updated: {new Date(updatedAt).toLocaleTimeString()}
+                    <p className="text-bb-sm text-bb-muted">
+                        The top ten by score and by best streak.{' '}
+                        <Link href="/" className="text-bb-accent hover:underline">
+                            Play a round
+                        </Link>{' '}
+                        to get on it.
                     </p>
-                </div>
+                </header>
 
-                {/* Two columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Score leaderboard */}
-                    <div className="bb-card">
-                        <h2
-                            className="text-bb-xl font-semibold mb-4"
-                            style={{ color: 'var(--color-text-primary)' }}
-                        >
-                            🏆 Top Scores
-                        </h2>
-                        {scores.length === 0 ? (
-                            <p style={{ color: 'var(--color-text-muted)' }}>No scores yet</p>
-                        ) : (
-                            <ol className="space-y-2">
-                                {scores.map((entry: LeaderboardEntry, i: number) => (
-                                    <li
-                                        key={entry.userId}
-                                        className="flex items-center justify-between p-3 rounded-bb-md"
-                                        style={{ backgroundColor: 'var(--color-bg-elevated)' }}
-                                    >
-                                        <span style={{
-                                            color: i === 0 ? '#fbbf24' : i === 1 ? '#94a3b8' : i === 2 ? '#cd7f32' : 'var(--color-text-secondary)',
-                                            fontWeight: 700,
-                                            minWidth: '2rem'
-                                        }}>
-                                            #{i + 1}
-                                        </span>
-                                        <span
-                                            className="flex-1 mx-3 truncate"
-                                            style={{ color: 'var(--color-text-primary)' }}
-                                        >
-                                            {entry.username || entry.userId.substring(0, 8)}
-                                        </span>
-                                        <span
-                                            className="font-mono font-bold"
-                                            style={{ color: 'var(--color-accent-light)' }}
-                                        >
-                                            {entry.totalScore?.toLocaleString()}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ol>
-                        )}
-                    </div>
-
-                    {/* Streak leaderboard */}
-                    <div className="bb-card">
-                        <h2
-                            className="text-bb-xl font-semibold mb-4"
-                            style={{ color: 'var(--color-text-primary)' }}
-                        >
-                            🔥 Top Streaks
-                        </h2>
-                        {streaks.length === 0 ? (
-                            <p style={{ color: 'var(--color-text-muted)' }}>No streaks yet</p>
-                        ) : (
-                            <ol className="space-y-2">
-                                {streaks.map((entry: LeaderboardEntry, i: number) => (
-                                    <li
-                                        key={entry.userId}
-                                        className="flex items-center justify-between p-3 rounded-bb-md"
-                                        style={{ backgroundColor: 'var(--color-bg-elevated)' }}
-                                    >
-                                        <span style={{
-                                            color: i === 0 ? '#fbbf24' : i === 1 ? '#94a3b8' : i === 2 ? '#cd7f32' : 'var(--color-text-secondary)',
-                                            fontWeight: 700,
-                                            minWidth: '2rem'
-                                        }}>
-                                            #{i + 1}
-                                        </span>
-                                        <span
-                                            className="flex-1 mx-3 truncate"
-                                            style={{ color: 'var(--color-text-primary)' }}
-                                        >
-                                            {entry.username || entry.userId.substring(0, 8)}
-                                        </span>
-                                        <span
-                                            className="font-mono font-bold"
-                                            style={{ color: 'var(--color-success)' }}
-                                        >
-                                            {entry.maxStreak} streak
-                                        </span>
-                                    </li>
-                                ))}
-                            </ol>
-                        )}
-                    </div>
+                <div className="grid gap-6 md:grid-cols-2">
+                    <Board title="Top scores" rows={scores} metric="score" failed={failed} />
+                    <Board title="Top streaks" rows={streaks} metric="streak" failed={failed} />
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
     );
 }

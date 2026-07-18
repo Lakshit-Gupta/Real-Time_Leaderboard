@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { checkRateLimit } from "@/lib/rateLimit";
 import { getNextQuestion } from "@/lib/adaptive";
 import { verifyAuth } from "@/lib/auth";
-import { saveUser } from "@/lib/store";
+import { dbOutageResponse } from "@/lib/db";
 
 export async function GET(request: NextRequest) {
   // Verify authentication
@@ -39,37 +39,37 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // Get next question via adaptive engine
-  const result = await getNextQuestion(userId);
+  try {
+    // Get next question via adaptive engine
+    const result = await getNextQuestion(userId);
 
-  if (!result) {
-    return NextResponse.json(
-      { error: "No questions available for current difficulty" },
-      { status: 404 }
-    );
-  }
-  
-  // Store sessionId if provided
-  if (sessionId && result) {
-    // Note: getNextQuestion already loads the user, but we need to update sessionId
-    const { getOrCreateUser } = await import('@/lib/store');
-    const user = await getOrCreateUser(userId);
-    user.sessionId = sessionId;
-    await saveUser(user);
-  }
-
-  return NextResponse.json(
-    {
-      ...result,
-      sessionId: sessionId || null,
-      currentScore: result.userState.totalScore,
-      currentStreak: result.userState.streak,
-      difficulty: result.userState.difficulty,
-    },
-    {
-      headers: {
-        "X-RateLimit-Remaining": String(rateLimit.remaining),
-      },
+    if (!result) {
+      return NextResponse.json(
+        { error: "No questions available for current difficulty" },
+        { status: 404 }
+      );
     }
-  );
+
+    // sessionId is echoed back for the caller's convenience only. It is NOT
+    // persisted here: getOrCreateUser + saveUser was a full-row read-modify-write
+    // with no version check, so it could clobber a concurrent answer commit.
+    return NextResponse.json(
+      {
+        ...result,
+        sessionId: sessionId || null,
+        currentScore: result.userState.totalScore,
+        currentStreak: result.userState.streak,
+        difficulty: result.userState.difficulty,
+      },
+      {
+        headers: {
+          "X-RateLimit-Remaining": String(rateLimit.remaining),
+        },
+      }
+    );
+  } catch (err) {
+    const outage = dbOutageResponse(err);
+    if (outage) return outage;
+    throw err;
+  }
 }

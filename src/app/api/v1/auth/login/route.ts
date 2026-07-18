@@ -3,6 +3,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { createSession, validateUsername } from "@/lib/auth";
+import { dbOutageResponse } from "@/lib/db";
 
 interface LoginRequestBody {
   username?: string;
@@ -39,7 +40,16 @@ export async function POST(request: NextRequest) {
   }
 
   // Create session
-  const session = await createSession(username);
+  let session;
+  try {
+    session = await createSession(username);
+  } catch (err) {
+    // Without Postgres we cannot mint a durable identity. Say so rather than
+    // hand back a session whose progress would silently evaporate.
+    const outage = dbOutageResponse(err);
+    if (outage) return outage;
+    throw err;
+  }
 
   return NextResponse.json({
     userId: session.userId,

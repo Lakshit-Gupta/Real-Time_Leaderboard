@@ -1,144 +1,304 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Theme is switched by toggling `.dark` on <html>; `dark:` utilities follow it. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Runtime theme values. `:root` is dark (dark-first); `html:not(.dark)` is light.
+  Every token is redefined for light — no value is allowed to leak across themes.
+*/
+:root {
+  --bb-bg: #0a0b0f;
+  --bb-surface: #12141a;
+  --bb-raised: #1a1d26;
+  --bb-border: #23262f;
+  --bb-border-strong: #2f333e;
+
+  --bb-text: #f2f3f5;
+  --bb-muted: #9ba0af;
+  --bb-faint: #6b7080;
+
+  /* Bolt — the accent. BrainBolt = lightning. */
+  --bb-accent: #ffb020;
+  --bb-accent-hover: #ffc24d;
+  --bb-accent-light: #ffd07a;
+  --bb-on-accent: #1a1200;
+
+  --bb-success: #34d399;
+  --bb-error: #f43f5e;
+  --bb-warning: #fbbf24;
+
+  /* Difficulty ramp: cool (level 1) -> bolt (level 10). Color encodes difficulty. */
+  --bb-level-1: #38bdf8;
+  --bb-level-2: #6ab4f0;
+  --bb-level-3: #93ade2;
+  --bb-level-4: #b3a6cf;
+  --bb-level-5: #cba0b9;
+  --bb-level-6: #dd9ea1;
+  --bb-level-7: #eb9f87;
+  --bb-level-8: #f6a566;
+  --bb-level-9: #fdab41;
+  --bb-level-10: #ffb020;
+
+  /* Podium medals. Only the top three earn a colour. */
+  --bb-medal-gold: #ffb020;
+  --bb-medal-silver: #cbd5e1;
+  --bb-medal-bronze: #e19a5c;
+
+  /* Avatars mix a per-user hue with these; light mode flips the lightness. */
+  --bb-avatar-bg-l: 22%;
+  --bb-avatar-fg-l: 78%;
+  --bb-avatar-border-l: 32%;
+
+  --bb-shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 16px -6px rgb(0 0 0 / 0.4);
+  --bb-shadow-elevated: 0 8px 32px -8px rgb(0 0 0 / 0.55);
+
+  /* Glass: used only on the header and overlays, never on every card. */
+  --bb-glass-bg: rgb(18 20 26 / 0.72);
+  --bb-glass-border: rgb(255 255 255 / 0.08);
+}
+
+html:not(.dark) {
+  --bb-bg: #fbfbfa;
+  --bb-surface: #ffffff;
+  --bb-raised: #f4f4f2;
+  --bb-border: #e5e5e2;
+  --bb-border-strong: #d3d3cf;
+
+  --bb-text: #14151a;
+  --bb-muted: #61646e;
+  --bb-faint: #8b8f99;
+
+  /* Amber on white fails contrast — light mode uses a darkened bolt. */
+  --bb-accent: #9a5b00;
+  --bb-accent-hover: #7c4900;
+  --bb-accent-light: #b87300;
+  --bb-on-accent: #ffffff;
+
+  --bb-success: #047857;
+  --bb-error: #be123c;
+  --bb-warning: #a16207;
+
+  --bb-level-1: #0369a1;
+  --bb-level-2: #2c6795;
+  --bb-level-3: #4d6389;
+  --bb-level-4: #67607c;
+  --bb-level-5: #7c5c6f;
+  --bb-level-6: #8c5961;
+  --bb-level-7: #985751;
+  --bb-level-8: #a15840;
+  --bb-level-9: #a75a2c;
+  --bb-level-10: #9a5b00;
+
+  /* Medal hues darkened so the digit stays legible on a white row. */
+  --bb-medal-gold: #9a5b00;
+  --bb-medal-silver: #5b6472;
+  --bb-medal-bronze: #8a4f24;
+
+  --bb-avatar-bg-l: 92%;
+  --bb-avatar-fg-l: 28%;
+  --bb-avatar-border-l: 78%;
+
+  --bb-shadow-card: 0 1px 2px rgb(20 21 26 / 0.04), 0 4px 16px -6px rgb(20 21 26 / 0.08);
+  --bb-shadow-elevated: 0 8px 32px -8px rgb(20 21 26 / 0.14);
+
+  --bb-glass-bg: rgb(255 255 255 / 0.78);
+  --bb-glass-border: rgb(20 21 26 / 0.07);
+}
+
+/*
+  `inline` keeps utilities pointing at the vars above, so a theme flip
+  restyles the page without regenerating any CSS.
+*/
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-inter), sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --color-bb-bg: var(--bb-bg);
+  --color-bb-surface: var(--bb-surface);
+  --color-bb-elevated: var(--bb-raised);
+  --color-bb-raised: var(--bb-raised);
+  --color-bb-border: var(--bb-border);
+  --color-bb-border-strong: var(--bb-border-strong);
+
+  --color-bb-text: var(--bb-text);
+  --color-bb-muted: var(--bb-muted);
+  --color-bb-faint: var(--bb-faint);
+
+  --color-bb-accent: var(--bb-accent);
+  --color-bb-accent-hover: var(--bb-accent-hover);
+  --color-bb-accent-light: var(--bb-accent-light);
+  --color-bb-on-accent: var(--bb-on-accent);
+
+  --color-bb-success: var(--bb-success);
+  --color-bb-error: var(--bb-error);
+  --color-bb-warning: var(--bb-warning);
+
+  --color-bb-level-1: var(--bb-level-1);
+  --color-bb-level-2: var(--bb-level-2);
+  --color-bb-level-3: var(--bb-level-3);
+  --color-bb-level-4: var(--bb-level-4);
+  --color-bb-level-5: var(--bb-level-5);
+  --color-bb-level-6: var(--bb-level-6);
+  --color-bb-level-7: var(--bb-level-7);
+  --color-bb-level-8: var(--bb-level-8);
+  --color-bb-level-9: var(--bb-level-9);
+  --color-bb-level-10: var(--bb-level-10);
+
+  --radius-bb-sm: 0.375rem;
+  --radius-bb-md: 0.625rem;
+  --radius-bb-lg: 1rem;
+  --radius-bb-xl: 1.5rem;
+
+  --shadow-bb-card: var(--bb-shadow-card);
+  --shadow-bb-elevated: var(--bb-shadow-elevated);
+
+  --text-bb-xs: 0.75rem;
+  --text-bb-sm: 0.875rem;
+  --text-bb-base: 1rem;
+  --text-bb-lg: 1.125rem;
+  --text-bb-xl: 1.25rem;
+  --text-bb-2xl: 1.5rem;
+  --text-bb-3xl: 2rem;
+  --text-bb-4xl: 2.75rem;
+}
 
 @layer base {
-  :root {
-    /* Colors */
-    --color-bg-primary: #0f172a;
-    --color-bg-surface: #1e293b;
-    --color-bg-elevated: #293548;
-    --color-border: #334155;
-    --color-border-subtle: #1e293b;
-
-    --color-accent: #6366f1;
-    --color-accent-hover: #4f46e5;
-    --color-accent-light: #818cf8;
-
-    --color-success: #22c55e;
-    --color-success-bg: #052e16;
-    --color-error: #ef4444;
-    --color-error-bg: #1c0505;
-    --color-warning: #f59e0b;
-
-    --color-text-primary: #f8fafc;
-    --color-text-secondary: #94a3b8;
-    --color-text-muted: #64748b;
-
-    /* Spacing scale */
-    --space-1: 0.25rem;
-    --space-2: 0.5rem;
-    --space-3: 0.75rem;
-    --space-4: 1rem;
-    --space-6: 1.5rem;
-    --space-8: 2rem;
-    --space-12: 3rem;
-
-    /* Radii */
-    --radius-sm: 0.375rem;
-    --radius-md: 0.75rem;
-    --radius-lg: 1rem;
-    --radius-xl: 1.5rem;
-
-    /* Shadows */
-    --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.4);
-    --shadow-elevated: 0 10px 25px -3px rgba(0,0,0,0.5);
-
-    /* Typography */
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
+  /*
+    Spacing follows an 8px grid: use even steps only (2=8px, 4=16px, 6=24px, 8=32px).
+    Tailwind's 4px base makes odd steps possible — they are off-grid, don't use them.
+  */
+  * {
+    border-color: var(--bb-border);
   }
 
-  html:not(.dark) {
-    --color-bg-primary: #f8fafc;
-    --color-bg-surface: #ffffff;
-    --color-bg-elevated: #f1f5f9;
-    --color-border: #e2e8f0;
-    --color-text-primary: #0f172a;
-    --color-text-secondary: #475569;
-    --color-text-muted: #94a3b8;
+  body {
+    background-color: var(--bb-bg);
+    color: var(--bb-text);
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  /* One focus treatment for the whole app. */
+  :focus-visible {
+    outline: 2px solid var(--bb-accent);
+    outline-offset: 2px;
+  }
+
+  /* Data reads as data: rank/score/level digits never jitter while updating. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
   .bb-card {
-    background-color: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    padding: var(--space-6);
+    background-color: var(--bb-surface);
+    border: 1px solid var(--bb-border);
+    border-radius: var(--radius-bb-lg);
+    box-shadow: var(--bb-shadow-card);
+    padding: 1.5rem;
+  }
+
+  /* Glass is reserved for the sticky header, where content scrolls beneath it. */
+  .bb-glass {
+    background-color: var(--bb-glass-bg);
+    border-color: var(--bb-glass-border);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
   }
 
   .bb-btn-primary {
-    background-color: var(--color-accent);
-    color: var(--color-text-primary);
-    border-radius: var(--radius-md);
-    padding: var(--space-3) var(--space-6);
+    background-color: var(--bb-accent);
+    color: var(--bb-on-accent);
+    border-radius: var(--radius-bb-md);
     font-weight: 600;
-    transition: background-color 150ms ease;
-    cursor: pointer;
-    border: none;
+    transition: background-color 150ms ease, transform 100ms ease;
   }
-  .bb-btn-primary:hover {
-    background-color: var(--color-accent-hover);
+  .bb-btn-primary:hover:not(:disabled) {
+    background-color: var(--bb-accent-hover);
+  }
+  .bb-btn-primary:active:not(:disabled) {
+    transform: translateY(1px);
   }
   .bb-btn-primary:disabled {
-    opacity: 0.5;
+    opacity: 0.45;
     cursor: not-allowed;
   }
 
   .bb-input {
-    background-color: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    color: var(--color-text-primary);
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--font-size-base);
+    background-color: var(--bb-raised);
+    border: 1px solid var(--bb-border);
+    border-radius: var(--radius-bb-md);
+    color: var(--bb-text);
+    padding: 0.75rem 1rem;
+    font-size: var(--text-bb-base);
     width: 100%;
-    outline: none;
-    transition: border-color 150ms ease;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+  .bb-input::placeholder {
+    color: var(--bb-faint);
   }
   .bb-input:focus {
-    border-color: var(--color-accent);
+    outline: none;
+    border-color: var(--bb-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--bb-accent) 25%, transparent);
   }
 
   .bb-badge {
     display: inline-flex;
     align-items: center;
-    border-radius: var(--radius-sm);
-    padding: var(--space-1) var(--space-2);
-    font-size: var(--font-size-xs);
+    border-radius: var(--radius-bb-sm);
+    padding: 0.125rem 0.5rem;
+    font-size: var(--text-bb-xs);
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 
+  /* Consumers set --bb-medal to one of the medal tokens. */
+  .bb-medal {
+    background-color: color-mix(in srgb, var(--bb-medal) 16%, transparent);
+    border: 1px solid color-mix(in srgb, var(--bb-medal) 45%, transparent);
+    color: var(--bb-medal);
+  }
+
+  /* Consumers set --bb-avatar-hue; lightness comes from the theme. */
+  .bb-avatar {
+    background-color: hsl(var(--bb-avatar-hue) 55% var(--bb-avatar-bg-l));
+    color: hsl(var(--bb-avatar-hue) 70% var(--bb-avatar-fg-l));
+    border: 1px solid hsl(var(--bb-avatar-hue) 50% var(--bb-avatar-border-l));
+  }
+
+  /* Derived from the base tokens — no duplicated color literals. */
   .bb-success-subtle {
-    background-color: rgba(34, 197, 94, 0.12);
-    border-color: rgba(34, 197, 94, 0.3);
+    background-color: color-mix(in srgb, var(--bb-success) 14%, transparent);
+    border-color: color-mix(in srgb, var(--bb-success) 35%, transparent);
   }
-
   .bb-error-subtle {
-    background-color: rgba(239, 68, 68, 0.12);
-    border-color: rgba(239, 68, 68, 0.3);
+    background-color: color-mix(in srgb, var(--bb-error) 14%, transparent);
+    border-color: color-mix(in srgb, var(--bb-error) 35%, transparent);
   }
-
   .bb-accent-subtle {
-    background-color: rgba(99, 102, 241, 0.15);
-    border-color: rgba(99, 102, 241, 0.4);
+    background-color: color-mix(in srgb, var(--bb-accent) 15%, transparent);
+    border-color: color-mix(in srgb, var(--bb-accent) 40%, transparent);
   }
-
   .bb-warning-subtle {
-    background-color: rgba(245, 158, 11, 0.12);
-    border-color: rgba(245, 158, 11, 0.3);
+    background-color: color-mix(in srgb, var(--bb-warning) 14%, transparent);
+    border-color: color-mix(in srgb, var(--bb-warning) 35%, transparent);
   }
-
-  .bb-surface-hover {
-    background-color: rgba(99, 102, 241, 0.08);
+  .bb-surface-hover:hover {
+    background-color: color-mix(in srgb, var(--bb-accent) 7%, transparent);
   }
 }

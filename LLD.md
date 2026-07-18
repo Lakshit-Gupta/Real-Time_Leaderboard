@@ -9,11 +9,9 @@
 5. [Cache Strategy](#5-cache-strategy)
 6. [Adaptive Algorithm](#6-adaptive-algorithm)
 7. [Score Formula](#7-score-formula)
-8. [IRT Scoring Microservice](#8-irt-scoring-microservice)
-9. [Edge Cases](#9-edge-cases)
-10. [Leaderboard Update Strategy](#10-leaderboard-update-strategy)
-11. [IRT Scoring Microservice (Detailed)](#11-irt-scoring-microservice-detailed)
-12. [Non-Functional Requirements](#12-non-functional-requirements)
+8. [Edge Cases](#8-edge-cases)
+9. [Leaderboard Update Strategy](#9-leaderboard-update-strategy)
+10. [Non-Functional Requirements](#10-non-functional-requirements)
 
 
 ---
@@ -582,128 +580,85 @@ interface Session {
 
 ---
 
-### 4.2 Production DB Schema (PostgreSQL)
+### 4.2 Production DB Schema (PostgreSQL — as implemented)
 
-#### users table
+The schema below is what `migrations/001_init.sql` + `002_*.sql` actually create, and supersedes the earlier proposal in this section. Four deliberate changes from that proposal:
+
+1. **`users` holds identity only; `user_state` holds all mutable quiz state** (1:1). The original had it backwards. Login then touches only `users`.
+2. **No `questions` table.** Questions are a static 20-row code module (`src/lib/questions.ts`); a table plus an `answer_log → questions` FK would add sync burden for zero benefit. `answer_log.question_id` is a plain column.
+3. **No `leaderboard_score` / `leaderboard_streak` tables.** A materialized `rank` column means an O(N) rewrite on every score change. The Redis zset *is* the ranking index; the `total_score DESC` / `max_streak DESC` indexes cover rebuild and the Redis-down read path.
+4. **`DOUBLE PRECISION`, not `NUMERIC(10,2)`.** `calculateScore` returns an unrounded float and node-postgres hands `NUMERIC` back as a *string* — `float8` keeps scores numeric and unrounded, matching the API contract. An `idempotency` table is added so a durable score mutation is guarded by a durable key (Redis-only would let a flush double-apply a score).
+
 ```sql
 CREATE TABLE users (
-  user_id VARCHAR(255) PRIMARY KEY,
-  username VARCHAR(20) NOT NULL,
-  difficulty INTEGER NOT NULL DEFAULT 1 CHECK (difficulty BETWEEN 1 AND 10),
-  streak INTEGER NOT NULL DEFAULT 0 CHECK (streak >= 0),
-  max_streak INTEGER NOT NULL DEFAULT 0 CHECK (max_streak >= 0),
-  total_score NUMERIC(10, 2) NOT NULL DEFAULT 0 CHECK (total_score >= 0),
-  confidence INTEGER NOT NULL DEFAULT 5 CHECK (confidence BETWEEN 0 AND 10),
-  last_question_id VARCHAR(50),
-  last_answer_at TIMESTAMP,
-  created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
-  state_version BIGINT NOT NULL DEFAULT 0
+  user_id    UUID PRIMARY KEY,
+  username   VARCHAR(20) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+-- Case-insensitive identity continuity: "Ada" and "ada" are one person.
+CREATE UNIQUE INDEX idx_users_username_lower ON users (LOWER(username));
 
-CREATE INDEX idx_user_state_score ON users(total_score DESC);
-CREATE INDEX idx_user_state_streak ON users(max_streak DESC);
-CREATE INDEX idx_user_state_last_answer ON users(last_answer_at DESC);
-```
-
----
-
-#### questions table
-```sql
-CREATE TABLE questions (
-  question_id VARCHAR(50) PRIMARY KEY,
-  text TEXT NOT NULL,
-  choices JSONB NOT NULL,
-  correct_index INTEGER NOT NULL CHECK (correct_index BETWEEN 0 AND 3),
-  difficulty INTEGER NOT NULL CHECK (difficulty BETWEEN 1 AND 10),
-  category VARCHAR(50) NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT NOW()
-);
-
-CREATE INDEX idx_questions_difficulty ON questions(difficulty);
-CREATE INDEX idx_questions_category ON questions(category);
-```
-
----
-
-#### user_state table
-```sql
 CREATE TABLE user_state (
-  user_id VARCHAR(255) NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
-  answered_ids TEXT[] NOT NULL DEFAULT '{}',
-  recent_results BOOLEAN[] NOT NULL DEFAULT '{}',
-  updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
-  PRIMARY KEY (user_id)
+  user_id          UUID PRIMARY KEY REFERENCES users(user_id) ON DELETE CASCADE,
+  difficulty       INTEGER NOT NULL DEFAULT 1  CHECK (difficulty BETWEEN 1 AND 10),
+  streak           INTEGER NOT NULL DEFAULT 0  CHECK (streak >= 0),
+  max_streak       INTEGER NOT NULL DEFAULT 0  CHECK (max_streak >= 0),
+  total_score      DOUBLE PRECISION NOT NULL DEFAULT 0 CHECK (total_score >= 0),
+  confidence       INTEGER NOT NULL DEFAULT 5  CHECK (confidence BETWEEN 0 AND 10),
+  last_question_id VARCHAR(50),
+  answered_ids     TEXT[]    NOT NULL DEFAULT '{}',
+  recent_results   BOOLEAN[] NOT NULL DEFAULT '{}',
+  state_version    BIGINT    NOT NULL DEFAULT 0,
+  last_answer_at   TIMESTAMPTZ,
+  session_id       VARCHAR(255),          -- migration 002
+  created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at       TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
-```
+CREATE INDEX idx_user_state_score  ON user_state (total_score DESC);
+CREATE INDEX idx_user_state_streak ON user_state (max_streak DESC);
 
----
-
-#### answer_log table
-```sql
 CREATE TABLE answer_log (
-  id VARCHAR(50) PRIMARY KEY,
-  user_id VARCHAR(255) NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
-  question_id VARCHAR(50) NOT NULL REFERENCES questions(question_id),
-  difficulty INTEGER NOT NULL,
-  answer INTEGER NOT NULL,
-  correct BOOLEAN NOT NULL,
-  score_delta NUMERIC(10, 2) NOT NULL,
+  id               VARCHAR(50) PRIMARY KEY,   -- nanoid() from adaptive.ts
+  user_id          UUID NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
+  question_id      VARCHAR(50) NOT NULL,      -- no FK: questions live in code
+  difficulty       INTEGER NOT NULL,
+  answer           INTEGER NOT NULL,
+  correct          BOOLEAN NOT NULL,
+  score_delta      DOUBLE PRECISION NOT NULL,
   streak_at_answer INTEGER NOT NULL,
-  answered_at TIMESTAMP NOT NULL DEFAULT NOW()
+  answered_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+CREATE INDEX idx_answer_log_user_time ON answer_log (user_id, answered_at DESC);
 
-CREATE INDEX idx_answer_log_user_time ON answer_log(user_id, answered_at DESC);
-CREATE INDEX idx_answer_log_question ON answer_log(question_id);
+-- Durable idempotency: the key is written in the SAME txn as the score it guards.
+CREATE TABLE idempotency (
+  key        VARCHAR(255) PRIMARY KEY,
+  user_id    UUID NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
+  response   JSONB NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX idx_idempotency_created ON idempotency (created_at);  -- for pruning
 ```
 
----
-
-#### leaderboard_score table
-```sql
-CREATE TABLE leaderboard_score (
-  user_id VARCHAR(255) PRIMARY KEY REFERENCES users(user_id) ON DELETE CASCADE,
-  username VARCHAR(20) NOT NULL,
-  total_score NUMERIC(10, 2) NOT NULL,
-  rank INTEGER,
-  updated_at TIMESTAMP NOT NULL DEFAULT NOW()
-);
-
-CREATE INDEX idx_leaderboard_score_rank ON leaderboard_score(total_score DESC);
-```
-
----
-
-#### leaderboard_streak table
-```sql
-CREATE TABLE leaderboard_streak (
-  user_id VARCHAR(255) PRIMARY KEY REFERENCES users(user_id) ON DELETE CASCADE,
-  username VARCHAR(20) NOT NULL,
-  max_streak INTEGER NOT NULL,
-  rank INTEGER,
-  updated_at TIMESTAMP NOT NULL DEFAULT NOW()
-);
-
-CREATE INDEX idx_leaderboard_streak_rank ON leaderboard_streak(max_streak DESC);
-```
+Retention: rows in `idempotency` older than 5 min are pruned by a lazy sweep on write. `answer_log` is unbounded by design (real history, no LTRIM cap).
 
 ---
 
 ## 5. Cache Strategy
 
-### 5.1 Redis Cache Layers
+### 5.1 Redis Cache Layers (as implemented)
 
-| Key Pattern | Data Stored | TTL | Write Strategy | Invalidation Trigger |
-|-------------|-------------|-----|----------------|----------------------|
-| `user:state:{userId}` | UserState JSON | 24h | Write-through | Every answer |
-| `questions:difficulty:{n}` | Question[] JSON | 1h | Write-once | Never (static) |
-| `leaderboard:score` | Sorted set (ZADD) | 30s | Write-through | Every answer |
-| `leaderboard:streak` | Sorted set (ZADD) | 30s | Write-through | Every answer |
-| `idempotency:{key}` | Response JSON | 5min | Write-once | Auto-expire |
-| `session:{token}` | Session JSON | 24h | Write-once | Logout |
-| `metrics:{userId}` | Metrics JSON | 10s | Write-through | Every answer |
-| `answers:{userId}` | Answer log LIST | 24h | LPUSH+LTRIM | Append-only |
-| `ratelimit:{userId}` | Request count | 60s | Increment | Auto-expire |
+Redis is now a **derived** layer over Postgres, not the store of record. Only these keys exist:
+
+| Key Pattern | Role | TTL | Source of truth |
+|-------------|------|-----|-----------------|
+| `user:state:{userId}` | Cache of the PG `user_state` row | 60s | Postgres |
+| `leaderboard:score` | Sorted-set ranking **index** (ZADD absolute) | none | Postgres (rebuildable) |
+| `leaderboard:streak` | Sorted-set ranking **index** (ZADD absolute) | none | Postgres (rebuildable) |
+| `session:{token}` | Session JSON | 24h | Redis only (ephemeral by design) |
+| `leaderboard:rebuild:lock` | NX lock guarding rebuild-on-reconnect | 30s | — |
+
+Removed vs. the original design: `questions:difficulty:{n}` (questions filter in-process, no round-trip), `idempotency:{key}` (now durable in the PG `idempotency` table, written inside the answer txn), `answers:{userId}` (answer history is durable in `answer_log`), and the per-user `metrics`/`ratelimit` keys (metrics compute from PG; rate limit is in-process in `rateLimit.ts`). On every Redis (re)connect, `rebuildLeaderboards()` reconciles the two zsets from Postgres; a zset member with no PG row is ZREM-ed on read.
 
 ---
 
@@ -991,404 +946,7 @@ Prevents a streak of correct answers from scoring zero just because the player p
 
 ---
 
-## 8. IRT Scoring Microservice
-
-### 8.1 Overview
-
-While the current system uses a simple confidence-based hysteresis algorithm suitable for demonstration purposes, production-grade adaptive testing requires **Item Response Theory (IRT)**—the statistical framework underlying standardized tests like the GRE, GMAT, and SAT. The IRT Scoring Microservice implements the **3-Parameter Logistic (3PL) model** with **Maximum Likelihood Estimation (MLE)** for ability scoring and **Elo-inspired dynamic item calibration**.
-
-**Why separate microservice:**
-1. **Language-appropriate computation:** Python/R for numerical optimization (scipy, numpy) vs TypeScript for web APIs
-2. **Independent scaling:** CPU-intensive MLE calculations scale separately from stateless Next.js servers
-3. **Fault-isolated fallback:** If IRT service fails, fall back to simple scoring without bringing down the quiz interface
-
----
-
-### 8.2 The 3PL Model
-
-#### Mathematical Foundation
-
-The probability that a test-taker with latent ability θ (theta) correctly answers item *i* is:
-
-```
-P(θ) = cᵢ + (1 - cᵢ) / (1 + e^(-aᵢ(θ - bᵢ)))
-```
-
-**Parameters:**
-- **θ (theta)**: Examinee's latent ability on the logit scale (−∞ to +∞, typically −3 to +3)
-- **aᵢ**: Item discrimination (slope) — how well the item differentiates between ability levels
-- **bᵢ**: Item difficulty (location) — ability level at which P(θ) = 0.5
-- **cᵢ**: Pseudo-guessing parameter — lower asymptote (probability of correct guess)
-
-#### Why 3PL vs 1PL or 2PL?
-
-| Model | Parameters | Use Case | BrainBolt Fit |
-|-------|-----------|----------|---------------|
-| 1PL (Rasch) | bᵢ only (difficulty) | All items equally discriminating | ❌ Not realistic for trivia |
-| 2PL | aᵢ, bᵢ | Varying discrimination, no guessing | ❌ Ignores 25% guess rate (4 choices) |
-| **3PL** | **aᵢ, bᵢ, cᵢ** | **Full model with guessing** | **✅ Chosen** |
-
----
-
-### 8.3 Item Parameter Table (Difficulties 1–10)
-
-Calibrated via pre-testing with 500+ pilot users:
-
-| Difficulty | aᵢ (Discrimination) | bᵢ (Difficulty) | cᵢ (Guessing) | Interpretation |
-|------------|---------------------|-----------------|---------------|----------------|
-| 1 | 0.8 | −2.5 | 0.25 | Very easy; low discrimination (broad ability range succeeds) |
-| 2 | 1.0 | −2.0 | 0.25 | Easy; moderate discrimination |
-| 3 | 1.2 | −1.5 | 0.23 | Below average; good discrimination |
-| 4 | 1.4 | −1.0 | 0.22 | Slightly easy; very good discrimination |
-| 5 | 1.6 | −0.5 | 0.20 | Average; high discrimination |
-| 6 | 1.8 | 0.0 | 0.18 | Slightly hard; very high discrimination |
-| 7 | 2.0 | 0.5 | 0.15 | Above average; excellent discrimination |
-| 8 | 2.2 | 1.0 | 0.12 | Hard; excellent discrimination |
-| 9 | 2.0 | 1.5 | 0.10 | Very hard; high discrimination (experts only) |
-| 10 | 1.8 | 2.0 | 0.08 | Extremely hard; guessing unlikely |
-
-**Key insights:**
-- Discrimination (aᵢ) peaks at mid-range difficulties (6–8) where most users cluster
-- Guessing probability (cᵢ) decreases at higher difficulties (experts less likely to guess)
-- Difficulty (bᵢ) maps roughly to standard deviations: b=0 is average ability
-
----
-
-### 8.4 Newton-Raphson MLE for Theta Estimation
-
-#### Why Maximum Likelihood?
-
-Given a sequence of item responses (correct/incorrect), we want to find the ability estimate θ̂ that maximizes the likelihood of observing those responses. This is the **Maximum Likelihood Estimate (MLE)**.
-
-**Likelihood function:**
-```
-L(θ) = ∏ᵢ P(θ)^uᵢ × (1 - P(θ))^(1-uᵢ)
-```
-where uᵢ = 1 if correct, 0 if wrong.
-
-We maximize **log-likelihood** (easier numerically):
-```
-ℓ(θ) = Σᵢ [uᵢ log P(θ) + (1 - uᵢ) log(1 - P(θ))]
-```
-
-#### Newton-Raphson Algorithm
-
-Iterative root-finding method to solve ∂ℓ/∂θ = 0:
-
-```
-θₙ₊₁ = θₙ - [∂ℓ/∂θ]θₙ / [∂²ℓ/∂θ²]θₙ
-```
-
-**Pseudocode:**
-```python
-def estimate_theta(responses: List[Tuple[int, bool]], items: List[Item]) -> float:
-    theta = 0.0  # Initial guess: average ability
-    
-    for iteration in range(20):  # Max 20 iterations
-        # First derivative (score function)
-        first_deriv = sum(
-            (u - P(theta, item)) * item.a * P_prime(theta, item)
-            for (item_id, u) in responses
-            for item in items if item.id == item_id
-        )
-        
-        # Second derivative (information function, negated)
-        second_deriv = -sum(
-            item.a^2 * P_prime(theta, item)^2 / (P(theta, item) * (1 - P(theta, item)))
-            for (item_id, u) in responses
-            for item in items if item.id == item_id
-        )
-        
-        # Newton-Raphson update
-        theta_new = theta - first_deriv / second_deriv
-        
-        # Convergence check
-        if abs(theta_new - theta) < 0.001:
-            return theta_new
-        
-        theta = theta_new
-    
-    return theta  # Return best estimate after max iterations
-
-def P(theta: float, item: Item) -> float:
-    """3PL probability function"""
-    return item.c + (1 - item.c) / (1 + exp(-item.a * (theta - item.b)))
-
-def P_prime(theta: float, item: Item) -> float:
-    """Derivative of P with respect to theta"""
-    exp_term = exp(-item.a * (theta - item.b))
-    return item.a * (1 - item.c) * exp_term / (1 + exp_term)^2
-```
-
-**Why Newton-Raphson over simpler methods?**
-- **Quadratic convergence:** Converges in 3-5 iterations vs 20-30 for gradient descent
-- **Exact derivatives:** IRT likelihood function is smooth and well-behaved
-- **Standard in psychometrics:** Used by ETS (GRE/TOEFL), GMAC (GMAT), College Board (SAT)
-
----
-
-### 8.5 Elo K-Factor for Dynamic Item Calibration
-
-#### Problem: Static Item Parameters Become Stale
-
-After initial calibration, item difficulties drift as:
-- Questions leak online (becomes easier)
-- User population improves (community learning)
-- Ambiguous wording is clarified (changes difficulty)
-
-#### Solution: Elo-Inspired Dynamic Updating
-
-Treat each question-answer interaction as an Elo "match":
-- Expected outcome: P(θ) from 3PL model
-- Actual outcome: 1 (correct) or 0 (wrong)
-- Update item difficulty bᵢ based on prediction error
-
-**Update formula:**
-```
-bᵢ_new = bᵢ_old + K × (actual - expected) × weight
-```
-
-**Where:**
-- **K-factor:** Learning rate controlling update magnitude (K = 0.05 for stable calibration)
-- **actual:** 1 if user answered correctly, 0 if wrong
-- **expected:** P(θ̂, item) from 3PL model using current θ̂ estimate
-- **weight:** Confidence weight based on user's answer history (more answers → higher weight)
-
-**Weight function:**
-```python
-def calibration_weight(user_answer_count: int) -> float:
-    """
-    - New users (< 5 answers): weight = 0 (unreliable ability estimate)
-    - Established users (5-50 answers): weight scales linearly 0 → 1
-    - Expert users (> 50 answers): weight = 1 (fully trusted)
-    """
-    if user_answer_count < 5:
-        return 0.0
-    elif user_answer_count < 50:
-        return (user_answer_count - 5) / 45
-    else:
-        return 1.0
-```
-
-#### Why K = 0.05?
-
-| K-factor | Convergence Speed | Stability | Choice |
-|----------|-------------------|-----------|--------|
-| K = 0.01 | Very slow (1000+ interactions) | Very stable | Too conservative |
-| **K = 0.05** | **Moderate (200+ interactions)** | **Stable** | **✅ Chosen** |
-| K = 0.10 | Fast (100+ interactions) | Oscillates | Too volatile |
-| K = 0.20 | Very fast (50+ interactions) | Unstable | Not recommended |
-
-**Rationale:** With thousands of users, K=0.05 balances responsiveness to genuine difficulty drift against noise from individual user variance. Item parameters stabilize after ~200 responses per item.
-
----
-
-### 8.6 Microservice Architecture
-
-#### Service Boundaries
-
-```
-┌────────────────────────────────────────────────────────────┐
-│                     Next.js API Routes                     │
-│  (TypeScript, stateless, horizontally scalable)            │
-└──────────────────┬─────────────────────────────────────────┘
-                   │ gRPC (protobuf)
-                   ▼
-┌────────────────────────────────────────────────────────────┐
-│               IRT Scoring Microservice                     │
-│  (Python 3.11, FastAPI, numpy/scipy)                       │
-│  ┌────────────────┐  ┌────────────────┐                   │
-│  │  theta_mle()   │  │  item_update() │                   │
-│  │  (Newton-R)    │  │  (Elo K)       │                   │
-│  └────────────────┘  └────────────────┘                   │
-└──────────────────┬─────────────────────────────────────────┘
-                   │
-                   ▼
-┌────────────────────────────────────────────────────────────┐
-│          Redis (Item Parameters + User Theta Cache)        │
-│  item:params:{qId} → {a: 1.6, b: -0.5, c: 0.20}           │
-│  user:theta:{userId} → -0.35                               │
-└────────────────────────────────────────────────────────────┘
-```
-
----
-
-#### API Contract (gRPC)
-
-**EstimateAbility RPC:**
-```protobuf
-message EstimateAbilityRequest {
-  string user_id = 1;
-  repeated AnswerRecord responses = 2;  // Recent 20-30 answers
-}
-
-message AnswerRecord {
-  string question_id = 1;
-  bool correct = 2;
-}
-
-message EstimateAbilityResponse {
-  double theta = 1;              // Ability estimate (logit scale)
-  double standard_error = 2;     // Precision of estimate
-  int32 convergence_iterations = 3;
-}
-```
-
-**UpdateItem RPC (async, non-blocking):**
-```protobuf
-message UpdateItemRequest {
-  string question_id = 1;
-  double user_theta = 2;
-  bool user_correct = 3;
-  int32 user_answer_count = 4;
-}
-
-message UpdateItemResponse {
-  ItemParameters updated_params = 1;
-  double delta_difficulty = 2;  // How much b_i changed
-}
-```
-
----
-
-#### Fallback Strategy
-
-**If IRT service unavailable:**
-1. **Primary:** Use cached θ from last successful call (stale up to 5min)
-2. **Secondary:** Fall back to simple scoring (Section 7) with confidence hysteresis
-3. **Monitoring:** Alert on-call engineer if IRT service down >2min
-
-**Circuit breaker pseudocode:**
-```typescript
-class IRTCircuitBreaker {
-  async estimateAbility(userId: string): Promise<number | null> {
-    if (this.state === 'open') {
-      // Fall back to cached theta
-      return await redis.get(`user:theta:${userId}`);
-    }
-    
-    try {
-      const response = await grpcClient.estimateAbility({
-        userId,
-        responses: await getRecentAnswers(userId, 30)
-      });
-      
-      // Cache theta for 5min
-      await redis.setex(`user:theta:${userId}`, 300, response.theta);
-      
-      this.failures = 0;
-      return response.theta;
-    } catch (error) {
-      this.failures++;
-      
-      if (this.failures >= 3) {
-        this.state = 'open';
-        setTimeout(() => this.state = 'half-open', 60000);  // Retry after 1min
-      }
-      
-      // Return cached theta or null (triggers simple scoring)
-      return await redis.get(`user:theta:${userId}`);
-    }
-  }
-}
-```
-
----
-
-#### Why Python for IRT Service?
-
-| Requirement | TypeScript (Node.js) | Python | Winner |
-|-------------|---------------------|--------|--------|
-| Numerical optimization | ❌ No native support | ✅ scipy.optimize | Python |
-| Matrix operations | ❌ Slow (pure JS) | ✅ NumPy (C bindings) | Python |
-| IRT libraries | ❌ None | ✅ py-irt, pyirt, catlearn | Python |
-| Concurrency model | ✅ Event loop | ⚠️ GIL limitations | Tie |
-| Deployment complexity | ✅ Single runtime | ⚠️ Separate runtime | TypeScript |
-
-**Decision:** Python's numerical computing ecosystem (NumPy, SciPy) is unmatched. The GIL is acceptable because MLE computation is CPU-bound (not I/O-bound), and we run multiple worker processes behind a load balancer.
-
----
-
-### 8.7 Example: Full Scoring Flow
-
-**User answers 5th question (difficulty 6) incorrectly:**
-
-1. **Fetch item parameters from cache:**
-   ```
-   Redis GET item:params:q42 → {a: 1.8, b: 0.0, c: 0.18}
-   ```
-
-2. **Call IRT microservice to update θ:**
-   ```python
-   gRPC EstimateAbility(
-     user_id="alice",
-     responses=[(q1, true), (q2, true), (q3, false), (q4, true), (q5, false)]
-   )
-   → theta = 0.35 (previously 0.50, dropped due to wrong answer)
-   → standard_error = 0.28 (good precision after 5 answers)
-   ```
-
-3. **Async: Update item difficulty (Elo K-factor):**
-   ```python
-   expected = P(0.50, item) = 0.18 + 0.82 / (1 + e^(-1.8 * (0.50 - 0.0)))
-            = 0.18 + 0.82 / (1 + e^(-0.90))
-            = 0.18 + 0.82 / 1.41
-            = 0.76
-   
-   actual = 0 (user got it wrong)
-   weight = calibration_weight(5) = 0.0 (< 5 answers, ignore)
-   
-   # No update because user is too new (weight=0)
-   ```
-
-4. **Determine next question difficulty:**
-   ```python
-   # Target item with maximum information at θ = 0.35
-   I(θ) = a² × P'(θ)² / (P(θ) × (1 - P(θ)))
-   
-   # Search all items, find q17 (difficulty 5) has highest I(0.35)
-   ```
-
-5. **Return to Next.js API:**
-   ```json
-   {
-     "updated_theta": 0.35,
-     "recommended_difficulty": 5,
-     "information_at_theta": 0.45,
-     "next_question_id": "q17"
-   }
-   ```
-
----
-
-### 8.8 Production Migration Path
-
-**Phase 1: Parallel Run (2 weeks)**
-- Deploy IRT service alongside existing simple scoring
-- Log both scores for all users
-- Compare distributions (correlation should be r > 0.85)
-- Identify outliers (users where IRT diverges significantly)
-
-**Phase 2: Gradual Rollout (4 weeks)**
-- Week 1: 10% of users use IRT scoring (A/B test)
-- Week 2: 25% if metrics stable (engagement, completion rate)
-- Week 3: 50% if no regressions
-- Week 4: 100% cutover, remove simple scoring code
-
-**Phase 3: Item Calibration (Ongoing)**
-- Month 1: Freeze item parameters, collect data
-- Month 2: Run batch calibration with full dataset (1000+ responses per item)
-- Month 3+: Enable incremental Elo updates (K=0.05)
-
-**Monitoring KPIs:**
-- **User engagement:** Session length, questions per session
-- **Completion rate:** % users reaching difficulty 10
-- **Adaptive accuracy:** Correlation between predicted P(θ) and actual correctness rate
-- **Service latency:** P95 < 100ms for theta estimation, P99 < 200ms
-
----
-
-## 9. Edge Cases
+## 8. Edge Cases
 
 | Edge Case | Trigger | System Response | Score Impact | Spec Reference |
 |-----------|---------|-----------------|--------------|----------------|
@@ -1400,8 +958,8 @@ class IRTCircuitBreaker {
 | 6. Duplicate answer (idempotency) | Same idempotencyKey sent twice | Return cached response, no state change | 0 (no double-score) | API route layer |
 | 7. stateVersion conflict | Two browser tabs submit simultaneously | 409 response with current stateVersion | N/A (request rejected) | §3 POST /answer |
 | 8. Empty question pool at difficulty | All questions at ±1 band answered | Clear answeredIds, widen to ±2 band | Normal | §6.2 line 18 |
-| 9. Rate limit exceeded | 31st request in 60s window | 429 response with Retry-After header | N/A (request rejected) | §11.3 |
-| 10. Redis connection failure | Redis unavailable | Graceful degradation to in-memory Map | Normal (single server only) | §11.5 |
+| 9. Rate limit exceeded | 31st request in 60s window | 429 response with Retry-After header | N/A (request rejected) | §10.3 |
+| 10. Redis connection failure | Redis unavailable | Graceful degradation to in-memory Map | Normal (single server only) | §10.5 |
 | 11. Session expired | Token older than 24h | 401 Unauthorized, must re-login | N/A (request rejected) | auth.ts |
 | 12. selectedIndex out of bounds | selectedIndex < 0 or >= choices.length | 400 error, no state change | N/A (request rejected) | §6.1 line 6 |
 | 13. accuracyFactor floor | 10 consecutive wrong answers | `max(0.1, 0/10)` = 0.1 prevents zero score | 10% of base × multiplier | §7.2 |
@@ -1409,9 +967,9 @@ class IRTCircuitBreaker {
 
 ---
 
-## 10. Leaderboard Update Strategy
+## 9. Leaderboard Update Strategy
 
-### 10.1 Write-Through on Every Answer
+### 9.1 Write-Through on Every Answer
 
 **Synchronous Redis ZADD on every POST /answer:**
 ```typescript
@@ -1426,7 +984,7 @@ await redis.zadd('leaderboard:streak', user.maxStreak, user.userId);
 
 ---
 
-### 10.2 Redis Sorted Sets
+### 9.2 Redis Sorted Sets
 
 **Data structure:**
 ```
@@ -1444,7 +1002,7 @@ ZREVRANK leaderboard:score {userId}          # User's rank (0-indexed)
 
 ---
 
-### 10.3 Current User Always Visible
+### 9.3 Current User Always Visible
 
 **Implementation:**
 ```typescript
@@ -1475,7 +1033,7 @@ export async function GET(request: NextRequest) {
 
 ---
 
-### 10.4 Polling vs SSE vs WebSocket
+### 9.4 Polling vs SSE vs WebSocket
 
 | Approach | Latency | Complexity | Stateless servers | Chosen? |
 |----------|---------|------------|-------------------|---------|
@@ -1502,335 +1060,9 @@ redis.on('message', (channel, message) => {
 
 ---
 
-## 11. IRT Scoring Microservice
+## 10. Non-Functional Requirements
 
-### 11.1 Why a Separate Python Service
-
-**Rationale for microservice architecture:**
-- **IRT math is computation-heavy and iterative:** Newton-Raphson MLE requires 5-20 iterations per ability estimate with numerical derivatives
-- **Python has mature scientific computing libraries:** NumPy for vectorized operations, SciPy for optimization algorithms
-- **Separation of concerns:** Next.js handles UX/routing/SSR, Python handles advanced psychometric calculations
-- **Independent scaling:** CPU-intensive MLE computations scale separately from stateless Next.js API servers
-- **Fault isolation:** IRT service failures don't crash the quiz—system degrades gracefully to simple scoring
-
-**Fallback guarantee:**
-If IRT service returns error or times out (3s timeout), Next.js immediately falls back to simple formula:
-```
-scoreDelta = difficulty × 10 × streakMultiplier × accuracyFactor
-```
-Zero downtime—quiz continues working regardless of microservice health.
-
----
-
-### 11.2 The 3PL IRT Model
-
-**Formula:**
-```
-P(θ | i) = c + (1 - c) / (1 + exp(-1.7 * a * (θ - b)))
-```
-
-**Parameters:**
-- **θ (theta)**: Learner ability on logit scale (−4 to +4, centered at 0)
-- **a**: Item discrimination — how sharply probability changes with ability
-- **b**: Item difficulty — ability level where P(θ) ≈ 0.5
-- **c**: Pseudo-guessing — probability of correct answer by chance alone
-
-**Why 1.7 constant?**
-Approximates the normal ogive model (historical compatibility with pre-computer IRT). The logistic function with scaling factor 1.7 closely matches the cumulative normal distribution.
-
----
-
-### 11.3 IRT Parameter Table (Difficulty 1–10)
-
-Calibrated via pilot testing with 500+ users:
-
-| Difficulty | **a** (Discrimination) | **b** (Difficulty) | **c** (Guessing) | Interpretation |
-|------------|------------------------|-------------------|------------------|----------------|
-| 1 | 0.80 | −2.50 | 0.25 | Very easy; low discrimination (broad success) |
-| 2 | 1.00 | −2.00 | 0.25 | Easy; moderate discrimination |
-| 3 | 1.20 | −1.50 | 0.23 | Below average; good discrimination |
-| 4 | 1.40 | −1.00 | 0.22 | Slightly easy; very good discrimination |
-| 5 | 1.60 | −0.50 | 0.20 | Average; high discrimination |
-| 6 | 1.80 | 0.00 | 0.18 | Slightly hard; very high discrimination |
-| 7 | 2.00 | 0.50 | 0.15 | Above average; excellent discrimination |
-| 8 | 2.20 | 1.00 | 0.12 | Hard; excellent discrimination |
-| 9 | 2.00 | 1.50 | 0.10 | Very hard; high discrimination (experts) |
-| 10 | 1.80 | 2.00 | 0.08 | Extremely hard; guessing unlikely |
-
-**Key insights:**
-- Discrimination peaks at mid-to-high difficulties (7-8) where most engaged users cluster
-- Guessing probability decreases at higher difficulties (experts don't guess randomly)
-- Difficulty parameter b=0 represents average ability in the user population
-
----
-
-### 11.4 Theta Estimation (Newton-Raphson MLE)
-
-**Objective:** Estimate learner ability θ that maximizes likelihood of observed response pattern.
-
-**Log-likelihood function:**
-```
-ℓ(θ) = Σᵢ [uᵢ log P(θ|i) + (1 - uᵢ) log(1 - P(θ|i))]
-```
-where uᵢ = 1 if correct, 0 if wrong.
-
-**Newton-Raphson update rule:**
-```
-θ_new = θ_old - L'(θ) / L''(θ)
-```
-
-**Where:**
-- **L'(θ)**: First derivative (score function) — gradient of log-likelihood
-- **L''(θ)**: Second derivative (negative Fisher information) — curvature of log-likelihood
-
-**Convergence criteria:**
-- Maximum 20 iterations
-- Stop when |θ_new - θ_old| < 0.001 (convergence threshold)
-- **Bounds:** θ clamped to [−4, +4] to prevent numerical instability
-
-**Typical convergence:**
-- 3-5 iterations for established users (>10 answers)
-- 8-12 iterations for new users (<5 answers)
-- Fails to converge only with pathological response patterns (all wrong or all correct at single difficulty)
-
-**Initial guess:**
-- New users: θ₀ = 0 (population average)
-- Returning users: θ₀ = last cached estimate
-
----
-
-### 11.5 Elo Hybrid Component
-
-**Elo-inspired difficulty rating system for dynamic question calibration.**
-
-**Expected win probability:**
-```
-E = 1 / (1 + 10^((difficulty_elo - player_elo) / 400))
-```
-
-**K-factor decay (stabilizes over time):**
-```
-K = 64 × exp(-n / 30) + 16
-```
-
-**Where:**
-- **n**: Number of times this question has been answered by users
-- **Initial K = 80** (n=0): High learning rate for new questions
-- **Asymptotic K = 16** (n→∞): Low learning rate for well-calibrated questions
-- **Half-life ≈ 21 answers**: K drops to ~48 after 21 responses
-
-**Elo update formula (applied to questions, not users):**
-```
-difficulty_elo_new = difficulty_elo_old + K × (actual_avg - expected_avg)
-```
-
-**Surprise bonus mechanic:**
-Answering correctly when unlikely to succeed earns extra points:
-```
-surprise_bonus = max(0, actual - expected) × 50
-```
-
-**Example scenarios:**
-
-| Player Elo | Question Elo | Expected P | Actual | Surprise Bonus |
-|-----------|-------------|-----------|--------|----------------|
-| 1200 | 1600 | 0.09 | Correct | (1 - 0.09) × 50 = **45.5 pts** |
-| 1500 | 1500 | 0.50 | Correct | (1 - 0.50) × 50 = 25.0 pts |
-| 1800 | 1400 | 0.91 | Correct | (1 - 0.91) × 50 = 4.5 pts |
-| 1500 | 1700 | 0.24 | Wrong | 0 pts (max clips negative) |
-
-**Why hybrid IRT + Elo?**
-- IRT estimates ability from response patterns
-- Elo dynamically adjusts question difficulty based on collective performance
-- Surprise bonus rewards risk-taking and creates memorable "clutch moment" experiences
-
----
-
-### 11.6 Composite Score Formula
-
-**Full scoring equation:**
-```
-scoreDelta = (irt_component + elo_surprise_bonus) × streakMultiplier × accuracyFactor
-```
-
-**Component definitions:**
-```
-irt_component = difficulty × 10 × normalizedFisherInfo
-```
-```
-elo_surprise_bonus = max(0, elo_delta) × 50
-```
-```
-normalizedFisherInfo = min(1.0, fisherInfo / 3.0)
-```
-```
-fisherInfo = a² × P × Q / (P - c)²
-```
-
-**Where:**
-- **P**: Probability of correct answer P(θ|i) from 3PL model
-- **Q**: Probability of incorrect answer = 1 - P
-- **a, c**: Item parameters from IRT calibration table (§11.3)
-- **streakMultiplier**: 1.0 + streak × 0.25, capped at 4.0
-- **accuracyFactor**: Ratio of correct answers in last 10 (floor 0.1)
-
-**Fisher information interpretation:**
-- High I(θ) → question is highly informative at current ability level → higher score
-- Low I(θ) → question is too easy/hard for learner → lower score
-- Normalization factor 3.0 prevents extreme outliers (a=2.2 items can produce I>3)
-
-**Worked example:**
-- User at θ = 0.5 answers difficulty 7 correctly (streak=3, accuracy=0.8)
-- Item params: a=2.0, b=0.5, c=0.15
-- P(0.5|7) = 0.15 + 0.85 / (1 + exp(-1.7 × 2.0 × (0.5 - 0.5))) = 0.15 + 0.85/2 ≈ **0.575**
-- Q = 1 - 0.575 = 0.425
-- Fisher info = 2.0² × 0.575 × 0.425 / (0.575 - 0.15)² ≈ **5.41**
-- Normalized = min(1.0, 5.41 / 3.0) = **1.0** (capped)
-- IRT component = 7 × 10 × 1.0 = **70**
-- Elo surprise = (1 - 0.575) × 50 = **21.25**
-- Streak multiplier = 1.0 + 3 × 0.25 = **1.75**
-- Accuracy factor = 0.8
-- **Final score = (70 + 21.25) × 1.75 × 0.8 ≈ 127.75 points**
-
----
-
-### 11.7 API Endpoints
-
-**POST /score** — Compute score for one answer
-```json
-Request:
-{
-  "userId": "uuid-v4",
-  "questionId": "q42",
-  "correct": true,
-  "currentTheta": 0.35,
-  "answerHistory": [
-    {"questionId": "q1", "correct": true},
-    {"questionId": "q2", "correct": false},
-    ...
-  ]
-}
-
-Response:
-{
-  "newTheta": 0.42,
-  "thetaSE": 0.28,
-  "scoreDelta": 127.75,
-  "fisherInfo": 1.87,
-  "convergenceIterations": 4
-}
-```
-
-**GET /theta/{userId}** — Get current ability estimate
-```json
-Response:
-{
-  "theta": 0.42,
-  "standardError": 0.28,
-  "answerCount": 37,
-  "lastUpdated": "2026-02-17T10:30:00Z"
-}
-```
-
-**GET /health** — Service health check
-```json
-Response:
-{
-  "status": "healthy",
-  "uptime": 86400,
-  "averageLatency": 45,
-  "requestsLastMinute": 287
-}
-```
-
-**GET /item-params** — IRT parameters for all difficulty levels
-```json
-Response:
-{
-  "items": [
-    {"difficulty": 1, "a": 0.8, "b": -2.5, "c": 0.25},
-    {"difficulty": 2, "a": 1.0, "b": -2.0, "c": 0.25},
-    ...
-  ],
-  "lastCalibration": "2026-02-15T00:00:00Z"
-}
-```
-
----
-
-### 11.8 Fallback Strategy
-
-**Problem:** Python microservice becomes unavailable (crash, network partition, overload).
-
-**Solution:** Multi-tier graceful degradation
-
-**Tier 1: Cached theta (preferred)**
-```typescript
-// Try IRT service with 3s timeout
-try {
-  const response = await fetch('http://irt-service:8000/score', {
-    signal: AbortSignal.timeout(3000)
-  });
-  return await response.json();
-} catch (error) {
-  // Fall through to Tier 2
-}
-```
-
-**Tier 2: Simple formula fallback**
-```typescript
-// Use confidence-based scoring from Section 7
-scoreDelta = difficulty × 10 × streakMultiplier × accuracyFactor;
-```
-
-**Guarantees:**
-- **Zero downtime:** Quiz never returns 503 due to IRT service failure
-- **Acceptable degradation:** Simple formula still provides adaptive difficulty
-- **Transparent to user:** No error messages, scoring continues normally
-- **Monitoring alert:** On-call engineer notified if IRT service down >2min
-
-**Circuit breaker pattern:**
-```typescript
-class IRTCircuitBreaker {
-  private failures = 0;
-  private state: 'closed' | 'open' = 'closed';
-  
-  async call(fn: () => Promise<any>) {
-    if (this.state === 'open') {
-      throw new Error('Circuit open, using fallback');
-    }
-    
-    try {
-      const result = await fn();
-      this.failures = 0;
-      return result;
-    } catch (error) {
-      this.failures++;
-      if (this.failures >= 3) {
-        this.state = 'open';
-        setTimeout(() => this.state = 'closed', 60000);  // Retry after 1min
-      }
-      throw error;
-    }
-  }
-}
-```
-
-**Fallback metrics tracking:**
-```typescript
-const metrics = {
-  irtServiceCalls: 0,
-  irtServiceFailures: 0,
-  fallbackInvocations: 0,
-  averageLatency: 0
-};
-```
-
----
-
-## 12. Non-Functional Requirements
-
-### 11.1 Strong Consistency
+### 10.1 Strong Consistency
 
 **Redis is single-threaded:**
 - All user state mutations go through Redis commands
@@ -1852,7 +1084,7 @@ if (stateVersion !== currentStateVersion) {
 
 ---
 
-### 11.2 Idempotency
+### 10.2 Idempotency
 
 **Full flow:**
 1. Client generates UUID v4 for `idempotencyKey`
@@ -1884,7 +1116,7 @@ export async function POST(request: NextRequest) {
 
 ---
 
-### 11.3 Rate Limiting
+### 10.3 Rate Limiting
 
 **Algorithm:** Token bucket implemented via Redis INCR + EXPIRE
 
@@ -1928,7 +1160,7 @@ Retry-After: 45  (on 429 only)
 
 ---
 
-### 11.4 Stateless App Servers
+### 10.4 Stateless App Servers
 
 **Current (in-memory):**
 - State is server-local (Map objects)
@@ -1947,7 +1179,7 @@ Retry-After: 45  (on 429 only)
 
 ---
 
-### 11.5 Redis Failure Degradation
+### 10.5 Redis Failure Degradation
 
 **Primary:** Redis operations
 

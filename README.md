@@ -27,7 +27,8 @@ BrainBolt is an intelligent adaptive quiz platform that responds to your perform
 | Framework | Next.js 15 | SSR frontend + API routes backend (fullstack monolith) |
 | UI Library | React 19 | Interactive components with Server Components support |
 | Language | TypeScript | Type-safe development across frontend and backend |
-| Database | Redis 7 | Low-latency state storage, sorted sets for leaderboards |
+| Database | PostgreSQL 16 | Durable source of truth (identity, quiz state, answer log, idempotency) |
+| Cache / Index | Redis 7 | 60s state cache, sorted-set leaderboard index, sessions |
 | Styling | Tailwind CSS | Utility-first responsive design with dark mode support |
 | Containerization | Docker | Multi-stage builds for production deployment |
 
@@ -35,11 +36,20 @@ BrainBolt is an intelligent adaptive quiz platform that responds to your perform
 
 ## Architecture
 
-BrainBolt runs as a **monolithic Next.js application** where the framework handles both server-side rendering (SSR) for the frontend and API route handlers for the backend. All user state, leaderboards, answer logs, and session data live in Redis with TTL-based cache invalidation. The application servers are stateless—any instance can handle any request since all state resides in Redis. This enables horizontal scaling behind a load balancer with zero session affinity requirements.
+BrainBolt runs as a **monolithic Next.js application** where the framework handles both server-side rendering (SSR) for the frontend and API route handlers for the backend. **PostgreSQL is the durable source of truth** for identity, quiz state, the answer log, and idempotency keys; **Redis is a derived layer** — a 60s cache of state, the sorted-set ranking index for leaderboards, and session storage. Writes go to Postgres first, then best-effort to Redis, so a Redis loss costs only freshness (and a passwordless re-login), never data. In production a Postgres outage returns `503`; in development the app falls back to in-memory Maps so `npm run dev` needs no infrastructure. Application servers stay stateless, so any instance can serve any request.
 
 ```
-Browser → Next.js App (SSR + API Routes) → Redis
+Browser → Next.js App (SSR + API Routes) → PostgreSQL (truth) + Redis (cache/index)
 ```
+
+**Environment variables** (see `.env.example`):
+
+| Variable | Default | Purpose |
+|----------|---------|---------|
+| `DATABASE_URL` | `postgres://brainbolt:brainbolt@localhost:5432/brainbolt` | PostgreSQL connection (required in production) |
+| `REDIS_URL` | `redis://localhost:6379` | Redis connection |
+
+Run `npm run db:migrate` once against a running Postgres to create the schema.
 
 ---
 
@@ -302,14 +312,14 @@ Rolling accuracy over the last 10 answers scales scores to recent performance. T
 
 - **Adaptive Difficulty (1–10 scale):** Confidence-based hysteresis prevents oscillation
 - **Streak Multiplier:** +0.25× per consecutive correct answer (caps at 4×)
-- **Redis Caching:** TTL-based cache layers for user state, leaderboards, and metrics
-- **Idempotent Answers:** Client-generated keys prevent double-scoring on retries
-- **SSR Leaderboard:** Server-rendered React components fetch live data at request time
+- **Durable Postgres + Redis cache:** Postgres is the source of truth; Redis is a 60s state cache and the sorted-set leaderboard index, rebuilt from Postgres on reconnect
+- **Idempotent Answers:** Client-generated keys, durable in Postgres and written inside the answer transaction, prevent double-scoring on retries even across a Redis flush
+- **SSR Leaderboard:** Server-rendered React components fetch live data at request time (one Redis + one Postgres query, no N+1)
 - **Dark Mode:** Theme toggle with `prefers-color-scheme` detection and localStorage persistence
-- **Rate Limiting:** Token bucket via Redis (30 req/min per user)
-- **Session-Based Auth:** Bearer tokens with 24-hour TTL stored in Redis
-- **Answer Logging:** Append-only answer history for metrics and analysis
-- **State Versioning:** Optimistic locking prevents concurrent tab conflicts
+- **Rate Limiting:** In-process token bucket (30 req/min per user)
+- **Session-Based Auth:** Bearer tokens with 24-hour TTL stored in Redis; stable Postgres-backed identity survives a session loss
+- **Answer Logging:** Append-only durable answer history (Postgres) for metrics and analysis
+- **State Versioning:** Optimistic locking via `SELECT ... FOR UPDATE` prevents concurrent tab conflicts
 
 ---
 
@@ -335,17 +345,42 @@ src/
 │   │           │   └── route.ts          # GET /api/v1/leaderboard/score
 │   │           └── streak/
 │   │               └── route.ts          # GET /api/v1/leaderboard/streak
-│   ├── globals.css                       # Design tokens + Tailwind directives
-│   ├── layout.tsx                        # Root layout with theme provider
-│   └── page.tsx                          # Main quiz interface
+│   ├── leaderboard/
+│   │   └── page.tsx                      # Server-rendered leaderboard route
+│   ├── globals.css                       # Design tokens + Tailwind v4 CSS-first config
+│   ├── layout.tsx                        # Root layout, fonts, anti-FOUC theme script
+│   └── page.tsx                          # Main quiz interface (composition only)
 ├── components/
-│   ├── QuizCard.tsx                      # Question display + answer submission
-│   ├── Leaderboard.tsx                   # Score/streak tabs with polling
-│   ├── StatsBar.tsx                      # Real-time difficulty/streak/score display
-│   └── ThemeToggle.tsx                   # Dark mode toggle button
+│   ├── auth/
+│   │   └── LoginScreen.tsx               # Username sign-in
+│   ├── layout/
+│   │   ├── AppHeader.tsx                 # Header: nav, avatar, sign out
+│   │   ├── BoltMark.tsx                  # Logo mark
+│   │   └── ThemeToggle.tsx               # Dark/light toggle
+│   ├── leaderboard/
+│   │   ├── LeaderboardPanel.tsx          # Score/streak tabs, owns one poll loop
+│   │   ├── LeaderboardRow.tsx            # A single ranked row
+│   │   ├── LiveIndicator.tsx             # Live dot + "updated 2s ago"
+│   │   └── useRankAnimation.ts           # FLIP rank-change animation
+│   ├── quiz/
+│   │   ├── QuizCard.tsx                  # Question shell + submission
+│   │   ├── ChoiceList.tsx                # Radiogroup choices, arrow keys + A–D
+│   │   └── FeedbackBanner.tsx            # Correct/incorrect result
+│   ├── stats/
+│   │   ├── StatsBar.tsx                  # Score / streak / best streak
+│   │   └── AbilityTrace.tsx              # Difficulty trace + confidence meter
+│   └── ui/                               # Primitives: Button, Card, Input, Badge,
+│                                         # Avatar, RankBadge, Meter, Skeleton, States
+├── hooks/
+│   ├── useSession.ts                     # Sign in/out, localStorage session
+│   ├── useQuiz.ts                        # Question flow, answer submission, trace
+│   ├── useLeaderboard.ts                 # Polling (pauses on hidden tab)
+│   └── useTheme.ts                       # Theme state via useSyncExternalStore
 └── lib/
     ├── adaptive.ts                       # Core adaptive algorithm (processAnswer, getNextQuestion)
+    ├── api.ts                            # Typed browser API client (owns the Bearer header)
     ├── auth.ts                           # Session management (createSession, verifyAuth)
+    ├── format.ts                         # formatScore, formatRelativeTime, levelColor
     ├── questions.ts                      # Question bank (20 questions, difficulty 1–10)
     ├── rateLimit.ts                      # Token bucket rate limiter
     ├── redis.ts                          # Redis client initialization
