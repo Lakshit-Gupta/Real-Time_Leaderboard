@@ -1,0 +1,2597 @@
+[
+  {
+    "id": "sec_0001",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "SQL Injection",
+    "difficulty": "Easy",
+    "question": "What is SQL injection?",
+    "options": [
+      "Inserting attacker-controlled input into a SQL query to alter its logic",
+      "A method to speed up database queries",
+      "A type of database index",
+      "A backup strategy for SQL databases"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SQL injection exploits unsanitized input concatenated into query text to change query behavior.",
+    "source": "Generated (based on SQL Injection theory)",
+    "tags": [
+      "SQL Injection",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0002",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "SQL Injection",
+    "difficulty": "Easy",
+    "question": "Which technique best prevents SQL injection?",
+    "options": [
+      "Blocklisting the word \"SELECT\"",
+      "Parameterized queries / prepared statements",
+      "Increasing the database connection pool size",
+      "Using a longer password"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Parameterized queries separate code from data so user input can never alter query structure.",
+    "source": "Generated (based on SQL Injection theory)",
+    "tags": [
+      "SQL Injection",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0003",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "SQL Injection",
+    "difficulty": "Medium",
+    "question": "Why is manual escaping of quotes considered a weak defense against SQL injection?",
+    "options": [
+      "Escaping quotes is not supported by SQL databases",
+      "Escaping always corrupts unicode strings",
+      "Escaping logic can miss edge cases and encoding tricks that bypass it",
+      "Escaping requires a special license"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Manual escaping is fragile and history-prone to bypass techniques; parameterization removes the class of bug structurally.",
+    "source": "Generated (based on SQL Injection theory)",
+    "tags": [
+      "SQL Injection",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0004",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "SQL Injection",
+    "difficulty": "Medium",
+    "question": "What is a blind SQL injection?",
+    "options": [
+      "An injection that only works on blind users",
+      "An injection that requires physical database access",
+      "A SQL injection detected by static analysis",
+      "An attack that infers data through true/false or timing responses without seeing query output directly"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Blind SQL injection extracts data indirectly via boolean or time-based side channels rather than direct output.",
+    "source": "Generated (based on SQL Injection theory)",
+    "tags": [
+      "SQL Injection",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0005",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "SQL Injection",
+    "difficulty": "Hard",
+    "question": "An application uses parameterized queries everywhere except for a dynamic \"ORDER BY\" clause built from a query string parameter. What is the safest fix?",
+    "options": [
+      "Whitelist allowed column names against a known set before interpolating",
+      "Escape the column name like a string literal",
+      "Rely on the database's query planner to sanitize it",
+      "Disable ORDER BY entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Identifiers cannot be bound as parameters, so a strict whitelist against known-safe values is the correct mitigation.",
+    "source": "Generated (based on SQL Injection theory)",
+    "tags": [
+      "SQL Injection",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0006",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Scripting (XSS)",
+    "difficulty": "Easy",
+    "question": "What is cross-site scripting (XSS)?",
+    "options": [
+      "A technique to style pages across multiple domains",
+      "Injecting malicious script into a page that executes in another user's browser",
+      "A method for cross-origin resource sharing",
+      "A caching strategy for JavaScript files"
+    ],
+    "correctAnswer": 1,
+    "explanation": "XSS lets an attacker run arbitrary script in a victim's browser session by injecting it into trusted page content.",
+    "source": "Generated (based on Cross-Site Scripting (XSS) theory)",
+    "tags": [
+      "XSS",
+      "OWASP"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0007",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Scripting (XSS)",
+    "difficulty": "Easy",
+    "question": "What is the primary defense against reflected/stored XSS?",
+    "options": [
+      "Disabling all JavaScript on the page",
+      "Using only GET requests",
+      "Properly encoding/escaping output based on its context (HTML, attribute, JS)",
+      "Increasing the session timeout"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Context-aware output encoding ensures user data is rendered as inert text, not executable markup.",
+    "source": "Generated (based on Cross-Site Scripting (XSS) theory)",
+    "tags": [
+      "XSS",
+      "OWASP"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0008",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Scripting (XSS)",
+    "difficulty": "Medium",
+    "question": "What distinguishes stored XSS from reflected XSS?",
+    "options": [
+      "Stored XSS only affects the attacker's own browser",
+      "Reflected XSS cannot execute JavaScript",
+      "Stored XSS requires no database access",
+      "Stored XSS persists the payload server-side (e.g. in a database) and affects any viewer; reflected XSS requires a crafted request per victim"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Stored XSS payloads live in persisted data and hit every viewer, while reflected XSS depends on tricking a victim into a specific malicious request.",
+    "source": "Generated (based on Cross-Site Scripting (XSS) theory)",
+    "tags": [
+      "XSS",
+      "OWASP"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0009",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Scripting (XSS)",
+    "difficulty": "Medium",
+    "question": "How does a Content Security Policy (CSP) help mitigate XSS impact?",
+    "options": [
+      "It restricts which script sources the browser will execute, limiting damage even if injection occurs",
+      "It encrypts all page content",
+      "It blocks all cookies from being set",
+      "It disables the DOM entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "CSP is a defense-in-depth layer that can block inline/untrusted scripts from executing even if an injection slips through.",
+    "source": "Generated (based on Cross-Site Scripting (XSS) theory)",
+    "tags": [
+      "XSS",
+      "OWASP"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0010",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Scripting (XSS)",
+    "difficulty": "Hard",
+    "question": "A single-page app renders user-supplied markdown by inserting raw HTML output via `innerHTML` without sanitization. What is the most robust fix?",
+    "options": [
+      "Switch from innerHTML to innerText only for admin users",
+      "Sanitize the rendered HTML with a trusted allowlist-based sanitizer before insertion",
+      "Rely on the markdown parser to be inherently safe",
+      "Base64-encode the markdown before rendering"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Allowlist-based HTML sanitization strips dangerous tags/attributes while preserving legitimate formatting, closing the DOM XSS vector.",
+    "source": "Generated (based on Cross-Site Scripting (XSS) theory)",
+    "tags": [
+      "XSS",
+      "OWASP"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0011",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Request Forgery (CSRF)",
+    "difficulty": "Easy",
+    "question": "What is CSRF?",
+    "options": [
+      "A method to forge database records",
+      "A cross-region server failover technique",
+      "Tricking a logged-in user's browser into submitting an unwanted request to a site they are authenticated with",
+      "A caching optimization for form submissions"
+    ],
+    "correctAnswer": 2,
+    "explanation": "CSRF abuses the browser automatically attaching credentials (cookies) to requests triggered from another site.",
+    "source": "Generated (based on Cross-Site Request Forgery (CSRF) theory)",
+    "tags": [
+      "CSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Microsoft",
+      "Shopify"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0012",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Request Forgery (CSRF)",
+    "difficulty": "Easy",
+    "question": "Which common defense mitigates CSRF?",
+    "options": [
+      "Using longer session cookie names",
+      "Disabling HTTPS",
+      "Increasing rate limits",
+      "Anti-CSRF tokens included in state-changing requests"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A per-session/per-form CSRF token that an attacker cannot predict or read prevents forged cross-site requests from succeeding.",
+    "source": "Generated (based on Cross-Site Request Forgery (CSRF) theory)",
+    "tags": [
+      "CSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Microsoft",
+      "Shopify"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0013",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Request Forgery (CSRF)",
+    "difficulty": "Medium",
+    "question": "Why does the `SameSite` cookie attribute help against CSRF?",
+    "options": [
+      "It restricts when cookies are sent with cross-site requests, blocking many forged request scenarios",
+      "It encrypts the cookie value",
+      "It extends the cookie expiration",
+      "It disables cookies entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SameSite=Strict/Lax prevents the browser from attaching session cookies to most cross-site requests, mitigating CSRF.",
+    "source": "Generated (based on Cross-Site Request Forgery (CSRF) theory)",
+    "tags": [
+      "CSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Microsoft",
+      "Shopify"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0014",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Request Forgery (CSRF)",
+    "difficulty": "Medium",
+    "question": "Why are CSRF tokens typically not needed for GET requests?",
+    "options": [
+      "GET requests cannot carry cookies",
+      "GET requests are expected to be safe/idempotent and should not cause state changes",
+      "Browsers block all GET requests from forms",
+      "CSRF tokens only work with POST syntax"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Per HTTP semantics GET should be side-effect free; CSRF protection focuses on state-changing methods like POST/PUT/DELETE.",
+    "source": "Generated (based on Cross-Site Request Forgery (CSRF) theory)",
+    "tags": [
+      "CSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Microsoft",
+      "Shopify"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0015",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Cross-Site Request Forgery (CSRF)",
+    "difficulty": "Hard",
+    "question": "An API relies solely on a custom header (not sent automatically by browsers) for authentication instead of cookies. Why is it largely immune to classic CSRF?",
+    "options": [
+      "Custom headers are always encrypted by default",
+      "CSRF only affects APIs using JSON",
+      "Browsers cannot be tricked into automatically attaching a custom header on cross-site requests without CORS permission",
+      "Custom headers disable the same-origin policy"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Cross-site forms/scripts cannot set arbitrary custom headers without an explicit CORS preflight allowing it, removing the classic CSRF vector.",
+    "source": "Generated (based on Cross-Site Request Forgery (CSRF) theory)",
+    "tags": [
+      "CSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Microsoft",
+      "Shopify"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0016",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Authentication vs Authorization",
+    "difficulty": "Easy",
+    "question": "What does authentication verify?",
+    "options": [
+      "That a user has permission to perform an action",
+      "That a network connection is encrypted",
+      "That a database query is valid",
+      "That a user is who they claim to be"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Authentication establishes identity; authorization is a separate later step deciding what that identity may do.",
+    "source": "Generated (based on Authentication vs Authorization theory)",
+    "tags": [
+      "AuthN",
+      "AuthZ"
+    ],
+    "company": [
+      "Okta",
+      "Auth0"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0017",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Authentication vs Authorization",
+    "difficulty": "Easy",
+    "question": "What does authorization determine?",
+    "options": [
+      "Whether an authenticated identity is permitted to perform a specific action",
+      "Whether a password meets complexity rules",
+      "Whether a TLS certificate is valid",
+      "Whether a user's email is verified"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Authorization checks permissions/roles against a resource after identity has already been established.",
+    "source": "Generated (based on Authentication vs Authorization theory)",
+    "tags": [
+      "AuthN",
+      "AuthZ"
+    ],
+    "company": [
+      "Okta",
+      "Auth0"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0018",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Authentication vs Authorization",
+    "difficulty": "Medium",
+    "question": "Why is it a security flaw to skip authorization checks after authenticating a user?",
+    "options": [
+      "Authentication alone always implies full access is safe",
+      "Any authenticated user could then access resources or actions beyond their intended permissions",
+      "Authorization checks slow down every request unacceptably",
+      "Skipping authorization improves caching"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is a classic broken access control flaw — being logged in should not automatically grant access to every resource.",
+    "source": "Generated (based on Authentication vs Authorization theory)",
+    "tags": [
+      "AuthN",
+      "AuthZ"
+    ],
+    "company": [
+      "Okta",
+      "Auth0"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0019",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Authentication vs Authorization",
+    "difficulty": "Medium",
+    "question": "What is the principle of least privilege in the context of authorization?",
+    "options": [
+      "Granting every authenticated user full admin rights by default",
+      "Requiring the fewest possible login attempts",
+      "Granting an identity only the minimum permissions needed to perform its function",
+      "Minimizing the number of authentication providers"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Least privilege limits the blast radius of a compromised account or bug by minimizing what it is allowed to do.",
+    "source": "Generated (based on Authentication vs Authorization theory)",
+    "tags": [
+      "AuthN",
+      "AuthZ"
+    ],
+    "company": [
+      "Okta",
+      "Auth0"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0020",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Authentication vs Authorization",
+    "difficulty": "Hard",
+    "question": "A microservice trusts an internal `X-User-Role` header set by an upstream gateway for authorization decisions. What is the key risk if the service is ever reachable directly?",
+    "options": [
+      "Internal headers are always encrypted so no risk exists",
+      "HTTP headers cannot be spoofed by any client",
+      "The service would fail to start without the header",
+      "A caller bypassing the gateway could forge the header and grant itself elevated privileges"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Trusting an unauthenticated internal header for authorization is unsafe if the service is reachable outside the intended trust boundary — the header must be cryptographically verified or the network path strictly enforced.",
+    "source": "Generated (based on Authentication vs Authorization theory)",
+    "tags": [
+      "AuthN",
+      "AuthZ"
+    ],
+    "company": [
+      "Okta",
+      "Auth0"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0021",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Password Hashing",
+    "difficulty": "Easy",
+    "question": "Why should passwords be hashed rather than stored in plaintext?",
+    "options": [
+      "If the database is breached, hashed passwords are not directly readable as the original password",
+      "Hashing makes login faster",
+      "Hashing is required for password length limits",
+      "Plaintext storage uses more disk space"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Hashing means a database breach does not directly expose usable plaintext passwords.",
+    "source": "Generated (based on Password Hashing theory)",
+    "tags": [
+      "Passwords",
+      "Hashing"
+    ],
+    "company": [
+      "LinkedIn",
+      "Dropbox"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0022",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Password Hashing",
+    "difficulty": "Easy",
+    "question": "Which algorithm family is recommended for password hashing over general-purpose hashes like MD5/SHA-256?",
+    "options": [
+      "Fast hashes optimized for speed",
+      "Slow, memory-hard algorithms like bcrypt, scrypt, or Argon2",
+      "Simple checksums like CRC32",
+      "Base64 encoding"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Password hashing needs to be deliberately slow and memory-hard to resist brute-force and GPU-accelerated cracking.",
+    "source": "Generated (based on Password Hashing theory)",
+    "tags": [
+      "Passwords",
+      "Hashing"
+    ],
+    "company": [
+      "LinkedIn",
+      "Dropbox"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0023",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Password Hashing",
+    "difficulty": "Medium",
+    "question": "What is the purpose of a per-user salt in password hashing?",
+    "options": [
+      "It encrypts the password reversibly",
+      "It speeds up hash computation",
+      "It prevents precomputed rainbow-table attacks and ensures identical passwords hash differently",
+      "It replaces the need for HTTPS"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A unique salt per user defeats precomputed lookup tables and stops identical passwords from producing identical hashes.",
+    "source": "Generated (based on Password Hashing theory)",
+    "tags": [
+      "Passwords",
+      "Hashing"
+    ],
+    "company": [
+      "LinkedIn",
+      "Dropbox"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0024",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Password Hashing",
+    "difficulty": "Medium",
+    "question": "Why is bcrypt/Argon2 preferred specifically because it is slow, unlike hashes used for data integrity?",
+    "options": [
+      "Speed has no bearing on password cracking resistance",
+      "Slow hashes are required for password length validation",
+      "Slow algorithms use less memory",
+      "Slowness limits the rate an attacker can try candidate passwords during brute force or cracking"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A deliberately slow, tunable cost factor makes large-scale offline password guessing computationally expensive.",
+    "source": "Generated (based on Password Hashing theory)",
+    "tags": [
+      "Passwords",
+      "Hashing"
+    ],
+    "company": [
+      "LinkedIn",
+      "Dropbox"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0025",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Password Hashing",
+    "difficulty": "Hard",
+    "question": "A legacy system stores passwords hashed with unsalted MD5. What migration strategy safely upgrades security without forcing every user to reset immediately?",
+    "options": [
+      "Rehash with a strong algorithm (e.g. bcrypt) at next successful login, replacing the old hash transparently",
+      "Leave the hashes as-is since MD5 is irreversible",
+      "Immediately delete all accounts",
+      "Encrypt the existing MD5 hashes with a static key"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A lazy rehash-on-login strategy incrementally migrates users to a strong scheme without disrupting login or forcing mass resets.",
+    "source": "Generated (based on Password Hashing theory)",
+    "tags": [
+      "Passwords",
+      "Hashing"
+    ],
+    "company": [
+      "LinkedIn",
+      "Dropbox"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0026",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Session Management",
+    "difficulty": "Easy",
+    "question": "Why should session cookies be marked `HttpOnly`?",
+    "options": [
+      "It makes the cookie last forever",
+      "It prevents client-side JavaScript from reading the cookie, mitigating XSS-based theft",
+      "It encrypts the cookie value",
+      "It allows cross-domain sharing"
+    ],
+    "correctAnswer": 1,
+    "explanation": "HttpOnly blocks script access to the cookie, limiting the damage an XSS injection can do to session theft.",
+    "source": "Generated (based on Session Management theory)",
+    "tags": [
+      "Sessions",
+      "Security"
+    ],
+    "company": [
+      "Netflix",
+      "Auth0"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0027",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Session Management",
+    "difficulty": "Easy",
+    "question": "Why should session cookies be marked `Secure`?",
+    "options": [
+      "It compresses the cookie value",
+      "It extends the cookie's expiration date",
+      "It ensures the cookie is only sent over HTTPS, preventing interception over plaintext HTTP",
+      "It disables same-site restrictions"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Secure flag prevents the browser from ever sending the session cookie over an unencrypted connection.",
+    "source": "Generated (based on Session Management theory)",
+    "tags": [
+      "Sessions",
+      "Security"
+    ],
+    "company": [
+      "Netflix",
+      "Auth0"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0028",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Session Management",
+    "difficulty": "Medium",
+    "question": "Why should a session identifier be regenerated after a successful login?",
+    "options": [
+      "It speeds up the login process",
+      "It is required for password hashing",
+      "It reduces database load",
+      "It prevents session fixation attacks where an attacker pre-sets a known session ID for the victim"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Regenerating the session ID post-authentication invalidates any pre-login ID an attacker may have planted (session fixation).",
+    "source": "Generated (based on Session Management theory)",
+    "tags": [
+      "Sessions",
+      "Security"
+    ],
+    "company": [
+      "Netflix",
+      "Auth0"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0029",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Session Management",
+    "difficulty": "Medium",
+    "question": "What is the security benefit of a short, sliding session expiration versus an indefinite one?",
+    "options": [
+      "It limits the window an attacker can use a stolen session token",
+      "It makes the application load faster",
+      "It reduces the number of users who can log in",
+      "It removes the need for logout functionality"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bounded and refreshed expiration reduces the value and lifespan of a compromised session token.",
+    "source": "Generated (based on Session Management theory)",
+    "tags": [
+      "Sessions",
+      "Security"
+    ],
+    "company": [
+      "Netflix",
+      "Auth0"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0030",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Session Management",
+    "difficulty": "Hard",
+    "question": "A banking app keeps sessions alive indefinitely as long as the tab stays open, with no absolute maximum lifetime. What is the main risk?",
+    "options": [
+      "Indefinite sessions always crash the server eventually",
+      "A stolen or shared device session token remains valid indefinitely, giving an attacker unlimited access window",
+      "It is only a performance issue, not security",
+      "It prevents concurrent logins entirely"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Without an absolute timeout, a compromised token provides an attacker permanent access rather than a bounded window.",
+    "source": "Generated (based on Session Management theory)",
+    "tags": [
+      "Sessions",
+      "Security"
+    ],
+    "company": [
+      "Netflix",
+      "Auth0"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0031",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "JWT Security",
+    "difficulty": "Easy",
+    "question": "What does a JWT signature guarantee?",
+    "options": [
+      "That the token contents are encrypted and unreadable",
+      "That the token can never expire",
+      "That the token contents have not been tampered with since signing",
+      "That the token is stored securely on the client"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A JWT signature verifies integrity/authenticity of the claims; by default the payload is only base64-encoded, not encrypted.",
+    "source": "Generated (based on JWT Security theory)",
+    "tags": [
+      "JWT",
+      "Tokens"
+    ],
+    "company": [
+      "Auth0",
+      "Okta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0032",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "JWT Security",
+    "difficulty": "Easy",
+    "question": "Why is it dangerous to accept the `alg: none` header value in JWT verification?",
+    "options": [
+      "It makes tokens load faster",
+      "It is required for refresh tokens to work",
+      "It only affects token expiration",
+      "It allows an attacker to submit an unsigned token that bypasses signature verification entirely"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The historic `alg: none` vulnerability lets an attacker submit a token with no signature and have it accepted as valid.",
+    "source": "Generated (based on JWT Security theory)",
+    "tags": [
+      "JWT",
+      "Tokens"
+    ],
+    "company": [
+      "Auth0",
+      "Okta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0033",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "JWT Security",
+    "difficulty": "Medium",
+    "question": "What is the \"algorithm confusion\" attack against JWTs verified with RS256?",
+    "options": [
+      "Tricking the server into verifying an HS256 token using the public RSA key as the HMAC secret",
+      "Using an unsupported hashing algorithm to crash the server",
+      "Encrypting the JWT header twice",
+      "Sending a JWT with an expired timestamp"
+    ],
+    "correctAnswer": 0,
+    "explanation": "If a server accepts multiple algorithms and mistakenly uses the public key as an HMAC secret, an attacker can forge valid-looking tokens.",
+    "source": "Generated (based on JWT Security theory)",
+    "tags": [
+      "JWT",
+      "Tokens"
+    ],
+    "company": [
+      "Auth0",
+      "Okta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0034",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "JWT Security",
+    "difficulty": "Medium",
+    "question": "Why should sensitive session-revocation-sensitive systems avoid relying purely on long-lived, stateless JWTs?",
+    "options": [
+      "JWTs cannot store expiration claims",
+      "A stateless JWT cannot be revoked before its expiration without an additional server-side check",
+      "JWTs are always encrypted by default",
+      "Stateless JWTs cannot include user roles"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pure stateless JWTs remain valid until expiry; immediate revocation requires a server-side denylist or short-lived tokens with refresh.",
+    "source": "Generated (based on JWT Security theory)",
+    "tags": [
+      "JWT",
+      "Tokens"
+    ],
+    "company": [
+      "Auth0",
+      "Okta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0035",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "JWT Security",
+    "difficulty": "Hard",
+    "question": "A system stores a JWT in `localStorage` for API authentication. What is the primary security tradeoff versus an HttpOnly cookie?",
+    "options": [
+      "localStorage tokens cannot be signed",
+      "localStorage is not readable by the application itself",
+      "localStorage is readable by any JavaScript on the page, making the token vulnerable to theft via XSS",
+      "Cookies cannot store JWTs at all"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Unlike HttpOnly cookies, localStorage is fully accessible to page scripts, so any XSS vulnerability can exfiltrate the token directly.",
+    "source": "Generated (based on JWT Security theory)",
+    "tags": [
+      "JWT",
+      "Tokens"
+    ],
+    "company": [
+      "Auth0",
+      "Okta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0036",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Rate Limiting",
+    "difficulty": "Easy",
+    "question": "What is the primary security purpose of rate limiting an API endpoint?",
+    "options": [
+      "To make the API run faster for all users",
+      "To reduce the number of supported HTTP methods",
+      "To automatically fix bugs in the endpoint",
+      "To slow or block abusive volumes of requests, such as brute-force login attempts"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Rate limiting caps how many requests a client can make in a time window, blunting brute force and abuse.",
+    "source": "Generated (based on Rate Limiting theory)",
+    "tags": [
+      "Rate Limiting",
+      "Availability"
+    ],
+    "company": [
+      "Cloudflare",
+      "Stripe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0037",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Rate Limiting",
+    "difficulty": "Easy",
+    "question": "Which endpoint is a especially high-value target for rate limiting?",
+    "options": [
+      "A login/authentication endpoint",
+      "A static asset like a CSS file",
+      "A public health-check endpoint",
+      "A documentation page"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Login endpoints are prime brute-force targets, making rate limiting there especially important.",
+    "source": "Generated (based on Rate Limiting theory)",
+    "tags": [
+      "Rate Limiting",
+      "Availability"
+    ],
+    "company": [
+      "Cloudflare",
+      "Stripe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0038",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Rate Limiting",
+    "difficulty": "Medium",
+    "question": "What is the difference between a fixed-window and a token-bucket rate limiter?",
+    "options": [
+      "They are functionally identical in every case",
+      "Fixed-window resets counts at set intervals (allowing bursts at boundaries); token-bucket allows smoother, controlled bursts via accumulated tokens",
+      "Token-bucket only works for GET requests",
+      "Fixed-window cannot be implemented in distributed systems"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fixed windows can allow a burst right at the window boundary; token-bucket algorithms smooth this by requiring accumulated tokens per request.",
+    "source": "Generated (based on Rate Limiting theory)",
+    "tags": [
+      "Rate Limiting",
+      "Availability"
+    ],
+    "company": [
+      "Cloudflare",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0039",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Rate Limiting",
+    "difficulty": "Medium",
+    "question": "Why should rate limits be applied per-user/per-IP rather than only globally across an API?",
+    "options": [
+      "Global limits are always more accurate",
+      "Per-user limits are required by HTTP spec",
+      "A single abusive client should not exhaust capacity for all other legitimate users",
+      "Global rate limiting improves caching hit rates"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Per-client limiting isolates abuse so one bad actor cannot degrade service for everyone else.",
+    "source": "Generated (based on Rate Limiting theory)",
+    "tags": [
+      "Rate Limiting",
+      "Availability"
+    ],
+    "company": [
+      "Cloudflare",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0040",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Rate Limiting",
+    "difficulty": "Hard",
+    "question": "An attacker rotates through thousands of IP addresses to bypass per-IP rate limiting on a login endpoint. What additional defense best mitigates this?",
+    "options": [
+      "Increase the per-IP limit to reduce false positives",
+      "Remove rate limiting since it is bypassable anyway",
+      "Rely solely on CAPTCHA for every request",
+      "Layer in account-based lockout/backoff and anomaly detection independent of source IP"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Combining per-account throttling and behavioral anomaly detection catches distributed attacks that per-IP limiting alone cannot.",
+    "source": "Generated (based on Rate Limiting theory)",
+    "tags": [
+      "Rate Limiting",
+      "Availability"
+    ],
+    "company": [
+      "Cloudflare",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0041",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Input Validation",
+    "difficulty": "Easy",
+    "question": "Why is server-side input validation required even when client-side validation exists?",
+    "options": [
+      "Client-side validation can be bypassed entirely by a direct API request",
+      "Client-side validation is always sufficient",
+      "Server-side validation is slower and unnecessary",
+      "Client-side validation encrypts the data"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An attacker can call the API directly, skipping any browser-based client-side checks entirely.",
+    "source": "Generated (based on Input Validation theory)",
+    "tags": [
+      "Validation",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0042",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Input Validation",
+    "difficulty": "Easy",
+    "question": "What is the safer validation approach: allowlisting or blocklisting?",
+    "options": [
+      "Blocklisting known-bad patterns",
+      "Allowlisting known-good patterns",
+      "Neither approach matters for security",
+      "Blocklisting is always more secure"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Allowlists constrain input to explicitly known-safe values/patterns, avoiding the endless game of blocking every bad variant.",
+    "source": "Generated (based on Input Validation theory)",
+    "tags": [
+      "Validation",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0043",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Input Validation",
+    "difficulty": "Medium",
+    "question": "Why is validating a file upload's declared MIME type alone insufficient?",
+    "options": [
+      "MIME types cannot be read by servers",
+      "MIME type validation is only relevant for images",
+      "The MIME type header is client-supplied and can be trivially spoofed",
+      "Validating MIME type breaks file uploads"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A client-controlled Content-Type header proves nothing about the actual file bytes; content should be inspected/verified too.",
+    "source": "Generated (based on Input Validation theory)",
+    "tags": [
+      "Validation",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0044",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Input Validation",
+    "difficulty": "Medium",
+    "question": "Why should numeric input ranges be validated even if the type system already enforces \"it is a number\"?",
+    "options": [
+      "Type systems make range validation unnecessary in all cases",
+      "Range validation is only a UI concern",
+      "Numbers cannot be validated server-side",
+      "A number could still be out of an acceptable business range (e.g. negative age, huge quantity) causing logic errors or abuse"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Type correctness (is it a number) is separate from business validity (is it a sane, in-range value) — both matter.",
+    "source": "Generated (based on Input Validation theory)",
+    "tags": [
+      "Validation",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0045",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Input Validation",
+    "difficulty": "Hard",
+    "question": "An API validates and sanitizes a filename from user input before passing it to a file-read function, but still allows `../` sequences after sanitization order was applied incorrectly. What vulnerability results?",
+    "options": [
+      "Path traversal, allowing access to files outside the intended directory",
+      "SQL injection",
+      "Cross-site scripting",
+      "Denial of service only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "If sanitization does not correctly strip traversal sequences (or is applied before decoding), an attacker can escape the intended directory via `../` path traversal.",
+    "source": "Generated (based on Input Validation theory)",
+    "tags": [
+      "Validation",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0046",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "OWASP Top 10 Overview",
+    "difficulty": "Easy",
+    "question": "What is the OWASP Top 10?",
+    "options": [
+      "A list of the top 10 fastest web frameworks",
+      "A regularly updated list of the most critical web application security risks",
+      "A certification exam for penetration testers",
+      "A programming language ranking"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The OWASP Top 10 is an industry-standard awareness document ranking the most impactful web app security risks.",
+    "source": "Generated (based on OWASP Top 10 Overview theory)",
+    "tags": [
+      "OWASP",
+      "Security"
+    ],
+    "company": [
+      "OWASP Foundation"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0047",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "OWASP Top 10 Overview",
+    "difficulty": "Easy",
+    "question": "Which category has consistently ranked among the top OWASP risks across recent editions?",
+    "options": [
+      "Excessive code comments",
+      "Slow page load times",
+      "Broken Access Control",
+      "Too many unit tests"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Broken Access Control has topped or near-topped recent OWASP Top 10 editions due to its prevalence and impact.",
+    "source": "Generated (based on OWASP Top 10 Overview theory)",
+    "tags": [
+      "OWASP",
+      "Security"
+    ],
+    "company": [
+      "OWASP Foundation"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0048",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "OWASP Top 10 Overview",
+    "difficulty": "Medium",
+    "question": "Why does OWASP periodically update the Top 10 list rather than keeping it static?",
+    "options": [
+      "The list is required by law to change every year",
+      "Static lists are technically impossible to publish",
+      "It has nothing to do with real-world data",
+      "The threat landscape and prevalent vulnerability classes evolve over time as technology and attack techniques change"
+    ],
+    "correctAnswer": 3,
+    "explanation": "OWASP bases updates on real-world incident and vulnerability data, which shifts as technology and attacker techniques evolve.",
+    "source": "Generated (based on OWASP Top 10 Overview theory)",
+    "tags": [
+      "OWASP",
+      "Security"
+    ],
+    "company": [
+      "OWASP Foundation"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0049",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "OWASP Top 10 Overview",
+    "difficulty": "Medium",
+    "question": "What is \"Security Misconfiguration\" as an OWASP risk category primarily about?",
+    "options": [
+      "Insecure default settings, unnecessary features enabled, or missing hardening across the stack",
+      "Only misconfigured DNS records",
+      "Only weak passwords",
+      "Only outdated browsers"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This broad category covers default credentials, verbose error messages, unnecessary open ports/services, and missing security headers.",
+    "source": "Generated (based on OWASP Top 10 Overview theory)",
+    "tags": [
+      "OWASP",
+      "Security"
+    ],
+    "company": [
+      "OWASP Foundation"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0050",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "OWASP Top 10 Overview",
+    "difficulty": "Hard",
+    "question": "A team treats \"not in the current OWASP Top 10\" as proof a class of bug is not worth fixing. Why is this reasoning flawed?",
+    "options": [
+      "The OWASP Top 10 covers literally every possible vulnerability",
+      "The Top 10 highlights prevalent categories but is not an exhaustive list of all possible vulnerabilities",
+      "Vulnerabilities outside the Top 10 cannot be exploited",
+      "The list is purely theoretical with no real attacks behind it"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Top 10 is a prioritized awareness tool, not a complete taxonomy — real risk assessment must go beyond just that list.",
+    "source": "Generated (based on OWASP Top 10 Overview theory)",
+    "tags": [
+      "OWASP",
+      "Security"
+    ],
+    "company": [
+      "OWASP Foundation"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0051",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Encryption at Rest vs In Transit",
+    "difficulty": "Easy",
+    "question": "What does \"encryption in transit\" protect against?",
+    "options": [
+      "Theft of a physical hard drive",
+      "Weak password choices",
+      "Interception of data as it travels across a network",
+      "SQL injection attacks"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Encryption in transit (e.g. TLS) protects data while it moves between client and server or between services.",
+    "source": "Generated (based on Encryption at Rest vs In Transit theory)",
+    "tags": [
+      "Encryption",
+      "Data Protection"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0052",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Encryption at Rest vs In Transit",
+    "difficulty": "Easy",
+    "question": "What does \"encryption at rest\" protect against?",
+    "options": [
+      "Man-in-the-middle attacks on network traffic",
+      "Cross-site scripting",
+      "Session fixation",
+      "Unauthorized access to stored data if underlying storage is compromised"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Encryption at rest protects stored data (disk, database, backups) from exposure if storage media is accessed improperly.",
+    "source": "Generated (based on Encryption at Rest vs In Transit theory)",
+    "tags": [
+      "Encryption",
+      "Data Protection"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0053",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Encryption at Rest vs In Transit",
+    "difficulty": "Medium",
+    "question": "Why is TLS alone insufficient if a database is later breached directly?",
+    "options": [
+      "TLS only protects data while traveling over the network, not once it is stored on disk",
+      "TLS also encrypts data at rest automatically",
+      "TLS prevents all forms of database breaches",
+      "TLS is a replacement for authentication"
+    ],
+    "correctAnswer": 0,
+    "explanation": "TLS secures the transport channel; a direct storage compromise (e.g. stolen disk, SQLi dump) bypasses TLS entirely, requiring at-rest encryption.",
+    "source": "Generated (based on Encryption at Rest vs In Transit theory)",
+    "tags": [
+      "Encryption",
+      "Data Protection"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0054",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Encryption at Rest vs In Transit",
+    "difficulty": "Medium",
+    "question": "Why is key management often considered the hardest part of an encryption strategy?",
+    "options": [
+      "Encryption keys never need to be rotated",
+      "Poor key storage or rotation practices can undermine even strong encryption algorithms",
+      "Keys are automatically managed by the operating system",
+      "Key management has no effect on security"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Strong algorithms are useless if keys are exposed, hardcoded, or never rotated — key management is often the actual weak link.",
+    "source": "Generated (based on Encryption at Rest vs In Transit theory)",
+    "tags": [
+      "Encryption",
+      "Data Protection"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0055",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Encryption at Rest vs In Transit",
+    "difficulty": "Hard",
+    "question": "A backup system encrypts data at rest using a key stored in the same database as the encrypted data. What is the core flaw?",
+    "options": [
+      "This setup is actually a security best practice",
+      "Encryption at rest is unnecessary if backups are also encrypted",
+      "An attacker who compromises the database gains both the ciphertext and the key needed to decrypt it",
+      "The flaw only matters for network-based attacks"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Encryption provides no protection if the key is co-located with the data it protects — keys must be stored and access-controlled separately (e.g. a dedicated KMS).",
+    "source": "Generated (based on Encryption at Rest vs In Transit theory)",
+    "tags": [
+      "Encryption",
+      "Data Protection"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0056",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "CORS",
+    "difficulty": "Easy",
+    "question": "What problem does CORS (Cross-Origin Resource Sharing) solve?",
+    "options": [
+      "It encrypts all cross-origin traffic",
+      "It replaces the need for HTTPS",
+      "It blocks all cross-origin requests permanently",
+      "It lets a server explicitly opt in to allowing certain other origins to access its resources via the browser"
+    ],
+    "correctAnswer": 3,
+    "explanation": "CORS is a controlled relaxation of the browser's same-origin policy, letting servers whitelist trusted origins.",
+    "source": "Generated (based on CORS theory)",
+    "tags": [
+      "CORS",
+      "Browser Security"
+    ],
+    "company": [
+      "Mozilla",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0057",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "CORS",
+    "difficulty": "Easy",
+    "question": "What does the same-origin policy restrict by default?",
+    "options": [
+      "A script on one origin from freely reading responses from a different origin",
+      "A script from making any network request at all",
+      "A page from loading any images",
+      "A server from responding to any request"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The same-origin policy is the browser's default sandboxing that CORS selectively relaxes.",
+    "source": "Generated (based on CORS theory)",
+    "tags": [
+      "CORS",
+      "Browser Security"
+    ],
+    "company": [
+      "Mozilla",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0058",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "CORS",
+    "difficulty": "Medium",
+    "question": "Why is setting `Access-Control-Allow-Origin: *` combined with credentials risky?",
+    "options": [
+      "A wildcard origin has no effect on security at all",
+      "Browsers block credentialed requests with a wildcard origin, and using a reflected origin instead can expose credentialed data to any site",
+      "It only affects response compression",
+      "It is required for any API to function with cookies"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Combining a fully open origin policy with credentialed requests (cookies/auth headers) can let any website read authenticated responses.",
+    "source": "Generated (based on CORS theory)",
+    "tags": [
+      "CORS",
+      "Browser Security"
+    ],
+    "company": [
+      "Mozilla",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0059",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "CORS",
+    "difficulty": "Medium",
+    "question": "From a security review standpoint, why does the browser send a preflight OPTIONS request before certain cross-origin calls?",
+    "options": [
+      "It pre-loads the destination page's assets for faster rendering",
+      "It measures round-trip latency to the target server",
+      "It lets the server confirm in advance that the actual cross-origin request is permitted, before any potentially state-changing request is sent",
+      "It duplicates the main request as a redundancy safeguard"
+    ],
+    "correctAnswer": 2,
+    "explanation": "For certain methods/headers, the browser first sends an OPTIONS preflight to confirm the server allows the actual request.",
+    "source": "Generated (based on CORS theory)",
+    "tags": [
+      "CORS",
+      "Browser Security"
+    ],
+    "company": [
+      "Mozilla",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0060",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "CORS",
+    "difficulty": "Hard",
+    "question": "A server dynamically reflects any request's `Origin` header back in `Access-Control-Allow-Origin` to \"support many origins easily.\" What is the security risk?",
+    "options": [
+      "This approach is actually the recommended CORS pattern",
+      "It has no risk since Origin headers cannot be spoofed by a browser",
+      "It only affects response caching behavior",
+      "It effectively allows any origin to make credentialed cross-origin requests, defeating the purpose of CORS restriction"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Blindly reflecting Origin without validating against a real allowlist turns CORS into a no-op protection, allowing any site to interact with authenticated endpoints.",
+    "source": "Generated (based on CORS theory)",
+    "tags": [
+      "CORS",
+      "Browser Security"
+    ],
+    "company": [
+      "Mozilla",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0061",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Headers",
+    "difficulty": "Easy",
+    "question": "What does the `Strict-Transport-Security` (HSTS) header do?",
+    "options": [
+      "Instructs browsers to only connect to the site over HTTPS for a specified duration",
+      "Encrypts the page content client-side",
+      "Blocks all cookies from being set",
+      "Disables caching entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "HSTS prevents protocol downgrade attacks by forcing the browser to use HTTPS for future requests to the domain.",
+    "source": "Generated (based on Security Headers theory)",
+    "tags": [
+      "HTTP Headers",
+      "Hardening"
+    ],
+    "company": [
+      "Mozilla",
+      "Cloudflare"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0062",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Headers",
+    "difficulty": "Easy",
+    "question": "What does the `X-Content-Type-Options: nosniff` header prevent?",
+    "options": [
+      "Cross-site scripting entirely on its own",
+      "The browser guessing/overriding a resource's declared MIME type",
+      "SQL injection attempts",
+      "CSRF attacks"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Nosniff stops browsers from MIME-sniffing content in a way that could turn a non-executable file into executable script.",
+    "source": "Generated (based on Security Headers theory)",
+    "tags": [
+      "HTTP Headers",
+      "Hardening"
+    ],
+    "company": [
+      "Mozilla",
+      "Cloudflare"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0063",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Headers",
+    "difficulty": "Medium",
+    "question": "How does a `Content-Security-Policy` header reduce XSS impact?",
+    "options": [
+      "It encrypts all inline scripts automatically",
+      "It disables JavaScript entirely on the page",
+      "It restricts which sources scripts/styles/resources can load from, blocking many injected script execution paths",
+      "It blocks all third-party cookies"
+    ],
+    "correctAnswer": 2,
+    "explanation": "CSP acts as a browser-enforced allowlist for content sources, providing defense-in-depth against successful injection.",
+    "source": "Generated (based on Security Headers theory)",
+    "tags": [
+      "HTTP Headers",
+      "Hardening"
+    ],
+    "company": [
+      "Mozilla",
+      "Cloudflare"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0064",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Headers",
+    "difficulty": "Medium",
+    "question": "Why is the `X-Frame-Options` (or frame-ancestors CSP directive) header used?",
+    "options": [
+      "To speed up page rendering inside frames",
+      "To allow unlimited embedding on any site",
+      "To block all image loading",
+      "To prevent the page from being embedded in a malicious iframe for clickjacking attacks"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Restricting framing prevents clickjacking, where a hidden iframe tricks users into interacting with a page they cannot see.",
+    "source": "Generated (based on Security Headers theory)",
+    "tags": [
+      "HTTP Headers",
+      "Hardening"
+    ],
+    "company": [
+      "Mozilla",
+      "Cloudflare"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0065",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Headers",
+    "difficulty": "Hard",
+    "question": "A site sets a strict CSP but still allows `unsafe-inline` for scripts to avoid refactoring legacy inline handlers. What is the practical security consequence?",
+    "options": [
+      "It significantly weakens CSP's XSS mitigation, since injected inline scripts would still execute",
+      "It has no effect on the CSP's protection level",
+      "It only affects stylesheet loading",
+      "It automatically blocks all external script sources instead"
+    ],
+    "correctAnswer": 0,
+    "explanation": "unsafe-inline defeats one of CSP's main XSS protections by allowing any inline script — including an attacker's injected payload — to run.",
+    "source": "Generated (based on Security Headers theory)",
+    "tags": [
+      "HTTP Headers",
+      "Hardening"
+    ],
+    "company": [
+      "Mozilla",
+      "Cloudflare"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0066",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Secrets Management",
+    "difficulty": "Easy",
+    "question": "Why is hardcoding API keys or passwords in source code a security risk?",
+    "options": [
+      "Hardcoded secrets always cause compile errors",
+      "They become permanently exposed in version control history even if later removed",
+      "Hardcoding secrets improves application startup time",
+      "It is required for CI pipelines to work"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Once committed, a secret typically remains recoverable from git history even after a later commit removes it.",
+    "source": "Generated (based on Secrets Management theory)",
+    "tags": [
+      "Secrets",
+      "DevSecOps"
+    ],
+    "company": [
+      "HashiCorp",
+      "AWS"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0067",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Secrets Management",
+    "difficulty": "Easy",
+    "question": "What is a common alternative to hardcoding secrets in application code?",
+    "options": [
+      "Storing secrets in a public README for easy access",
+      "Emailing secrets to the team each release",
+      "A dedicated secrets manager or environment-injected configuration",
+      "Storing secrets in client-side JavaScript"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Secrets managers (e.g. Vault, AWS Secrets Manager) inject credentials at runtime without embedding them in source.",
+    "source": "Generated (based on Secrets Management theory)",
+    "tags": [
+      "Secrets",
+      "DevSecOps"
+    ],
+    "company": [
+      "HashiCorp",
+      "AWS"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0068",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Secrets Management",
+    "difficulty": "Medium",
+    "question": "Why should secrets be rotated periodically even without a known breach?",
+    "options": [
+      "Rotation is required by all programming languages",
+      "It improves application performance",
+      "It removes the need for access controls entirely",
+      "It limits the exposure window if a secret was leaked undetected"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Regular rotation bounds how long an unnoticed leak remains useful to an attacker.",
+    "source": "Generated (based on Secrets Management theory)",
+    "tags": [
+      "Secrets",
+      "DevSecOps"
+    ],
+    "company": [
+      "HashiCorp",
+      "AWS"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0069",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Secrets Management",
+    "difficulty": "Medium",
+    "question": "Why is committing a `.env` file containing production secrets to a private repository still risky?",
+    "options": [
+      "Anyone with repo access (including former employees, CI logs, or a future accidental public fork) can read the secrets",
+      "Private repositories cannot be cloned by anyone",
+      ".env files are automatically encrypted by git",
+      "Private repos never leak accidentally"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Private today does not guarantee private forever — access scope changes, and secrets in history persist regardless.",
+    "source": "Generated (based on Secrets Management theory)",
+    "tags": [
+      "Secrets",
+      "DevSecOps"
+    ],
+    "company": [
+      "HashiCorp",
+      "AWS"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0070",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Secrets Management",
+    "difficulty": "Hard",
+    "question": "A leaked cloud credential is discovered in an old commit from two years ago. What is the most important immediate action beyond removing it from the current codebase?",
+    "options": [
+      "Force-push to rewrite history and consider the incident closed",
+      "Revoke/rotate the actual credential immediately, since removing it from code does not invalidate the leaked value",
+      "Wait until the next scheduled rotation cycle",
+      "Only notify the security team without rotating the key"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The leaked credential remains valid and usable by an attacker until it is explicitly revoked/rotated — code removal alone does not fix the exposure.",
+    "source": "Generated (based on Secrets Management theory)",
+    "tags": [
+      "Secrets",
+      "DevSecOps"
+    ],
+    "company": [
+      "HashiCorp",
+      "AWS"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0071",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Dependency Vulnerabilities",
+    "difficulty": "Easy",
+    "question": "Why should third-party dependencies be regularly scanned for known vulnerabilities?",
+    "options": [
+      "Dependencies never contain security issues",
+      "Scanning is only relevant for compiled languages",
+      "A dependency's vulnerability becomes part of the application's attack surface",
+      "Dependencies are automatically patched by the runtime"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An application inherits the security posture of every library it depends on, transitively.",
+    "source": "Generated (based on Dependency Vulnerabilities theory)",
+    "tags": [
+      "Supply Chain",
+      "Dependencies"
+    ],
+    "company": [
+      "GitHub",
+      "Snyk"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0072",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Dependency Vulnerabilities",
+    "difficulty": "Easy",
+    "question": "What is a transitive dependency vulnerability?",
+    "options": [
+      "A vulnerability that only affects transit encryption",
+      "A vulnerability found only in test dependencies",
+      "A vulnerability that transitions between programming languages",
+      "A vulnerability in a package that your direct dependency itself depends on"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Transitive dependencies are pulled in indirectly, and their vulnerabilities are easy to overlook without proper scanning.",
+    "source": "Generated (based on Dependency Vulnerabilities theory)",
+    "tags": [
+      "Supply Chain",
+      "Dependencies"
+    ],
+    "company": [
+      "GitHub",
+      "Snyk"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0073",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Dependency Vulnerabilities",
+    "difficulty": "Medium",
+    "question": "Why is pinning exact dependency versions alone not sufficient for security?",
+    "options": [
+      "A pinned version can still contain an undiscovered or unpatched vulnerability that requires an eventual update",
+      "Pinning versions guarantees permanent security",
+      "Pinned versions cannot be scanned by any tool",
+      "Pinning automatically applies security patches"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Pinning provides reproducibility but does not protect against vulnerabilities discovered in that exact pinned version later.",
+    "source": "Generated (based on Dependency Vulnerabilities theory)",
+    "tags": [
+      "Supply Chain",
+      "Dependencies"
+    ],
+    "company": [
+      "GitHub",
+      "Snyk"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0074",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Dependency Vulnerabilities",
+    "difficulty": "Medium",
+    "question": "What is a supply chain attack in the context of dependencies?",
+    "options": [
+      "An attack purely on physical shipping logistics",
+      "An attacker compromises a legitimate package (or its maintainer account) to inject malicious code distributed to all its users",
+      "An attack that only targets internal company networks",
+      "A denial-of-service attack against a package registry"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Supply chain attacks compromise trusted upstream packages, spreading malicious code to every downstream consumer automatically.",
+    "source": "Generated (based on Dependency Vulnerabilities theory)",
+    "tags": [
+      "Supply Chain",
+      "Dependencies"
+    ],
+    "company": [
+      "GitHub",
+      "Snyk"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0075",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Dependency Vulnerabilities",
+    "difficulty": "Hard",
+    "question": "A critical dependency has a known high-severity CVE, but upgrading requires a major version bump with breaking API changes. What is the best interim risk mitigation strategy?",
+    "options": [
+      "Ignore the CVE since upgrading is inconvenient",
+      "Delete the dependency entirely without a replacement",
+      "Assess if the vulnerable code path is actually reachable, and apply a temporary mitigation (e.g. WAF rule, config change) while planning the upgrade",
+      "Wait indefinitely until a non-breaking patch is released"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Reachability analysis plus a temporary compensating control balances immediate risk reduction against the real cost of a breaking upgrade.",
+    "source": "Generated (based on Dependency Vulnerabilities theory)",
+    "tags": [
+      "Supply Chain",
+      "Dependencies"
+    ],
+    "company": [
+      "GitHub",
+      "Snyk"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0076",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Least Privilege Principle",
+    "difficulty": "Easy",
+    "question": "What does the principle of least privilege state?",
+    "options": [
+      "Every user should have administrator access by default",
+      "Access should be granted based on seniority alone",
+      "Access controls should be disabled to improve performance",
+      "Every user, process, or service should have only the minimum access needed to perform its function"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Least privilege minimizes the potential damage from a compromised account, bug, or insider threat.",
+    "source": "Generated (based on Least Privilege Principle theory)",
+    "tags": [
+      "Access Control",
+      "IAM"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0077",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Least Privilege Principle",
+    "difficulty": "Easy",
+    "question": "Why is granting a background job broad admin database permissions risky, even if it only reads one table?",
+    "options": [
+      "If compromised, the job's credentials could be used to access or modify far more than intended",
+      "Admin permissions always make jobs run faster",
+      "Broad permissions are required for read-only operations",
+      "It has no additional risk beyond the intended read"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Excess permissions expand the blast radius of any compromise of that job's credentials.",
+    "source": "Generated (based on Least Privilege Principle theory)",
+    "tags": [
+      "Access Control",
+      "IAM"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0078",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Least Privilege Principle",
+    "difficulty": "Medium",
+    "question": "What is \"privilege creep\" in an organization's access model?",
+    "options": [
+      "A sudden spike in login attempts",
+      "Users accumulating access over time (e.g. role changes) beyond what their current role actually needs",
+      "A vulnerability in privilege escalation exploits only",
+      "A performance degradation from too many permission checks"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Privilege creep happens when access is added for past roles but never revoked as responsibilities change, violating least privilege over time.",
+    "source": "Generated (based on Least Privilege Principle theory)",
+    "tags": [
+      "Access Control",
+      "IAM"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0079",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Least Privilege Principle",
+    "difficulty": "Medium",
+    "question": "Why are periodic access reviews an important complement to least privilege?",
+    "options": [
+      "Access reviews are only relevant for physical security",
+      "They replace the need for authentication entirely",
+      "They catch accumulated excess permissions that were granted but never revoked",
+      "Reviews are required only once at account creation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Regular reviews catch privilege creep and stale access grants that violate the least-privilege principle over time.",
+    "source": "Generated (based on Least Privilege Principle theory)",
+    "tags": [
+      "Access Control",
+      "IAM"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0080",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Least Privilege Principle",
+    "difficulty": "Hard",
+    "question": "A CI/CD pipeline uses a single set of cloud credentials with account-wide admin rights to deploy to all environments (dev, staging, prod). What is the strongest argument for scoping credentials per-environment instead?",
+    "options": [
+      "Per-environment credentials make deployments run faster",
+      "Admin credentials are required for any deployment to succeed",
+      "Scoping credentials has no effect on incident blast radius",
+      "A compromise of the CI system would otherwise grant an attacker full control over production, not just the intended environment"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Scoping least-privilege credentials per environment ensures a CI compromise (a common attack target) cannot cascade into full production takeover.",
+    "source": "Generated (based on Least Privilege Principle theory)",
+    "tags": [
+      "Access Control",
+      "IAM"
+    ],
+    "company": [
+      "AWS",
+      "Google Cloud"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0081",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Server-Side Request Forgery (SSRF)",
+    "difficulty": "Easy",
+    "question": "What is Server-Side Request Forgery (SSRF)?",
+    "options": [
+      "Tricking a server into making unintended requests to internal or unintended destinations on the attacker's behalf",
+      "A client-side attack that forges browser requests",
+      "A method to speed up server response times",
+      "A type of denial-of-service attack on client devices"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SSRF abuses server-side functionality (e.g. \"fetch this URL\") to reach internal systems the attacker could not reach directly.",
+    "source": "Generated (based on Server-Side Request Forgery (SSRF) theory)",
+    "tags": [
+      "SSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Capital One"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0082",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Server-Side Request Forgery (SSRF)",
+    "difficulty": "Easy",
+    "question": "Which feature commonly introduces SSRF risk if not carefully validated?",
+    "options": [
+      "A purely client-side form validation rule",
+      "A server-side \"fetch URL from user input\" feature (e.g. webhook or image-fetch)",
+      "A CSS stylesheet import",
+      "A static HTML page"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Any feature where the server fetches a user-supplied URL is a classic SSRF vector if the destination is not restricted.",
+    "source": "Generated (based on Server-Side Request Forgery (SSRF) theory)",
+    "tags": [
+      "SSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Capital One"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0083",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Server-Side Request Forgery (SSRF)",
+    "difficulty": "Medium",
+    "question": "Why is SSRF especially dangerous in cloud environments?",
+    "options": [
+      "Cloud environments are immune to SSRF by design",
+      "SSRF only works on-premises, never in the cloud",
+      "It can be used to reach cloud metadata endpoints and steal instance credentials",
+      "It has no special relevance to cloud infrastructure"
+    ],
+    "correctAnswer": 2,
+    "explanation": "SSRF is frequently used to access cloud instance metadata services, which can leak temporary credentials with significant permissions.",
+    "source": "Generated (based on Server-Side Request Forgery (SSRF) theory)",
+    "tags": [
+      "SSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Capital One"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0084",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Server-Side Request Forgery (SSRF)",
+    "difficulty": "Medium",
+    "question": "Why is blocklisting `localhost` and `127.0.0.1` alone an insufficient SSRF defense?",
+    "options": [
+      "Those addresses cannot be reached by any server",
+      "Blocklisting those addresses is fully comprehensive",
+      "SSRF cannot target internal IP ranges at all",
+      "Attackers can use alternate representations (e.g. decimal IPs, DNS rebinding, IPv6) to bypass a naive blocklist"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Naive blocklists miss encoding tricks, redirects, and DNS rebinding that still resolve to internal/forbidden addresses.",
+    "source": "Generated (based on Server-Side Request Forgery (SSRF) theory)",
+    "tags": [
+      "SSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Capital One"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0085",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Server-Side Request Forgery (SSRF)",
+    "difficulty": "Hard",
+    "question": "An image-processing service fetches a user-provided image URL, follows redirects, and has no destination allowlist. What is the most robust mitigation?",
+    "options": [
+      "Resolve and validate the destination against an allowlist at each redirect hop, blocking internal/private IP ranges",
+      "Just check the original URL's hostname before any redirects occur",
+      "Disable image processing entirely",
+      "Rely on the cloud provider to block all internal traffic automatically"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Redirects can silently point to internal addresses after an initial check passes, so validation must apply at every hop, not just the first request.",
+    "source": "Generated (based on Server-Side Request Forgery (SSRF) theory)",
+    "tags": [
+      "SSRF",
+      "OWASP"
+    ],
+    "company": [
+      "Amazon",
+      "Capital One"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0086",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Insecure Deserialization",
+    "difficulty": "Easy",
+    "question": "What is the core risk of insecure deserialization?",
+    "options": [
+      "Deserialization is always slower than serialization",
+      "Deserializing untrusted data can trigger unintended code execution or object state manipulation",
+      "It only affects XML-based formats",
+      "It has no security implications, only performance ones"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Deserializing attacker-controlled data can instantiate unexpected objects or trigger gadget chains leading to remote code execution.",
+    "source": "Generated (based on Insecure Deserialization theory)",
+    "tags": [
+      "Deserialization",
+      "OWASP"
+    ],
+    "company": [
+      "Oracle",
+      "Apache"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0087",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Insecure Deserialization",
+    "difficulty": "Easy",
+    "question": "Which practice reduces insecure deserialization risk?",
+    "options": [
+      "Always using the most feature-rich serialization library available",
+      "Deserializing as early as possible in the request pipeline",
+      "Avoiding deserialization of data from untrusted sources, or using safe, restricted formats like JSON with strict schemas",
+      "Disabling all input validation to simplify parsing"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Restricting formats/schemas and avoiding deserialization of fully untrusted, arbitrary object graphs closes off the main risk.",
+    "source": "Generated (based on Insecure Deserialization theory)",
+    "tags": [
+      "Deserialization",
+      "OWASP"
+    ],
+    "company": [
+      "Oracle",
+      "Apache"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0088",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Insecure Deserialization",
+    "difficulty": "Medium",
+    "question": "Why are language-native serialization formats (e.g. Java serialization, Python pickle) especially risky for untrusted input?",
+    "options": [
+      "They are always slower than JSON",
+      "They cannot represent nested data structures",
+      "They require no parsing logic at all",
+      "They can reconstruct arbitrary objects and invoke code during deserialization, enabling gadget-chain exploits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Native object serialization formats can trigger constructors/methods during reconstruction, which attackers can chain into code execution (\"gadget chains\").",
+    "source": "Generated (based on Insecure Deserialization theory)",
+    "tags": [
+      "Deserialization",
+      "OWASP"
+    ],
+    "company": [
+      "Oracle",
+      "Apache"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0089",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Insecure Deserialization",
+    "difficulty": "Medium",
+    "question": "What is a \"gadget chain\" in the context of deserialization attacks?",
+    "options": [
+      "A sequence of existing classes/methods on the classpath that, when invoked in order during deserialization, achieve a malicious side effect",
+      "A hardware chain of servers processing a single request",
+      "A chain of encrypted tokens used for authentication",
+      "A chain of database transactions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Gadget chains repurpose legitimate application/library code paths, triggered via deserialization, to accomplish an attacker's goal like code execution.",
+    "source": "Generated (based on Insecure Deserialization theory)",
+    "tags": [
+      "Deserialization",
+      "OWASP"
+    ],
+    "company": [
+      "Oracle",
+      "Apache"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0090",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Insecure Deserialization",
+    "difficulty": "Hard",
+    "question": "A legacy Java service must continue supporting native Java object serialization for internal RPC. What is the most effective mitigation short of a full protocol rewrite?",
+    "options": [
+      "Disable all logging to hide the deserialization calls",
+      "Implement deserialization allowlisting/filtering (e.g. a look-ahead deserialization filter restricting allowed classes)",
+      "Increase the JVM heap size to prevent related crashes",
+      "Rely solely on network firewalls for protection"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A class-allowlist deserialization filter restricts which classes can be instantiated during deserialization, blocking most gadget-chain exploits without a full protocol migration.",
+    "source": "Generated (based on Insecure Deserialization theory)",
+    "tags": [
+      "Deserialization",
+      "OWASP"
+    ],
+    "company": [
+      "Oracle",
+      "Apache"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0091",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Broken Access Control",
+    "difficulty": "Easy",
+    "question": "What is \"Broken Access Control\" as a vulnerability class?",
+    "options": [
+      "A failure of TLS certificate validation",
+      "A weak password policy",
+      "A failure to properly enforce restrictions on what authenticated users are allowed to do or access",
+      "A misconfigured firewall port"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Broken access control covers cases where authorization checks are missing, bypassable, or incorrectly scoped.",
+    "source": "Generated (based on Broken Access Control theory)",
+    "tags": [
+      "Access Control",
+      "OWASP"
+    ],
+    "company": [
+      "OWASP Foundation",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0092",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Broken Access Control",
+    "difficulty": "Easy",
+    "question": "What is an Insecure Direct Object Reference (IDOR)?",
+    "options": [
+      "A reference to an object that no longer exists in memory",
+      "A type of SQL injection",
+      "A method for referencing external APIs",
+      "Accessing another user's resource by simply changing an ID in a request, without proper ownership checks"
+    ],
+    "correctAnswer": 3,
+    "explanation": "IDOR occurs when an application exposes internal object identifiers without verifying the requester actually owns/can access that object.",
+    "source": "Generated (based on Broken Access Control theory)",
+    "tags": [
+      "Access Control",
+      "OWASP"
+    ],
+    "company": [
+      "OWASP Foundation",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0093",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Broken Access Control",
+    "difficulty": "Medium",
+    "question": "Why is client-side hiding of an admin-only UI button insufficient access control?",
+    "options": [
+      "The underlying API endpoint can still be called directly by anyone who knows or guesses the URL",
+      "Hiding a button always disables the endpoint automatically",
+      "Client-side hiding is cryptographically enforced",
+      "Browsers block direct API calls to hidden endpoints"
+    ],
+    "correctAnswer": 0,
+    "explanation": "UI-level hiding is not a security boundary; the server must independently verify authorization for every protected action.",
+    "source": "Generated (based on Broken Access Control theory)",
+    "tags": [
+      "Access Control",
+      "OWASP"
+    ],
+    "company": [
+      "OWASP Foundation",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0094",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Broken Access Control",
+    "difficulty": "Medium",
+    "question": "Why should authorization checks be enforced on every request rather than cached from an earlier check in the session?",
+    "options": [
+      "Per-request checks are always slower and should be avoided",
+      "A user's permissions can change mid-session (e.g. role downgrade or account suspension), and cached checks would not reflect that",
+      "Cached authorization is cryptographically guaranteed to be current",
+      "Session-level checks are sufficient for all applications"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Permissions can change during an active session; verifying on every sensitive request ensures revoked or downgraded access is respected immediately.",
+    "source": "Generated (based on Broken Access Control theory)",
+    "tags": [
+      "Access Control",
+      "OWASP"
+    ],
+    "company": [
+      "OWASP Foundation",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0095",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Broken Access Control",
+    "difficulty": "Hard",
+    "question": "An API endpoint `/orders/{id}` correctly checks that the requester is authenticated, but not that the order belongs to them. What is this specific flaw called and what is the fix?",
+    "options": [
+      "CSRF — add an anti-CSRF token to the request",
+      "XSS — sanitize the order ID before use",
+      "IDOR — add an ownership check comparing the order's owner to the authenticated user before returning data",
+      "Rate limiting gap — add a rate limiter to the endpoint"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is a textbook IDOR: authentication alone was checked, but the missing per-resource ownership/authorization check lets any user view or modify others' orders.",
+    "source": "Generated (based on Broken Access Control theory)",
+    "tags": [
+      "Access Control",
+      "OWASP"
+    ],
+    "company": [
+      "OWASP Foundation",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sec_0096",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Logging and Monitoring",
+    "difficulty": "Easy",
+    "question": "Why is security event logging important?",
+    "options": [
+      "Logging automatically prevents all attacks",
+      "Logs are only useful for performance tuning",
+      "Security logging is optional for compliance purposes",
+      "It enables detection of attacks and provides an audit trail for investigating incidents after the fact"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Without adequate logging, breaches often go undetected for long periods and are far harder to investigate afterward.",
+    "source": "Generated (based on Security Logging and Monitoring theory)",
+    "tags": [
+      "Logging",
+      "Monitoring"
+    ],
+    "company": [
+      "Splunk",
+      "Datadog"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0097",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Logging and Monitoring",
+    "difficulty": "Easy",
+    "question": "What kind of event should typically be logged for security purposes?",
+    "options": [
+      "Failed login attempts and privilege changes",
+      "Successful page load times only",
+      "CSS rendering events",
+      "Font loading failures"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Authentication failures and privilege/permission changes are classic signals used to detect and investigate abuse.",
+    "source": "Generated (based on Security Logging and Monitoring theory)",
+    "tags": [
+      "Logging",
+      "Monitoring"
+    ],
+    "company": [
+      "Splunk",
+      "Datadog"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sec_0098",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Logging and Monitoring",
+    "difficulty": "Medium",
+    "question": "Why should security logs avoid recording sensitive data like plaintext passwords or full credit card numbers?",
+    "options": [
+      "Logs are always encrypted automatically, making this a non-issue",
+      "Logs themselves become a high-value target and a compliance liability if they leak sensitive data",
+      "Sensitive data cannot be logged technically",
+      "Logging sensitive data improves searchability with no downside"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Log stores are frequently less protected than primary data stores; logging secrets/PII simply creates another exposure point.",
+    "source": "Generated (based on Security Logging and Monitoring theory)",
+    "tags": [
+      "Logging",
+      "Monitoring"
+    ],
+    "company": [
+      "Splunk",
+      "Datadog"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0099",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Logging and Monitoring",
+    "difficulty": "Medium",
+    "question": "Why is centralized log aggregation important in a microservices architecture?",
+    "options": [
+      "Centralizing logs always slows down each individual service",
+      "Each service's local logs are always sufficient for investigation",
+      "Correlating an attack across multiple services requires visibility into logs from all of them in one place",
+      "Aggregation eliminates the need for log retention policies"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A single request or attack often spans multiple services; central aggregation is what makes cross-service correlation and detection possible.",
+    "source": "Generated (based on Security Logging and Monitoring theory)",
+    "tags": [
+      "Logging",
+      "Monitoring"
+    ],
+    "company": [
+      "Splunk",
+      "Datadog"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sec_0100",
+    "level": "Level 20",
+    "category": "Security",
+    "topic": "Security Logging and Monitoring",
+    "difficulty": "Hard",
+    "question": "A company detects a breach three months after it occurred, and logs from that period have already been purged per a 30-day retention policy. What is the key lesson for future log/retention design?",
+    "options": [
+      "Logs should never be retained longer than 30 days for any reason",
+      "This outcome is unavoidable and unrelated to retention policy",
+      "Real-time alerting makes retention policy irrelevant",
+      "Retention periods should be set based on realistic detection and investigation timelines, balancing storage cost against forensic needs"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Retention policy is a security control in itself — too short a window can erase the only evidence needed to investigate a slow-burn or delayed-discovery breach.",
+    "source": "Generated (based on Security Logging and Monitoring theory)",
+    "tags": [
+      "Logging",
+      "Monitoring"
+    ],
+    "company": [
+      "Splunk",
+      "Datadog"
+    ],
+    "estimatedTime": 60
+  }
+]

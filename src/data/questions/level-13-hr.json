@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "hr_0001",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Tell Me About Yourself",
+    "difficulty": "Easy",
+    "question": "You're asked \"Tell me about yourself\" at the start of an interview. Which response best follows interview best practice?",
+    "options": [
+      "A concise 60–90 second narrative covering your current role, relevant background, and why you're interested in this position",
+      "A detailed recap of your entire life story starting from childhood",
+      "A word-for-word recitation of your resume, line by line",
+      "A joke to break the ice, followed by silence waiting for the next question"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A tight present-past-future narrative shows you can communicate concisely and keeps the answer relevant to the role, which is what interviewers are actually screening for.",
+    "source": "Generated (based on Tell Me About Yourself theory)",
+    "tags": [
+      "Opening Question",
+      "Self-Introduction"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0002",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Tell Me About Yourself",
+    "difficulty": "Easy",
+    "question": "What is the primary purpose of the \"Tell me about yourself\" question from the interviewer's perspective?",
+    "options": [
+      "To test your ability to recall exact dates of past jobs",
+      "To assess how well you summarize your professional narrative and communicate concisely",
+      "To evaluate your handwriting on a whiteboard",
+      "To fill time before the \"real\" questions begin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "It is a communication and framing test, not a memory test — interviewers want to see if you can distill your background into a clear, relevant story.",
+    "source": "Generated (based on Tell Me About Yourself theory)",
+    "tags": [
+      "Opening Question",
+      "Communication"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0003",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Tell Me About Yourself",
+    "difficulty": "Medium",
+    "question": "A candidate answers \"Tell me about yourself\" with a rambling 8-minute answer covering unrelated hobbies and family history. What should they have done instead?",
+    "options": [
+      "Keep rambling, since more information always helps",
+      "Ask the interviewer to skip the question entirely",
+      "Structure the answer around present role, relevant past experience, and future goals tied to the job, in under two minutes",
+      "Answer only with \"I'd rather not say\""
+    ],
+    "correctAnswer": 2,
+    "explanation": "Time-boxing the answer to a structured present-past-future arc keeps it relevant and respects the interviewer's time, both signals of professionalism.",
+    "source": "Generated (based on Tell Me About Yourself theory)",
+    "tags": [
+      "Structure",
+      "Conciseness"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0004",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Tell Me About Yourself",
+    "difficulty": "Medium",
+    "question": "You're switching industries and are asked to tell the interviewer about yourself. Which framing is best practice?",
+    "options": [
+      "Avoid mentioning the industry change at all",
+      "Focus entirely on jargon from the previous industry",
+      "State upfront that your past experience is irrelevant",
+      "Emphasize transferable skills and explicitly connect past experience to the new role's requirements"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Explicitly bridging past experience to the target role helps the interviewer do the transferability reasoning for you instead of leaving them to guess.",
+    "source": "Generated (based on Tell Me About Yourself theory)",
+    "tags": [
+      "Career Change",
+      "Transferable Skills"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0005",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Tell Me About Yourself",
+    "difficulty": "Hard",
+    "question": "In a panel interview, one interviewer has already reviewed your resume in detail while the others have not. How should you calibrate your \"tell me about yourself\" answer?",
+    "options": [
+      "Give a version that works for the whole panel — concise and complete for those unfamiliar with your background, while adding forward-looking context of interest even to the interviewer who already knows your resume",
+      "Only address the interviewer who hasn't read your resume and ignore the others",
+      "Skip the resume basics and assume everyone already read it in full",
+      "Ask each panelist individually whether they need the summary repeated"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A panel answer has to serve mixed audiences at once; leading with a shared narrative and closing with forward-looking motivation keeps everyone engaged without wasting anyone's time.",
+    "source": "Generated (based on Tell Me About Yourself theory)",
+    "tags": [
+      "Panel Interview",
+      "Audience Calibration"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0006",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Strengths & Weaknesses",
+    "difficulty": "Easy",
+    "question": "When asked \"What is your greatest weakness?\", which answer best follows best practice?",
+    "options": [
+      "Claiming you have no weaknesses at all",
+      "Naming a real, job-relevant weakness along with a concrete step you've taken to improve it",
+      "Naming a strength disguised as a weakness, like \"I work too hard\"",
+      "Listing every flaw you can think of to seem humble"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A genuine weakness paired with active improvement shows self-awareness and growth mindset, which is what the question is actually testing.",
+    "source": "Generated (based on Strengths & Weaknesses theory)",
+    "tags": [
+      "Self-Awareness",
+      "Weakness"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0007",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Strengths & Weaknesses",
+    "difficulty": "Easy",
+    "question": "When asked about your greatest strength, what should the answer be anchored to?",
+    "options": [
+      "The most impressive-sounding strength regardless of job relevance",
+      "A strength that only your friends and family would recognize",
+      "A strength directly relevant to the job you're interviewing for, backed by a specific example",
+      "A generic list of adjectives with no supporting example"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Relevance plus evidence makes the strength credible and useful to the interviewer's decision, rather than just a flattering label.",
+    "source": "Generated (based on Strengths & Weaknesses theory)",
+    "tags": [
+      "Self-Awareness",
+      "Strength"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0008",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Strengths & Weaknesses",
+    "difficulty": "Medium",
+    "question": "A candidate says their greatest weakness is \"I care too much about my work.\" Why is this considered a weak answer in practice?",
+    "options": [
+      "It is too specific and reveals too much about the candidate",
+      "It focuses on a technical skill instead of a soft skill",
+      "It is factually impossible to verify",
+      "It is a thinly veiled humble-brag that avoids genuine self-reflection, which experienced interviewers recognize immediately"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Interviewers are trained to spot disguised-strength answers; they signal an unwillingness to engage honestly with self-improvement.",
+    "source": "Generated (based on Strengths & Weaknesses theory)",
+    "tags": [
+      "Common Mistakes",
+      "Weakness"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0009",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Strengths & Weaknesses",
+    "difficulty": "Medium",
+    "question": "You want to describe a weakness around public speaking. What is the best way to structure the answer?",
+    "options": [
+      "State the weakness plainly, give a brief example of its impact, then describe the specific action you're taking to address it",
+      "Mention the weakness and immediately change the subject",
+      "Explain the weakness in detail without mentioning any improvement effort",
+      "Deny that public speaking is actually difficult for you"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The weakness-impact-action structure turns a negative into evidence of self-awareness and proactive growth.",
+    "source": "Generated (based on Strengths & Weaknesses theory)",
+    "tags": [
+      "Structure",
+      "Weakness"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0010",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Strengths & Weaknesses",
+    "difficulty": "Hard",
+    "question": "You are interviewing for a role where your named weakness (say, delegating tasks) is a core requirement of the job itself. How should you handle the strengths/weaknesses question?",
+    "options": [
+      "Name the core-requirement weakness anyway to prove you are being fully honest",
+      "Choose a different, still-genuine weakness that isn't central to the role's core requirements, while being honest about ongoing growth areas",
+      "Claim you have no weaknesses to avoid the conflict entirely",
+      "Deflect the question by asking the interviewer about their own weaknesses"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Honesty doesn't require volunteering a disqualifying weakness; picking a real but non-critical weakness keeps the answer both truthful and strategically sound.",
+    "source": "Generated (based on Strengths & Weaknesses theory)",
+    "tags": [
+      "Strategy",
+      "Role Fit"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0011",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Why This Company",
+    "difficulty": "Easy",
+    "question": "When asked \"Why do you want to work here?\", which response demonstrates the best preparation?",
+    "options": [
+      "Saying you applied because the company was hiring",
+      "Saying you need a job and this one pays well",
+      "Referencing specific products, values, or initiatives of the company and connecting them to your own goals",
+      "Saying you have not researched the company but it seems fine"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Specific, researched reasons show genuine interest and effort, distinguishing you from candidates applying indiscriminately.",
+    "source": "Generated (based on Why This Company theory)",
+    "tags": [
+      "Company Research",
+      "Motivation"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0012",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Why This Company",
+    "difficulty": "Easy",
+    "question": "What is the main red flag interviewers listen for when evaluating a \"why this company\" answer?",
+    "options": [
+      "An answer that is too short in length",
+      "An answer that mentions the interviewer by name",
+      "An answer that references the company website",
+      "A generic answer that could apply to literally any company in the industry"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Generic, copy-paste-sounding answers signal the candidate has not done real research or considered genuine fit.",
+    "source": "Generated (based on Why This Company theory)",
+    "tags": [
+      "Common Mistakes",
+      "Motivation"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0013",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Why This Company",
+    "difficulty": "Medium",
+    "question": "You're asked why you want to join a company known for a distinctive engineering culture (e.g., strong code review practices). What is the best way to answer?",
+    "options": [
+      "Explain how that specific cultural trait aligns with how you like to work and grow, with a concrete personal reason",
+      "Say you had not heard of that cultural trait before the interview",
+      "Praise the trait in vague terms without connecting it to yourself",
+      "Say the trait does not matter to you either way"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Tying a specific, well-known cultural trait to your own working style shows both research and genuine self-reflection on fit.",
+    "source": "Generated (based on Why This Company theory)",
+    "tags": [
+      "Culture Fit",
+      "Research"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0014",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Why This Company",
+    "difficulty": "Medium",
+    "question": "A candidate's \"why this company\" answer focuses entirely on compensation and benefits. What is the issue with this approach?",
+    "options": [
+      "It is dishonest, since compensation is never a real motivator",
+      "It signals the candidate is compelled mainly by transactional factors rather than genuine interest in the mission or role",
+      "It is too vague to be useful",
+      "It violates standard interview etiquette rules"
+    ],
+    "correctAnswer": 1,
+    "explanation": "While pay matters to everyone, leading exclusively with it during this question suggests low interest in the actual work, which concerns hiring managers.",
+    "source": "Generated (based on Why This Company theory)",
+    "tags": [
+      "Common Mistakes",
+      "Motivation"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0015",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Why This Company",
+    "difficulty": "Hard",
+    "question": "You are interviewing at a company undergoing public layoffs and negative press. When asked \"why this company,\" what is the most credible way to answer?",
+    "options": [
+      "Avoid any mention of the layoffs and answer as if nothing happened",
+      "Bring up the negative press unprompted and ask the interviewer to justify it",
+      "Acknowledge you're aware of the challenges, then explain the specific opportunity or team you're drawn to despite them",
+      "Say the layoffs make no difference to your interest at all"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Acknowledging known context without dwelling on it, then pivoting to a specific, genuine reason for interest, reads as informed and mature rather than naive or confrontational.",
+    "source": "Generated (based on Why This Company theory)",
+    "tags": [
+      "Difficult Context",
+      "Credibility"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0016",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Goals",
+    "difficulty": "Easy",
+    "question": "When asked \"Where do you see yourself in five years?\", which answer best reflects best practice?",
+    "options": [
+      "A detailed plan to start your own competing company",
+      "Saying you have no idea and haven't thought about it",
+      "Naming a completely unrelated job in a different field",
+      "A realistic growth trajectory that connects your development to the role and company you're interviewing with"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Interviewers want to see that your goals are compatible with staying and growing at the company, not a countdown to leaving.",
+    "source": "Generated (based on Career Goals theory)",
+    "tags": [
+      "Career Planning",
+      "Growth"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0017",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Goals",
+    "difficulty": "Easy",
+    "question": "What is the main thing interviewers are trying to assess with career-goal questions?",
+    "options": [
+      "Whether your ambitions are realistic and reasonably aligned with what this role and company can offer",
+      "Whether you can predict the future with certainty",
+      "Whether you have memorized the company's five-year plan",
+      "Whether you are willing to relocate internationally"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The question is about alignment and realism, not prophecy — a well-aligned answer reduces perceived flight risk.",
+    "source": "Generated (based on Career Goals theory)",
+    "tags": [
+      "Career Planning",
+      "Alignment"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0018",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Goals",
+    "difficulty": "Medium",
+    "question": "A candidate answers the five-year question with \"I want your job,\" referring to the interviewer's role. Why is this considered a weak answer?",
+    "options": [
+      "It is illegal to state ambition for a specific role in an interview",
+      "It comes across as presumptuous and can make the interviewer uncomfortable rather than demonstrating genuine planning",
+      "It is too modest and undersells the candidate",
+      "It shows insufficient interest in leadership"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Overly specific, competitive-sounding goals aimed at the interviewer's own seat tend to read as tone-deaf rather than ambitious.",
+    "source": "Generated (based on Career Goals theory)",
+    "tags": [
+      "Common Mistakes",
+      "Ambition"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0019",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Goals",
+    "difficulty": "Medium",
+    "question": "You are early-career and unsure of your long-term specialization. What is the best way to answer a career-goals question honestly?",
+    "options": [
+      "Invent a rigid five-year plan you don't actually intend to follow",
+      "Say career goals do not matter to you at this stage",
+      "Describe the skills and experiences you want to build next, while showing openness to how the specific path unfolds",
+      "Refuse to answer since the future is uncertain"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Honest, direction-oriented answers (skills and growth areas) are more credible than a fabricated rigid plan, and still show intentionality.",
+    "source": "Generated (based on Career Goals theory)",
+    "tags": [
+      "Early Career",
+      "Flexibility"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0020",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Goals",
+    "difficulty": "Hard",
+    "question": "You privately plan to pursue an MBA and likely leave the industry within two years, but you're interviewing for a role expecting longer tenure. How should you answer the career-goals question?",
+    "options": [
+      "Volunteer the MBA plan and your intent to leave in exhaustive detail unprompted",
+      "Explicitly promise a specific number of years of tenure you cannot guarantee",
+      "Say you have no career goals at all to avoid the topic",
+      "Focus honestly on what you want to gain and contribute in the near term, without fabricating a false long-term commitment you don't intend to keep"
+    ],
+    "correctAnswer": 3,
+    "explanation": "You are not obligated to disclose speculative future plans, but promising a false commitment is dishonest; focusing on genuine near-term value avoids both traps.",
+    "source": "Generated (based on Career Goals theory)",
+    "tags": [
+      "Honesty",
+      "Long-Term Plans"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0021",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Conflict Resolution",
+    "difficulty": "Easy",
+    "question": "When describing a past conflict with a coworker, which structure best demonstrates strong conflict-resolution skills?",
+    "options": [
+      "Describe the situation, the steps you took to address it directly and respectfully, and the resolution reached",
+      "Describe only how frustrating the coworker was, without describing any resolution",
+      "Say you avoided the coworker until the issue resolved itself",
+      "Say you escalated to HR immediately without attempting direct conversation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A situation-action-resolution structure shows you can address disagreements proactively and constructively, which is the core competency being tested.",
+    "source": "Generated (based on Conflict Resolution theory)",
+    "tags": [
+      "STAR Method",
+      "Resolution"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0022",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Conflict Resolution",
+    "difficulty": "Easy",
+    "question": "What is generally considered the best first step when a conflict arises with a colleague?",
+    "options": [
+      "Immediately involve your manager without speaking to the colleague first",
+      "Have a direct, private, respectful conversation with the colleague to understand their perspective",
+      "Post about the disagreement in a shared team channel",
+      "Ignore the issue and hope it resolves on its own"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Best practice favors direct, respectful communication first, escalating only if that doesn't resolve the issue.",
+    "source": "Generated (based on Conflict Resolution theory)",
+    "tags": [
+      "Best Practices",
+      "Communication"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0023",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Conflict Resolution",
+    "difficulty": "Medium",
+    "question": "You disagreed strongly with a teammate's technical approach during a project. Which response best reflects good conflict-resolution judgment?",
+    "options": [
+      "Insist on your approach and refuse to discuss alternatives",
+      "Quietly implement your own approach without informing the team",
+      "Present your concerns with data or reasoning, listen to their rationale, and work toward a decision both can support",
+      "Complain to other teammates about the disagreement instead of addressing it directly"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Resolving technical disagreements requires transparent, evidence-based discussion and a shared path forward, not unilateral action or backchannel complaints.",
+    "source": "Generated (based on Conflict Resolution theory)",
+    "tags": [
+      "Technical Disagreement",
+      "Collaboration"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0024",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Conflict Resolution",
+    "difficulty": "Medium",
+    "question": "A conflict with a coworker was resolved, but trust between you two remains low afterward. What is the best next step according to best practice?",
+    "options": [
+      "Avoid all future interaction with that coworker",
+      "Bring up the past conflict repeatedly to ensure it is not forgotten",
+      "Request a transfer immediately to avoid the coworker entirely",
+      "Continue engaging professionally and consistently to rebuild trust over time through reliable follow-through"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Trust rebuilds through consistent, professional behavior over time; avoidance or repeated relitigating of the conflict prevents that recovery.",
+    "source": "Generated (based on Conflict Resolution theory)",
+    "tags": [
+      "Trust Building",
+      "Follow-Through"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0025",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Conflict Resolution",
+    "difficulty": "Hard",
+    "question": "You are a team lead and two direct reports are in an unresolved conflict that is affecting delivery. Neither will compromise. What is the most effective next step?",
+    "options": [
+      "Meet with both individually to understand each perspective, then facilitate a joint conversation focused on the shared project outcome rather than assigning blame",
+      "Force one person to concede regardless of the merits of their position",
+      "Let the conflict continue since it is not directly your responsibility",
+      "Reassign both people off the project immediately without addressing the underlying issue"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Effective conflict mediation as a lead requires understanding both sides and reframing around shared goals, rather than picking a winner or avoiding the issue.",
+    "source": "Generated (based on Conflict Resolution theory)",
+    "tags": [
+      "Leadership",
+      "Mediation"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0026",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Teamwork",
+    "difficulty": "Easy",
+    "question": "When describing a successful team project, what should you emphasize according to best practice?",
+    "options": [
+      "Only the team's success, without mentioning your individual role at all",
+      "Your specific individual contribution as well as how it fit into the team's collective success",
+      "Only your individual role, disregarding the rest of the team's contributions",
+      "The failures of teammates who slowed the project down"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Balancing personal contribution with team credit shows both accountability and the ability to collaborate, both of which interviewers value.",
+    "source": "Generated (based on Teamwork theory)",
+    "tags": [
+      "Collaboration",
+      "STAR Method"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0027",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Teamwork",
+    "difficulty": "Easy",
+    "question": "What is generally the best way to handle a teammate who is consistently missing deadlines?",
+    "options": [
+      "Complete their work silently without ever mentioning the missed deadlines",
+      "Report them to management immediately without speaking to them first",
+      "Have a direct, supportive conversation to understand the blocker and offer to help find a solution",
+      "Publicly call out the missed deadlines in a team meeting"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Direct, supportive communication addresses the root cause while preserving the relationship, which is the preferred first step in most teamwork scenarios.",
+    "source": "Generated (based on Teamwork theory)",
+    "tags": [
+      "Accountability",
+      "Support"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0028",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Teamwork",
+    "difficulty": "Medium",
+    "question": "You are on a team where one member dominates discussions and others rarely speak up. What is the best action for a team member (not necessarily the lead) to take?",
+    "options": [
+      "Say nothing since managing group dynamics is only the manager's job",
+      "Match the dominant member's behavior by talking over them as well",
+      "Complain about the dominant teammate outside the group instead of addressing it",
+      "Actively create space for quieter teammates, such as directly asking for their input during discussions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Any team member can improve group dynamics by inviting quieter voices in, which is a practical, low-conflict way to improve collaboration.",
+    "source": "Generated (based on Teamwork theory)",
+    "tags": [
+      "Group Dynamics",
+      "Inclusion"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0029",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Teamwork",
+    "difficulty": "Medium",
+    "question": "A cross-functional project stalled because engineering and design disagreed on priorities. What is the best team-oriented approach to unblock it?",
+    "options": [
+      "Facilitate a joint discussion to align on shared goals and trade-offs, so both sides commit to one prioritized plan",
+      "Let each function proceed with its own separate priorities independently",
+      "Escalate to leadership immediately without attempting cross-functional alignment first",
+      "Wait for the disagreement to resolve itself over time"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Effective teamwork across functions requires proactively facilitating alignment on shared goals rather than working in silos or escalating prematurely.",
+    "source": "Generated (based on Teamwork theory)",
+    "tags": [
+      "Cross-Functional",
+      "Alignment"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0030",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Teamwork",
+    "difficulty": "Hard",
+    "question": "You joined a high-performing team mid-project and notice their established process has an inefficiency, but the team is resistant to change. What is the best approach?",
+    "options": [
+      "Immediately insist the team change its process on your first day",
+      "Build credibility first by understanding the existing process and its rationale, then propose the change with data and buy-in from key members",
+      "Say nothing indefinitely to avoid disrupting the team's established dynamic",
+      "Implement your preferred process unilaterally without informing the team"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Effective teamwork as a newcomer requires earning trust and understanding context before advocating change, rather than forcing or silently avoiding it.",
+    "source": "Generated (based on Teamwork theory)",
+    "tags": [
+      "Change Management",
+      "New Team Member"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0031",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Leadership",
+    "difficulty": "Easy",
+    "question": "When describing a leadership experience, which framing best follows best practice, even if you had no formal title?",
+    "options": [
+      "Say you have never led anything because you have never had a management title",
+      "Describe a time you gave orders to subordinates without their input",
+      "Describe a time you influenced outcomes, motivated others, or took ownership of a problem, regardless of formal authority",
+      "Describe a time someone else led and you simply followed instructions"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Leadership is commonly demonstrated through influence and initiative, not just formal titles, which is why interviewers accept \"informal leadership\" examples.",
+    "source": "Generated (based on Leadership theory)",
+    "tags": [
+      "Informal Leadership",
+      "Influence"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0032",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Leadership",
+    "difficulty": "Easy",
+    "question": "What is generally the best leadership style to describe when handling a struggling team member?",
+    "options": [
+      "Immediately reassigning their work to someone else without discussion",
+      "Publicly criticizing their performance in front of the team",
+      "Ignoring the issue until it resolves on its own",
+      "Understanding the root cause of the struggle and providing tailored coaching and support"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Effective leadership addresses underperformance through understanding and coaching, which supports growth rather than punishment.",
+    "source": "Generated (based on Leadership theory)",
+    "tags": [
+      "Coaching",
+      "People Management"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0033",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Leadership",
+    "difficulty": "Medium",
+    "question": "You led a project where a key decision needed to be made quickly and the team was split on the approach. What is the best leadership behavior to describe?",
+    "options": [
+      "Gather key input efficiently, make a clear decision within the time constraint, and communicate the reasoning to the team",
+      "Delay the decision indefinitely until full consensus is reached",
+      "Make the decision alone without consulting the team on a fast-moving issue",
+      "Let the team vote and default to majority rule regardless of the reasoning"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Good leadership under time pressure balances input-gathering with decisive action and transparent reasoning, rather than pure consensus-seeking or unilateral action.",
+    "source": "Generated (based on Leadership theory)",
+    "tags": [
+      "Decision Making",
+      "Time Pressure"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0034",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Leadership",
+    "difficulty": "Medium",
+    "question": "As a project lead, you discover partway through that the original plan will not meet the deadline. What is the best leadership response?",
+    "options": [
+      "Say nothing and hope the team catches up unnoticed",
+      "Proactively communicate the risk to stakeholders early, along with options to address it",
+      "Wait until the deadline passes to explain what happened",
+      "Blame team members individually for the delay in the status update"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Strong leadership involves early, transparent risk communication with proposed options, not silence or blame after the fact.",
+    "source": "Generated (based on Leadership theory)",
+    "tags": [
+      "Stakeholder Communication",
+      "Risk Management"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0035",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Leadership",
+    "difficulty": "Hard",
+    "question": "You are leading a team through a reorganization that will eliminate some of their roles, but the final details are not yet confirmed. How should you communicate with your team?",
+    "options": [
+      "Withhold all information until every detail is fully confirmed",
+      "Speculate freely about the outcome to fill the information gap",
+      "Share what is confirmed transparently, acknowledge the uncertainty honestly, and commit to timely updates as details are finalized",
+      "Reassure the team that no one will be affected, even though that is not yet certain"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Leading through uncertainty requires honest, calibrated transparency — sharing confirmed facts and acknowledging what is unknown — rather than silence or false reassurance.",
+    "source": "Generated (based on Leadership theory)",
+    "tags": [
+      "Change Leadership",
+      "Difficult Communication"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0036",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Failure",
+    "difficulty": "Easy",
+    "question": "When asked to describe a time you failed, which response best follows best practice?",
+    "options": [
+      "Claiming you have never failed at anything",
+      "Describing a failure that was entirely someone else's fault",
+      "Describing a trivial failure with no real learning or consequence",
+      "A genuine failure, what you learned from it, and how you applied that lesson afterward"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A genuine failure paired with a clear lesson demonstrates accountability and growth, which is exactly what the question is designed to surface.",
+    "source": "Generated (based on Handling Failure theory)",
+    "tags": [
+      "Accountability",
+      "Growth"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0037",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Failure",
+    "difficulty": "Easy",
+    "question": "What is the biggest interview red flag when a candidate describes a past failure?",
+    "options": [
+      "Blaming other people entirely without acknowledging any personal role in the outcome",
+      "Describing the failure in a calm, matter-of-fact tone",
+      "Mentioning that the failure happened early in their career",
+      "Explaining the business context that led to the failure"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Failing to acknowledge personal accountability is the clearest signal of low self-awareness, which interviewers specifically screen for.",
+    "source": "Generated (based on Handling Failure theory)",
+    "tags": [
+      "Common Mistakes",
+      "Accountability"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0038",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Failure",
+    "difficulty": "Medium",
+    "question": "You missed a critical deadline on a project you owned. Which explanation to your manager best follows best practice?",
+    "options": [
+      "Downplay the miss and hope it goes unnoticed",
+      "Acknowledge the miss, explain the root cause factually, and present a plan to recover and prevent recurrence",
+      "Blame the deadline itself as unreasonable without any self-reflection",
+      "Apologize repeatedly without offering any concrete plan going forward"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A root-cause explanation paired with a forward-looking recovery plan converts a failure into evidence of maturity and problem-solving.",
+    "source": "Generated (based on Handling Failure theory)",
+    "tags": [
+      "Deadline Miss",
+      "Recovery Plan"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0039",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Failure",
+    "difficulty": "Medium",
+    "question": "A candidate describes a failure story where they immediately identify what they would do differently. Why does this reflect strong best practice?",
+    "options": [
+      "It shows the candidate is overly self-critical, which is a weakness",
+      "It is irrelevant since interviewers only care about outcomes, not reflection",
+      "It demonstrates reflective learning, which is what turns a failure into evidence of growth rather than just a setback",
+      "It suggests the candidate is prone to repeating the same mistakes"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Clear, specific reflection on what would change is precisely the signal that differentiates a growth-oriented answer from a purely negative one.",
+    "source": "Generated (based on Handling Failure theory)",
+    "tags": [
+      "Reflection",
+      "Growth Mindset"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0040",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Failure",
+    "difficulty": "Hard",
+    "question": "Your failure story involves a decision that also negatively affected a teammate's work, not just your own. How should you frame this in an interview?",
+    "options": [
+      "Omit the impact on the teammate to keep the story about yourself only",
+      "Shift primary responsibility onto the teammate for being affected",
+      "Avoid naming what specifically went wrong to keep the story vague",
+      "Take ownership of your role in the decision, acknowledge the impact on the teammate honestly, and describe how you addressed it with them directly"
+    ],
+    "correctAnswer": 3,
+    "explanation": "When a failure affects others, best practice requires owning the impact honestly and describing direct repair, not just personal reflection in isolation.",
+    "source": "Generated (based on Handling Failure theory)",
+    "tags": [
+      "Impact on Others",
+      "Ownership"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0041",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Pressure & Stress",
+    "difficulty": "Easy",
+    "question": "When asked how you handle pressure, which answer best reflects best practice?",
+    "options": [
+      "A specific example of a high-pressure situation and the concrete steps you took to manage it effectively",
+      "Claiming you never feel pressure under any circumstances",
+      "Saying you simply avoid high-pressure situations whenever possible",
+      "A vague statement with no specific example"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A concrete example with clear coping steps is far more credible and informative than a generic claim of imperviousness to stress.",
+    "source": "Generated (based on Handling Pressure & Stress theory)",
+    "tags": [
+      "Stress Management",
+      "STAR Method"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0042",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Pressure & Stress",
+    "difficulty": "Easy",
+    "question": "What is generally considered a strong strategy for managing pressure that is good to mention in an interview?",
+    "options": [
+      "Working without breaks until the task is finished, regardless of quality",
+      "Breaking a high-pressure task into prioritized, manageable steps",
+      "Ignoring the deadline until the last possible moment",
+      "Delegating the entire task to someone else without any personal involvement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Prioritization and structured breakdown are widely recognized, healthy strategies for managing pressure, unlike burnout-driven or avoidant approaches.",
+    "source": "Generated (based on Handling Pressure & Stress theory)",
+    "tags": [
+      "Prioritization",
+      "Coping Strategy"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0043",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Pressure & Stress",
+    "difficulty": "Medium",
+    "question": "You had two competing high-priority deadlines on the same day. What is the best approach to describe in an interview?",
+    "options": [
+      "Attempt to do both simultaneously without informing anyone of the conflict",
+      "Pick one at random without any assessment or communication",
+      "Quickly assess relative urgency and impact, communicate trade-offs to stakeholders, and execute against the agreed priority",
+      "Ignore both until one deadline passes"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Transparent prioritization with stakeholder communication is the best-practice response to competing deadlines under pressure.",
+    "source": "Generated (based on Handling Pressure & Stress theory)",
+    "tags": [
+      "Prioritization",
+      "Stakeholder Communication"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0044",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Pressure & Stress",
+    "difficulty": "Medium",
+    "question": "During a live production incident, you felt overwhelmed by the number of things going wrong at once. What is the best practice response to describe?",
+    "options": [
+      "Try to fix every issue simultaneously without any prioritization",
+      "Step away from the incident until you feel calmer, without informing anyone",
+      "Freeze and wait for someone else to take charge without offering input",
+      "Focus on triaging the most critical issue first while calmly communicating status to the team"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Triage combined with calm communication is the standard best practice for high-pressure incident response.",
+    "source": "Generated (based on Handling Pressure & Stress theory)",
+    "tags": [
+      "Incident Response",
+      "Triage"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0045",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Handling Pressure & Stress",
+    "difficulty": "Hard",
+    "question": "You are under significant personal stress unrelated to work, and it is starting to affect your performance during a critical project. What is the best professional approach?",
+    "options": [
+      "Proactively communicate to your manager that you're managing a personal challenge and, without oversharing, discuss reasonable adjustments to workload or timelines",
+      "Hide the impact entirely and hope your performance is not noticed",
+      "Share extensive personal details with the entire team to explain the situation",
+      "Quietly reduce your effort without informing anyone about the underlying cause"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Proactive, appropriately bounded communication with your manager allows for reasonable support while maintaining professional boundaries, unlike silence or oversharing.",
+    "source": "Generated (based on Handling Pressure & Stress theory)",
+    "tags": [
+      "Personal Challenges",
+      "Professional Boundaries"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0046",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Salary Negotiation",
+    "difficulty": "Easy",
+    "question": "When asked \"What are your salary expectations?\" early in the process, which response best follows best practice?",
+    "options": [
+      "Refusing to give any number or range at all",
+      "Providing a well-researched range based on market data for the role and location, while expressing openness to discussion",
+      "Immediately naming the highest number you can imagine",
+      "Asking the interviewer to guess your expectations"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A researched range shows preparation and keeps the conversation productive, rather than stonewalling or anchoring unrealistically.",
+    "source": "Generated (based on Salary Negotiation theory)",
+    "tags": [
+      "Salary Range",
+      "Research"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0047",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Salary Negotiation",
+    "difficulty": "Easy",
+    "question": "What is generally the best foundation for a salary negotiation position?",
+    "options": [
+      "Your personal monthly expenses and bills",
+      "What a friend at an unrelated company earns",
+      "Market rate data for the role, industry, and location, combined with your own experience level",
+      "A number picked at random to seem confident"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Market-based data is the credible, defensible basis for negotiation, unlike personal financial need or anecdotal comparisons.",
+    "source": "Generated (based on Salary Negotiation theory)",
+    "tags": [
+      "Market Research",
+      "Negotiation Basis"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0048",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Salary Negotiation",
+    "difficulty": "Medium",
+    "question": "You receive an offer below your researched market range. What is the best next step according to best practice?",
+    "options": [
+      "Accept the offer immediately to avoid seeming difficult",
+      "Reject the offer outright without any counter-discussion",
+      "Ask a friend to negotiate the offer on your behalf without informing the employer",
+      "Express enthusiasm for the role, then present market data and ask if there is room to adjust the offer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Countering with data while affirming interest is the standard, effective approach — combining professionalism with assertiveness.",
+    "source": "Generated (based on Salary Negotiation theory)",
+    "tags": [
+      "Counteroffer",
+      "Negotiation"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0049",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Salary Negotiation",
+    "difficulty": "Medium",
+    "question": "An interviewer asks about your current or previous salary in a negotiation, in a location where such questions are legal to ask. What is the best way to respond?",
+    "options": [
+      "Redirect the conversation toward the market value of the role and your expectations for the new position",
+      "Provide the exact figure with no additional context",
+      "Refuse to engage with the question at all and end the conversation",
+      "Inflate your previous salary to anchor the negotiation higher"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Redirecting toward the target role's market value keeps the negotiation focused on forward-looking value rather than anchoring on the past, and avoids the risk of misstatement.",
+    "source": "Generated (based on Salary Negotiation theory)",
+    "tags": [
+      "Salary History",
+      "Redirection"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0050",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Salary Negotiation",
+    "difficulty": "Hard",
+    "question": "You have a competing offer with a higher base salary but this role offers stronger long-term growth. How should you use the competing offer in negotiation?",
+    "options": [
+      "Bluff about a competing offer that does not actually exist",
+      "Disclose the competing offer's relevant details honestly to give the employer a chance to match or adjust, while being clear about your genuine interest in this role",
+      "Withhold any mention of the competing offer even when directly asked",
+      "Use the competing offer only as a threat to force an immediate decision without further discussion"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Honest disclosure of a real competing offer, paired with genuine interest, gives the employer real information to negotiate on without resorting to bluffing or ultimatums.",
+    "source": "Generated (based on Salary Negotiation theory)",
+    "tags": [
+      "Competing Offers",
+      "Leverage"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0051",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Resignation & Notice Period",
+    "difficulty": "Easy",
+    "question": "What is generally considered best practice when resigning from a position?",
+    "options": [
+      "Leaving immediately without any notice, regardless of contract terms",
+      "Announcing your resignation publicly before informing your manager",
+      "Providing the standard notice period stated in your contract and offering to help transition your responsibilities",
+      "Waiting until your last day to tell your manager you are leaving"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Honoring the notice period and offering a transition plan is the professional standard that preserves relationships and your reputation.",
+    "source": "Generated (based on Resignation & Notice Period theory)",
+    "tags": [
+      "Notice Period",
+      "Professionalism"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0052",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Resignation & Notice Period",
+    "difficulty": "Easy",
+    "question": "Who should typically be informed first when you decide to resign?",
+    "options": [
+      "The entire team, in a group announcement",
+      "Your professional network on social media",
+      "Clients or external partners",
+      "Your direct manager, in a private conversation before anyone else on the team"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Informing your direct manager first, privately, is standard etiquette that respects the chain of communication and avoids surprises.",
+    "source": "Generated (based on Resignation & Notice Period theory)",
+    "tags": [
+      "Notice Period",
+      "Communication Order"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0053",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Resignation & Notice Period",
+    "difficulty": "Medium",
+    "question": "During your notice period, your manager asks you to train your replacement, who has not yet been hired. What is the best way to handle this?",
+    "options": [
+      "Offer to document processes and knowledge thoroughly so training can happen efficiently once a replacement is hired",
+      "Refuse to do any transition work since you are leaving anyway",
+      "Extend your notice period indefinitely until a replacement is found",
+      "Ignore the request and let the team figure it out after you leave"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Proactively documenting knowledge is a practical, professional way to support the transition even when timing doesn't allow direct training.",
+    "source": "Generated (based on Resignation & Notice Period theory)",
+    "tags": [
+      "Knowledge Transfer",
+      "Transition Planning"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0054",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Resignation & Notice Period",
+    "difficulty": "Medium",
+    "question": "A departing employee is asked in an exit interview why they are leaving. What is the best way to answer?",
+    "options": [
+      "Vague, non-committal answers with no real information",
+      "Honest, constructive feedback focused on specific, actionable factors rather than personal attacks",
+      "Personal criticism of specific colleagues by name",
+      "Refusing to participate in the exit interview at all"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Honest, constructive feedback benefits both parties, while personal attacks or evasiveness undermine the value of the conversation and your professional reputation.",
+    "source": "Generated (based on Resignation & Notice Period theory)",
+    "tags": [
+      "Exit Interview",
+      "Constructive Feedback"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0055",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Resignation & Notice Period",
+    "difficulty": "Hard",
+    "question": "You receive a competing offer during your notice period that requires you to start sooner than your notice period allows. How should you handle this?",
+    "options": [
+      "Leave your current job immediately without honoring the notice period",
+      "Decline to mention the notice period constraint to the new employer at all",
+      "Discuss the timeline honestly with the new employer and attempt to negotiate a start date that respects your existing notice obligation, or negotiate a shortened notice with your current employer",
+      "Ignore the new offer's timeline and hope it resolves itself"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Best practice is to be transparent with both parties and negotiate a workable timeline, protecting your reputation with both the current and future employer.",
+    "source": "Generated (based on Resignation & Notice Period theory)",
+    "tags": [
+      "Competing Timelines",
+      "Professional Reputation"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0056",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Gaps",
+    "difficulty": "Easy",
+    "question": "When explaining a career gap on your resume, which approach best follows best practice?",
+    "options": [
+      "Avoiding the topic entirely and hoping it is not noticed",
+      "Fabricating a fictional job to cover the gap",
+      "Apologizing excessively for the gap without further explanation",
+      "A brief, honest explanation of the gap along with what you did or learned during that time"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Brief honesty paired with what you gained during the gap turns a potential concern into a neutral or even positive data point.",
+    "source": "Generated (based on Career Gaps theory)",
+    "tags": [
+      "Resume Gaps",
+      "Honesty"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0057",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Gaps",
+    "difficulty": "Easy",
+    "question": "What is generally the best tone to use when discussing a career gap in an interview?",
+    "options": [
+      "Matter-of-fact and confident, treating it as a normal part of your career story",
+      "Overly apologetic and self-deprecating",
+      "Defensive and irritated that the question was asked",
+      "Completely dismissive, refusing to give any context"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A confident, matter-of-fact tone signals that the gap does not undermine your capability, which is the impression you want to leave.",
+    "source": "Generated (based on Career Gaps theory)",
+    "tags": [
+      "Tone",
+      "Confidence"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0058",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Gaps",
+    "difficulty": "Medium",
+    "question": "You took a year off to care for a family member. How should you frame this during an interview, according to best practice?",
+    "options": [
+      "Share extensive personal and medical details about the family member",
+      "State the reason briefly and honestly, then pivot quickly to your readiness and enthusiasm for returning to work",
+      "Avoid stating any reason at all, leaving the interviewer to guess",
+      "Apologize repeatedly for taking the time off"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A brief, honest reason followed by a pivot to forward-looking readiness respects privacy while fully answering the question.",
+    "source": "Generated (based on Career Gaps theory)",
+    "tags": [
+      "Caregiving Gap",
+      "Privacy"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0059",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Gaps",
+    "difficulty": "Medium",
+    "question": "During a gap, you completed an online certification relevant to the job. How should you use this in your explanation?",
+    "options": [
+      "Leave it out since it happened during a gap and might raise more questions",
+      "Mention it but downplay its relevance to avoid seeming like you are compensating",
+      "Mention the certification explicitly as evidence you stayed engaged with the field and kept your skills current",
+      "Claim it was equivalent to full-time work experience"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Concrete evidence of staying current during a gap directly strengthens your candidacy and should be highlighted, not hidden.",
+    "source": "Generated (based on Career Gaps theory)",
+    "tags": [
+      "Skill Development",
+      "Evidence"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0060",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Gaps",
+    "difficulty": "Hard",
+    "question": "You were let go from your previous job and took several months to find your footing before resuming the job search. How should you address this gap and reason for leaving together?",
+    "options": [
+      "Say you left voluntarily when you were actually let go",
+      "Extensively criticize the former employer's decision and management",
+      "Refuse to explain the reason for leaving at all",
+      "State honestly that the role ended, briefly explain any context relevant to fit (without disparaging the former employer), and describe what you did with the time before resuming the search"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Honesty about the separation without disparaging the former employer, paired with a constructive account of the gap, is the credible and professional path through a sensitive combination of facts.",
+    "source": "Generated (based on Career Gaps theory)",
+    "tags": [
+      "Job Loss",
+      "Sensitive Disclosure"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0061",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Relocation & Flexibility",
+    "difficulty": "Easy",
+    "question": "When asked if you are willing to relocate for a role, what is the best approach if you are genuinely open to it?",
+    "options": [
+      "Confirm your openness clearly and ask any practical questions about timeline or relocation support",
+      "Say yes without any consideration, even if you have not actually thought it through",
+      "Avoid answering directly and change the subject",
+      "Say you would only consider it if the offer is exceptionally high"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A clear, genuine confirmation paired with practical follow-up questions shows both honesty and thoughtful engagement with the logistics.",
+    "source": "Generated (based on Relocation & Flexibility theory)",
+    "tags": [
+      "Relocation",
+      "Clarity"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0062",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Relocation & Flexibility",
+    "difficulty": "Easy",
+    "question": "If you are not willing to relocate, what is the best way to communicate this in an interview?",
+    "options": [
+      "Say you are open to relocating and plan to negotiate out of it later",
+      "State your constraint honestly and early, so both sides can assess fit without wasted effort",
+      "Avoid the topic entirely and hope it does not come up again",
+      "Say yes to keep the option open even though you do not intend to follow through"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Early, honest disclosure of a hard constraint respects everyone's time and avoids a mismatch discovered late in the process.",
+    "source": "Generated (based on Relocation & Flexibility theory)",
+    "tags": [
+      "Honesty",
+      "Constraints"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0063",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Relocation & Flexibility",
+    "difficulty": "Medium",
+    "question": "You are asked about flexibility on remote versus in-office work, and you have a genuine strong preference. What is the best way to answer?",
+    "options": [
+      "Say you have no preference at all, even though you actually do",
+      "Refuse to discuss the topic until an offer is made",
+      "State your preference clearly along with your reasoning, while remaining open to discussing the company's specific policy",
+      "Insist on your preference with no willingness to discuss the company's policy"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Clear communication of a genuine preference, balanced with openness to discussion, leads to a better-informed match for both sides.",
+    "source": "Generated (based on Relocation & Flexibility theory)",
+    "tags": [
+      "Remote Work",
+      "Preference Communication"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0064",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Relocation & Flexibility",
+    "difficulty": "Medium",
+    "question": "A role requires occasional travel that you did not anticipate when applying. What is the best way to raise this once you learn about it?",
+    "options": [
+      "Immediately withdraw your application without seeking any clarification",
+      "Say nothing and hope the travel requirement turns out to be minimal",
+      "Agree to any amount of travel without understanding what is actually expected",
+      "Ask clarifying questions about the frequency and nature of the travel before deciding how to respond"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Seeking clarification before reacting ensures your decision is based on accurate information rather than assumptions.",
+    "source": "Generated (based on Relocation & Flexibility theory)",
+    "tags": [
+      "Travel Requirements",
+      "Clarification"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0065",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Relocation & Flexibility",
+    "difficulty": "Hard",
+    "question": "You are interested in a role that requires relocation, but your decision depends on factors like a partner's job or children's schooling that are not yet resolved. How should you communicate this?",
+    "options": [
+      "Be transparent that you are interested and working through personal logistics, and give a realistic timeline for when you can confirm",
+      "Commit definitively to relocating even though it is not actually certain yet",
+      "Withdraw from the process entirely rather than explain the complexity",
+      "Avoid mentioning the dependency and hope it resolves itself before a decision is needed"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Transparent communication about genuine dependencies, with a realistic timeline, allows the employer to plan accordingly without you overcommitting or disengaging.",
+    "source": "Generated (based on Relocation & Flexibility theory)",
+    "tags": [
+      "Personal Logistics",
+      "Transparency"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0066",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Change",
+    "difficulty": "Easy",
+    "question": "When explaining a career change to a new field, what is the best practice for framing your story?",
+    "options": [
+      "Saying you are simply bored of your old field with no further explanation",
+      "Connecting your motivation for the change to specific, genuine interests and transferable skills relevant to the new field",
+      "Criticizing your previous field or employer at length",
+      "Avoiding any explanation of why you are changing careers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A clear, positive narrative connecting motivation and transferable skills makes the change feel intentional rather than reactive.",
+    "source": "Generated (based on Career Change theory)",
+    "tags": [
+      "Career Change",
+      "Narrative"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0067",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Change",
+    "difficulty": "Easy",
+    "question": "What is generally the strongest way to address a lack of direct experience when changing careers?",
+    "options": [
+      "Claim to have direct experience that you do not actually have",
+      "Say experience does not matter and should be disregarded entirely",
+      "Highlight relevant transferable skills and any steps you've taken to build knowledge in the new field, such as courses or projects",
+      "Avoid discussing the experience gap and hope it is not noticed"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Honestly highlighting transferable skills and concrete preparation steps is the credible way to bridge an experience gap.",
+    "source": "Generated (based on Career Change theory)",
+    "tags": [
+      "Transferable Skills",
+      "Preparation"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0068",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Change",
+    "difficulty": "Medium",
+    "question": "An interviewer seems skeptical that you will stay committed to the new field after switching careers. What is the best way to address this concern?",
+    "options": [
+      "Dismiss the concern as unfair without offering any evidence",
+      "Promise unconditional long-term commitment with no supporting evidence",
+      "Avoid addressing the concern directly and change the subject",
+      "Share specific evidence of sustained interest, such as projects, courses, or networking you've pursued in the new field over time"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Concrete, sustained evidence of interest is far more persuasive than a bare promise or a dismissal of a reasonable concern.",
+    "source": "Generated (based on Career Change theory)",
+    "tags": [
+      "Commitment",
+      "Evidence"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0069",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Change",
+    "difficulty": "Medium",
+    "question": "You are taking a pay cut to change careers into a field you're passionate about. How should you address this if asked about it?",
+    "options": [
+      "Acknowledge the trade-off honestly and explain the long-term reasoning behind your decision",
+      "Deny that a pay cut is involved at all",
+      "Avoid the topic since it might seem like a weakness",
+      "Say money does not matter to you at all, which may not be fully credible"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Honest acknowledgment of a real trade-off, paired with clear reasoning, is more credible than denial or an implausible claim of indifference.",
+    "source": "Generated (based on Career Change theory)",
+    "tags": [
+      "Compensation Trade-off",
+      "Reasoning"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0070",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Career Change",
+    "difficulty": "Hard",
+    "question": "You are changing careers into a field where you suspect age or experience-level bias may work against you. How should you handle this in an interview if it comes up indirectly?",
+    "options": [
+      "Directly accuse the interviewer of bias based on your suspicion",
+      "Focus the conversation on the concrete value you bring — relevant skills, maturity, and reliability — without directly addressing bias or making assumptions about the interviewer's intent",
+      "Avoid the field-experience topic entirely, even when it is clearly relevant to the conversation",
+      "Preemptively apologize for your age or experience level"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The most effective response redirects to concrete value and strengths rather than assuming or confronting bias that may not be present, while still substantively addressing the experience question.",
+    "source": "Generated (based on Career Change theory)",
+    "tags": [
+      "Bias Concerns",
+      "Value Framing"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0071",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Ethics & Integrity",
+    "difficulty": "Easy",
+    "question": "You are asked to describe a time you faced an ethical dilemma at work. Which type of example best demonstrates integrity?",
+    "options": [
+      "A hypothetical situation you have not actually experienced",
+      "A situation where someone else made the ethical decision instead of you",
+      "A real situation where you chose the honest or correct action despite some personal cost or discomfort",
+      "A situation where you avoided the dilemma entirely by staying uninvolved"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A genuine example where you personally chose the harder, correct path is the clearest demonstration of integrity under real pressure.",
+    "source": "Generated (based on Ethics & Integrity theory)",
+    "tags": [
+      "Ethical Dilemma",
+      "Integrity"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0072",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Ethics & Integrity",
+    "difficulty": "Easy",
+    "question": "What is the best practice if you discover a colleague made an honest mistake that affects your own work?",
+    "options": [
+      "Report it to management immediately without speaking to the colleague first",
+      "Ignore the mistake even though it affects your own work",
+      "Publicly point out the mistake in front of the team",
+      "Address it directly and constructively, focusing on fixing the issue rather than assigning blame"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A constructive, direct approach resolves the issue while preserving the working relationship, reflecting both integrity and professionalism.",
+    "source": "Generated (based on Ethics & Integrity theory)",
+    "tags": [
+      "Mistake Handling",
+      "Constructive Approach"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0073",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Ethics & Integrity",
+    "difficulty": "Medium",
+    "question": "Your manager asks you to present overly optimistic numbers to a client, which you believe misrepresents the actual project status. What is the best course of action?",
+    "options": [
+      "Raise your concern directly with your manager privately and propose a more accurate way to present the information",
+      "Present the numbers as asked without raising any concerns",
+      "Tell the client the truth directly without first discussing it with your manager",
+      "Refuse to attend the client meeting to avoid the situation entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Raising the concern privately with your manager first respects the chain of communication while still upholding your commitment to honesty.",
+    "source": "Generated (based on Ethics & Integrity theory)",
+    "tags": [
+      "Honesty",
+      "Chain of Communication"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0074",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Ethics & Integrity",
+    "difficulty": "Medium",
+    "question": "You notice a minor billing error that benefits your company at a client's expense. What is the best practice response?",
+    "options": [
+      "Say nothing since the error benefits your own company",
+      "Flag the error internally and ensure it gets corrected, even though it currently benefits your company",
+      "Wait to see if the client notices before taking any action",
+      "Correct it quietly without informing anyone, including your own team"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Proactively correcting errors that unfairly benefit your side, and doing so transparently within your organization, reflects genuine integrity rather than convenient silence.",
+    "source": "Generated (based on Ethics & Integrity theory)",
+    "tags": [
+      "Billing Error",
+      "Transparency"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0075",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Ethics & Integrity",
+    "difficulty": "Hard",
+    "question": "You are asked in an interview to describe a time you disagreed with a decision made by senior leadership on ethical grounds. What is the best way to frame this story?",
+    "options": [
+      "Describe secretly undermining the decision without raising any concerns through proper channels",
+      "Describe publicly criticizing leadership to your peers instead of raising it directly",
+      "Describe the concern you raised through appropriate channels, the reasoning behind it, and the outcome, focusing on constructive escalation rather than open defiance",
+      "Avoid ever describing disagreement with leadership, implying you have never had one"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A strong ethics story shows you can raise real concerns through legitimate channels and describe the outcome honestly, rather than either silent compliance or undermining leadership covertly.",
+    "source": "Generated (based on Ethics & Integrity theory)",
+    "tags": [
+      "Leadership Disagreement",
+      "Escalation Channels"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0076",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Communication Style",
+    "difficulty": "Easy",
+    "question": "When asked to describe your communication style, which answer best reflects best practice?",
+    "options": [
+      "A vague claim of being \"a great communicator\" with no supporting example",
+      "Saying your communication style depends entirely on your mood",
+      "Saying you generally avoid communicating unless absolutely necessary",
+      "A specific description backed by an example, such as being direct but empathetic when giving feedback"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A specific, example-backed description is far more credible and useful than a generic self-label.",
+    "source": "Generated (based on Communication Style theory)",
+    "tags": [
+      "Self-Description",
+      "Specificity"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0077",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Communication Style",
+    "difficulty": "Easy",
+    "question": "What is generally the best practice when communicating with a stakeholder who has a very different working style than you?",
+    "options": [
+      "Adapt your communication approach to match their preferences, such as level of detail or format",
+      "Insist on your own preferred communication style regardless of their preference",
+      "Avoid communicating with them directly whenever possible",
+      "Communicate only through written channels regardless of their preference"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Adapting communication style to the audience is a core best practice that improves clarity and working relationships.",
+    "source": "Generated (based on Communication Style theory)",
+    "tags": [
+      "Adaptation",
+      "Stakeholder Management"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0078",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Communication Style",
+    "difficulty": "Medium",
+    "question": "You need to deliver a technical explanation to a non-technical stakeholder. What is the best communication approach?",
+    "options": [
+      "Use the same technical terminology you would use with an engineer",
+      "Translate the technical details into plain language focused on the impact and implications relevant to them",
+      "Skip the explanation entirely since they will not understand it",
+      "Provide the raw technical documentation without any simplification"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Adjusting language and framing to the audience's context and needs is the hallmark of effective communication across technical and non-technical audiences.",
+    "source": "Generated (based on Communication Style theory)",
+    "tags": [
+      "Technical Communication",
+      "Audience Awareness"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0079",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Communication Style",
+    "difficulty": "Medium",
+    "question": "A miscommunication led to a missed requirement on a project. What is the best way to prevent this going forward, according to best practice?",
+    "options": [
+      "Rely exclusively on verbal communication going forward to save time",
+      "Avoid discussing requirements in meetings and use email only",
+      "Introduce a habit of summarizing key decisions and requirements in writing after discussions, for shared confirmation",
+      "Assume future miscommunications are unavoidable and take no preventive action"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Written confirmation of key points after discussions is a widely recognized, low-effort practice that reduces miscommunication risk.",
+    "source": "Generated (based on Communication Style theory)",
+    "tags": [
+      "Miscommunication",
+      "Written Confirmation"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0080",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Communication Style",
+    "difficulty": "Hard",
+    "question": "You must deliver difficult feedback to a peer whose communication style is highly sensitive to criticism, in a culture that values directness. How should you balance these factors?",
+    "options": [
+      "Deliver the feedback in the bluntest way possible to match the cultural norm regardless of their sensitivity",
+      "Soften the feedback so much that the actual substance is lost or unclear",
+      "Avoid giving the feedback at all to prevent any discomfort",
+      "Adjust your delivery to be more considerate of their sensitivity while still ensuring the substantive feedback is clear and actionable"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Effective communication adapts tone and delivery to the individual while preserving the clarity and substance of the message, rather than sacrificing either factor entirely.",
+    "source": "Generated (based on Communication Style theory)",
+    "tags": [
+      "Difficult Feedback",
+      "Style Adaptation"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0081",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Adaptability",
+    "difficulty": "Easy",
+    "question": "When describing your adaptability, which type of example best follows best practice?",
+    "options": [
+      "A specific instance where priorities or circumstances changed and you adjusted your approach effectively",
+      "A general claim that you are flexible with no supporting example",
+      "An example where you resisted a necessary change until forced to comply",
+      "An example where someone else adapted on your behalf"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A concrete, specific example of adjusting to real change is far more convincing than a general self-assessment.",
+    "source": "Generated (based on Adaptability theory)",
+    "tags": [
+      "Flexibility",
+      "Specificity"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0082",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Adaptability",
+    "difficulty": "Easy",
+    "question": "What is generally the best initial reaction to an unexpected major change in project scope?",
+    "options": [
+      "Resist the change and continue with the original plan regardless",
+      "Understand the reasons behind the change and reassess priorities and plans accordingly",
+      "Immediately escalate a complaint about the change before understanding its rationale",
+      "Disengage from the project since the original plan is no longer valid"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Understanding the rationale before reassessing plans is the constructive first step, rather than resistance or immediate escalation.",
+    "source": "Generated (based on Adaptability theory)",
+    "tags": [
+      "Scope Change",
+      "Reassessment"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0083",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Adaptability",
+    "difficulty": "Medium",
+    "question": "Your company adopts a new tool or process that disrupts your established workflow. What is the best approach according to best practice?",
+    "options": [
+      "Continue using the old workflow indefinitely, ignoring the new tool",
+      "Complain about the change without attempting to learn the new tool",
+      "Invest time in learning the new tool thoroughly while providing constructive feedback on any genuine friction points",
+      "Adopt the new tool without ever raising legitimate concerns about it"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Genuinely learning the new approach while raising constructive feedback balances adaptability with valuable input, rather than resistance or silent compliance.",
+    "source": "Generated (based on Adaptability theory)",
+    "tags": [
+      "New Tools",
+      "Constructive Feedback"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0084",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Adaptability",
+    "difficulty": "Medium",
+    "question": "You are reassigned to a new team with different norms and expectations partway through a project. What is the best way to adapt?",
+    "options": [
+      "Continue working exactly as you did on your previous team without adjustment",
+      "Wait passively for the new team to fully explain everything before contributing",
+      "Immediately try to change the new team's norms to match your previous team's",
+      "Observe the new team's norms first, ask clarifying questions, and adjust your working style to fit while still contributing your own strengths"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Observing and adjusting to new norms while still contributing your own value is the balanced, effective approach to adapting to a new team.",
+    "source": "Generated (based on Adaptability theory)",
+    "tags": [
+      "Team Transition",
+      "Norms"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0085",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Adaptability",
+    "difficulty": "Hard",
+    "question": "Midway through a long project, leadership pivots the strategic direction in a way that makes much of your completed work less relevant. How should you respond?",
+    "options": [
+      "Acknowledge the sunk work professionally, quickly assess what remains useful under the new direction, and refocus effort accordingly",
+      "Insist on completing the original plan regardless of the new direction",
+      "Express frustration to leadership about the wasted effort without proposing a way forward",
+      "Disengage from the project since your prior work is no longer fully relevant"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Professionally acknowledging the change, salvaging what is still useful, and refocusing is the mature, adaptable response, rather than resistance or disengagement.",
+    "source": "Generated (based on Adaptability theory)",
+    "tags": [
+      "Strategic Pivot",
+      "Resilience"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0086",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Time Management",
+    "difficulty": "Easy",
+    "question": "When asked how you manage your time, which answer best reflects best practice?",
+    "options": [
+      "Saying you handle everything as it comes with no particular method",
+      "A specific method you use, such as prioritizing tasks by impact and urgency, with a concrete example",
+      "Saying you rely entirely on reminders from others to know what to do",
+      "Saying time management is not something you think about"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A specific, example-backed method demonstrates genuine, practiced time-management skill rather than a vague or reactive approach.",
+    "source": "Generated (based on Time Management theory)",
+    "tags": [
+      "Prioritization",
+      "Method"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0087",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Time Management",
+    "difficulty": "Easy",
+    "question": "What is generally the best practice when you realize you have too many tasks to complete in the available time?",
+    "options": [
+      "Attempt to do everything at reduced quality without informing anyone",
+      "Work significantly longer hours indefinitely without addressing the root cause",
+      "Prioritize based on impact and urgency, and communicate proactively about what may need to be deprioritized",
+      "Complete tasks in the order they arrived, regardless of priority"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Proactive prioritization and communication is the sustainable, professional response to an overloaded workload.",
+    "source": "Generated (based on Time Management theory)",
+    "tags": [
+      "Overload",
+      "Communication"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0088",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Time Management",
+    "difficulty": "Medium",
+    "question": "You are assigned a new urgent task that conflicts with an existing deadline. What is the best way to handle this?",
+    "options": [
+      "Silently drop the existing deadline without telling anyone",
+      "Refuse the new urgent task since you already have a deadline",
+      "Attempt both tasks in parallel without seeking any clarification on priority",
+      "Clarify relative priority with your manager and adjust your plan based on their guidance"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Seeking explicit prioritization guidance from your manager avoids unilateral decisions that might not reflect actual business priorities.",
+    "source": "Generated (based on Time Management theory)",
+    "tags": [
+      "Competing Priorities",
+      "Manager Alignment"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0089",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Time Management",
+    "difficulty": "Medium",
+    "question": "You consistently underestimate how long tasks will take, causing recurring schedule slips. What is the best corrective action?",
+    "options": [
+      "Track actual time spent against estimates and use that data to calibrate future estimates more accurately",
+      "Stop giving any time estimates at all to avoid being wrong",
+      "Always double your gut-feel estimate without examining why estimates are off",
+      "Blame the unpredictable nature of the work rather than adjusting your process"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Data-driven calibration based on actual past performance is a systematic best practice for improving estimation accuracy over time.",
+    "source": "Generated (based on Time Management theory)",
+    "tags": [
+      "Estimation",
+      "Self-Improvement"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0090",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Time Management",
+    "difficulty": "Hard",
+    "question": "You manage your own schedule but also unofficially help several colleagues with their tasks, and it is eroding your ability to meet your own deadlines. What is the best way to address this?",
+    "options": [
+      "Stop helping colleagues altogether without any explanation",
+      "Set clearer boundaries on your available time for helping others, and communicate this transparently while still offering support within reasonable limits",
+      "Continue helping everyone as before and let your own deadlines slip silently",
+      "Complain about colleagues to management without addressing the boundary issue directly with them"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Transparent boundary-setting protects your own priorities while preserving collaborative goodwill, rather than abrupt withdrawal or silent overextension.",
+    "source": "Generated (based on Time Management theory)",
+    "tags": [
+      "Boundaries",
+      "Prioritization"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0091",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Feedback Handling",
+    "difficulty": "Easy",
+    "question": "When receiving critical feedback from a manager, which response best reflects best practice?",
+    "options": [
+      "Immediately explain why the feedback is wrong before fully hearing it out",
+      "Accept the feedback outwardly but privately dismiss it entirely",
+      "Listen carefully, ask clarifying questions if needed, and reflect on how to apply the feedback",
+      "Become visibly upset and end the conversation early"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Actively listening and engaging constructively with feedback, even when it is critical, is the professional and growth-oriented response.",
+    "source": "Generated (based on Feedback Handling theory)",
+    "tags": [
+      "Receiving Feedback",
+      "Growth Mindset"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0092",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Feedback Handling",
+    "difficulty": "Easy",
+    "question": "What is generally the best way to give constructive feedback to a peer?",
+    "options": [
+      "Focus on the person's character rather than specific behavior",
+      "Deliver the feedback publicly in front of the team",
+      "Avoid giving the feedback directly and hope they figure it out on their own",
+      "Focus on specific, observable behavior and its impact, delivered privately and respectfully"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Specific, behavior-focused feedback delivered privately is the standard best practice for constructive feedback that is actionable and respectful.",
+    "source": "Generated (based on Feedback Handling theory)",
+    "tags": [
+      "Giving Feedback",
+      "Behavior-Focused"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0093",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Feedback Handling",
+    "difficulty": "Medium",
+    "question": "You receive feedback that you strongly disagree with. What is the best way to handle it according to best practice?",
+    "options": [
+      "Acknowledge the feedback respectfully, then share your perspective and ask for specific examples to better understand it",
+      "Argue immediately and dismiss the feedback outright",
+      "Agree outwardly without any genuine reflection or discussion",
+      "Ignore the feedback entirely and continue as before"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Respectful acknowledgment combined with seeking specific examples allows for genuine dialogue, rather than defensive dismissal or superficial agreement.",
+    "source": "Generated (based on Feedback Handling theory)",
+    "tags": [
+      "Disagreement",
+      "Clarification"
+    ],
+    "company": [
+      "Apple",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0094",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Feedback Handling",
+    "difficulty": "Medium",
+    "question": "A teammate reacts defensively when you give them constructive feedback. What is the best way to handle their reaction?",
+    "options": [
+      "Escalate by repeating the feedback more forcefully",
+      "Stay calm, reaffirm your supportive intent, and give them space to process the feedback before continuing the conversation",
+      "Withdraw the feedback entirely to avoid further conflict",
+      "Report the defensive reaction to management immediately"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Staying calm and giving space while reaffirming intent helps the feedback land constructively, rather than escalating or retreating entirely.",
+    "source": "Generated (based on Feedback Handling theory)",
+    "tags": [
+      "Defensive Reactions",
+      "Emotional Intelligence"
+    ],
+    "company": [
+      "Goldman Sachs",
+      "JPMorgan"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0095",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Feedback Handling",
+    "difficulty": "Hard",
+    "question": "You receive feedback anonymously through a 360-review that seems to contradict feedback you've received directly from your manager. How should you handle the discrepancy?",
+    "options": [
+      "Dismiss the anonymous feedback entirely since it cannot be directly verified",
+      "Assume the anonymous feedback is more truthful than your manager's direct feedback",
+      "Take the anonymous feedback seriously as one data point, look for patterns across multiple sources, and consider discussing the broader theme with your manager for context",
+      "Try to identify who gave the anonymous feedback to confront them directly"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Treating anonymous feedback as one data point among several, and discussing broader patterns with your manager, is the balanced, professional way to reconcile conflicting input.",
+    "source": "Generated (based on Feedback Handling theory)",
+    "tags": [
+      "360 Feedback",
+      "Conflicting Input"
+    ],
+    "company": [
+      "Deloitte",
+      "McKinsey"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "hr_0096",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Company Culture Fit",
+    "difficulty": "Easy",
+    "question": "When asked what kind of company culture you thrive in, which answer best follows best practice?",
+    "options": [
+      "Saying you can adapt to absolutely any culture with no real preference at all",
+      "Describing a culture that is the opposite of what the company is known for",
+      "Giving a vague answer with no specific detail",
+      "A specific description of your ideal working environment, backed by a real example of when you thrived in it"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A specific, example-backed answer shows genuine self-awareness and helps assess real fit, rather than a generic or contradictory answer.",
+    "source": "Generated (based on Company Culture Fit theory)",
+    "tags": [
+      "Culture Fit",
+      "Self-Awareness"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0097",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Company Culture Fit",
+    "difficulty": "Easy",
+    "question": "What is generally the best way to research a company's culture before an interview?",
+    "options": [
+      "Review employee reviews, company values pages, and recent news to form a realistic picture",
+      "Rely solely on the company's marketing materials without any other sources",
+      "Assume the culture is the same as a well-known competitor",
+      "Skip researching culture entirely since it cannot be assessed beforehand"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Combining multiple sources, including employee perspectives, gives a more realistic and well-rounded view of actual culture than marketing alone.",
+    "source": "Generated (based on Company Culture Fit theory)",
+    "tags": [
+      "Research",
+      "Preparation"
+    ],
+    "company": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "hr_0098",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Company Culture Fit",
+    "difficulty": "Medium",
+    "question": "During the interview process, you notice signs that the company's actual culture may not match its stated values. What is the best way to handle this?",
+    "options": [
+      "Ignore the discrepancy and assume it is not significant",
+      "Ask direct, specific questions to interviewers about how the stated values show up in day-to-day practice",
+      "Confront the interviewer accusingly about the mismatch",
+      "Withdraw from the process immediately without seeking any clarification"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Asking specific, probing questions is the constructive way to validate or clarify a perceived discrepancy before making a decision.",
+    "source": "Generated (based on Company Culture Fit theory)",
+    "tags": [
+      "Culture Discrepancy",
+      "Due Diligence"
+    ],
+    "company": [
+      "Accenture",
+      "Infosys"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0099",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Company Culture Fit",
+    "difficulty": "Medium",
+    "question": "You value a highly collaborative culture, but the role you're interviewing for is largely independent, individual-contributor work. How should you address this in the interview?",
+    "options": [
+      "Claim you prefer working independently even though you do not, to seem like a better fit",
+      "Avoid asking about collaboration at all to prevent seeming like a poor fit",
+      "Ask specific questions about collaboration opportunities within the role and honestly assess whether the balance would work for you",
+      "Assume the role will change to match your preference after you are hired"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Honest exploration of the actual balance of collaboration in the role leads to a genuinely informed fit decision, rather than misrepresenting your preferences.",
+    "source": "Generated (based on Company Culture Fit theory)",
+    "tags": [
+      "Fit Assessment",
+      "Honest Exploration"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "hr_0100",
+    "level": "Level 13",
+    "category": "HR & Behavioral",
+    "topic": "Company Culture Fit",
+    "difficulty": "Hard",
+    "question": "You are interviewing at a company whose stated values emphasize inclusion, but you have read credible reports of past issues in that area. How should you approach this topic in the interview?",
+    "options": [
+      "Avoid the topic entirely to prevent an awkward interview moment",
+      "Directly accuse the interviewer of the company's past issues without seeking their perspective",
+      "Assume the reports are accurate and withdraw from the process without further inquiry",
+      "Ask thoughtful, specific questions about concrete practices and recent changes related to inclusion, and weigh the answers alongside other available evidence"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Thoughtful, specific questions that seek concrete evidence of current practice allow you to make an informed decision, rather than avoiding the topic or reacting on assumption alone.",
+    "source": "Generated (based on Company Culture Fit theory)",
+    "tags": [
+      "Inclusion",
+      "Due Diligence"
+    ],
+    "company": [
+      "LinkedIn",
+      "Cisco"
+    ],
+    "estimatedTime": 60
+  }
+]

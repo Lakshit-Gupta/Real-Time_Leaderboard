@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "linux_0001",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File Permissions",
+    "difficulty": "Easy",
+    "question": "Which command changes the permission bits of a file or directory in Linux?",
+    "options": [
+      "chmod",
+      "chown",
+      "chgrp",
+      "chattr"
+    ],
+    "correctAnswer": 0,
+    "explanation": "chmod changes the read/write/execute permission bits of a file or directory. chown changes the owning user, and chgrp changes the owning group instead.",
+    "source": "Generated (based on File Permissions theory)",
+    "tags": [
+      "chmod",
+      "permissions"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0002",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File Permissions",
+    "difficulty": "Easy",
+    "question": "In the permission string `-rwxr-xr--`, what does the very first character represent?",
+    "options": [
+      "The owner's read permission",
+      "The file type (`-` for a regular file, `d` for a directory, `l` for a symlink, etc.)",
+      "The number of hard links to the file",
+      "The file's size category"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The leading character of `ls -l` output is the file type indicator, not a permission bit; the nine characters that follow are the actual rwx permission triplets for owner, group, and others.",
+    "source": "Generated (based on File Permissions theory)",
+    "tags": [
+      "ls",
+      "permissions"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0003",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File Permissions",
+    "difficulty": "Medium",
+    "question": "What octal permission value corresponds to the symbolic permissions `rwxr-xr-x`?",
+    "options": [
+      "744",
+      "754",
+      "755",
+      "700"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Each permission triplet is scored r=4, w=2, x=1. Owner rwx = 4+2+1 = 7, group r-x = 4+0+1 = 5, and other r-x = 4+0+1 = 5, giving 755.",
+    "source": "Generated (based on File Permissions theory)",
+    "tags": [
+      "octal",
+      "permissions"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0004",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File Permissions",
+    "difficulty": "Medium",
+    "question": "What does setting the setuid bit on an executable file cause?",
+    "options": [
+      "It prevents the file from ever being deleted by anyone",
+      "It makes the file executable only when invoked by root",
+      "It forces the program to run inside an isolated sandbox",
+      "The program runs with the privileges of the file's owner rather than the user who launched it"
+    ],
+    "correctAnswer": 3,
+    "explanation": "setuid (mode bit 4000) makes the process assume the file owner's effective UID at execution time; the classic example is /usr/bin/passwd, which needs root privileges to edit /etc/shadow on behalf of ordinary users.",
+    "source": "Generated (based on File Permissions theory)",
+    "tags": [
+      "setuid",
+      "permissions"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0005",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File Permissions",
+    "difficulty": "Hard",
+    "question": "A directory shows permissions `drwxrwxrwt`. What does the trailing `t` mean, and what practical effect does it have on a world-writable directory like `/tmp`?",
+    "options": [
+      "It is the sticky bit; even though everyone can write into the directory, only a file's owner (or root) can rename or delete that specific file inside it",
+      "The directory is actually a symlink pointing elsewhere",
+      "All files placed there are automatically deleted after the next reboot",
+      "The directory has ACLs enabled, blocking all non-owner access entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The sticky bit on a directory restricts deletion/renaming rights to the file's owner (or root/directory owner) even when the directory itself is writable by everyone \u2014 exactly what keeps users in /tmp from deleting each other's files.",
+    "source": "Generated (based on File Permissions theory)",
+    "tags": [
+      "sticky-bit",
+      "permissions"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0006",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Process Management",
+    "difficulty": "Easy",
+    "question": "Which command lists a snapshot of currently running processes?",
+    "options": [
+      "top",
+      "ps",
+      "kill",
+      "nice"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ps prints a one-time snapshot of processes; top instead shows a continuously refreshing live view, kill sends signals, and nice adjusts scheduling priority.",
+    "source": "Generated (based on Process Management theory)",
+    "tags": [
+      "ps",
+      "processes"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0007",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Process Management",
+    "difficulty": "Easy",
+    "question": "What happens when you run `kill -9 <pid>`?",
+    "options": [
+      "The process is paused via SIGSTOP",
+      "The process is asked to terminate gracefully via SIGTERM",
+      "The process is terminated immediately via SIGKILL, with no chance to clean up",
+      "The process is restarted with a fresh PID"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Signal 9 is SIGKILL, which the kernel delivers directly without giving the target process any opportunity to catch it or run cleanup code, unlike SIGTERM (15).",
+    "source": "Generated (based on Process Management theory)",
+    "tags": [
+      "signals",
+      "kill"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0008",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Process Management",
+    "difficulty": "Medium",
+    "question": "What is the difference between a process's PID and its PPID?",
+    "options": [
+      "PID identifies threads while PPID identifies processes",
+      "PPID is always 1 for every user-launched process",
+      "PID changes every second while PPID stays fixed",
+      "PID is the process's own unique identifier; PPID is the PID of the process that created (forked) it"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Every process has a unique PID assigned by the kernel and a PPID referencing its parent, which is how process trees (visible via `pstree`) are formed.",
+    "source": "Generated (based on Process Management theory)",
+    "tags": [
+      "pid",
+      "processes"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0009",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Process Management",
+    "difficulty": "Medium",
+    "question": "In `ps` output, what does the `D` process state typically indicate?",
+    "options": [
+      "Uninterruptible sleep, usually while waiting on disk or device I/O",
+      "Zombie, a finished process awaiting reaping",
+      "Stopped, paused by a job-control signal",
+      "Interruptible sleep, waiting on a normal event"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Processes in state D are blocked on I/O in a way the kernel won't interrupt, which is why they can't even respond to SIGKILL until the underlying I/O operation completes.",
+    "source": "Generated (based on Process Management theory)",
+    "tags": [
+      "ps",
+      "process-states"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0010",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Process Management",
+    "difficulty": "Hard",
+    "question": "A parent process exits before calling wait() on a child that has already finished, leaving a zombie entry. What ultimately reclaims that zombie?",
+    "options": [
+      "The kernel deletes any zombie entry automatically after a fixed 60-second timeout",
+      "init/systemd (PID 1) adopts the orphaned zombie and reaps it by calling wait() on its behalf once it notices the child has terminated",
+      "The child re-parents itself and calls exit() a second time to self-clean",
+      "The OOM killer removes zombie entries to free up memory pressure"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Orphaned processes are reparented to PID 1 by the kernel; init-class processes are written to periodically reap their adopted children, which finally removes the zombie's process-table entry.",
+    "source": "Generated (based on Process Management theory)",
+    "tags": [
+      "zombie",
+      "init"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0011",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Shell Scripting Basics",
+    "difficulty": "Easy",
+    "question": "What must appear as the very first line of a Bash script to specify which interpreter should run it?",
+    "options": [
+      "`#!/start/bash`",
+      "`//bin/bash`",
+      "A shebang line such as `#!/bin/bash`",
+      "`#!bash-init`"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The shebang (`#!` followed by an interpreter path) tells the kernel's exec mechanism which program should be used to run the rest of the file when it's executed directly.",
+    "source": "Generated (based on Shell Scripting Basics theory)",
+    "tags": [
+      "shebang",
+      "scripting"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0012",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Shell Scripting Basics",
+    "difficulty": "Easy",
+    "question": "How do you make a shell script file executable so it can be run as `./script.sh`?",
+    "options": [
+      "chmod +r script.sh",
+      "bash --enable script.sh",
+      "exec script.sh",
+      "chmod +x script.sh"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The execute permission bit must be set before the kernel will allow the file to be run directly as a program; chmod +x sets that bit for the appropriate user classes.",
+    "source": "Generated (based on Shell Scripting Basics theory)",
+    "tags": [
+      "chmod",
+      "scripting"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0013",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Shell Scripting Basics",
+    "difficulty": "Medium",
+    "question": "In a Bash script, what does the special variable `$?` hold right after a command finishes?",
+    "options": [
+      "The exit status (return code) of the most recently executed command",
+      "The PID of the last backgrounded process",
+      "The number of positional arguments passed to the script",
+      "The process ID of the current shell"
+    ],
+    "correctAnswer": 0,
+    "explanation": "`$?` is set to the exit code of the previous foreground command \u2014 0 conventionally means success, and any nonzero value signals some kind of failure.",
+    "source": "Generated (based on Shell Scripting Basics theory)",
+    "tags": [
+      "exit-status",
+      "scripting"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0014",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Shell Scripting Basics",
+    "difficulty": "Medium",
+    "question": "What does adding `set -e` near the top of a Bash script accomplish?",
+    "options": [
+      "It puts the script into verbose echo mode, printing each command before running it",
+      "The script immediately exits if any simple command returns a nonzero exit status",
+      "It makes all environment variables in the script read-only",
+      "It tells Bash to ignore every error and keep running regardless"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`set -e` (errexit) causes the script to abort as soon as an unchecked command fails, which is commonly used to prevent a script from silently continuing after a broken step.",
+    "source": "Generated (based on Shell Scripting Basics theory)",
+    "tags": [
+      "set-e",
+      "scripting"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0015",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Shell Scripting Basics",
+    "difficulty": "Hard",
+    "question": "Why might `set -e` fail to stop a script when the failing command sits inside an `if` condition, or is a non-final stage of a pipeline?",
+    "options": [
+      "set -e is silently disabled the moment a script defines any function",
+      "set -e in Bash only ever applies to the final line of the entire script",
+      "errexit specifically exempts commands used as conditions (in if/while/until) and, in a pipeline, exempts every command except the last one unless `set -o pipefail` is also enabled",
+      "set -e requires Bash 5 or newer to work correctly inside conditionals"
+    ],
+    "correctAnswer": 2,
+    "explanation": "POSIX and Bash both carve out exceptions to errexit for commands that are part of a conditional's test, or a pipeline's non-last stage \u2014 which is exactly why `set -o pipefail` is usually paired with `set -e` in robust scripts.",
+    "source": "Generated (based on Shell Scripting Basics theory)",
+    "tags": [
+      "set-e",
+      "pipefail"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0016",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Piping & Redirection",
+    "difficulty": "Easy",
+    "question": "What does the `|` operator do when placed between two commands?",
+    "options": [
+      "It runs both commands simultaneously with no data exchange",
+      "It redirects only stderr from the first command into a file",
+      "It runs the second command only if the first one fails",
+      "It sends the standard output of the first command as standard input to the second command"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The pipe operator connects one process's stdout directly to the next process's stdin, letting data flow through a chain of commands without touching disk.",
+    "source": "Generated (based on Piping & Redirection theory)",
+    "tags": [
+      "pipe",
+      "redirection"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0017",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Piping & Redirection",
+    "difficulty": "Easy",
+    "question": "If `file.txt` already exists, what does `command > file.txt` do to it?",
+    "options": [
+      "It overwrites file.txt entirely with the command's standard output",
+      "It appends the new output to the end of the existing file",
+      "It refuses to run because the target file already exists",
+      "It merges the command's stdout and stderr into the file"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The single `>` redirection operator truncates the target file before writing, replacing its previous contents; `>>` is the operator that appends instead.",
+    "source": "Generated (based on Piping & Redirection theory)",
+    "tags": [
+      "redirection",
+      "stdout"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0018",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Piping & Redirection",
+    "difficulty": "Medium",
+    "question": "What is the functional difference between `>` and `>>` for output redirection?",
+    "options": [
+      "`>` writes to standard output while `>>` writes only to standard error",
+      "`>` truncates and overwrites the target file, while `>>` appends output to the end of it",
+      "`>` is for redirecting input, and `>>` is for redirecting output",
+      "`>` only works on plain text files, while `>>` only works on binaries"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Both operators redirect stdout to a file, but `>` starts the file empty (or creates it), whereas `>>` preserves existing content and adds new output after it.",
+    "source": "Generated (based on Piping & Redirection theory)",
+    "tags": [
+      "redirection",
+      "append"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0019",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Piping & Redirection",
+    "difficulty": "Medium",
+    "question": "What does `2>&1` accomplish in `command > out.log 2>&1`?",
+    "options": [
+      "It creates two separate copies of stdout in different files",
+      "It permanently suppresses all error messages from the command",
+      "It duplicates file descriptor 2 (stderr) onto wherever file descriptor 1 (stdout) currently points, so both streams end up in out.log",
+      "It redirects standard input from file descriptor 2"
+    ],
+    "correctAnswer": 2,
+    "explanation": "`2>&1` means 'make fd 2 point at whatever fd 1 currently points at.' Because it comes after `> out.log` has already redirected stdout there, stderr ends up merged into the same file.",
+    "source": "Generated (based on Piping & Redirection theory)",
+    "tags": [
+      "stderr",
+      "file-descriptors"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0020",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Piping & Redirection",
+    "difficulty": "Hard",
+    "question": "Why does `command 2>&1 > out.log` fail to send stderr into out.log, while `command > out.log 2>&1` succeeds?",
+    "options": [
+      "Bash actually parses redirection operators from right to left in every case",
+      "The order of redirection operators never affects behavior in any POSIX-compliant shell",
+      "`2>&1` always takes precedence over any `>` redirection regardless of where it's placed",
+      "Bash applies redirections strictly left to right; in the first form, `2>&1` duplicates stderr onto the terminal (stdout's target at that moment) before `> out.log` moves stdout away, so stderr keeps going to the terminal instead of the log"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Because each redirection takes effect immediately as it's parsed, the position of `2>&1` relative to `> out.log` changes what stderr ends up pointing at \u2014 a classic Bash gotcha.",
+    "source": "Generated (based on Piping & Redirection theory)",
+    "tags": [
+      "stderr",
+      "file-descriptors"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0021",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Package Managers",
+    "difficulty": "Easy",
+    "question": "Which command installs a package on a Debian- or Ubuntu-based system using APT?",
+    "options": [
+      "apt install <package>",
+      "yum install <package>",
+      "dnf install <package>",
+      "pacman -S <package>"
+    ],
+    "correctAnswer": 0,
+    "explanation": "APT (Advanced Package Tool) is the package management front-end for Debian and its derivatives like Ubuntu; yum/dnf are used on Red Hat-family distros and pacman on Arch.",
+    "source": "Generated (based on Package Managers theory)",
+    "tags": [
+      "apt",
+      "package-manager"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0022",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Package Managers",
+    "difficulty": "Easy",
+    "question": "Which package manager is native to Fedora and modern RHEL/CentOS systems?",
+    "options": [
+      "apt",
+      "dnf (the successor to yum)",
+      "zypper",
+      "apk"
+    ],
+    "correctAnswer": 1,
+    "explanation": "dnf is the default package manager on Fedora and current RHEL/CentOS releases; apt belongs to Debian-family systems, zypper to openSUSE, and apk to Alpine Linux.",
+    "source": "Generated (based on Package Managers theory)",
+    "tags": [
+      "dnf",
+      "package-manager"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0023",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Package Managers",
+    "difficulty": "Medium",
+    "question": "What is the difference between `apt update` and `apt upgrade`?",
+    "options": [
+      "They are just two aliases for exactly the same operation",
+      "`apt update` upgrades the kernel while `apt upgrade` only upgrades user-space packages",
+      "`apt update` refreshes the local package index from configured repositories; `apt upgrade` actually installs newer versions of packages already on the system",
+      "`apt upgrade` refreshes the index, and `apt update` performs the installation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "You almost always run `apt update` first so APT knows about the latest available versions, then `apt upgrade` to install them \u2014 skipping update leaves upgrade working from stale metadata.",
+    "source": "Generated (based on Package Managers theory)",
+    "tags": [
+      "apt",
+      "package-manager"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0024",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Package Managers",
+    "difficulty": "Medium",
+    "question": "What core problem does a package manager's dependency resolver (as in APT or DNF) solve?",
+    "options": [
+      "It compiles the requested package's source code into a binary automatically",
+      "It encrypts packages while they're being downloaded over the network",
+      "It assigns Unix file permissions to every binary after installation",
+      "It automatically determines and installs the correct versions of libraries and other packages that a requested package needs in order to function"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Modern packages declare dependencies in metadata; the resolver walks that graph to figure out what else must be installed (or upgraded) so the requested package actually works.",
+    "source": "Generated (based on Package Managers theory)",
+    "tags": [
+      "dependencies",
+      "package-manager"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0025",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Package Managers",
+    "difficulty": "Hard",
+    "question": "A dnf/yum transaction fails because two enabled repositories offer conflicting versions of the same library, and the resolver can't reconcile them. What mechanism commonly resolves this class of conflict?",
+    "options": [
+      "Repository priority settings or explicit version pinning/exclude rules let the resolver consistently favor one repository's version, avoiding a mixed-version conflict",
+      "The package manager silently installs both conflicting versions side by side by default",
+      "The running kernel hot-patches the conflicting library in memory at runtime",
+      "dnf falls back to statically linking every dependency into the requesting package"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Because resolvers work from repository metadata, tools like DNF's repo priority plugin or `yum versionlock`/`dnf exclude` let admins tell the resolver which source should win when multiple repos claim the same package.",
+    "source": "Generated (based on Package Managers theory)",
+    "tags": [
+      "dnf",
+      "dependency-conflict"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0026",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "systemd & Services",
+    "difficulty": "Easy",
+    "question": "Which command immediately starts a systemd-managed service?",
+    "options": [
+      "systemctl enable <service>",
+      "systemctl start <service>",
+      "service init <service>",
+      "systemctl boot <service>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`systemctl start` launches the unit right now; `systemctl enable` only configures it to start on future boots without starting it immediately.",
+    "source": "Generated (based on systemd & Services theory)",
+    "tags": [
+      "systemctl",
+      "systemd"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0027",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "systemd & Services",
+    "difficulty": "Easy",
+    "question": "What does `systemctl enable <service>` do?",
+    "options": [
+      "It starts the service right away and turns on verbose logging for it",
+      "It uninstalls the service's dependency packages",
+      "It configures the service to start automatically at boot, by creating the appropriate symlinks, without starting it immediately",
+      "It restarts the service and clears its accumulated logs"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Enabling a unit wires it into the relevant target's `.wants` directory so it launches on future boots; it's independent from actually starting the service in the current session.",
+    "source": "Generated (based on systemd & Services theory)",
+    "tags": [
+      "systemctl",
+      "systemd"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0028",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "systemd & Services",
+    "difficulty": "Medium",
+    "question": "What is a systemd unit file primarily used for?",
+    "options": [
+      "Storing the compiled binary that systemd will execute directly",
+      "Recording historical CPU usage statistics for past services",
+      "Encrypting a service's credentials while it's at rest on disk",
+      "Declaratively describing how systemd should manage a resource, such as a service, socket, mount point, or timer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Unit files are plain-text configuration describing dependencies, startup commands, restart policy, and more; systemd reads them to know how to launch and supervise each managed resource.",
+    "source": "Generated (based on systemd & Services theory)",
+    "tags": [
+      "unit-file",
+      "systemd"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0029",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "systemd & Services",
+    "difficulty": "Medium",
+    "question": "How does a systemd `.timer` unit differ from a traditional cron job for scheduling recurring tasks?",
+    "options": [
+      "Timers integrate with systemd's dependency graph and journald logging, can trigger relative to boot or other unit events (not just calendar time), and are managed through systemctl like any other unit",
+      "Timers can only ever fire once per boot and can never repeat",
+      "Timers require installing and running a separate cron daemon alongside systemd",
+      "Timers cannot invoke arbitrary shell commands, only systemd-native binaries"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Because a .timer unit is paired with a .service unit and lives inside systemd's own unit ecosystem, it gets features cron never had \u2014 dependency ordering, structured logs, and boot-relative triggers.",
+    "source": "Generated (based on systemd & Services theory)",
+    "tags": [
+      "systemd-timer",
+      "cron-alternative"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0030",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "systemd & Services",
+    "difficulty": "Hard",
+    "question": "`systemctl status` on a repeatedly crashing service shows \"start-limit-hit\". What is systemd doing, and why?",
+    "options": [
+      "systemd always retries a failing unit indefinitely unless an external script kills it",
+      "systemd tracks failed starts within a StartLimitIntervalSec window; once StartLimitBurst restarts happen inside that window it stops retrying and marks the unit failed, to prevent an infinite restart storm from consuming resources",
+      "The kernel's OOM killer permanently disables the unit file after three failures",
+      "systemd silently converts any failing service into a oneshot unit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The start-limit mechanism is a safety valve: a service crash-looping every second would otherwise hammer the system forever, so systemd caps retries per configured burst/interval and surfaces the failure instead.",
+    "source": "Generated (based on systemd & Services theory)",
+    "tags": [
+      "systemd",
+      "restart-limit"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0031",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Networking Commands",
+    "difficulty": "Easy",
+    "question": "Which modern command displays IP addresses and network interface configuration, replacing the deprecated `ifconfig`?",
+    "options": [
+      "netstat -r",
+      "traceroute",
+      "ip addr (or `ip a`)",
+      "nslookup"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The `ip` command from iproute2 is the current standard for viewing and configuring addresses, routes, and links, superseding the older net-tools `ifconfig` utility.",
+    "source": "Generated (based on Networking Commands theory)",
+    "tags": [
+      "ip",
+      "networking"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0032",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Networking Commands",
+    "difficulty": "Easy",
+    "question": "Which command tests basic reachability to a host by sending ICMP echo requests?",
+    "options": [
+      "curl",
+      "ss",
+      "dig",
+      "ping"
+    ],
+    "correctAnswer": 3,
+    "explanation": "ping sends ICMP echo request packets and reports whether/how quickly echo replies come back, which is the classic first check for basic network connectivity.",
+    "source": "Generated (based on Networking Commands theory)",
+    "tags": [
+      "ping",
+      "networking"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0033",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Networking Commands",
+    "difficulty": "Medium",
+    "question": "What does `ss -tulnp` display?",
+    "options": [
+      "Listening TCP and UDP sockets, along with the process that owns each one",
+      "The complete kernel routing table with hop counts",
+      "Cached DNS resolution entries on the local machine",
+      "Only currently established SSH sessions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The flags mean: -t (TCP), -u (UDP), -l (listening only), -n (numeric, skip name resolution), -p (show owning process) \u2014 together giving a quick view of what's listening and by whom.",
+    "source": "Generated (based on Networking Commands theory)",
+    "tags": [
+      "ss",
+      "networking"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0034",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Networking Commands",
+    "difficulty": "Medium",
+    "question": "What is the primary purpose of the `dig` command?",
+    "options": [
+      "Measuring available bandwidth between two hosts",
+      "Querying DNS servers to resolve domain names and inspect DNS record details",
+      "Encrypting traffic on an already-established TCP connection",
+      "Displaying real-time throughput per network interface"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`dig` is a DNS lookup utility that queries name servers directly and shows detailed record information (A, MX, TXT, etc.), useful for debugging resolution issues.",
+    "source": "Generated (based on Networking Commands theory)",
+    "tags": [
+      "dig",
+      "dns"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0035",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Networking Commands",
+    "difficulty": "Hard",
+    "question": "`traceroute` shows increasing latency up to a certain hop, then several consecutive hops report `* * *`, before the final destination eventually responds successfully. What does this pattern most likely mean?",
+    "options": [
+      "The destination host is definitely down and completely unreachable",
+      "Every hop showing asterisks has a hardware fault requiring physical repair",
+      "Those intermediate routers are configured not to respond to (or they rate-limit/block) the TTL-expired ICMP messages traceroute relies on, even though they still forward the actual packets normally toward the destination",
+      "The route has looped back on itself and traceroute is stuck retrying forever"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Silent hops are extremely common in real networks because many routers deprioritize or drop the ICMP TTL-exceeded replies traceroute depends on for diagnostics \u2014 it doesn't mean packets themselves are being dropped.",
+    "source": "Generated (based on Networking Commands theory)",
+    "tags": [
+      "traceroute",
+      "icmp"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0036",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Disk & Filesystem",
+    "difficulty": "Easy",
+    "question": "Which command shows disk space usage per mounted filesystem?",
+    "options": [
+      "du -h",
+      "free -h",
+      "lsblk -a",
+      "df -h"
+    ],
+    "correctAnswer": 3,
+    "explanation": "df reports free/used space for each mounted filesystem; du instead reports space consumed by files and directories, and free reports RAM/swap usage.",
+    "source": "Generated (based on Disk & Filesystem theory)",
+    "tags": [
+      "df",
+      "filesystem"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0037",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Disk & Filesystem",
+    "difficulty": "Easy",
+    "question": "Which command shows how much disk space a specific directory (and its contents) is using, rather than a whole filesystem?",
+    "options": [
+      "du -sh <path>",
+      "df -sh <path>",
+      "fdisk -l",
+      "mount -a"
+    ],
+    "correctAnswer": 0,
+    "explanation": "du walks the given path and sums up file sizes; -s summarizes into a single total and -h makes the output human-readable (KB/MB/GB).",
+    "source": "Generated (based on Disk & Filesystem theory)",
+    "tags": [
+      "du",
+      "filesystem"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0038",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Disk & Filesystem",
+    "difficulty": "Medium",
+    "question": "What typically needs to happen to a brand-new block device before a filesystem can be created directly on it for normal use?",
+    "options": [
+      "It must first be formatted as swap space before any other use",
+      "It usually needs a partition table with at least one partition created (e.g. via fdisk or parted), unless the whole raw disk is being used directly",
+      "It must be added to an LVM volume group before anything else is possible",
+      "It must be mounted read-only before a filesystem can be written to it"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Most workflows partition a disk first (creating device nodes like /dev/sdb1) and then run mkfs on the partition, though it's also possible to put a filesystem directly on the whole raw device.",
+    "source": "Generated (based on Disk & Filesystem theory)",
+    "tags": [
+      "partition",
+      "filesystem"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0039",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Disk & Filesystem",
+    "difficulty": "Medium",
+    "question": "What does `mount /dev/sdb1 /mnt/data` do?",
+    "options": [
+      "It formats /dev/sdb1 with a brand-new filesystem",
+      "It copies the entire contents of /dev/sdb1 into /mnt/data",
+      "It attaches the filesystem found on partition /dev/sdb1 to the directory /mnt/data, making its contents accessible at that path",
+      "It encrypts /dev/sdb1 using a key file found in /mnt/data"
+    ],
+    "correctAnswer": 2,
+    "explanation": "mount doesn't create or copy data \u2014 it makes an existing filesystem on a device available under a chosen directory (the mount point) in the overall directory tree.",
+    "source": "Generated (based on Disk & Filesystem theory)",
+    "tags": [
+      "mount",
+      "filesystem"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0040",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Disk & Filesystem",
+    "difficulty": "Hard",
+    "question": "`df` reports a filesystem at 100% full, but deleting large files doesn't reduce the reported usage, and `du` shows far less space used than `df` does. What commonly explains this discrepancy?",
+    "options": [
+      "df caches its results for 24 hours and just needs a manual cache flush",
+      "The filesystem is corrupted and requires a full reformat to reclaim space",
+      "du intentionally undercounts usage by design and should never be trusted",
+      "Some process still holds an open file descriptor to a file that was deleted; the kernel keeps the underlying disk blocks allocated until the last open reference to that file is closed"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A deleted-but-still-open file is invisible to du (which walks the directory tree) but still counted by df (which reads actual block allocation), a classic cause of 'phantom' disk usage that only clears once the holding process exits or is restarted.",
+    "source": "Generated (based on Disk & Filesystem theory)",
+    "tags": [
+      "disk-space",
+      "open-file-handles"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0041",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Environment Variables",
+    "difficulty": "Easy",
+    "question": "Which command prints the current value of the PATH environment variable?",
+    "options": [
+      "echo $PATH",
+      "cat PATH",
+      "printenv --path",
+      "set PATH"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Prefixing a variable name with `$` expands its value in the shell, so `echo $PATH` prints the current search path; the other options aren't valid ways to read it.",
+    "source": "Generated (based on Environment Variables theory)",
+    "tags": [
+      "path",
+      "environment-variables"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0042",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Environment Variables",
+    "difficulty": "Easy",
+    "question": "How do you set an environment variable that is exported to child processes for the current shell session only?",
+    "options": [
+      "setenv MYVAR value (in Bash)",
+      "export MYVAR=value",
+      "MYVAR := value",
+      "echo MYVAR=value"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`export` marks a shell variable so it becomes part of the environment passed to any child process launched afterward; `setenv` is a csh/tcsh construct, not Bash.",
+    "source": "Generated (based on Environment Variables theory)",
+    "tags": [
+      "export",
+      "environment-variables"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0043",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Environment Variables",
+    "difficulty": "Medium",
+    "question": "What is the main role of the PATH environment variable?",
+    "options": [
+      "It stores only the current working directory",
+      "It lists which environment variables are allowed to be exported to children",
+      "It lists, in order, the directories the shell searches to locate an executable when a bare command name is typed",
+      "It defines the format of the shell's command prompt"
+    ],
+    "correctAnswer": 2,
+    "explanation": "When you type a command like `ls`, the shell scans each directory listed in PATH, in order, until it finds a matching executable (or reports 'command not found').",
+    "source": "Generated (based on Environment Variables theory)",
+    "tags": [
+      "path",
+      "environment-variables"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0044",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Environment Variables",
+    "difficulty": "Medium",
+    "question": "What is the difference between a plain shell variable and an exported environment variable?",
+    "options": [
+      "Shell variables persist across reboots while exported variables do not",
+      "Exported variables automatically become read-only once exported",
+      "There is no functional difference, only a naming convention",
+      "A plain shell variable exists only in the current shell; exporting it with `export` makes it part of the environment inherited by any child processes launched from that shell"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Without `export`, a variable is visible to the current shell's own commands (like in scripts referencing $var) but is not passed down when the shell forks a child process to run another program.",
+    "source": "Generated (based on Environment Variables theory)",
+    "tags": [
+      "export",
+      "environment-variables"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0045",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Environment Variables",
+    "difficulty": "Hard",
+    "question": "A parent script sets `export FOO=bar`, then calls a second script that changes FOO and exits. Back in the parent script, FOO is still `bar`. Why doesn't the child's change persist?",
+    "options": [
+      "The child script runs as a separate process with its own copy of the environment; modifying FOO there only affects that child's process memory and can't propagate back up to the parent process",
+      "Bash caches exported variables for five minutes before refreshing them",
+      "FOO must be marked `readonly` for children to inherit updates correctly",
+      "Environment variables are shared memory, so this indicates a bash bug"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Environment variables flow one-way, from parent to child, at process creation time; a child can freely modify its own copy, but there's no mechanism for that to be reflected back in the parent's environment once the child exits.",
+    "source": "Generated (based on Environment Variables theory)",
+    "tags": [
+      "environment-variables",
+      "subprocess"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0046",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Cron Jobs",
+    "difficulty": "Easy",
+    "question": "Which command opens the current user's crontab file for editing?",
+    "options": [
+      "cron -edit",
+      "crontab -e",
+      "systemctl edit cron",
+      "crontab -l --edit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`crontab -e` opens the invoking user's personal crontab in the default editor; `crontab -l` merely lists it without editing.",
+    "source": "Generated (based on Cron Jobs theory)",
+    "tags": [
+      "crontab",
+      "cron"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0047",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Cron Jobs",
+    "difficulty": "Easy",
+    "question": "In the crontab line `0 5 * * * /path/script.sh`, what does the fifth field (the final `*`) represent?",
+    "options": [
+      "Minute of the hour",
+      "Month of the year",
+      "Day of the week (0\u20137, where both 0 and 7 mean Sunday)",
+      "Year"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Cron's five fields are, in order: minute, hour, day-of-month, month, day-of-week \u2014 so the last `*` in this line means 'every day of the week', firing at 5:00 AM daily.",
+    "source": "Generated (based on Cron Jobs theory)",
+    "tags": [
+      "cron",
+      "scheduling"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0048",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Cron Jobs",
+    "difficulty": "Medium",
+    "question": "What does the cron schedule expression `*/15 * * * *` mean?",
+    "options": [
+      "Run the job once, 15 minutes after midnight",
+      "Run the job on the 15th day of every month",
+      "Run the job every 15 hours",
+      "Run the job every 15 minutes, around the clock, every day"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The `*/15` step syntax in the minute field means 'every 15th minute value' (0, 15, 30, 45); with the rest left as `*`, that repeats every hour of every day.",
+    "source": "Generated (based on Cron Jobs theory)",
+    "tags": [
+      "cron",
+      "scheduling"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0049",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Cron Jobs",
+    "difficulty": "Medium",
+    "question": "Where can system-wide cron jobs (as opposed to a single user's personal crontab) typically be placed on Linux?",
+    "options": [
+      "In /etc/crontab and in files under /etc/cron.d/",
+      "In each user's ~/.bashrc file",
+      "In /var/spool/mail/ alongside mail queues",
+      "In /usr/bin/cron.conf"
+    ],
+    "correctAnswer": 0,
+    "explanation": "System administrators or packages commonly drop scheduling files into /etc/cron.d/ or add lines to /etc/crontab, both of which the cron daemon reads in addition to individual users' crontabs.",
+    "source": "Generated (based on Cron Jobs theory)",
+    "tags": [
+      "cron",
+      "system-cron"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0050",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Cron Jobs",
+    "difficulty": "Hard",
+    "question": "A cron job runs a script that works perfectly when launched manually from an interactive shell, but fails when cron runs it. What's the most common root cause?",
+    "options": [
+      "Cron jobs always run as root regardless of the crontab's owner, causing permission mismatches",
+      "Cron executes jobs with a minimal, non-login environment (a different PATH, no shell profile/rc files sourced), so environment variables and relative paths the script implicitly assumed from an interactive session simply aren't set",
+      "Cron is fundamentally unable to execute any script containing pipes or redirection",
+      "Cron silently caps every job's runtime at exactly 60 seconds"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Interactive shells load profile/rc files that set up PATH, aliases, and other variables a script might depend on; cron's environment is deliberately minimal, which is why cron scripts should use absolute paths and set needed variables explicitly.",
+    "source": "Generated (based on Cron Jobs theory)",
+    "tags": [
+      "cron",
+      "environment"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0051",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Text Processing (grep/sed/awk)",
+    "difficulty": "Easy",
+    "question": "Which command searches for lines matching a pattern inside a text file?",
+    "options": [
+      "find 'pattern' file.txt",
+      "sort 'pattern' file.txt",
+      "grep 'pattern' file.txt",
+      "cut 'pattern' file.txt"
+    ],
+    "correctAnswer": 2,
+    "explanation": "grep is purpose-built for searching text for lines matching a pattern (literal or regular expression); find locates files by name/attributes, sort orders lines, and cut extracts columns.",
+    "source": "Generated (based on Text Processing (grep/sed/awk) theory)",
+    "tags": [
+      "grep",
+      "text-processing"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0052",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Text Processing (grep/sed/awk)",
+    "difficulty": "Easy",
+    "question": "What does the `-i` flag do when used with grep?",
+    "options": [
+      "It inverts the match, printing only non-matching lines",
+      "It prints only a count of matching lines",
+      "It searches recursively through subdirectories",
+      "It makes the pattern match case-insensitively"
+    ],
+    "correctAnswer": 3,
+    "explanation": "`-i` tells grep to ignore letter case when comparing the pattern; the inverse-match flag is `-v`, count-only is `-c`, and recursive search is `-r`.",
+    "source": "Generated (based on Text Processing (grep/sed/awk) theory)",
+    "tags": [
+      "grep",
+      "flags"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0053",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Text Processing (grep/sed/awk)",
+    "difficulty": "Medium",
+    "question": "What does `sed 's/foo/bar/' file.txt` do?",
+    "options": [
+      "It prints file.txt to standard output with the first occurrence of \"foo\" on each line replaced by \"bar\", leaving the file itself unmodified",
+      "It replaces every occurrence of \"foo\" with \"bar\" directly on disk automatically",
+      "It deletes every line that contains \"foo\"",
+      "It searches for \"foo\" and appends \"bar\" immediately after each match"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Without the `g` flag, sed's substitute command replaces only the first match per line, and without `-i` it writes the transformed stream to stdout rather than editing the file in place.",
+    "source": "Generated (based on Text Processing (grep/sed/awk) theory)",
+    "tags": [
+      "sed",
+      "text-processing"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0054",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Text Processing (grep/sed/awk)",
+    "difficulty": "Medium",
+    "question": "In an awk script processing a line of input, what do `$1` and `$0` refer to?",
+    "options": [
+      "`$1` is the current line number and `$0` is the input file name",
+      "`$1` is the first field of the current record; `$0` is the entire current record (the whole line) unsplit",
+      "`$1` is the first command-line file argument and `$0` is the awk script's own name",
+      "`$0` is always empty unless the script explicitly assigns a value to it"
+    ],
+    "correctAnswer": 1,
+    "explanation": "awk automatically splits each input line into fields ($1, $2, \u2026) based on the field separator, while $0 always holds the unsplit original line, which is useful for whole-line matching or printing.",
+    "source": "Generated (based on Text Processing (grep/sed/awk) theory)",
+    "tags": [
+      "awk",
+      "fields"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0055",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Text Processing (grep/sed/awk)",
+    "difficulty": "Hard",
+    "question": "Why does `sed 's/foo/bar/g' file.txt > file.txt` typically leave file.txt empty or corrupted, and what's the standard fix?",
+    "options": [
+      "sed processes files from back to front internally, which reverses and garbles line order",
+      "The `g` flag is fundamentally incompatible with output redirection and must be removed",
+      "The shell truncates file.txt for output redirection before sed ever gets to open it for reading, so sed ends up reading an already-empty file; the fix is to use `sed -i` for in-place editing, or write to a temporary file and then move it over the original",
+      "sed requires the `-i` flag just to open any file at all, so this command always errors out immediately"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Shell redirection setup (opening/truncating the target file) happens before the piped command even starts executing, which is why 'reading and writing the same file via `>`' is a classic footgun independent of sed specifically.",
+    "source": "Generated (based on Text Processing (grep/sed/awk) theory)",
+    "tags": [
+      "sed",
+      "redirection-gotcha"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0056",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "SSH & Remote Access",
+    "difficulty": "Easy",
+    "question": "Which command opens an SSH session to a remote host as the user \"alice\"?",
+    "options": [
+      "ssh -connect alice hostname",
+      "remote alice@hostname",
+      "ssh --user=alice hostname",
+      "ssh alice@hostname"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The standard SSH client syntax is `ssh user@host` (or `ssh -l user host`); the other forms use flags that don't exist in OpenSSH's client.",
+    "source": "Generated (based on SSH & Remote Access theory)",
+    "tags": [
+      "ssh",
+      "remote-access"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0057",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "SSH & Remote Access",
+    "difficulty": "Easy",
+    "question": "What is the default TCP port used by the SSH protocol?",
+    "options": [
+      "22",
+      "21",
+      "443",
+      "80"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Port 22 is IANA-assigned to SSH; 21 is FTP's control port, 443 is HTTPS, and 80 is plain HTTP.",
+    "source": "Generated (based on SSH & Remote Access theory)",
+    "tags": [
+      "ssh",
+      "ports"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0058",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "SSH & Remote Access",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the `ssh-keygen` command?",
+    "options": [
+      "It generates a one-time password for a single SSH login",
+      "It generates a public/private key pair used for key-based SSH authentication",
+      "It automatically rotates the SSH server's host key on every login",
+      "It encrypts individual files for transfer over SCP"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ssh-keygen creates an asymmetric key pair (e.g. Ed25519 or RSA) \u2014 the private key stays on the client, and the public key is placed in a server's authorized_keys file to permit passwordless login.",
+    "source": "Generated (based on SSH & Remote Access theory)",
+    "tags": [
+      "ssh-keygen",
+      "keys"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0059",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "SSH & Remote Access",
+    "difficulty": "Medium",
+    "question": "How does public-key SSH authentication verify a client's identity without ever transmitting the client's private key over the network?",
+    "options": [
+      "The client sends an encrypted copy of its private key that the server decrypts using a shared secret",
+      "SSH exchanges the private key once during the very first connection and caches it locally afterward",
+      "The server challenges the client to sign a piece of data with its private key; the server then verifies that signature using the matching public key already stored in authorized_keys",
+      "The private key is hashed and transmitted alongside the username for direct comparison"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Public-key cryptography lets the server confirm possession of the private key purely by verifying a signature \u2014 the private key material itself never has to leave the client machine.",
+    "source": "Generated (based on SSH & Remote Access theory)",
+    "tags": [
+      "ssh",
+      "public-key-auth"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0060",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "SSH & Remote Access",
+    "difficulty": "Hard",
+    "question": "An `ssh`/`scp` connection to a previously trusted host suddenly warns \"REMOTE HOST IDENTIFICATION HAS CHANGED\" and refuses to proceed. What is SSH protecting against, and what's the safe remedy if the change is actually expected (e.g. the server was rebuilt)?",
+    "options": [
+      "It means the SSH protocol version is mismatched and the client needs to be upgraded",
+      "It always means the remote server's disk has failed and data has been permanently lost",
+      "The safe fix is to disable host key checking globally with a client-wide configuration flag",
+      "It's guarding against a possible man-in-the-middle attack, since the presented host key no longer matches the one recorded in known_hosts; if the change is legitimate, verify the new host key through an out-of-band channel and then update/remove the stale entry in ~/.ssh/known_hosts"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Host key pinning is exactly what stops a MITM attacker from silently substituting their own server; the warning should always be investigated rather than bypassed, and only cleared once the new key is confirmed legitimate through a separate trusted channel.",
+    "source": "Generated (based on SSH & Remote Access theory)",
+    "tags": [
+      "ssh",
+      "known-hosts"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0061",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "User & Group Management",
+    "difficulty": "Easy",
+    "question": "Which command creates a new user account on Linux?",
+    "options": [
+      "useradd <username> (or the friendlier adduser)",
+      "usermod <username>",
+      "groupadd <username>",
+      "newuser <username>"
+    ],
+    "correctAnswer": 0,
+    "explanation": "useradd (or its interactive wrapper adduser on Debian-based systems) creates the account entry; usermod modifies an existing account, and groupadd creates groups rather than users.",
+    "source": "Generated (based on User & Group Management theory)",
+    "tags": [
+      "useradd",
+      "users"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0062",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "User & Group Management",
+    "difficulty": "Easy",
+    "question": "Which file stores basic account information such as username, UID, home directory, and login shell?",
+    "options": [
+      "/etc/shadow",
+      "/etc/passwd",
+      "/etc/users",
+      "/etc/group"
+    ],
+    "correctAnswer": 1,
+    "explanation": "/etc/passwd holds account metadata (historically including passwords, now just a placeholder); the actual hashed passwords live in /etc/shadow, and /etc/group defines group membership.",
+    "source": "Generated (based on User & Group Management theory)",
+    "tags": [
+      "passwd",
+      "users"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0063",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "User & Group Management",
+    "difficulty": "Medium",
+    "question": "Where are users' hashed passwords actually stored, as opposed to general account metadata?",
+    "options": [
+      "/etc/passwd",
+      "/etc/security/passwords",
+      "/etc/shadow",
+      "~/.password"
+    ],
+    "correctAnswer": 2,
+    "explanation": "/etc/shadow is readable only by root and stores password hashes plus aging information, separated out from /etc/passwd (which must remain world-readable for other tools to look up account info).",
+    "source": "Generated (based on User & Group Management theory)",
+    "tags": [
+      "shadow",
+      "users"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0064",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "User & Group Management",
+    "difficulty": "Medium",
+    "question": "What does `usermod -aG sudo alice` do?",
+    "options": [
+      "It replaces alice's entire group membership with just the sudo group",
+      "It grants alice permanent, unlimited root shell access",
+      "It removes alice from every group except sudo",
+      "It adds alice to the \"sudo\" group in addition to whatever groups she already belongs to, without removing her from any of them"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The `-a` (append) flag is essential here: combined with `-G`, it adds the named group(s) to the user's existing supplementary group list instead of overwriting it.",
+    "source": "Generated (based on User & Group Management theory)",
+    "tags": [
+      "usermod",
+      "groups"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0065",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "User & Group Management",
+    "difficulty": "Hard",
+    "question": "Running `usermod -G developers alice` (without `-a`) unexpectedly removes alice from groups she already belonged to. Why, and how should the command have been written to only add her to \"developers\"?",
+    "options": [
+      "`-G` alone sets the user's entire supplementary group list to exactly the groups given, replacing any prior memberships; it must be combined with `-a` (i.e. `usermod -aG developers alice`) to append a group without dropping the others",
+      "`-G` appends by default, so this removal indicates a bug in usermod itself",
+      "`-G` only ever affects the primary group, so this behavior is impossible and points to filesystem corruption",
+      "`-G` requires a reboot to take effect, and the apparent removal is just a stale cache"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is a well-known usermod footgun: forgetting `-a` silently truncates a user's group memberships down to only what's listed, which is why `-aG` is the standard idiom for adding a single group.",
+    "source": "Generated (based on User & Group Management theory)",
+    "tags": [
+      "usermod",
+      "groups"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0066",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Signals",
+    "difficulty": "Easy",
+    "question": "What signal is typically sent to the foreground process when you press Ctrl+C in a terminal?",
+    "options": [
+      "SIGKILL",
+      "SIGINT",
+      "SIGTERM",
+      "SIGSTOP"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ctrl+C generates SIGINT (signal 2), an interrupt request that a well-behaved program can catch to shut down cleanly, unlike SIGKILL which can't be caught at all.",
+    "source": "Generated (based on Signals theory)",
+    "tags": [
+      "sigint",
+      "signals"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0067",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Signals",
+    "difficulty": "Easy",
+    "question": "Which signal number corresponds to SIGKILL on Linux?",
+    "options": [
+      "15",
+      "1",
+      "9",
+      "19"
+    ],
+    "correctAnswer": 2,
+    "explanation": "SIGKILL is signal number 9; SIGTERM is 15, SIGHUP is 1, and SIGSTOP is 19 on most Linux architectures.",
+    "source": "Generated (based on Signals theory)",
+    "tags": [
+      "sigkill",
+      "signals"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0068",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Signals",
+    "difficulty": "Medium",
+    "question": "What is the intended, commonly expected behavior when a process receives SIGTERM?",
+    "options": [
+      "The process is killed immediately by the kernel with no opportunity to clean up",
+      "The process is merely paused until it later receives SIGCONT",
+      "The process silently ignores it by default and keeps running unless SIGKILL follows",
+      "The process is asked to terminate gracefully, and may catch the signal to run cleanup logic before actually exiting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "SIGTERM (15) is the standard 'please shut down' signal \u2014 it can be intercepted by a signal handler so a program can close files, flush buffers, or notify other systems before exiting, unlike SIGKILL.",
+    "source": "Generated (based on Signals theory)",
+    "tags": [
+      "sigterm",
+      "signals"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0069",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Signals",
+    "difficulty": "Medium",
+    "question": "Why can't a process catch or ignore SIGKILL or SIGSTOP the way it can catch SIGTERM?",
+    "options": [
+      "The kernel handles SIGKILL and SIGSTOP directly, without ever delivering them to a user-space signal handler, which guarantees they always take effect",
+      "They can actually be caught, but only by processes running as root",
+      "They're simply aliases for SIGTERM that happen to be handled identically by convention",
+      "Only single-threaded processes are unable to catch them"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SIGKILL and SIGSTOP are deliberately un-catchable and un-blockable at the kernel level, precisely so there's always a reliable way for an administrator to terminate or pause any process regardless of its own signal handling.",
+    "source": "Generated (based on Signals theory)",
+    "tags": [
+      "sigkill",
+      "sigstop"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0070",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Signals",
+    "difficulty": "Hard",
+    "question": "A long-running daemon reloads its configuration when sent `kill -HUP <pid>`, even though SIGHUP's original meaning was \"the controlling terminal hung up.\" What makes this repurposing possible?",
+    "options": [
+      "SIGHUP is specially reserved by the kernel exclusively for configuration reloads and can't be used for anything else",
+      "SIGHUP has no OS-enforced action beyond terminating the process if left unhandled; many daemons register a custom handler that reinterprets receipt of SIGHUP as a request to reload configuration, purely by software convention rather than any kernel-level reload semantics",
+      "Daemons must be compiled with a special SIGHUP flag that overrides the kernel's built-in reload behavior",
+      "SIGHUP automatically triggers a configuration reload in every Linux process with no code changes needed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because a program is free to install its own handler for most signals (SIGKILL/SIGSTOP excepted), long-running services commonly repurpose SIGHUP for config reloads as a long-standing Unix convention, not a kernel feature.",
+    "source": "Generated (based on Signals theory)",
+    "tags": [
+      "sighup",
+      "daemons"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0071",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File System Hierarchy",
+    "difficulty": "Easy",
+    "question": "Which directory conventionally holds system-wide configuration files on Linux?",
+    "options": [
+      "/var",
+      "/opt",
+      "/etc",
+      "/usr"
+    ],
+    "correctAnswer": 2,
+    "explanation": "/etc is the traditional home for host-wide configuration files read by system services and applications; /var holds variable runtime data, /opt holds optional third-party software, and /usr holds most installed programs and libraries.",
+    "source": "Generated (based on File System Hierarchy theory)",
+    "tags": [
+      "etc",
+      "fhs"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0072",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File System Hierarchy",
+    "difficulty": "Easy",
+    "question": "Which directory is conventionally used for temporary files, which may be cleared on reboot?",
+    "options": [
+      "/home",
+      "/root",
+      "/srv",
+      "/tmp"
+    ],
+    "correctAnswer": 3,
+    "explanation": "/tmp is designated for transient files that applications don't need to persist; many distros clear it on boot. /home holds user data, /root is the superuser's home, and /srv holds data served by the host.",
+    "source": "Generated (based on File System Hierarchy theory)",
+    "tags": [
+      "tmp",
+      "fhs"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0073",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File System Hierarchy",
+    "difficulty": "Medium",
+    "question": "What kind of content is conventionally stored under /var?",
+    "options": [
+      "Variable data that changes during normal operation, such as log files, spool queues, and caches",
+      "Static system binaries required for booting the machine",
+      "Users' personal documents and configuration files",
+      "Kernel source code and header files"
+    ],
+    "correctAnswer": 0,
+    "explanation": "/var (\"variable\") is explicitly meant for data that's expected to grow or change while the system runs \u2014 logs in /var/log, mail spools, package caches, and so on \u2014 as opposed to mostly-static program files.",
+    "source": "Generated (based on File System Hierarchy theory)",
+    "tags": [
+      "var",
+      "fhs"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0074",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File System Hierarchy",
+    "difficulty": "Medium",
+    "question": "What is the conventional distinction between /usr/local and /usr?",
+    "options": [
+      "/usr/local is simply a symlink to /usr and the two are functionally identical",
+      "/usr/local is reserved for software installed manually by a system administrator, kept separate from packages managed by the distribution's package manager, which live under /usr",
+      "/usr/local only exists on servers and is never present on desktop distributions",
+      "/usr/local is meant to store only shell configuration files, nothing else"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Keeping locally-built or manually-installed software under /usr/local avoids collisions and confusion with files the package manager owns and tracks under /usr, making upgrades and cleanups safer.",
+    "source": "Generated (based on File System Hierarchy theory)",
+    "tags": [
+      "usr-local",
+      "fhs"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0075",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "File System Hierarchy",
+    "difficulty": "Hard",
+    "question": "Why did the FHS historically separate `/bin` and `/sbin` from `/usr/bin` and `/usr/sbin`, and why have many modern distributions merged them via symlinks (the \"usr merge\")?",
+    "options": [
+      "/sbin binaries are compiled for a different instruction set than /usr/bin binaries, making a merge impossible",
+      "The separation exists purely for licensing reasons unrelated to the boot process",
+      "Historically, /bin and /sbin held essential binaries needed before /usr \u2014 potentially a separate mount \u2014 became available early in boot; modern initramfs-based boot processes no longer need that separation, so distros now merge them (e.g. /bin -> usr/bin) to simplify packaging while symlinks preserve the old paths for compatibility",
+      "/usr must always live on physically separate hardware from /, and the split enforces that"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The usr-merge reflects that early Unix systems sometimes mounted /usr later or over the network, so a minimal root filesystem needed its own essential binaries; that constraint mostly disappeared once initramfs-based boot became standard.",
+    "source": "Generated (based on File System Hierarchy theory)",
+    "tags": [
+      "fhs",
+      "usr-merge"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0076",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Log Management",
+    "difficulty": "Easy",
+    "question": "Which command shows logs collected by systemd's journal?",
+    "options": [
+      "syslog-view",
+      "cat /var/log/system",
+      "logctl",
+      "journalctl"
+    ],
+    "correctAnswer": 3,
+    "explanation": "journalctl is the dedicated tool for reading systemd-journald's structured, binary log storage; the other names aren't real standard Linux utilities.",
+    "source": "Generated (based on Log Management theory)",
+    "tags": [
+      "journalctl",
+      "logs"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0077",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Log Management",
+    "difficulty": "Easy",
+    "question": "Which directory is the conventional location for traditional Linux log files?",
+    "options": [
+      "/var/log",
+      "/etc/log",
+      "/tmp/log",
+      "/usr/log"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Following the FHS, log files that record system and application activity are conventionally kept under /var/log, since logs are exactly the kind of variable, growing data /var is meant for.",
+    "source": "Generated (based on Log Management theory)",
+    "tags": [
+      "var-log",
+      "logs"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0078",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Log Management",
+    "difficulty": "Medium",
+    "question": "How can you view the most recent log lines and keep watching for new ones as they arrive, similar to watching a growing file live?",
+    "options": [
+      "head -f /var/log/syslog",
+      "tail -f /var/log/syslog (or `journalctl -f` to follow the journal)",
+      "cat --live /var/log/syslog",
+      "watch /var/log/syslog"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The `-f` (follow) flag makes tail keep the file open and print new lines as they're appended, which is the standard way to watch logs in real time; `head -f` and `cat --live` aren't valid options.",
+    "source": "Generated (based on Log Management theory)",
+    "tags": [
+      "tail",
+      "logs"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0079",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Log Management",
+    "difficulty": "Medium",
+    "question": "What core problem does log rotation (e.g. via logrotate) primarily solve?",
+    "options": [
+      "It encrypts log files so that only the root user is able to read them",
+      "It automatically fixes bugs that are reported inside application logs",
+      "It prevents log files from growing without bound and exhausting disk space, by periodically archiving, compressing, and truncating them on a schedule",
+      "It streams logs to a remote SIEM system in real time"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Without rotation, continuously-appended logs would eventually fill the disk; logrotate periodically renames/compresses old logs and starts a fresh file, keeping disk usage bounded and predictable.",
+    "source": "Generated (based on Log Management theory)",
+    "tags": [
+      "logrotate",
+      "logs"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0080",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Log Management",
+    "difficulty": "Hard",
+    "question": "`journalctl` shows recent boot logs fine, but entries from a week ago are missing even though plenty of disk space is free. What's a likely systemd-journald configuration cause?",
+    "options": [
+      "journalctl is only ever able to display logs from the current boot, with no exceptions possible",
+      "Historical logs are always deleted automatically after exactly 24 hours regardless of configuration",
+      "journald requires a paid license to retain logs older than one day",
+      "journald may be configured for volatile, in-memory-only storage rather than persistent storage under /var/log/journal, so history is lost across reboots; alternatively, SystemMaxUse or similar retention limits in journald.conf may be capping how much history is kept"
+    ],
+    "correctAnswer": 3,
+    "explanation": "By default some distributions run journald with Storage=volatile (RAM-only, wiped on reboot); switching to Storage=persistent and creating /var/log/journal (or adjusting size/time retention settings) is what actually preserves history across boots.",
+    "source": "Generated (based on Log Management theory)",
+    "tags": [
+      "journald",
+      "log-retention"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0081",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Bash Variables & Loops",
+    "difficulty": "Easy",
+    "question": "How do you reference the value of a variable named `name` in Bash?",
+    "options": [
+      "$name (or ${name})",
+      "%name%",
+      "&name",
+      "#name"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bash expands a variable's value when its name is prefixed with `$`; the other symbols aren't Bash's variable expansion syntax (%name% is a Windows batch convention).",
+    "source": "Generated (based on Bash Variables & Loops theory)",
+    "tags": [
+      "variables",
+      "bash"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0082",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Bash Variables & Loops",
+    "difficulty": "Easy",
+    "question": "Which loop construct iterates over each item in a list in Bash?",
+    "options": [
+      "while item in list: ...:end",
+      "for item in list; do ...; done",
+      "foreach item in list { ... }",
+      "loop item in list -> ..."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bash's `for ... in ...; do ... done` syntax is the standard way to iterate over a word list, filenames from a glob, or command substitution output; the other syntaxes belong to other languages, not Bash.",
+    "source": "Generated (based on Bash Variables & Loops theory)",
+    "tags": [
+      "for-loop",
+      "bash"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0083",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Bash Variables & Loops",
+    "difficulty": "Medium",
+    "question": "In most simple cases, what is the difference between `$var` and `${var}` in Bash?",
+    "options": [
+      "`${var}` always converts the value to a string while `$var` keeps it numeric",
+      "`$var` only reads from the environment while `${var}` only reads local shell variables",
+      "They are equivalent for plain variable expansion; braces mainly matter to disambiguate the variable name from adjacent text, e.g. `${var}_suffix`",
+      "`${var}` triggers command substitution while `$var` does not"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Both forms expand the variable's value identically in the simple case; the braces become necessary once you need to separate the variable name from immediately-following characters that would otherwise be parsed as part of the name.",
+    "source": "Generated (based on Bash Variables & Loops theory)",
+    "tags": [
+      "variable-expansion",
+      "bash"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0084",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Bash Variables & Loops",
+    "difficulty": "Medium",
+    "question": "What does `while read -r line; do ... done < file.txt` do?",
+    "options": [
+      "It reads the entire file into memory as a single variable called `line`",
+      "It executes file.txt as if it were a script, treating each line as a command",
+      "It continuously re-reads file.txt in an infinite loop regardless of contents",
+      "It reads file.txt line by line, assigning each line to the variable `line` for use inside the loop body, with `-r` preventing backslashes from being interpreted as escape characters"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Redirecting the file into the `while` loop's stdin lets `read` pull one line per iteration; `-r` (raw) is best practice so that literal backslashes in the data aren't silently swallowed as escapes.",
+    "source": "Generated (based on Bash Variables & Loops theory)",
+    "tags": [
+      "while-read",
+      "bash"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0085",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Bash Variables & Loops",
+    "difficulty": "Hard",
+    "question": "A script does `some_command | while read -r line; do count=$((count+1)); done; echo $count`, and `count` prints 0 after the loop even though lines were clearly processed inside it. Why?",
+    "options": [
+      "In Bash, the right-hand side of a pipeline runs in a subshell by default, so variable assignments made inside the while loop only exist in that subshell and don't persist back to the parent shell once the pipeline completes",
+      "`read -r` resets all shell variables to zero whenever the loop exits",
+      "`count` must be declared with `local` even at the top level of a script or it always resets to 0",
+      "Bash pipelines silently discard the final variable assignment right before an echo runs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is a classic Bash pitfall: piping into a while loop puts the loop in a subshell, so any counters or flags it sets vanish when the subshell exits \u2014 common workarounds are process substitution or `shopt -s lastpipe`.",
+    "source": "Generated (based on Bash Variables & Loops theory)",
+    "tags": [
+      "subshell",
+      "pipeline"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0086",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Kernel Basics",
+    "difficulty": "Easy",
+    "question": "What is the primary role of the Linux kernel?",
+    "options": [
+      "It provides the graphical desktop environment users interact with",
+      "It manages hardware resources (CPU, memory, devices) and mediates access to them for user-space processes",
+      "It compiles user applications at install time",
+      "It stores user documents and configuration files"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The kernel is the core layer that talks directly to hardware and enforces controlled access to it via system calls; graphical desktops, compilers, and document storage are all separate user-space concerns.",
+    "source": "Generated (based on Kernel Basics theory)",
+    "tags": [
+      "kernel",
+      "os-basics"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0087",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Kernel Basics",
+    "difficulty": "Easy",
+    "question": "Which command shows the version of the currently running kernel?",
+    "options": [
+      "kernel --version",
+      "cat /proc/version-only",
+      "uname -r",
+      "lsmod --version"
+    ],
+    "correctAnswer": 2,
+    "explanation": "`uname -r` prints just the running kernel's release string; the other listed commands/flags don't exist as standard Linux utilities.",
+    "source": "Generated (based on Kernel Basics theory)",
+    "tags": [
+      "uname",
+      "kernel"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0088",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Kernel Basics",
+    "difficulty": "Medium",
+    "question": "What is a Linux kernel module, as loaded with `insmod` or `modprobe`?",
+    "options": [
+      "A user-space daemon that mimics kernel behavior purely for testing purposes",
+      "A statically compiled component that always requires a full reboot to change",
+      "A configuration file that's read once at boot time and never referenced again",
+      "A piece of code that can be dynamically loaded into (or unloaded from) the running kernel to add functionality, such as a device driver, without requiring a reboot"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Kernel modules let functionality (drivers, filesystems, etc.) be added or removed from a running kernel on demand, which is far more flexible than requiring everything to be built directly into a monolithic kernel image.",
+    "source": "Generated (based on Kernel Basics theory)",
+    "tags": [
+      "kernel-module",
+      "modprobe"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0089",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Kernel Basics",
+    "difficulty": "Medium",
+    "question": "What is the difference between kernel space and user space?",
+    "options": [
+      "Kernel space runs privileged code with direct hardware access; user space runs ordinary applications in a restricted mode that must go through system calls to request services from the kernel",
+      "Kernel space is only used during the boot process; user space takes over completely afterward",
+      "They're just two different names for the same underlying memory region",
+      "Kernel space refers to disk storage while user space refers only to RAM"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The CPU enforces distinct privilege levels: kernel-space code can directly manipulate hardware and critical data structures, while user-space code is sandboxed and must request kernel services through the well-defined system call interface.",
+    "source": "Generated (based on Kernel Basics theory)",
+    "tags": [
+      "kernel-space",
+      "user-space"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0090",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Kernel Basics",
+    "difficulty": "Hard",
+    "question": "Why does Linux need a formal \"system call\" boundary between user-space processes and the kernel, rather than letting applications manipulate hardware directly?",
+    "options": [
+      "System calls exist purely for historical compatibility with 1970s-era hardware and serve no purpose on modern CPUs",
+      "The CPU's privilege rings combined with the kernel's controlled system call interface enforce isolation and validation, preventing a buggy or malicious user program from corrupting hardware state, other processes' memory, or crashing the whole system",
+      "Direct hardware access would actually be just as safe and faster, but Unix simply never bothered implementing it",
+      "System calls are only needed for networking operations, not for CPU or memory management"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Modern CPUs implement hardware privilege levels (rings) specifically so the kernel can validate and mediate every request that touches shared hardware or memory \u2014 without that, any user process could crash or compromise the entire system.",
+    "source": "Generated (based on Kernel Basics theory)",
+    "tags": [
+      "syscalls",
+      "privilege-rings"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0091",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Containers vs VMs",
+    "difficulty": "Easy",
+    "question": "What do Linux containers (such as Docker containers) primarily virtualize, compared to a traditional virtual machine?",
+    "options": [
+      "Containers virtualize physical CPU cores exclusively, while VMs virtualize only memory",
+      "Containers and VMs virtualize identically; the two terms are interchangeable",
+      "Containers share and isolate the host's existing kernel using namespaces and cgroups, whereas a VM virtualizes an entire machine, including its own separate kernel",
+      "Containers run entirely inside a web browser, unlike VMs"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because containers reuse the host's kernel rather than booting a separate one, they're lighter-weight and start faster than VMs, which must emulate hardware and run a full guest operating system.",
+    "source": "Generated (based on Containers vs VMs theory)",
+    "tags": [
+      "containers",
+      "virtualization"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0092",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Containers vs VMs",
+    "difficulty": "Easy",
+    "question": "Which Linux kernel feature isolates a container's view of processes, network interfaces, and mount points from the host?",
+    "options": [
+      "Swap space",
+      "Kernel modules",
+      "The bootloader",
+      "Namespaces"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Namespaces partition kernel resources (PID, network, mount, UTS, etc.) so that processes inside one namespace see a restricted, isolated view of the system, which is the core mechanism containers rely on.",
+    "source": "Generated (based on Containers vs VMs theory)",
+    "tags": [
+      "namespaces",
+      "containers"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0093",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Containers vs VMs",
+    "difficulty": "Medium",
+    "question": "What role do cgroups (control groups) play for containers?",
+    "options": [
+      "They limit and account for the resource usage \u2014 CPU, memory, I/O \u2014 that a group of processes, such as those belonging to a container, is allowed to consume",
+      "They provide network name resolution between different containers",
+      "They encrypt data written to a container's filesystem layer",
+      "They decide which physical host a container should be scheduled onto in a cluster"
+    ],
+    "correctAnswer": 0,
+    "explanation": "cgroups enforce and track resource limits (like a memory cap or CPU share) for a set of processes, which is how a container runtime prevents one container from starving others on the same host.",
+    "source": "Generated (based on Containers vs VMs theory)",
+    "tags": [
+      "cgroups",
+      "containers"
+    ],
+    "company": [
+      "Cisco",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0094",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Containers vs VMs",
+    "difficulty": "Medium",
+    "question": "Why do containers typically start much faster than virtual machines?",
+    "options": [
+      "Containers use a special fast-boot BIOS that virtual machines don't have access to",
+      "Containers don't need to boot a separate kernel or emulate hardware; they start as isolated processes directly on the host's already-running kernel",
+      "Containers are always pre-warmed and cached automatically by the CPU",
+      "Virtual machines must always run on physically separate hardware, which adds network latency"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A VM's startup includes booting an entire guest OS kernel from scratch through a (virtual) BIOS/UEFI; a container simply launches as a new process using kernel features already active on the host, skipping all of that overhead.",
+    "source": "Generated (based on Containers vs VMs theory)",
+    "tags": [
+      "containers",
+      "startup-time"
+    ],
+    "company": [
+      "Apple",
+      "Adobe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0095",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Containers vs VMs",
+    "difficulty": "Hard",
+    "question": "Because containers share the host kernel while VMs each run their own, what is a key security implication when deciding whether to run untrusted workloads in containers versus VMs?",
+    "options": [
+      "Containers are always strictly more secure than VMs simply because they involve less code",
+      "VMs are just as vulnerable to container-style escapes as containers are",
+      "A kernel-level vulnerability or successful container escape can let an untrusted container compromise the shared host kernel and potentially other containers on it, whereas a VM's stronger isolation boundary (separate kernel, hypervisor-enforced) generally limits the blast radius to that single VM",
+      "Sharing a kernel has no real security implications since namespaces provide isolation equivalent to a hypervisor"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is exactly why highly untrusted or multi-tenant workloads are often run in VMs (or in gVisor/Kata-style sandboxes that add a virtualization-like boundary around containers) rather than plain containers sharing a kernel directly with other tenants.",
+    "source": "Generated (based on Containers vs VMs theory)",
+    "tags": [
+      "container-security",
+      "isolation"
+    ],
+    "company": [
+      "Canonical",
+      "SUSE"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "linux_0096",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Common CLI Utilities",
+    "difficulty": "Easy",
+    "question": "Which command displays the contents of a text file directly to the terminal?",
+    "options": [
+      "touch file.txt",
+      "mkdir file.txt",
+      "rm file.txt",
+      "cat file.txt"
+    ],
+    "correctAnswer": 3,
+    "explanation": "cat concatenates and prints file contents to stdout; touch creates an empty file or updates timestamps, mkdir creates directories, and rm deletes files \u2014 none of which display content.",
+    "source": "Generated (based on Common CLI Utilities theory)",
+    "tags": [
+      "cat",
+      "cli-utilities"
+    ],
+    "company": [
+      "Intel",
+      "Dell"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0097",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Common CLI Utilities",
+    "difficulty": "Easy",
+    "question": "Which command searches for files by name within a directory tree?",
+    "options": [
+      "find /path -name \"pattern\"",
+      "locate --tree pattern",
+      "grep -r --filesonly pattern",
+      "ls -R pattern"
+    ],
+    "correctAnswer": 0,
+    "explanation": "find walks a directory tree and filters entries by criteria like name, type, or modification time; the other listed flags/commands aren't valid standard options for locating files by name this way.",
+    "source": "Generated (based on Common CLI Utilities theory)",
+    "tags": [
+      "find",
+      "cli-utilities"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "linux_0098",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Common CLI Utilities",
+    "difficulty": "Medium",
+    "question": "What is the difference between `cp` and `mv` on Linux?",
+    "options": [
+      "`cp` only works on directories while `mv` only works on individual files",
+      "`cp` copies a file, leaving the original in its original location; `mv` moves (or renames) a file, removing it from the source location entirely",
+      "`mv` always creates a compressed copy while `cp` does not",
+      "`cp` requires root privileges to run while `mv` does not"
+    ],
+    "correctAnswer": 1,
+    "explanation": "After `cp`, both the original and the copy exist; after `mv`, only the file at the new location exists \u2014 the source path is gone, which is also how `mv` implements in-place renaming.",
+    "source": "Generated (based on Common CLI Utilities theory)",
+    "tags": [
+      "cp",
+      "mv"
+    ],
+    "company": [
+      "Microsoft",
+      "Red Hat"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0099",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Common CLI Utilities",
+    "difficulty": "Medium",
+    "question": "What does `xargs` do in a pipeline such as `find . -name \"*.log\" | xargs rm`?",
+    "options": [
+      "It only works with grep and cat, and can't be paired with any other command",
+      "It schedules the following command to run at a later, unspecified time",
+      "It takes the list of input lines (filenames) from find and builds/executes command-line invocations of the given command (rm) using them, since many commands like rm can't read their targets directly from stdin",
+      "It encrypts the arguments before passing them along to the next command"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Most Unix commands take their operands as command-line arguments rather than reading them from stdin; xargs bridges that gap by converting a stream of input lines into arguments for the target command.",
+    "source": "Generated (based on Common CLI Utilities theory)",
+    "tags": [
+      "xargs",
+      "cli-utilities"
+    ],
+    "company": [
+      "IBM",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "linux_0100",
+    "level": "Level 10",
+    "category": "Linux & Systems",
+    "topic": "Common CLI Utilities",
+    "difficulty": "Hard",
+    "question": "Why is `find . -name \"*.log\" | xargs rm` considered riskier than `find . -name \"*.log\" -print0 | xargs -0 rm`, especially with filenames containing spaces or special characters?",
+    "options": [
+      "`-print0` simply makes find run faster and has no effect on correctness",
+      "`xargs -0` is only required when deleting more than 1000 files in a single invocation",
+      "The plain pipeline only fails specifically when filenames contain the letter \"x\"",
+      "The plain pipeline splits input on whitespace/newlines by default, so filenames containing spaces or embedded newlines can be misinterpreted as multiple separate arguments; `-print0` combined with `xargs -0` instead separates entries with the NUL byte, the only character that can never legally appear in a filename, making the pairing unambiguous"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is the standard fix for the classic 'filenames with spaces break my pipeline' bug: NUL-delimiting is safe precisely because the NUL byte is the one character the filesystem forbids inside a filename.",
+    "source": "Generated (based on Common CLI Utilities theory)",
+    "tags": [
+      "find",
+      "xargs-print0"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  }
+]

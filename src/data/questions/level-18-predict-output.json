@@ -1,0 +1,2672 @@
+[
+  {
+    "id": "pred_0001",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "JavaScript Type Coercion",
+    "difficulty": "Easy",
+    "question": "What does `console.log(1 + \"1\")` output in JavaScript?",
+    "options": [
+      "\"11\"",
+      "2",
+      "NaN",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The number 1 is coerced to a string and concatenated with \"1\", producing the string \"11\".",
+    "source": "Generated (based on JavaScript Type Coercion theory)",
+    "tags": [
+      "JavaScript",
+      "Type Coercion",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0002",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "JavaScript Type Coercion",
+    "difficulty": "Easy",
+    "question": "What does `console.log(\"5\" - 1)` output?",
+    "options": [
+      "\"51\"",
+      "4",
+      "NaN",
+      "\"4\""
+    ],
+    "correctAnswer": 1,
+    "explanation": "The \"-\" operator coerces the string \"5\" to a number, so 5 - 1 = 4 (a number).",
+    "source": "Generated (based on JavaScript Type Coercion theory)",
+    "tags": [
+      "JavaScript",
+      "Type Coercion",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0003",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "JavaScript Type Coercion",
+    "difficulty": "Medium",
+    "question": "What does `console.log([] + [])` output?",
+    "options": [
+      "0",
+      "undefined",
+      "\"\" (an empty string)",
+      "[]"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Both arrays are converted to strings (\"\") via toString, and \"\" + \"\" produces an empty string.",
+    "source": "Generated (based on JavaScript Type Coercion theory)",
+    "tags": [
+      "JavaScript",
+      "Type Coercion",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0004",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "JavaScript Type Coercion",
+    "difficulty": "Medium",
+    "question": "What does `console.log([] == false)` evaluate to?",
+    "options": [
+      "false",
+      "NaN",
+      "TypeError",
+      "true"
+    ],
+    "correctAnswer": 3,
+    "explanation": "[] is coerced to \"\" then to 0; false is coerced to 0; 0 == 0 is true under loose equality.",
+    "source": "Generated (based on JavaScript Type Coercion theory)",
+    "tags": [
+      "JavaScript",
+      "Type Coercion",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0005",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "JavaScript Type Coercion",
+    "difficulty": "Hard",
+    "question": "What does `console.log(1 < 2 < 3)` output, and why?",
+    "options": [
+      "true, because (1 < 2) evaluates to true (coerced to 1), and 1 < 3 is true",
+      "false, because chained comparisons are evaluated all at once mathematically",
+      "A SyntaxError, since JavaScript does not allow chained comparisons",
+      "true, because JavaScript evaluates it as a true three-way range check"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Comparison operators are left-associative and not chained like in math: (1 < 2) evaluates to boolean true, coerced to 1, then 1 < 3 is true.",
+    "source": "Generated (based on JavaScript Type Coercion theory)",
+    "tags": [
+      "JavaScript",
+      "Type Coercion",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0006",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Python List Mutation",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```python\na = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)\n```",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 2, 3, 4]",
+      "[4]",
+      "TypeError"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`b = a` makes b reference the same list object as a, so mutating b via append also affects a.",
+    "source": "Generated (based on Python List Mutation theory)",
+    "tags": [
+      "Python",
+      "Mutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0007",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Python List Mutation",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```python\na = [1, 2, 3]\nb = a.copy()\nb.append(4)\nprint(a)\n```",
+    "options": [
+      "[1, 2, 3, 4]",
+      "[4]",
+      "[1, 2, 3]",
+      "TypeError"
+    ],
+    "correctAnswer": 2,
+    "explanation": "`.copy()` creates a shallow copy, so mutating b no longer affects the original list a.",
+    "source": "Generated (based on Python List Mutation theory)",
+    "tags": [
+      "Python",
+      "Mutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0008",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Python List Mutation",
+    "difficulty": "Medium",
+    "question": "What is a classic pitfall with this function?\n```python\ndef add_item(item, items=[]):\n    items.append(item)\n    return items\n```",
+    "options": [
+      "The function will raise a TypeError on every call",
+      "Each call always starts with a fresh empty list as intended",
+      "The function cannot accept more than one argument",
+      "The default mutable list is shared and persists across calls, causing unexpected accumulation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Default mutable arguments are evaluated once at function definition time and shared across all calls that do not explicitly pass their own list.",
+    "source": "Generated (based on Python List Mutation theory)",
+    "tags": [
+      "Python",
+      "Mutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0009",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Python List Mutation",
+    "difficulty": "Medium",
+    "question": "What does the following print?\n```python\nx = [[0] * 3] * 3\nx[0][0] = 1\nprint(x)\n```",
+    "options": [
+      "[[1, 0, 0], [1, 0, 0], [1, 0, 0]]",
+      "[[1, 0, 0], [0, 0, 0], [0, 0, 0]]",
+      "[[0, 0, 0], [0, 0, 0], [0, 0, 0]]",
+      "IndexError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "`[[0]*3]*3` creates three references to the *same* inner list, so mutating one index affects all three rows.",
+    "source": "Generated (based on Python List Mutation theory)",
+    "tags": [
+      "Python",
+      "Mutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0010",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Python List Mutation",
+    "difficulty": "Hard",
+    "question": "What does the following print?\n```python\ndef f(items):\n    items += [4]\n\na = [1, 2, 3]\nf(a)\nprint(a)\n\ndef g(items):\n    items = items + [5]\n\nb = [1, 2, 3]\ng(b)\nprint(b)\n```",
+    "options": [
+      "[1, 2, 3] then [1, 2, 3, 5]",
+      "[1, 2, 3, 4] then [1, 2, 3]",
+      "[1, 2, 3, 4] then [1, 2, 3, 5]",
+      "[1, 2, 3] then [1, 2, 3]"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`items += [4]` calls list.__iadd__, mutating the original list in place; `items = items + [5]` creates a new list and rebinds the local name, leaving the caller's list b unchanged.",
+    "source": "Generated (based on Python List Mutation theory)",
+    "tags": [
+      "Python",
+      "Mutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0011",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Java String Pool",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```java\nString a = \"hello\";\nString b = \"hello\";\nSystem.out.println(a == b);\n```",
+    "options": [
+      "false",
+      "A compile error",
+      "true",
+      "NullPointerException"
+    ],
+    "correctAnswer": 2,
+    "explanation": "String literals are interned in the string pool, so both a and b reference the same pooled object, making == true.",
+    "source": "Generated (based on Java String Pool theory)",
+    "tags": [
+      "Java",
+      "String Pool",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0012",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Java String Pool",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```java\nString a = new String(\"hello\");\nString b = \"hello\";\nSystem.out.println(a == b);\n```",
+    "options": [
+      "true",
+      "A compile error",
+      "NullPointerException",
+      "false"
+    ],
+    "correctAnswer": 3,
+    "explanation": "`new String(...)` explicitly creates a new object on the heap, separate from the interned pool literal, so == (reference comparison) is false.",
+    "source": "Generated (based on Java String Pool theory)",
+    "tags": [
+      "Java",
+      "String Pool",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0013",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Java String Pool",
+    "difficulty": "Medium",
+    "question": "What does the following print?\n```java\nString a = new String(\"hello\");\nString b = \"hello\";\nSystem.out.println(a.equals(b));\n```",
+    "options": [
+      "true",
+      "false",
+      "A compile error",
+      "NullPointerException"
+    ],
+    "correctAnswer": 0,
+    "explanation": "`.equals()` compares string content, not reference identity, so it returns true even though `==` would be false.",
+    "source": "Generated (based on Java String Pool theory)",
+    "tags": [
+      "Java",
+      "String Pool",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0014",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Java String Pool",
+    "difficulty": "Medium",
+    "question": "What does the following print?\n```java\nString a = \"hel\" + \"lo\";\nString b = \"hello\";\nSystem.out.println(a == b);\n```",
+    "options": [
+      "false",
+      "true",
+      "A compile error",
+      "NullPointerException"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Concatenation of compile-time constant literals is resolved by the compiler at compile time, so `a` also becomes the interned literal \"hello\", making == true.",
+    "source": "Generated (based on Java String Pool theory)",
+    "tags": [
+      "Java",
+      "String Pool",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0015",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Java String Pool",
+    "difficulty": "Hard",
+    "question": "What does the following print, and why?\n```java\nString part = \"hel\";\nString a = part + \"lo\";\nString b = \"hello\";\nSystem.out.println(a == b);\n```",
+    "options": [
+      "true, because the compiler always resolves any string concatenation at compile time",
+      "A compile error, since concatenating with a variable is not allowed",
+      "false, because concatenation involving a non-final variable happens at runtime, producing a new heap object not in the pool",
+      "true, because all string concatenations are automatically interned"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Since `part` is a variable (not a compile-time constant), the concatenation `part + \"lo\"` is performed at runtime, producing a new String object on the heap that is not automatically interned, so == is false.",
+    "source": "Generated (based on Java String Pool theory)",
+    "tags": [
+      "Java",
+      "String Pool",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0016",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "C++ Pointer Arithmetic",
+    "difficulty": "Easy",
+    "question": "Given `int arr[3] = {10, 20, 30}; int *p = arr;`, what does `*(p + 1)` evaluate to?",
+    "options": [
+      "10",
+      "30",
+      "The memory address of arr[1]",
+      "20"
+    ],
+    "correctAnswer": 3,
+    "explanation": "`p + 1` advances the pointer by one int-sized step to arr[1], and dereferencing it gives the value 20.",
+    "source": "Generated (based on C++ Pointer Arithmetic theory)",
+    "tags": [
+      "C++",
+      "Pointers",
+      "Predict Output"
+    ],
+    "company": [
+      "Microsoft",
+      "Bloomberg"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0017",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "C++ Pointer Arithmetic",
+    "difficulty": "Easy",
+    "question": "Given `int arr[3] = {10, 20, 30};`, what does `arr[1]` and `*(arr + 1)` have in common?",
+    "options": [
+      "They are equivalent expressions referring to the same element",
+      "They refer to different elements of the array",
+      "arr[1] causes a compile error while *(arr + 1) does not",
+      "Only one of them is valid C++ syntax"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Array indexing `arr[i]` is defined in C/C++ as syntactic sugar equivalent to `*(arr + i)`.",
+    "source": "Generated (based on C++ Pointer Arithmetic theory)",
+    "tags": [
+      "C++",
+      "Pointers",
+      "Predict Output"
+    ],
+    "company": [
+      "Microsoft",
+      "Bloomberg"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0018",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "C++ Pointer Arithmetic",
+    "difficulty": "Medium",
+    "question": "What does the following print (assuming a typical 4-byte int)?\n```cpp\nint arr[3] = {1, 2, 3};\nint *p = arr;\np++;\ncout << *p;\n```",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "A garbage/undefined value"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`p++` advances the pointer by sizeof(int), moving it to point at arr[1], so dereferencing gives 2.",
+    "source": "Generated (based on C++ Pointer Arithmetic theory)",
+    "tags": [
+      "C++",
+      "Pointers",
+      "Predict Output"
+    ],
+    "company": [
+      "Microsoft",
+      "Bloomberg"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0019",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "C++ Pointer Arithmetic",
+    "difficulty": "Medium",
+    "question": "Why is `int *p = arr; p = p + 5;` for a 3-element array `arr` considered undefined behavior in this specific case (assuming it is later dereferenced)?",
+    "options": [
+      "Pointer arithmetic is never allowed on arrays in C++",
+      "Adding to a pointer always causes an immediate compile error",
+      "It points past the end of valid array bounds, and dereferencing it accesses memory outside the array",
+      "This specific case is always perfectly safe to dereference in any context"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Advancing a pointer beyond one-past-the-end of the array and then dereferencing it accesses memory outside the array's bounds, which is undefined behavior.",
+    "source": "Generated (based on C++ Pointer Arithmetic theory)",
+    "tags": [
+      "C++",
+      "Pointers",
+      "Predict Output"
+    ],
+    "company": [
+      "Microsoft",
+      "Bloomberg"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0020",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "C++ Pointer Arithmetic",
+    "difficulty": "Hard",
+    "question": "Given a 2D array `int matrix[2][3]` stored in row-major order, what does `*(*(matrix + 1) + 2)` access?",
+    "options": [
+      "matrix[2][1]",
+      "matrix[0][2]",
+      "An out-of-bounds element",
+      "matrix[1][2]"
+    ],
+    "correctAnswer": 3,
+    "explanation": "`matrix + 1` points to the second row; dereferencing gives a pointer to that row's first element; adding 2 and dereferencing accesses the third element of that row — matrix[1][2].",
+    "source": "Generated (based on C++ Pointer Arithmetic theory)",
+    "tags": [
+      "C++",
+      "Pointers",
+      "Predict Output"
+    ],
+    "company": [
+      "Microsoft",
+      "Bloomberg"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0021",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Closures & Scope",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```javascript\nfunction outer() {\n  let count = 0;\n  return function () {\n    count++;\n    return count;\n  };\n}\nconst counter = outer();\nconsole.log(counter());\nconsole.log(counter());\n```",
+    "options": [
+      "1 then 2",
+      "1 then 1",
+      "undefined then undefined",
+      "0 then 1"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The inner function forms a closure over `count`, retaining and updating it across calls, printing 1 then 2.",
+    "source": "Generated (based on Closures & Scope theory)",
+    "tags": [
+      "Closures",
+      "Scope",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0022",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Closures & Scope",
+    "difficulty": "Easy",
+    "question": "In JavaScript, what does a \"closure\" allow an inner function to do?",
+    "options": [
+      "Immediately delete all variables from the enclosing scope once created",
+      "Retain access to variables from its enclosing scope even after that outer function has returned",
+      "Access global variables only, never variables from an enclosing function",
+      "Run only once and never be called again"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A closure is a function bundled with references to its surrounding lexical scope, letting it access those variables even after the outer function finishes executing.",
+    "source": "Generated (based on Closures & Scope theory)",
+    "tags": [
+      "Closures",
+      "Scope",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0023",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Closures & Scope",
+    "difficulty": "Medium",
+    "question": "What does the following classic example print?\n```javascript\nfor (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0);\n}\n```",
+    "options": [
+      "0, 1, 2",
+      "0, 0, 0",
+      "3, 3, 3",
+      "undefined, undefined, undefined"
+    ],
+    "correctAnswer": 2,
+    "explanation": "`var` is function-scoped, so all three closures share the same `i`, which has finished looping to 3 by the time the callbacks run.",
+    "source": "Generated (based on Closures & Scope theory)",
+    "tags": [
+      "Closures",
+      "Scope",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0024",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Closures & Scope",
+    "difficulty": "Medium",
+    "question": "What does the following print, given the change from `var` to `let`?\n```javascript\nfor (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0);\n}\n```",
+    "options": [
+      "3, 3, 3",
+      "0, 0, 0",
+      "undefined, undefined, undefined",
+      "0, 1, 2"
+    ],
+    "correctAnswer": 3,
+    "explanation": "`let` creates a new binding of `i` for each loop iteration, so each closure captures its own distinct value, printing 0, 1, 2.",
+    "source": "Generated (based on Closures & Scope theory)",
+    "tags": [
+      "Closures",
+      "Scope",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0025",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Closures & Scope",
+    "difficulty": "Hard",
+    "question": "What does the following print?\n```javascript\nfunction makeCounters() {\n  let counters = [];\n  for (let i = 0; i < 3; i++) {\n    counters.push(() => i * 10);\n  }\n  return counters;\n}\nconst fns = makeCounters();\nconsole.log(fns.map(fn => fn()));\n```",
+    "options": [
+      "[0, 10, 20]",
+      "[20, 20, 20]",
+      "[0, 0, 0]",
+      "[NaN, NaN, NaN]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Each closure captures its own per-iteration `let` binding of i (0, 1, 2 respectively), so calling each function returns i * 10 for its captured value: [0, 10, 20].",
+    "source": "Generated (based on Closures & Scope theory)",
+    "tags": [
+      "Closures",
+      "Scope",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0026",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Operator Precedence",
+    "difficulty": "Easy",
+    "question": "What does `console.log(2 + 3 * 4)` output?",
+    "options": [
+      "20",
+      "14",
+      "9",
+      "24"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Multiplication has higher precedence than addition, so 3 * 4 = 12 is computed first, then 2 + 12 = 14.",
+    "source": "Generated (based on Operator Precedence theory)",
+    "tags": [
+      "Operator Precedence",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0027",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Operator Precedence",
+    "difficulty": "Easy",
+    "question": "What does `print(10 - 2 - 3)` output in Python?",
+    "options": [
+      "11",
+      "9",
+      "5",
+      "15"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Subtraction is left-associative, so it evaluates as (10 - 2) - 3 = 5.",
+    "source": "Generated (based on Operator Precedence theory)",
+    "tags": [
+      "Operator Precedence",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0028",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Operator Precedence",
+    "difficulty": "Medium",
+    "question": "What does `console.log(2 ** 3 ** 2)` output in JavaScript?",
+    "options": [
+      "64",
+      "18",
+      "81",
+      "512"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The exponentiation operator ** is right-associative, so it evaluates as 2 ** (3 ** 2) = 2 ** 9 = 512.",
+    "source": "Generated (based on Operator Precedence theory)",
+    "tags": [
+      "Operator Precedence",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0029",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Operator Precedence",
+    "difficulty": "Medium",
+    "question": "What does `console.log(true || false && false)` output in JavaScript?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "A SyntaxError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "&& has higher precedence than ||, so it evaluates as true || (false && false) = true || false = true.",
+    "source": "Generated (based on Operator Precedence theory)",
+    "tags": [
+      "Operator Precedence",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0030",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Operator Precedence",
+    "difficulty": "Hard",
+    "question": "What does the following print, and why?\n```javascript\nlet x = 1;\nlet y = (x++, x + 2, x * 3);\nconsole.log(y);\n```",
+    "options": [
+      "3, because only the first expression in the chain is ever evaluated",
+      "6, because the comma operator evaluates each expression left to right and returns only the value of the last one",
+      "9, because all three expressions are summed together",
+      "A SyntaxError, since the comma operator cannot be used this way"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The comma operator evaluates x++ (x becomes 2), then x + 2 (discarded), then x * 3 = 6, which becomes the value assigned to y.",
+    "source": "Generated (based on Operator Precedence theory)",
+    "tags": [
+      "Operator Precedence",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0031",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Loop Variable Capture",
+    "difficulty": "Easy",
+    "question": "What is the well-known issue with capturing a loop variable by reference in many languages' closures?",
+    "options": [
+      "Captured loop variables are always automatically copied by value in every language",
+      "This issue only ever occurs in compiled languages, never interpreted ones",
+      "All captured closures may end up sharing and referencing the same final value of the loop variable, rather than the value at their own iteration",
+      "Capturing a loop variable always causes an immediate runtime error"
+    ],
+    "correctAnswer": 2,
+    "explanation": "When a loop variable is captured by reference (as with `var` in JS, or similarly in some other languages), all closures may see the same final value instead of their own iteration's value.",
+    "source": "Generated (based on Loop Variable Capture theory)",
+    "tags": [
+      "Loop Capture",
+      "Closures",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0032",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Loop Variable Capture",
+    "difficulty": "Easy",
+    "question": "What does the following C# code output (assuming an older language version without per-iteration loop variable scoping)?\n```csharp\nvar actions = new List<Action>();\nfor (int i = 0; i < 3; i++) {\n    actions.Add(() => Console.Write(i));\n}\nforeach (var a in actions) a();\n```",
+    "options": [
+      "012",
+      "000",
+      "A compile error",
+      "333"
+    ],
+    "correctAnswer": 3,
+    "explanation": "In versions where the for-loop variable is shared across iterations, all captured closures reference the same final variable value (3), printing 333.",
+    "source": "Generated (based on Loop Variable Capture theory)",
+    "tags": [
+      "Loop Capture",
+      "Closures",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0033",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Loop Variable Capture",
+    "difficulty": "Medium",
+    "question": "In modern C# (with per-iteration loop variable scoping for `for` in newer language versions/foreach), what typically fixes the classic loop-capture issue without changing the loop type?",
+    "options": [
+      "Declaring a new local variable inside the loop body and capturing that instead of the loop variable directly",
+      "Removing the loop entirely and hardcoding each closure by hand",
+      "Using a global variable instead of a local one",
+      "Always using an infinite loop instead of a bounded one"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Introducing a fresh local variable each iteration (`int local = i;`) and capturing that in the closure ensures each captured value is independent per iteration.",
+    "source": "Generated (based on Loop Variable Capture theory)",
+    "tags": [
+      "Loop Capture",
+      "Closures",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0034",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Loop Variable Capture",
+    "difficulty": "Medium",
+    "question": "What does the following Python code output?\n```python\nfuncs = []\nfor i in range(3):\n    funcs.append(lambda: i)\nprint([f() for f in funcs])\n```",
+    "options": [
+      "[0, 1, 2]",
+      "[2, 2, 2]",
+      "[0, 0, 0]",
+      "TypeError"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Python lambdas capture the variable `i` by reference (late binding), so by the time they are called, `i` has finished looping to its final value 2 for all of them.",
+    "source": "Generated (based on Loop Variable Capture theory)",
+    "tags": [
+      "Loop Capture",
+      "Closures",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0035",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Loop Variable Capture",
+    "difficulty": "Hard",
+    "question": "What is the standard fix for the Python late-binding closure issue shown above, using a default argument?",
+    "options": [
+      "`funcs.append(lambda: i + 1)`, which changes the captured expression but not the underlying binding issue",
+      "Removing the loop entirely, since lambdas cannot be created inside loops",
+      "`funcs.append(lambda i=i: i)`, which captures the current value of i at each iteration as a default argument evaluated immediately",
+      "Using `global i` inside the lambda to force early binding"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Default argument values in Python are evaluated once at function-definition time, so `lambda i=i: i` captures the current per-iteration value of `i` as a snapshot, avoiding the late-binding issue.",
+    "source": "Generated (based on Loop Variable Capture theory)",
+    "tags": [
+      "Loop Capture",
+      "Closures",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0036",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Array/Object Reference Semantics",
+    "difficulty": "Easy",
+    "question": "What does the following print in JavaScript?\n```javascript\nconst obj1 = { value: 1 };\nconst obj2 = obj1;\nobj2.value = 2;\nconsole.log(obj1.value);\n```",
+    "options": [
+      "1",
+      "undefined",
+      "TypeError",
+      "2"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Objects are assigned by reference, so obj2 refers to the same object as obj1; mutating obj2 also affects obj1.",
+    "source": "Generated (based on Array/Object Reference Semantics theory)",
+    "tags": [
+      "Reference Semantics",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0037",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Array/Object Reference Semantics",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```javascript\nfunction changeValue(obj) {\n  obj.value = 100;\n}\nconst data = { value: 1 };\nchangeValue(data);\nconsole.log(data.value);\n```",
+    "options": [
+      "100",
+      "1",
+      "undefined",
+      "TypeError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Objects are passed by reference (the reference itself is copied, but points to the same object), so mutating a property inside the function affects the original object.",
+    "source": "Generated (based on Array/Object Reference Semantics theory)",
+    "tags": [
+      "Reference Semantics",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0038",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Array/Object Reference Semantics",
+    "difficulty": "Medium",
+    "question": "What does the following print, given that reassignment (not mutation) happens inside the function?\n```javascript\nfunction reassign(obj) {\n  obj = { value: 100 };\n}\nconst data = { value: 1 };\nreassign(data);\nconsole.log(data.value);\n```",
+    "options": [
+      "100",
+      "1",
+      "undefined",
+      "TypeError"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Reassigning the local parameter `obj` to point to a new object only changes the local reference variable; the caller's `data` still points to the original object.",
+    "source": "Generated (based on Array/Object Reference Semantics theory)",
+    "tags": [
+      "Reference Semantics",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0039",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Array/Object Reference Semantics",
+    "difficulty": "Medium",
+    "question": "What does `console.log(JSON.stringify({ a: 1 }) === JSON.stringify({ a: 1 }))` output, and why?",
+    "options": [
+      "false, because two separately created objects are never equal by any comparison",
+      "true, because objects are always compared by structural equality in JavaScript",
+      "true, because it compares the resulting string values, not object references",
+      "A TypeError, since JSON.stringify cannot be compared with ==="
+    ],
+    "correctAnswer": 2,
+    "explanation": "JSON.stringify converts each object to a string; identical content produces identical strings, and strings are compared by value, so the comparison is true.",
+    "source": "Generated (based on Array/Object Reference Semantics theory)",
+    "tags": [
+      "Reference Semantics",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0040",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Array/Object Reference Semantics",
+    "difficulty": "Hard",
+    "question": "What does the following print?\n```javascript\nconst a = { x: 1 };\nconst b = { x: 1 };\nconsole.log(a === b);\nconsole.log(a === a);\nconst c = a;\nconsole.log(a === c);\n```",
+    "options": [
+      "true, true, true",
+      "false, false, true",
+      "true, false, false",
+      "false, true, true"
+    ],
+    "correctAnswer": 3,
+    "explanation": "a and b are distinct objects with the same shape but different references (false); a === a is trivially true; c is assigned the same reference as a, so a === c is true.",
+    "source": "Generated (based on Array/Object Reference Semantics theory)",
+    "tags": [
+      "Reference Semantics",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0041",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Async/Await Ordering",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```javascript\nconsole.log(\"A\");\nsetTimeout(() => console.log(\"B\"), 0);\nconsole.log(\"C\");\n```",
+    "options": [
+      "A, C, B",
+      "A, B, C",
+      "B, A, C",
+      "C, A, B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "setTimeout schedules its callback on the macrotask queue, which runs only after the current synchronous code (\"A\", \"C\") finishes executing.",
+    "source": "Generated (based on Async/Await Ordering theory)",
+    "tags": [
+      "Async/Await",
+      "Event Loop",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0042",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Async/Await Ordering",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```javascript\nasync function f() {\n  console.log(\"1\");\n  await null;\n  console.log(\"2\");\n}\nf();\nconsole.log(\"3\");\n```",
+    "options": [
+      "1, 2, 3",
+      "1, 3, 2",
+      "3, 1, 2",
+      "2, 1, 3"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Code before the first await runs synchronously (\"1\"), then the async function yields control, letting \"3\" run before the microtask resumes and prints \"2\".",
+    "source": "Generated (based on Async/Await Ordering theory)",
+    "tags": [
+      "Async/Await",
+      "Event Loop",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0043",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Async/Await Ordering",
+    "difficulty": "Medium",
+    "question": "What does the following print?\n```javascript\nconsole.log(\"start\");\nPromise.resolve().then(() => console.log(\"promise\"));\nsetTimeout(() => console.log(\"timeout\"), 0);\nconsole.log(\"end\");\n```",
+    "options": [
+      "start, end, timeout, promise",
+      "start, promise, end, timeout",
+      "start, end, promise, timeout",
+      "start, promise, timeout, end"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Synchronous code runs first (\"start\", \"end\"), then microtasks (Promise .then) run before macrotasks (setTimeout), so \"promise\" prints before \"timeout\".",
+    "source": "Generated (based on Async/Await Ordering theory)",
+    "tags": [
+      "Async/Await",
+      "Event Loop",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0044",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Async/Await Ordering",
+    "difficulty": "Medium",
+    "question": "What does the following print?\n```javascript\nasync function delay() {\n  return new Promise(resolve => setTimeout(resolve, 0));\n}\nasync function run() {\n  console.log(\"before\");\n  await delay();\n  console.log(\"after\");\n}\nrun();\nconsole.log(\"sync\");\n```",
+    "options": [
+      "before, after, sync",
+      "sync, before, after",
+      "before, sync, after — but only if setTimeout is 0",
+      "before, sync, after"
+    ],
+    "correctAnswer": 3,
+    "explanation": "\"before\" prints synchronously in run(), then awaiting the timeout-based promise yields, letting \"sync\" print before the timeout resolves and \"after\" prints.",
+    "source": "Generated (based on Async/Await Ordering theory)",
+    "tags": [
+      "Async/Await",
+      "Event Loop",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0045",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Async/Await Ordering",
+    "difficulty": "Hard",
+    "question": "What does the following print, and in what order?\n```javascript\nconsole.log(\"1\");\nsetTimeout(() => console.log(\"2\"), 0);\nPromise.resolve().then(() => {\n  console.log(\"3\");\n  Promise.resolve().then(() => console.log(\"4\"));\n});\nconsole.log(\"5\");\n```",
+    "options": [
+      "1, 5, 3, 4, 2",
+      "1, 5, 3, 2, 4",
+      "1, 3, 5, 4, 2",
+      "1, 5, 2, 3, 4"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Synchronous code runs first (1, 5). Then the microtask queue drains fully before any macrotask: the first .then logs 3 and enqueues another microtask, which drains immediately logging 4, all before the setTimeout macrotask logs 2.",
+    "source": "Generated (based on Async/Await Ordering theory)",
+    "tags": [
+      "Async/Await",
+      "Event Loop",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0046",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Exception Handling Flow",
+    "difficulty": "Easy",
+    "question": "What does the following print in Python?\n```python\ntry:\n    print(\"A\")\n    raise ValueError(\"oops\")\n    print(\"B\")\nexcept ValueError:\n    print(\"C\")\n```",
+    "options": [
+      "A, B, C",
+      "A, C",
+      "A, B",
+      "C only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Execution stops at the raised exception, skipping \"B\", and jumps directly to the matching except block, printing \"A\" then \"C\".",
+    "source": "Generated (based on Exception Handling Flow theory)",
+    "tags": [
+      "Exception Handling",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0047",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Exception Handling Flow",
+    "difficulty": "Easy",
+    "question": "What does the following print in Python?\n```python\ntry:\n    print(\"A\")\nfinally:\n    print(\"B\")\nprint(\"C\")\n```",
+    "options": [
+      "A, C, B",
+      "B, A, C",
+      "A, B, C",
+      "A, B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The finally block always runs after the try block (whether or not an exception occurred), and since no exception was raised, execution continues to \"C\" afterward.",
+    "source": "Generated (based on Exception Handling Flow theory)",
+    "tags": [
+      "Exception Handling",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0048",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Exception Handling Flow",
+    "difficulty": "Medium",
+    "question": "What does the following print in Java?\n```java\ntry {\n    System.out.println(\"A\");\n    throw new RuntimeException(\"x\");\n} catch (RuntimeException e) {\n    System.out.println(\"B\");\n} finally {\n    System.out.println(\"C\");\n}\nSystem.out.println(\"D\");\n```",
+    "options": [
+      "A, C, D",
+      "A, B, D",
+      "A, B, C",
+      "A, B, C, D"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The exception is thrown and caught (\"A\", \"B\"), the finally block always executes (\"C\"), and execution continues normally afterward (\"D\") since the exception was handled.",
+    "source": "Generated (based on Exception Handling Flow theory)",
+    "tags": [
+      "Exception Handling",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0049",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Exception Handling Flow",
+    "difficulty": "Medium",
+    "question": "What does the following print in Python?\n```python\ndef f():\n    try:\n        return \"try\"\n    finally:\n        print(\"finally ran\")\n\nprint(f())\n```",
+    "options": [
+      "finally ran, try",
+      "try, finally ran",
+      "finally ran only",
+      "try only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The finally block executes before the function actually returns, even though the return value was already determined, so \"finally ran\" prints before the returned value is printed.",
+    "source": "Generated (based on Exception Handling Flow theory)",
+    "tags": [
+      "Exception Handling",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0050",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Exception Handling Flow",
+    "difficulty": "Hard",
+    "question": "What does the following print in Python, and why?\n```python\ndef f():\n    try:\n        return 1\n    finally:\n        return 2\n\nprint(f())\n```",
+    "options": [
+      "1, because the original return value in try always takes precedence",
+      "2, because a return statement inside finally overrides the pending return value from the try block",
+      "A RuntimeError, since returning from finally is not allowed",
+      "None, because both return statements cancel each other out"
+    ],
+    "correctAnswer": 1,
+    "explanation": "If a finally block itself contains a return statement, it overrides any pending return (or even an exception) from the try block, so the function returns 2.",
+    "source": "Generated (based on Exception Handling Flow theory)",
+    "tags": [
+      "Exception Handling",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0051",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Integer Overflow",
+    "difficulty": "Easy",
+    "question": "What generally happens when a 32-bit signed integer exceeds its maximum representable value in many languages like C/C++ or Java?",
+    "options": [
+      "It automatically converts to a floating-point type to avoid overflow",
+      "It always throws a runtime exception in every language",
+      "It wraps around to a negative value due to overflow",
+      "The program automatically halts execution safely"
+    ],
+    "correctAnswer": 2,
+    "explanation": "In fixed-width signed integer types, exceeding the maximum value typically wraps around to a negative number due to two's complement overflow (behavior varies by language).",
+    "source": "Generated (based on Integer Overflow theory)",
+    "tags": [
+      "Integer Overflow",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0052",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Integer Overflow",
+    "difficulty": "Easy",
+    "question": "In Java, what does `System.out.println(Integer.MAX_VALUE + 1)` print?",
+    "options": [
+      "2147483648",
+      "An exception is thrown",
+      "0",
+      "-2147483648"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Integer.MAX_VALUE (2147483647) + 1 overflows and wraps around to Integer.MIN_VALUE (-2147483648) due to two's complement arithmetic.",
+    "source": "Generated (based on Integer Overflow theory)",
+    "tags": [
+      "Integer Overflow",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0053",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Integer Overflow",
+    "difficulty": "Medium",
+    "question": "Why does Python not have the same fixed-width integer overflow behavior as Java or C for its standard `int` type?",
+    "options": [
+      "Python integers automatically support arbitrary precision, growing as needed rather than wrapping around",
+      "Python integers are always exactly 16 bits wide",
+      "Python does not support integer arithmetic at all",
+      "Python always throws an error on any large number"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Python's int type has arbitrary precision built in, so it grows as needed rather than wrapping around at a fixed bit-width boundary.",
+    "source": "Generated (based on Integer Overflow theory)",
+    "tags": [
+      "Integer Overflow",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0054",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Integer Overflow",
+    "difficulty": "Medium",
+    "question": "What does the following print in JavaScript, given how it represents numbers?\n```javascript\nconsole.log(Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2);\n```",
+    "options": [
+      "false",
+      "true",
+      "NaN",
+      "A SyntaxError"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Beyond MAX_SAFE_INTEGER, JavaScript's double-precision floating point numbers lose integer precision, so both additions can round to the same represented value, making them equal.",
+    "source": "Generated (based on Integer Overflow theory)",
+    "tags": [
+      "Integer Overflow",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0055",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Integer Overflow",
+    "difficulty": "Hard",
+    "question": "A function computing the average of two large integers uses `(a + b) / 2` in a language with fixed-width 32-bit ints. What subtle bug can occur, and what is the standard fix?",
+    "options": [
+      "This code is always completely safe regardless of the values of a and b",
+      "Division always causes overflow, regardless of the values involved",
+      "`a + b` can overflow before the division, producing an incorrect result; a common fix is `a + (b - a) / 2` to avoid the intermediate overflow",
+      "The bug only occurs if both a and b are negative numbers"
+    ],
+    "correctAnswer": 2,
+    "explanation": "If a and b are both large, their sum can exceed the maximum representable value before the division happens, causing overflow; `a + (b - a) / 2` avoids ever summing both large values directly.",
+    "source": "Generated (based on Integer Overflow theory)",
+    "tags": [
+      "Integer Overflow",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0056",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Recursion Output",
+    "difficulty": "Easy",
+    "question": "What does the following function return when called as `factorial(4)`?\n```python\ndef factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)\n```",
+    "options": [
+      "10",
+      "4",
+      "16",
+      "24"
+    ],
+    "correctAnswer": 3,
+    "explanation": "factorial(4) = 4 * 3 * 2 * 1 = 24, computed through the recursive chain down to the base case.",
+    "source": "Generated (based on Recursion Output theory)",
+    "tags": [
+      "Recursion",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0057",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Recursion Output",
+    "difficulty": "Easy",
+    "question": "What is the base case in the following recursive function meant to prevent?",
+    "options": [
+      "Infinite recursion (a stack overflow) by giving the recursion a stopping condition",
+      "The function from ever being called at all",
+      "The function from returning any value",
+      "The function from accepting any arguments"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A base case provides the stopping condition that prevents recursive calls from continuing indefinitely and exhausting the call stack.",
+    "source": "Generated (based on Recursion Output theory)",
+    "tags": [
+      "Recursion",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0058",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Recursion Output",
+    "difficulty": "Medium",
+    "question": "What does the following print for `fib(5)` using naive recursion (0-indexed, fib(0)=0, fib(1)=1)?\n```python\ndef fib(n):\n    if n <= 1:\n        return n\n    return fib(n - 1) + fib(n - 2)\n```",
+    "options": [
+      "8",
+      "5",
+      "3",
+      "13"
+    ],
+    "correctAnswer": 1,
+    "explanation": "fib(5) = fib(4) + fib(3) = 3 + 2 = 5, following the standard Fibonacci sequence 0, 1, 1, 2, 3, 5.",
+    "source": "Generated (based on Recursion Output theory)",
+    "tags": [
+      "Recursion",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0059",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Recursion Output",
+    "difficulty": "Medium",
+    "question": "What is the main inefficiency of the naive recursive Fibonacci implementation shown above?",
+    "options": [
+      "It cannot correctly compute any Fibonacci number at all",
+      "It always causes an immediate stack overflow for n = 5",
+      "It recomputes the same overlapping subproblems many times, leading to exponential time complexity",
+      "It runs in constant time regardless of n"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Without memoization, overlapping subproblems (like fib(3) being computed multiple times) are recomputed repeatedly, leading to exponential O(2^n) time complexity.",
+    "source": "Generated (based on Recursion Output theory)",
+    "tags": [
+      "Recursion",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0060",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Recursion Output",
+    "difficulty": "Hard",
+    "question": "What does the following mutually recursive pair print for `isEven(4)`?\n```python\ndef is_even(n):\n    if n == 0:\n        return True\n    return is_odd(n - 1)\n\ndef is_odd(n):\n    if n == 0:\n        return False\n    return is_even(n - 1)\n\nprint(is_even(4))\n```",
+    "options": [
+      "False",
+      "RecursionError",
+      "None",
+      "True"
+    ],
+    "correctAnswer": 3,
+    "explanation": "is_even(4) calls is_odd(3), which calls is_even(2), which calls is_odd(1), which calls is_even(0), which returns True — the mutual recursion correctly determines 4 is even.",
+    "source": "Generated (based on Recursion Output theory)",
+    "tags": [
+      "Recursion",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0061",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Hoisting",
+    "difficulty": "Easy",
+    "question": "What does the following print in JavaScript?\n```javascript\nconsole.log(x);\nvar x = 5;\n```",
+    "options": [
+      "undefined",
+      "5",
+      "ReferenceError",
+      "null"
+    ],
+    "correctAnswer": 0,
+    "explanation": "`var` declarations are hoisted to the top of their scope (initialized to undefined), but the assignment `x = 5` has not yet run at the point of the console.log.",
+    "source": "Generated (based on Hoisting theory)",
+    "tags": [
+      "Hoisting",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0062",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Hoisting",
+    "difficulty": "Easy",
+    "question": "What does the following print in JavaScript?\n```javascript\nconsole.log(y);\nlet y = 5;\n```",
+    "options": [
+      "undefined",
+      "A ReferenceError due to the temporal dead zone",
+      "5",
+      "null"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`let` declarations are hoisted but remain in the \"temporal dead zone\" until their declaration line executes, so accessing y before that throws a ReferenceError.",
+    "source": "Generated (based on Hoisting theory)",
+    "tags": [
+      "Hoisting",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0063",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Hoisting",
+    "difficulty": "Medium",
+    "question": "What does the following print?\n```javascript\nfoo();\nfunction foo() {\n  console.log(\"hoisted\");\n}\n```",
+    "options": [
+      "undefined",
+      "ReferenceError",
+      "\"hoisted\"",
+      "TypeError"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Function declarations (not expressions) are fully hoisted, including their body, so calling `foo()` before its textual definition still works.",
+    "source": "Generated (based on Hoisting theory)",
+    "tags": [
+      "Hoisting",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0064",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Hoisting",
+    "difficulty": "Medium",
+    "question": "What does the following print?\n```javascript\nfoo();\nvar foo = function () {\n  console.log(\"hoisted\");\n};\n```",
+    "options": [
+      "\"hoisted\"",
+      "ReferenceError",
+      "undefined",
+      "TypeError, because foo is undefined (hoisted as var) at the point of the call, not a function yet"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Only the `var foo` declaration is hoisted (as undefined); the function assignment has not happened yet, so calling foo() at that point throws a TypeError (undefined is not a function).",
+    "source": "Generated (based on Hoisting theory)",
+    "tags": [
+      "Hoisting",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0065",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Hoisting",
+    "difficulty": "Hard",
+    "question": "What does the following print, illustrating hoisting interacting with var scoping?\n```javascript\nvar x = 1;\nfunction test() {\n  console.log(x);\n  var x = 2;\n  console.log(x);\n}\ntest();\n```",
+    "options": [
+      "undefined, 2",
+      "1, 2",
+      "undefined, undefined",
+      "1, 1"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The `var x` declaration inside test() is hoisted to the top of the function scope, shadowing the outer x with a local x initialized to undefined; the first log prints undefined (local x, not yet assigned), and the second prints 2 after assignment.",
+    "source": "Generated (based on Hoisting theory)",
+    "tags": [
+      "Hoisting",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0066",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "this/self Binding",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```javascript\nconst obj = {\n  name: \"duck\",\n  greet() {\n    console.log(this.name);\n  },\n};\nobj.greet();\n```",
+    "options": [
+      "undefined",
+      "\"duck\"",
+      "ReferenceError",
+      "TypeError"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When calling `obj.greet()` as a method, `this` inside the function refers to `obj`, so `this.name` is \"duck\".",
+    "source": "Generated (based on this/self Binding theory)",
+    "tags": [
+      "this Binding",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0067",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "this/self Binding",
+    "difficulty": "Easy",
+    "question": "What does the following print?\n```javascript\nconst obj = {\n  name: \"duck\",\n  greet() {\n    console.log(this.name);\n  },\n};\nconst fn = obj.greet;\nfn();\n```",
+    "options": [
+      "\"duck\"",
+      "A SyntaxError",
+      "undefined (or an error in strict mode), because the function is called without its original object context",
+      "\"undefined duck\""
+    ],
+    "correctAnswer": 2,
+    "explanation": "Extracting the method as a standalone function and calling it loses its original `this` binding to obj; called this way, `this` is undefined (strict mode) or the global object (non-strict), so `this.name` is not \"duck\".",
+    "source": "Generated (based on this/self Binding theory)",
+    "tags": [
+      "this Binding",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0068",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "this/self Binding",
+    "difficulty": "Medium",
+    "question": "What does the following print, using an arrow function instead?\n```javascript\nconst obj = {\n  name: \"duck\",\n  greet: () => {\n    console.log(this.name);\n  },\n};\nobj.greet();\n```",
+    "options": [
+      "\"duck\"",
+      "A SyntaxError",
+      "\"duck duck\"",
+      "undefined, because arrow functions do not have their own `this` and instead inherit it from the surrounding lexical scope"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Arrow functions do not bind their own `this`; they use `this` from the enclosing lexical scope (not `obj`), so `this.name` is not \"duck\" here.",
+    "source": "Generated (based on this/self Binding theory)",
+    "tags": [
+      "this Binding",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0069",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "this/self Binding",
+    "difficulty": "Medium",
+    "question": "What does the following print, given explicit binding?\n```javascript\nfunction greet() {\n  console.log(this.name);\n}\nconst person = { name: \"duck\" };\nconst bound = greet.bind(person);\nbound();\n```",
+    "options": [
+      "\"duck\"",
+      "undefined",
+      "ReferenceError",
+      "TypeError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "`.bind(person)` permanently binds `this` to the `person` object for all future calls of the resulting function, so `this.name` is \"duck\".",
+    "source": "Generated (based on this/self Binding theory)",
+    "tags": [
+      "this Binding",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0070",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "this/self Binding",
+    "difficulty": "Hard",
+    "question": "What does the following print, combining a regular method with a nested arrow function?\n```javascript\nconst obj = {\n  name: \"duck\",\n  greetLater() {\n    setTimeout(() => {\n      console.log(this.name);\n    }, 0);\n  },\n};\nobj.greetLater();\n```",
+    "options": [
+      "undefined, because setTimeout always resets `this` to the global object",
+      "\"duck\", because the arrow function inherits `this` from the enclosing greetLater method, where `this` is obj",
+      "A SyntaxError, since arrow functions cannot be used inside setTimeout",
+      "\"duck\", but only if setTimeout's delay is greater than 0"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The arrow function passed to setTimeout does not have its own `this`; it inherits `this` from its enclosing scope, `greetLater`, where `this` is correctly bound to `obj` — a common pattern used specifically to avoid `this` issues in callbacks.",
+    "source": "Generated (based on this/self Binding theory)",
+    "tags": [
+      "this Binding",
+      "JavaScript",
+      "Predict Output"
+    ],
+    "company": [
+      "Meta",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0071",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Default Arguments",
+    "difficulty": "Easy",
+    "question": "What does the following print in JavaScript?\n```javascript\nfunction greet(name = \"world\") {\n  console.log(`Hello, ${name}`);\n}\ngreet();\n```",
+    "options": [
+      "\"Hello, undefined\"",
+      "A SyntaxError",
+      "\"Hello, world\"",
+      "\"Hello, \""
+    ],
+    "correctAnswer": 2,
+    "explanation": "When no argument is passed, the default value \"world\" is used, producing \"Hello, world\".",
+    "source": "Generated (based on Default Arguments theory)",
+    "tags": [
+      "Default Arguments",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0072",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Default Arguments",
+    "difficulty": "Easy",
+    "question": "What does the following print in JavaScript, given an explicit undefined argument?\n```javascript\nfunction greet(name = \"world\") {\n  console.log(`Hello, ${name}`);\n}\ngreet(undefined);\n```",
+    "options": [
+      "\"Hello, undefined\"",
+      "A SyntaxError",
+      "\"Hello, \"",
+      "\"Hello, world\""
+    ],
+    "correctAnswer": 3,
+    "explanation": "Passing `undefined` explicitly still triggers the default value (defaults apply specifically when the argument is undefined), so it prints \"Hello, world\".",
+    "source": "Generated (based on Default Arguments theory)",
+    "tags": [
+      "Default Arguments",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0073",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Default Arguments",
+    "difficulty": "Medium",
+    "question": "What does the following print, given an explicit `null` argument instead?\n```javascript\nfunction greet(name = \"world\") {\n  console.log(`Hello, ${name}`);\n}\ngreet(null);\n```",
+    "options": [
+      "\"Hello, null\"",
+      "\"Hello, world\"",
+      "A SyntaxError",
+      "\"Hello, undefined\""
+    ],
+    "correctAnswer": 0,
+    "explanation": "Default parameters only apply when the argument is `undefined`, not `null` — since `null` was explicitly passed, it prints \"Hello, null\".",
+    "source": "Generated (based on Default Arguments theory)",
+    "tags": [
+      "Default Arguments",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0074",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Default Arguments",
+    "difficulty": "Medium",
+    "question": "What is a classic mutable default argument pitfall in Python?\n```python\ndef append_to(item, target=[]):\n    target.append(item)\n    return target\n```",
+    "options": [
+      "This code always raises a TypeError on any call",
+      "The default list `target=[]` is created once and shared across all calls that do not pass their own list, causing unexpected accumulation",
+      "Each call always gets a completely fresh empty list as intended",
+      "Default arguments in Python cannot be lists under any circumstance"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Python evaluates default argument expressions once, at function definition time, so a mutable default like `[]` is shared and persists across calls unless a fresh list is explicitly passed each time.",
+    "source": "Generated (based on Default Arguments theory)",
+    "tags": [
+      "Default Arguments",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0075",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Default Arguments",
+    "difficulty": "Hard",
+    "question": "What does the following print in JavaScript, where a later default parameter references an earlier one?\n```javascript\nfunction area(width, height = width * 2) {\n  console.log(width * height);\n}\narea(3);\n```",
+    "options": [
+      "9, because default parameters cannot reference other parameters and height defaults to width",
+      "A ReferenceError, since referencing another parameter in a default value is not allowed",
+      "18, because default parameters can reference earlier parameters, so height defaults to 3 * 2 = 6, giving 3 * 6 = 18",
+      "NaN, because height is undefined at the time the default is evaluated"
+    ],
+    "correctAnswer": 2,
+    "explanation": "JavaScript default parameters are evaluated left to right and can reference earlier parameters already assigned in the same parameter list, so height correctly defaults to width * 2 = 6, and width * height = 18.",
+    "source": "Generated (based on Default Arguments theory)",
+    "tags": [
+      "Default Arguments",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0076",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Short-Circuit Evaluation",
+    "difficulty": "Easy",
+    "question": "What does `console.log(false && sideEffect())` do, if `sideEffect()` has a console.log inside it, given && short-circuits?",
+    "options": [
+      "sideEffect() is always called regardless of the first operand",
+      "This throws a TypeError since sideEffect is undefined",
+      "It logs \"false\" followed by whatever sideEffect() logs",
+      "sideEffect() is never called, since && short-circuits on the first falsy operand"
+    ],
+    "correctAnswer": 3,
+    "explanation": "&& short-circuits: once the left operand is falsy, the right operand is never evaluated, so sideEffect() is never called.",
+    "source": "Generated (based on Short-Circuit Evaluation theory)",
+    "tags": [
+      "Short-Circuit Evaluation",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0077",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Short-Circuit Evaluation",
+    "difficulty": "Easy",
+    "question": "What does `console.log(true || sideEffect())` do, given || short-circuits?",
+    "options": [
+      "sideEffect() is never called, since || short-circuits on the first truthy operand",
+      "sideEffect() is always called regardless of the first operand",
+      "This throws a TypeError since sideEffect is undefined",
+      "It evaluates both operands every time regardless of truthiness"
+    ],
+    "correctAnswer": 0,
+    "explanation": "|| short-circuits: once the left operand is truthy, the right operand is never evaluated, so sideEffect() is never called.",
+    "source": "Generated (based on Short-Circuit Evaluation theory)",
+    "tags": [
+      "Short-Circuit Evaluation",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0078",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Short-Circuit Evaluation",
+    "difficulty": "Medium",
+    "question": "What does `console.log(0 || \"default\")` output in JavaScript?",
+    "options": [
+      "0",
+      "\"default\"",
+      "undefined",
+      "false"
+    ],
+    "correctAnswer": 1,
+    "explanation": "0 is falsy, so the || operator short-circuits past it and evaluates/returns the right operand, \"default\".",
+    "source": "Generated (based on Short-Circuit Evaluation theory)",
+    "tags": [
+      "Short-Circuit Evaluation",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0079",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Short-Circuit Evaluation",
+    "difficulty": "Medium",
+    "question": "Why might using `??` (nullish coalescing) instead of `||` be preferred when 0 or an empty string is a valid, intended value?",
+    "options": [
+      "`??` and `||` behave identically in every case",
+      "`??` always throws an error when the left side is 0",
+      "`??` only falls back for null or undefined, while `||` also falls back for other falsy values like 0 or \"\"",
+      "`||` never falls back for any value, including null"
+    ],
+    "correctAnswer": 2,
+    "explanation": "`??` specifically checks for null/undefined only, preserving values like 0 or \"\" that `||` would incorrectly treat as needing a fallback.",
+    "source": "Generated (based on Short-Circuit Evaluation theory)",
+    "tags": [
+      "Short-Circuit Evaluation",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0080",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Short-Circuit Evaluation",
+    "difficulty": "Hard",
+    "question": "What does the following print, and why, given how short-circuiting interacts with side effects?\n```javascript\nlet count = 0;\nfunction increment() {\n  count++;\n  return count;\n}\nconsole.log(false && increment());\nconsole.log(count);\n```",
+    "options": [
+      "false, 1 — because increment() still runs once for its side effect",
+      "1, 1 — because && always evaluates both operands for side effects",
+      "true, 1 — because && converts the result to a boolean",
+      "false, 0 — because increment() is never called due to short-circuiting on the falsy left operand"
+    ],
+    "correctAnswer": 3,
+    "explanation": "&& short-circuits and never evaluates increment() since the left operand (false) is already falsy, so the side effect (count++) never happens; count remains 0.",
+    "source": "Generated (based on Short-Circuit Evaluation theory)",
+    "tags": [
+      "Short-Circuit Evaluation",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0081",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "String Immutability",
+    "difficulty": "Easy",
+    "question": "What does the following demonstrate about strings in Python?\n```python\ns = \"hello\"\ns[0] = \"H\"\n```",
+    "options": [
+      "A TypeError, because Python strings are immutable and do not support item assignment",
+      "It succeeds, changing s to \"Hello\"",
+      "It silently does nothing and s remains unchanged",
+      "It raises an IndexError instead of a TypeError"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Python strings are immutable; attempting to assign to an index directly raises a TypeError (\"str object does not support item assignment\").",
+    "source": "Generated (based on String Immutability theory)",
+    "tags": [
+      "String Immutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0082",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "String Immutability",
+    "difficulty": "Easy",
+    "question": "What does the following print in Java, illustrating string immutability?\n```java\nString s = \"hello\";\ns.toUpperCase();\nSystem.out.println(s);\n```",
+    "options": [
+      "\"HELLO\"",
+      "\"hello\"",
+      "A compile error",
+      "null"
+    ],
+    "correctAnswer": 1,
+    "explanation": "`toUpperCase()` returns a new string rather than mutating the original; since the result was not reassigned back to `s`, the original unchanged string still prints.",
+    "source": "Generated (based on String Immutability theory)",
+    "tags": [
+      "String Immutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0083",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "String Immutability",
+    "difficulty": "Medium",
+    "question": "What is the correct way to actually apply the uppercase transformation to a variable in the example above?",
+    "options": [
+      "`s.toUpperCase();` alone is sufficient with no reassignment needed",
+      "Using `s[0] = \"H\";` to mutate the first character directly",
+      "`s = s.toUpperCase();` — reassigning the returned new string back to the variable",
+      "There is no way to uppercase a Java string since strings are immutable"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because strings are immutable, transformation methods return a new string that must be explicitly assigned to a variable to be used going forward.",
+    "source": "Generated (based on String Immutability theory)",
+    "tags": [
+      "String Immutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0084",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "String Immutability",
+    "difficulty": "Medium",
+    "question": "Why can string immutability be beneficial for performance and safety in concurrent code?",
+    "options": [
+      "Immutability always makes string operations slower in every case",
+      "Immutable strings cannot be used in any multi-threaded program at all",
+      "Concurrent code never benefits from immutability of any kind",
+      "Immutable strings can be freely shared between threads without risk of one thread unexpectedly mutating a value another thread relies on"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Since immutable strings cannot be changed after creation, they can be safely shared across threads without synchronization concerns about concurrent mutation.",
+    "source": "Generated (based on String Immutability theory)",
+    "tags": [
+      "String Immutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0085",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "String Immutability",
+    "difficulty": "Hard",
+    "question": "A loop repeatedly concatenates to a string in a naive way (`result += chunk`) inside a large loop in a language with immutable strings. Why is this often a performance concern, and what is a common fix?",
+    "options": [
+      "Each concatenation creates a new string object, leading to O(n^2) behavior overall; using a mutable string builder (e.g. StringBuilder, list + join) avoids the repeated allocation",
+      "String concatenation in a loop is always O(1) regardless of immutability",
+      "Immutable strings make concatenation in a loop impossible to perform at all",
+      "The fix is to always use recursion instead of a loop for string building"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Because each `+=` creates an entirely new string (copying all prior content), repeating this in a loop of n iterations leads to roughly O(n^2) total work; using a dedicated mutable builder (StringBuilder, list of parts joined once) avoids the repeated full-copy cost.",
+    "source": "Generated (based on String Immutability theory)",
+    "tags": [
+      "String Immutability",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0086",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Generator/Iterator Behavior",
+    "difficulty": "Easy",
+    "question": "What does the following print in Python?\n```python\ndef gen():\n    yield 1\n    yield 2\n\ng = gen()\nprint(next(g))\nprint(next(g))\n```",
+    "options": [
+      "2, 1",
+      "1, 2",
+      "1, 1",
+      "A StopIteration error on the first call"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Each call to `next()` resumes the generator from where it last yielded, so it prints 1 then 2 in order.",
+    "source": "Generated (based on Generator/Iterator Behavior theory)",
+    "tags": [
+      "Generators",
+      "Iterators",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0087",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Generator/Iterator Behavior",
+    "difficulty": "Easy",
+    "question": "What happens when `next()` is called on a Python generator after it has already yielded all its values?",
+    "options": [
+      "It restarts from the beginning automatically",
+      "It returns None indefinitely",
+      "A StopIteration exception is raised",
+      "It returns 0 by default"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Once a generator is exhausted, further calls to next() raise StopIteration to signal there are no more values.",
+    "source": "Generated (based on Generator/Iterator Behavior theory)",
+    "tags": [
+      "Generators",
+      "Iterators",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0088",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Generator/Iterator Behavior",
+    "difficulty": "Medium",
+    "question": "What does the following print in JavaScript, given a generator function?\n```javascript\nfunction* gen() {\n  yield 1;\n  yield 2;\n  return 3;\n}\nconst g = gen();\nconsole.log(g.next());\nconsole.log(g.next());\nconsole.log(g.next());\n```",
+    "options": [
+      "{ value: 1, done: true }, { value: 2, done: true }, { value: 3, done: true }",
+      "1, 2, 3",
+      "An error after the second call",
+      "{ value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Each `.next()` call returns an object with `value` and `done`; the yielded values mark `done: false`, while the returned value on the final call marks `done: true`.",
+    "source": "Generated (based on Generator/Iterator Behavior theory)",
+    "tags": [
+      "Generators",
+      "Iterators",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0089",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Generator/Iterator Behavior",
+    "difficulty": "Medium",
+    "question": "Why is a generator considered \"lazy\" compared to returning a full list upfront?",
+    "options": [
+      "Values are computed one at a time only as they are requested, rather than all being computed and stored in memory upfront",
+      "Generators always compute every value immediately regardless of whether they are requested",
+      "Lazy evaluation means the generator never actually produces any values",
+      "Generators require more memory than an equivalent list in every case"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Lazy evaluation means each value is computed on demand (as next() is called), avoiding the memory cost of computing and storing the entire sequence upfront.",
+    "source": "Generated (based on Generator/Iterator Behavior theory)",
+    "tags": [
+      "Generators",
+      "Iterators",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0090",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Generator/Iterator Behavior",
+    "difficulty": "Hard",
+    "question": "What does the following print, given a generator with an infinite loop combined with `itertools.islice`-style limiting logic (assume a manual limiting loop)?\n```python\ndef naturals():\n    n = 1\n    while True:\n        yield n\n        n += 1\n\ngen = naturals()\nresult = [next(gen) for _ in range(4)]\nprint(result)\n```",
+    "options": [
+      "[0, 1, 2, 3]",
+      "[1, 2, 3, 4]",
+      "An infinite loop that never terminates",
+      "[4, 4, 4, 4]"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Even though `naturals()` yields indefinitely, calling `next()` exactly 4 times via the list comprehension only pulls the first four values (1 through 4) without ever exhausting the infinite generator.",
+    "source": "Generated (based on Generator/Iterator Behavior theory)",
+    "tags": [
+      "Generators",
+      "Iterators",
+      "Predict Output"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0091",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Static vs Instance Members",
+    "difficulty": "Easy",
+    "question": "In Java, what best describes a \"static\" field on a class?",
+    "options": [
+      "A field that is created fresh and independent for every new instance",
+      "A field that can never be changed after the class is compiled",
+      "A field shared across all instances of the class, rather than belonging to any single instance",
+      "A field that only exists inside a single method call"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A static field belongs to the class itself and is shared across all instances, as opposed to instance fields which each object has its own copy of.",
+    "source": "Generated (based on Static vs Instance Members theory)",
+    "tags": [
+      "Static Members",
+      "Instance Members",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0092",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Static vs Instance Members",
+    "difficulty": "Easy",
+    "question": "What does the following print in Java?\n```java\nclass Counter {\n    static int count = 0;\n    Counter() { count++; }\n}\nnew Counter();\nnew Counter();\nSystem.out.println(Counter.count);\n```",
+    "options": [
+      "0",
+      "1",
+      "A compile error",
+      "2"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Since `count` is static and shared across all instances, each constructor call increments the same shared value, resulting in 2 after two instances are created.",
+    "source": "Generated (based on Static vs Instance Members theory)",
+    "tags": [
+      "Static Members",
+      "Instance Members",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0093",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Static vs Instance Members",
+    "difficulty": "Medium",
+    "question": "What does the following print, illustrating instance vs static fields?\n```java\nclass Item {\n    static int total = 0;\n    int id;\n    Item() {\n        total++;\n        id = total;\n    }\n}\nItem a = new Item();\nItem b = new Item();\nSystem.out.println(a.id + \" \" + b.id + \" \" + Item.total);\n```",
+    "options": [
+      "1 2 2",
+      "1 1 1",
+      "2 2 2",
+      "0 1 2"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Each instance gets its own `id` (instance field) set from the shared, incrementing `total` (static field) at the time of construction, so a.id=1, b.id=2, and the final shared total is 2.",
+    "source": "Generated (based on Static vs Instance Members theory)",
+    "tags": [
+      "Static Members",
+      "Instance Members",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0094",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Static vs Instance Members",
+    "difficulty": "Medium",
+    "question": "Can a static method directly access a non-static (instance) field of its class without an object reference?",
+    "options": [
+      "Yes, static methods always have full direct access to all instance fields",
+      "No, because static methods do not have an implicit instance (\"this\") to reference instance fields with",
+      "Only if the instance field was declared before the static method in the source file",
+      "Yes, but only inside a try/catch block"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Static methods run without any particular instance context (no implicit `this`), so they cannot directly reference instance fields without an explicit object reference.",
+    "source": "Generated (based on Static vs Instance Members theory)",
+    "tags": [
+      "Static Members",
+      "Instance Members",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0095",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Static vs Instance Members",
+    "difficulty": "Hard",
+    "question": "What does the following print, given static initialization order in Java?\n```java\nclass Config {\n    static int a = getValue();\n    static int b = 10;\n    static int getValue() {\n        return b + 5;\n    }\n}\nSystem.out.println(Config.a);\n```",
+    "options": [
+      "15, because getValue() always sees the final fully-initialized value of b",
+      "A compile error, since getValue() cannot be called before b is initialized",
+      "5, because static fields are initialized in source order, and `b` is still 0 (its default) when getValue() runs for `a`",
+      "10, because a is set equal to b directly regardless of source order"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Static initializers run top-to-bottom in source order; when `a` is initialized, `b` has not yet been assigned 10 and still holds its default value 0, so getValue() returns 0 + 5 = 5.",
+    "source": "Generated (based on Static vs Instance Members theory)",
+    "tags": [
+      "Static Members",
+      "Instance Members",
+      "Predict Output"
+    ],
+    "company": [
+      "Amazon",
+      "Oracle",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "pred_0096",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Ternary/Conditional Expressions",
+    "difficulty": "Easy",
+    "question": "What does `console.log(5 > 3 ? \"yes\" : \"no\")` output?",
+    "options": [
+      "\"no\"",
+      "true",
+      "5",
+      "\"yes\""
+    ],
+    "correctAnswer": 3,
+    "explanation": "Since 5 > 3 is true, the ternary expression evaluates to the value before the colon, \"yes\".",
+    "source": "Generated (based on Ternary/Conditional Expressions theory)",
+    "tags": [
+      "Ternary Operator",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0097",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Ternary/Conditional Expressions",
+    "difficulty": "Easy",
+    "question": "What does `print(\"even\" if 4 % 2 == 0 else \"odd\")` output in Python?",
+    "options": [
+      "\"even\"",
+      "\"odd\"",
+      "True",
+      "0"
+    ],
+    "correctAnswer": 0,
+    "explanation": "4 % 2 == 0 is True, so the Python conditional expression evaluates to \"even\".",
+    "source": "Generated (based on Ternary/Conditional Expressions theory)",
+    "tags": [
+      "Ternary Operator",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "pred_0098",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Ternary/Conditional Expressions",
+    "difficulty": "Medium",
+    "question": "What does the following print, given nested ternary operators?\n```javascript\nlet score = 75;\nlet grade = score >= 90 ? \"A\" : score >= 70 ? \"B\" : \"C\";\nconsole.log(grade);\n```",
+    "options": [
+      "\"A\"",
+      "\"B\"",
+      "\"C\"",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "explanation": "score is not >= 90, so it falls to the next condition; 75 >= 70 is true, giving \"B\".",
+    "source": "Generated (based on Ternary/Conditional Expressions theory)",
+    "tags": [
+      "Ternary Operator",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0099",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Ternary/Conditional Expressions",
+    "difficulty": "Medium",
+    "question": "Why can deeply nested ternary expressions be considered risky in production code, even though they evaluate correctly?",
+    "options": [
+      "Nested ternaries always produce incorrect results regardless of logic",
+      "They are illegal syntax in most mainstream languages",
+      "They can become difficult to read and reason about correctly at a glance, increasing the risk of misinterpretation during maintenance",
+      "They always run significantly slower than equivalent if/else statements"
+    ],
+    "correctAnswer": 2,
+    "explanation": "While functionally correct, deeply nested ternaries reduce readability, making it harder for future maintainers to correctly trace the conditional logic — a stylistic/maintainability concern, not a correctness one.",
+    "source": "Generated (based on Ternary/Conditional Expressions theory)",
+    "tags": [
+      "Ternary Operator",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "pred_0100",
+    "level": "Level 18",
+    "category": "Predict Output",
+    "topic": "Ternary/Conditional Expressions",
+    "difficulty": "Hard",
+    "question": "What does the following print, given operator precedence between the ternary operator and other operators?\n```javascript\nlet x = 1;\nlet y = x > 0 ? 10 : 20 + 5;\nconsole.log(y);\n```",
+    "options": [
+      "15, because 20 + 5 is always computed and added regardless of the condition",
+      "25, because the ternary operator has lower precedence than addition, changing the grouping",
+      "30, because both branches are summed together",
+      "10, because the ternary condition (x > 0) is true, so the entire expression evaluates to the \"true\" branch, 10, regardless of the false branch's content"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The ternary operator groups as `x > 0 ? 10 : (20 + 5)`; since the condition is true, only the \"true\" branch (10) is evaluated and returned — the false branch's arithmetic is never computed.",
+    "source": "Generated (based on Ternary/Conditional Expressions theory)",
+    "tags": [
+      "Ternary Operator",
+      "Predict Output"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  }
+]

@@ -1,0 +1,2552 @@
+[
+  {
+    "id": "res_0001",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "ATS Keyword Optimization",
+    "difficulty": "Easy",
+    "question": "What does ATS stand for in the context of resume screening?",
+    "options": [
+      "Applicant Tracking System",
+      "Automated Talent Scoring",
+      "Application Transfer Service",
+      "Advanced Technical Screening"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An ATS is software that parses, stores, and filters resumes before a human recruiter reviews them.",
+    "source": "Generated (based on ATS Keyword Optimization theory)",
+    "tags": [
+      "ATS",
+      "Keywords",
+      "Resume"
+    ],
+    "company": [
+      "Amazon",
+      "Workday",
+      "Greenhouse"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0002",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "ATS Keyword Optimization",
+    "difficulty": "Easy",
+    "question": "Why should a candidate mirror key terms from the job description in their resume?",
+    "options": [
+      "It guarantees an automatic job offer",
+      "Many ATS platforms rank or filter resumes based on keyword overlap with the posting",
+      "It is required by federal law",
+      "It replaces the need for relevant experience entirely"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Keyword overlap improves ATS ranking/matching, but must reflect real experience, not just inserted buzzwords.",
+    "source": "Generated (based on ATS Keyword Optimization theory)",
+    "tags": [
+      "ATS",
+      "Keywords",
+      "Resume"
+    ],
+    "company": [
+      "Amazon",
+      "Workday",
+      "Greenhouse"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0003",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "ATS Keyword Optimization",
+    "difficulty": "Medium",
+    "question": "A resume uses \"Program Management\" while the job description says \"Project Management.\" Why might this hurt ATS matching?",
+    "options": [
+      "ATS systems always understand every synonym perfectly",
+      "The two terms are always treated as identical by every system",
+      "Some ATS keyword matching is literal and may not recognize close synonyms as equivalent",
+      "Synonyms never affect ATS scoring in any way"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Depending on the ATS, literal keyword matching can miss near-synonyms, so mirroring the exact phrasing used in the posting is safer.",
+    "source": "Generated (based on ATS Keyword Optimization theory)",
+    "tags": [
+      "ATS",
+      "Keywords",
+      "Resume"
+    ],
+    "company": [
+      "Amazon",
+      "Workday",
+      "Greenhouse"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0004",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "ATS Keyword Optimization",
+    "difficulty": "Medium",
+    "question": "Why is hiding keywords in white text or tiny font on a resume considered a bad practice?",
+    "options": [
+      "It always guarantees a higher ranking with no downside",
+      "It is a standard, recommended technique by career experts",
+      "It has no effect on ATS parsing whatsoever",
+      "Modern ATS and recruiters can detect it, and it can appear dishonest, damaging credibility"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Keyword stuffing/hiding text is a known trick many systems detect, and if a human notices it, it damages the candidate's credibility.",
+    "source": "Generated (based on ATS Keyword Optimization theory)",
+    "tags": [
+      "ATS",
+      "Keywords",
+      "Resume"
+    ],
+    "company": [
+      "Amazon",
+      "Workday",
+      "Greenhouse"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0005",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "ATS Keyword Optimization",
+    "difficulty": "Hard",
+    "question": "A candidate's resume is keyword-optimized for an ATS but reads awkwardly to a human reviewer once it passes the initial filter. What is the most balanced approach going forward?",
+    "options": [
+      "Integrate relevant keywords naturally within genuine accomplishment statements, so it works for both the ATS and a human reader",
+      "Maximize keyword density regardless of readability since only the ATS matters",
+      "Ignore keywords entirely and rely solely on formatting",
+      "Use keywords only in a hidden section not visible to human reviewers"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Resumes are read by both an algorithm and eventually a human — the strongest approach naturally integrates keywords into real, readable accomplishment statements.",
+    "source": "Generated (based on ATS Keyword Optimization theory)",
+    "tags": [
+      "ATS",
+      "Keywords",
+      "Resume"
+    ],
+    "company": [
+      "Amazon",
+      "Workday",
+      "Greenhouse"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0006",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Formatting",
+    "difficulty": "Easy",
+    "question": "Why do most ATS-friendly resume guides recommend avoiding tables and text boxes?",
+    "options": [
+      "Tables and text boxes are always visually unappealing",
+      "Many parsers struggle to correctly extract text laid out in tables or graphical text boxes",
+      "They are banned by employment law",
+      "They make the resume file size too large to upload"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Complex layout elements like tables/text-boxes can confuse ATS text extraction, scrambling or dropping content.",
+    "source": "Generated (based on Resume Formatting theory)",
+    "tags": [
+      "Formatting",
+      "Resume",
+      "Layout"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0007",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Formatting",
+    "difficulty": "Easy",
+    "question": "What is a commonly recommended file format for submitting a resume online, when the platform allows a choice?",
+    "options": [
+      "A scanned image of a printed resume",
+      "A password-protected document",
+      "A simple, text-selectable PDF or the format explicitly requested by the platform",
+      "A compressed zip archive containing the resume"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A clean, text-based PDF (not an image scan) is generally parsed most reliably by ATS platforms.",
+    "source": "Generated (based on Resume Formatting theory)",
+    "tags": [
+      "Formatting",
+      "Resume",
+      "Layout"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0008",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Formatting",
+    "difficulty": "Medium",
+    "question": "Why might using a non-standard, decorative font hurt a resume's ATS compatibility?",
+    "options": [
+      "Decorative fonts always improve keyword matching",
+      "Font choice has no bearing on parsing at all",
+      "Fonts are only relevant for print, never for digital parsing",
+      "Some parsers fail to correctly read characters from unusual fonts, corrupting extracted text"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Non-standard fonts can break text extraction in some parsers, resulting in garbled or missing content in the system.",
+    "source": "Generated (based on Resume Formatting theory)",
+    "tags": [
+      "Formatting",
+      "Resume",
+      "Layout"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0009",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Formatting",
+    "difficulty": "Medium",
+    "question": "Why is a clear, consistent section-heading structure (e.g. \"Experience,\" \"Education,\" \"Skills\") recommended?",
+    "options": [
+      "It helps both ATS parsers and human reviewers correctly categorize the information",
+      "Section headings are purely a stylistic preference with no functional purpose",
+      "Headings are only useful for print resumes, not digital ones",
+      "Non-standard section names always parse identically to standard ones"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Standard section headings are more reliably recognized by both automated parsers and quickly-scanning human reviewers.",
+    "source": "Generated (based on Resume Formatting theory)",
+    "tags": [
+      "Formatting",
+      "Resume",
+      "Layout"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0010",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Formatting",
+    "difficulty": "Hard",
+    "question": "A candidate's resume looks visually polished with multi-column layout and icons, but a text-only export of the PDF reveals scrambled, out-of-order content. What does this reveal about the tradeoff being made?",
+    "options": [
+      "Multi-column layouts and icons always parse identically to simple layouts",
+      "Visual design choices can conflict with reliable machine parsing, so ATS-facing resumes often favor simpler single-column layouts",
+      "This tradeoff only matters for resumes submitted on paper",
+      "There is no meaningful tradeoff between visual design and parseability"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Visually rich multi-column designs frequently parse out of reading order in ATS systems — a real tradeoff between visual polish and reliable machine readability.",
+    "source": "Generated (based on Resume Formatting theory)",
+    "tags": [
+      "Formatting",
+      "Resume",
+      "Layout"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0011",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Action Verbs & Impact Statements",
+    "difficulty": "Easy",
+    "question": "Which bullet point best demonstrates a strong \"impact statement\" style?",
+    "options": [
+      "\"Responsible for the website\"",
+      "\"Worked on some backend stuff\"",
+      "\"Reduced page load time by 40% by optimizing database queries\"",
+      "\"Was involved in various tasks related to performance\""
+    ],
+    "correctAnswer": 2,
+    "explanation": "A strong impact statement pairs a specific action with a measurable, concrete result.",
+    "source": "Generated (based on Action Verbs & Impact Statements theory)",
+    "tags": [
+      "Action Verbs",
+      "Impact",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0012",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Action Verbs & Impact Statements",
+    "difficulty": "Easy",
+    "question": "Why do resume guides recommend starting bullets with strong action verbs (e.g. \"Led,\" \"Built,\" \"Reduced\") rather than passive phrases like \"Responsible for\"?",
+    "options": [
+      "Action verbs are required by ATS software to parse a bullet at all",
+      "Passive phrasing always ranks higher in ATS keyword scoring",
+      "Action verbs have no measurable effect on how a bullet reads",
+      "Action verbs communicate direct ownership and impact more clearly than passive descriptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Active, ownership-focused verbs communicate a candidate's direct contribution more clearly than vague passive framing.",
+    "source": "Generated (based on Action Verbs & Impact Statements theory)",
+    "tags": [
+      "Action Verbs",
+      "Impact",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0013",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Action Verbs & Impact Statements",
+    "difficulty": "Medium",
+    "question": "A bullet reads: \"Helped improve the checkout process.\" What is the main weakness of this statement?",
+    "options": [
+      "It lacks specificity about the candidate's actual role and the measurable outcome achieved",
+      "It uses too strong an action verb",
+      "It is too quantified and specific",
+      "It contains too many technical keywords"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Vague verbs like \"helped\" and the absence of any measurable outcome make the actual contribution and impact unclear.",
+    "source": "Generated (based on Action Verbs & Impact Statements theory)",
+    "tags": [
+      "Action Verbs",
+      "Impact",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0014",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Action Verbs & Impact Statements",
+    "difficulty": "Medium",
+    "question": "Why is it useful to quantify impact (e.g., percentages, dollar amounts, time saved) even when the exact number requires some estimation?",
+    "options": [
+      "Numbers are only relevant for finance-related roles",
+      "Quantified impact gives a reviewer a concrete sense of scale that qualitative language alone cannot convey",
+      "Estimating any number is considered dishonest under any circumstance",
+      "Qualitative descriptions always convey more information than numbers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A reasonable, defensible estimate of impact gives reviewers a much clearer sense of scale than purely qualitative language, as long as it can be explained if asked.",
+    "source": "Generated (based on Action Verbs & Impact Statements theory)",
+    "tags": [
+      "Action Verbs",
+      "Impact",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0015",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Action Verbs & Impact Statements",
+    "difficulty": "Hard",
+    "question": "Two candidates describe similar work: one writes \"Improved system reliability\" and the other writes \"Reduced production incident rate by 35% over two quarters by introducing automated rollback checks.\" Why is the second framing considered stronger, even if both are truthful?",
+    "options": [
+      "Longer bullet points are always considered better regardless of content",
+      "The first statement uses stronger action verbs",
+      "It specifies the mechanism, timeframe, and measurable outcome, making the impact concrete and independently verifiable in an interview",
+      "Specificity has no bearing on how a reviewer perceives credibility"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Specificity (mechanism + timeframe + measurable result) both demonstrates deeper impact and gives the candidate concrete substance to expand on if probed further in an interview.",
+    "source": "Generated (based on Action Verbs & Impact Statements theory)",
+    "tags": [
+      "Action Verbs",
+      "Impact",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0016",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Quantifying Achievements",
+    "difficulty": "Easy",
+    "question": "Which metric type is generally most persuasive on a resume bullet, when available?",
+    "options": [
+      "The exact number of hours the candidate physically worked",
+      "The number of meetings the candidate attended",
+      "The number of emails the candidate sent",
+      "A measurable business or technical outcome tied to the candidate's action"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Business/technical outcomes (revenue, latency, error rate, retention, etc.) are far more meaningful than raw activity counts.",
+    "source": "Generated (based on Quantifying Achievements theory)",
+    "tags": [
+      "Quantifying Impact",
+      "Metrics",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0017",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Quantifying Achievements",
+    "difficulty": "Easy",
+    "question": "What is a reasonable approach if a candidate does not have access to exact metrics for past work?",
+    "options": [
+      "Provide a reasonable, defensible estimate and be ready to explain the basis for it if asked",
+      "Fabricate a precise-sounding number with no basis",
+      "Avoid any quantification entirely, even a rough estimate",
+      "Only quantify achievements from the most recent job"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A defensible estimate is far better than either fabrication or omitting quantification entirely.",
+    "source": "Generated (based on Quantifying Achievements theory)",
+    "tags": [
+      "Quantifying Impact",
+      "Metrics",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0018",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Quantifying Achievements",
+    "difficulty": "Medium",
+    "question": "A candidate writes \"Increased test coverage.\" What is the most useful addition to strengthen this statement?",
+    "options": [
+      "A longer list of unrelated adjectives describing the work",
+      "A before/after percentage and the resulting impact (e.g. fewer regressions)",
+      "Removing the mention of test coverage entirely",
+      "Changing \"increased\" to a synonym with no other change"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Adding the before/after numbers and downstream impact gives the statement concrete, comparable substance.",
+    "source": "Generated (based on Quantifying Achievements theory)",
+    "tags": [
+      "Quantifying Impact",
+      "Metrics",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0019",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Quantifying Achievements",
+    "difficulty": "Medium",
+    "question": "Why can quantifying achievements sometimes backfire if the numbers are not well contextualized?",
+    "options": [
+      "Numbers always make a statement automatically stronger regardless of context",
+      "Providing context around a number always weakens the statement",
+      "A number without context (e.g. team size, timeframe, scope) can be misleading or hard to interpret correctly",
+      "Reviewers never question the context behind a stated metric"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A number without scope/context (e.g. \"increased sales by 200%\" for a tiny baseline) can be misleading or invite skepticism without further explanation.",
+    "source": "Generated (based on Quantifying Achievements theory)",
+    "tags": [
+      "Quantifying Impact",
+      "Metrics",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0020",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Quantifying Achievements",
+    "difficulty": "Hard",
+    "question": "A candidate's achievement resulted from a team effort, but the quantified impact was primarily due to a broader initiative they only partially contributed to. How should this be represented on a resume?",
+    "options": [
+      "Claim full personal credit for the entire quantified outcome",
+      "Avoid mentioning the achievement at all since it was not solely individual",
+      "Omit any mention of the broader team or initiative entirely",
+      "Frame the specific individual contribution clearly while still crediting it as part of the larger initiative's overall result"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Honest, well-scoped framing (clear personal contribution within a larger context) avoids overclaiming while still fairly representing real impact and involvement.",
+    "source": "Generated (based on Quantifying Achievements theory)",
+    "tags": [
+      "Quantifying Impact",
+      "Metrics",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0021",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length & Structure",
+    "difficulty": "Easy",
+    "question": "What is a commonly recommended resume length for an early-career candidate (0-5 years experience)?",
+    "options": [
+      "One page",
+      "Five or more pages",
+      "No length guideline exists at all",
+      "Exactly two pages regardless of content"
+    ],
+    "correctAnswer": 0,
+    "explanation": "One page is the common guideline for early-career candidates, since there is typically limited experience to summarize.",
+    "source": "Generated (based on Resume Length & Structure theory)",
+    "tags": [
+      "Resume Length",
+      "Structure"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0022",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length & Structure",
+    "difficulty": "Easy",
+    "question": "Why might a senior candidate with 15+ years of experience reasonably use a two-page resume?",
+    "options": [
+      "Longer resumes are always required by law past a certain experience level",
+      "A longer career history may require more space to summarize relevant, significant accomplishments",
+      "Two pages guarantees a stronger candidacy regardless of content",
+      "One page is never acceptable for any senior candidate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "More years of relevant, significant experience can reasonably require more space, though quality and relevance still matter more than raw length.",
+    "source": "Generated (based on Resume Length & Structure theory)",
+    "tags": [
+      "Resume Length",
+      "Structure"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0023",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length & Structure",
+    "difficulty": "Medium",
+    "question": "A resume lists every job held since high school, including unrelated part-time roles from a decade ago. What is a likely issue with this structure?",
+    "options": [
+      "Listing every job ever held is always required for completeness",
+      "Older unrelated jobs always strengthen a resume regardless of relevance",
+      "Including largely irrelevant older roles can dilute focus on the most relevant, recent experience",
+      "Resume structure has no bearing on how quickly a reviewer can assess relevance"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Prioritizing relevant, recent experience over an exhaustive full job history helps reviewers quickly find what matters most.",
+    "source": "Generated (based on Resume Length & Structure theory)",
+    "tags": [
+      "Resume Length",
+      "Structure"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0024",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length & Structure",
+    "difficulty": "Medium",
+    "question": "Why do most resume guides recommend the most relevant/recent experience appear near the top of the page?",
+    "options": [
+      "Recruiters always read a resume from bottom to top",
+      "Placement on the page has no effect on what a recruiter notices",
+      "Older experience is always more important to feature prominently",
+      "Recruiters often skim resumes quickly, so the most relevant content should be immediately visible"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Given typically brief initial skim times, placing the most relevant/recent content near the top increases the chance it gets noticed.",
+    "source": "Generated (based on Resume Length & Structure theory)",
+    "tags": [
+      "Resume Length",
+      "Structure"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0025",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length & Structure",
+    "difficulty": "Hard",
+    "question": "A candidate is applying to a role in a different field from their most recent job, but has highly relevant older experience buried at the bottom of a chronological resume. What is a reasonable structural adjustment to consider?",
+    "options": [
+      "Reordering or highlighting the most relevant experience more prominently, even if it is not the most recent, while still being honest about timeline",
+      "Deleting the most recent job entirely to avoid confusion",
+      "Listing experience in a random, non-chronological order with no clear logic",
+      "Never deviating from strict reverse-chronological order under any circumstance"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Strategically emphasizing relevant older experience (without fabricating dates or omitting the actual timeline) can better align the resume with the target role while remaining honest.",
+    "source": "Generated (based on Resume Length & Structure theory)",
+    "tags": [
+      "Resume Length",
+      "Structure"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0026",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Tailoring to Job Description",
+    "difficulty": "Easy",
+    "question": "Why is submitting the exact same generic resume to every job posting generally discouraged?",
+    "options": [
+      "It is the fastest way to guarantee an interview at every company",
+      "It misses the opportunity to highlight the specific experience most relevant to each individual role",
+      "Generic resumes always parse better in ATS systems than tailored ones",
+      "Tailoring a resume has no measurable effect on response rates"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A generic resume fails to emphasize the specific relevant experience each job posting is looking for, generally lowering response rates.",
+    "source": "Generated (based on Tailoring to Job Description theory)",
+    "tags": [
+      "Tailoring",
+      "Job Description",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0027",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Tailoring to Job Description",
+    "difficulty": "Easy",
+    "question": "What is a reasonable first step when tailoring a resume to a specific job posting?",
+    "options": [
+      "Rewrite the entire resume with fabricated experience matching the posting exactly",
+      "Ignore the job posting entirely and submit a completely generic resume",
+      "Identify the key skills and responsibilities emphasized in the posting and reflect matching real experience",
+      "Copy phrases verbatim from the job posting regardless of whether they reflect real experience"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Tailoring means highlighting genuinely matching real experience based on the posting's emphasis — not fabricating unrelated experience.",
+    "source": "Generated (based on Tailoring to Job Description theory)",
+    "tags": [
+      "Tailoring",
+      "Job Description",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0028",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Tailoring to Job Description",
+    "difficulty": "Medium",
+    "question": "A candidate has multiple relevant projects but limited resume space. How should tailoring guide which ones to include for a specific role?",
+    "options": [
+      "Always include every project regardless of relevance to save time",
+      "Include only the most recent project regardless of its relevance",
+      "Randomly select which projects to include for variety",
+      "Prioritize the projects most closely aligned with the specific responsibilities described in that job posting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Limited space should be used to feature the most relevant experience to that specific posting, not an exhaustive or random list.",
+    "source": "Generated (based on Tailoring to Job Description theory)",
+    "tags": [
+      "Tailoring",
+      "Job Description",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0029",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Tailoring to Job Description",
+    "difficulty": "Medium",
+    "question": "Why might a candidate maintain a \"master resume\" containing all their experience, separate from tailored versions sent to specific applications?",
+    "options": [
+      "It serves as a comprehensive source to pull the most relevant details from when tailoring for each specific application",
+      "A master resume is what should always be sent directly to employers untailored",
+      "Maintaining multiple versions is unnecessary since tailoring provides no benefit",
+      "It is required by every ATS to have a master resume on file"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A master resume acts as a reference library, from which relevant sections are selected and adapted for each specific tailored application.",
+    "source": "Generated (based on Tailoring to Job Description theory)",
+    "tags": [
+      "Tailoring",
+      "Job Description",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0030",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Tailoring to Job Description",
+    "difficulty": "Hard",
+    "question": "A candidate's tailored resume closely mirrors the specific language of a job posting, but their actual experience only partially overlaps with what is implied. What is the most honest way to handle this tension?",
+    "options": [
+      "Use identical language to the posting regardless of whether it accurately reflects their real experience",
+      "Use language that accurately reflects the real scope of their experience, even if it does not perfectly mirror every phrase in the posting",
+      "Avoid applying at all if experience does not perfectly match every requirement",
+      "Exaggerate their experience to fully match the posting's language"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tailoring should adapt honest framing of real experience to the posting's emphasis, not stretch language to imply experience that is not genuinely there.",
+    "source": "Generated (based on Tailoring to Job Description theory)",
+    "tags": [
+      "Tailoring",
+      "Job Description",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0031",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Objective vs Summary Statement",
+    "difficulty": "Easy",
+    "question": "What is the main difference between an \"objective statement\" and a \"professional summary\" on a resume?",
+    "options": [
+      "They are functionally identical with no meaningful difference",
+      "An objective is always longer than a summary",
+      "An objective focuses on what the candidate wants; a summary focuses on what the candidate offers",
+      "A summary is only used by candidates with no prior experience"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Objective statements center the candidate's goals; summaries center relevant qualifications and value offered to the employer.",
+    "source": "Generated (based on Objective vs Summary Statement theory)",
+    "tags": [
+      "Resume Summary",
+      "Objective Statement"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0032",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Objective vs Summary Statement",
+    "difficulty": "Easy",
+    "question": "Why have professional summaries generally become more common than objective statements on modern resumes?",
+    "options": [
+      "Objective statements are illegal on resumes in most countries",
+      "Summaries are always shorter than objective statements",
+      "Objective statements are required only for internship applications",
+      "Summaries emphasize value to the employer, which is generally considered more persuasive than stating personal goals"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A value-focused summary is generally seen as more persuasive to employers than a candidate-centered objective statement.",
+    "source": "Generated (based on Objective vs Summary Statement theory)",
+    "tags": [
+      "Resume Summary",
+      "Objective Statement"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0033",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Objective vs Summary Statement",
+    "difficulty": "Medium",
+    "question": "A professional summary reads: \"Hardworking individual seeking a challenging role.\" What is the main weakness of this summary?",
+    "options": [
+      "It is generic and does not convey specific, relevant qualifications or value",
+      "It is too long for a summary section",
+      "It contains too many quantified achievements",
+      "It uses too many technical keywords"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Generic, non-specific language fails to differentiate the candidate or communicate concrete value to the reviewer.",
+    "source": "Generated (based on Objective vs Summary Statement theory)",
+    "tags": [
+      "Resume Summary",
+      "Objective Statement"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0034",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Objective vs Summary Statement",
+    "difficulty": "Medium",
+    "question": "For a career changer, what is a useful role for a professional summary to play?",
+    "options": [
+      "Hiding all past experience to avoid confusing the reviewer",
+      "Bridging past experience to the new target role by highlighting transferable skills up front",
+      "Listing every past job title in chronological order",
+      "Repeating the objective statement format instead"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A summary can proactively frame transferable skills for a career changer, helping a reviewer see relevance that might not be obvious from job titles alone.",
+    "source": "Generated (based on Objective vs Summary Statement theory)",
+    "tags": [
+      "Resume Summary",
+      "Objective Statement"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0035",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Objective vs Summary Statement",
+    "difficulty": "Hard",
+    "question": "A candidate with a strong track record still writes a summary using vague superlatives (\"results-driven, dynamic professional\") without any specific evidence. Why does this often fail to land well with experienced reviewers?",
+    "options": [
+      "Superlative language always strengthens a summary regardless of specificity",
+      "Reviewers are required to take all summary claims at face value",
+      "Unsupported superlatives are common and generic, so they carry little persuasive weight without specific, credible evidence",
+      "Vague language is considered more professional than specific claims"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because such phrasing is extremely common and easy to claim regardless of truth, experienced reviewers tend to discount it unless backed by specific, credible evidence.",
+    "source": "Generated (based on Objective vs Summary Statement theory)",
+    "tags": [
+      "Resume Summary",
+      "Objective Statement"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0036",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Skills Section Best Practices",
+    "difficulty": "Easy",
+    "question": "What is a common best practice for a resume's \"Skills\" section?",
+    "options": [
+      "List every skill or tool the candidate has ever heard of, regardless of proficiency",
+      "Avoid listing any technical skills to keep the section short",
+      "Only list soft skills, never technical ones",
+      "List skills the candidate can genuinely demonstrate, relevant to the target role"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A skills section should honestly reflect real, relevant proficiency — not an inflated or irrelevant list.",
+    "source": "Generated (based on Skills Section Best Practices theory)",
+    "tags": [
+      "Skills Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0037",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Skills Section Best Practices",
+    "difficulty": "Easy",
+    "question": "Why might separating \"Technical Skills\" from \"Tools/Platforms\" improve a skills section's clarity?",
+    "options": [
+      "It helps reviewers quickly scan for specific categories relevant to the role",
+      "Separation is required by every ATS to parse the resume at all",
+      "A single combined list is always clearer than separated categories",
+      "Categorization has no effect on how quickly a reviewer scans the section"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Clear categorization helps a quickly-scanning reviewer find the specific skill type they are looking for.",
+    "source": "Generated (based on Skills Section Best Practices theory)",
+    "tags": [
+      "Skills Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0038",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Skills Section Best Practices",
+    "difficulty": "Medium",
+    "question": "A candidate lists \"Expert in Python\" but can only write basic scripts. Why is this risky?",
+    "options": [
+      "Overstating proficiency has no real consequence during interviews",
+      "An interview will likely probe the claimed expertise, and a mismatch can damage credibility",
+      "ATS systems automatically verify proficiency claims for accuracy",
+      "Expertise claims are never followed up on in interviews"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Interviewers commonly probe claimed skill levels; a significant mismatch between claimed and actual proficiency damages credibility once discovered.",
+    "source": "Generated (based on Skills Section Best Practices theory)",
+    "tags": [
+      "Skills Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0039",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Skills Section Best Practices",
+    "difficulty": "Medium",
+    "question": "Why might listing proficiency levels (e.g. \"familiar,\" \"proficient,\" \"expert\") next to skills be useful?",
+    "options": [
+      "Proficiency levels are purely decorative with no informational value",
+      "It is required for every resume regardless of format preferences",
+      "It gives the reviewer a more honest, calibrated sense of the depth of each skill",
+      "It always makes the skills section longer without adding value"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Explicit proficiency framing helps set accurate expectations and reduces the risk of overstatement being assumed.",
+    "source": "Generated (based on Skills Section Best Practices theory)",
+    "tags": [
+      "Skills Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0040",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Skills Section Best Practices",
+    "difficulty": "Hard",
+    "question": "A candidate has genuine proficiency in an older version of a technology but the job posting asks for the latest version. How should the skills section handle this honestly?",
+    "options": [
+      "List the latest version as if it were direct experience to match the posting",
+      "Omit that skill entirely to avoid the discrepancy",
+      "Claim expert-level proficiency in the newest version without qualification",
+      "List the specific version/experience honestly and be prepared to discuss the gap and ability to quickly adapt"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Honest, specific framing (plus a note on adaptability) respects both accuracy and the reviewer's ability to assess real fit, without overstating unverified experience.",
+    "source": "Generated (based on Skills Section Best Practices theory)",
+    "tags": [
+      "Skills Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0041",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Handling Employment Gaps",
+    "difficulty": "Easy",
+    "question": "What is generally the best approach to an employment gap on a resume?",
+    "options": [
+      "Address it honestly and briefly, focusing on what was gained or done during that time if relevant",
+      "Fabricate a fake job to hide the gap entirely",
+      "Never mention the topic under any circumstances, including in an interview",
+      "List an intentionally incorrect date range to conceal the gap"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Honest, brief context (e.g. caregiving, education, health, layoff) is generally viewed better than fabrication or evasive date manipulation.",
+    "source": "Generated (based on Handling Employment Gaps theory)",
+    "tags": [
+      "Employment Gaps",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0042",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Handling Employment Gaps",
+    "difficulty": "Easy",
+    "question": "Why might a candidate briefly note relevant activity during a gap (e.g. \"Completed X certification during this period\")?",
+    "options": [
+      "It is required information on every resume regardless of relevance",
+      "It reframes the gap as a period of continued growth rather than pure inactivity",
+      "It always eliminates any question about the gap in an interview",
+      "It replaces the need for honest employment dates"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Noting relevant, credible activity during a gap helps a reviewer see it as productive time, without needing to over-explain or fabricate.",
+    "source": "Generated (based on Handling Employment Gaps theory)",
+    "tags": [
+      "Employment Gaps",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0043",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Handling Employment Gaps",
+    "difficulty": "Medium",
+    "question": "A candidate has a year-long gap due to a layoff and job search. What is a reasonable way to frame this if asked in an interview?",
+    "options": [
+      "Avoid answering the question directly at all",
+      "Blame the previous employer extensively and at length",
+      "Briefly and factually explain the circumstances, then pivot to what was learned or done during the search",
+      "Deny that any gap exists despite the resume showing one"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A brief, factual explanation followed by a forward-looking pivot is generally the most professional way to address a layoff-related gap.",
+    "source": "Generated (based on Handling Employment Gaps theory)",
+    "tags": [
+      "Employment Gaps",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0044",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Handling Employment Gaps",
+    "difficulty": "Medium",
+    "question": "Why is it generally considered risky to fabricate a fake employer to cover an employment gap?",
+    "options": [
+      "Fabricated employers are impossible for any company to verify",
+      "It has no consequences if discovered after being hired",
+      "Reference checks never verify employment history in practice",
+      "It can be discovered through reference or background checks, creating a serious credibility and trust issue"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Background/reference checks can reveal a fabricated employer, and the resulting trust violation is often more damaging than the original gap would have been.",
+    "source": "Generated (based on Handling Employment Gaps theory)",
+    "tags": [
+      "Employment Gaps",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0045",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Handling Employment Gaps",
+    "difficulty": "Hard",
+    "question": "A candidate took an extended gap for a personal health reason they prefer not to disclose in detail. What is a professional way to handle this without over-sharing or being dishonest?",
+    "options": [
+      "Provide a brief, general reason (e.g. \"personal leave\") without detailed disclosure, while being truthful about the general nature and timeline",
+      "Fabricate an entirely unrelated cover story to avoid the topic",
+      "Disclose full private medical details regardless of comfort level",
+      "Refuse to acknowledge the gap exists at all if asked directly"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A brief, general, truthful framing respects both honesty and personal privacy, without requiring detailed disclosure of sensitive information.",
+    "source": "Generated (based on Handling Employment Gaps theory)",
+    "tags": [
+      "Employment Gaps",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0046",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Listing Projects & Portfolio Links",
+    "difficulty": "Easy",
+    "question": "Why might a candidate with limited formal work experience include a \"Projects\" section on their resume?",
+    "options": [
+      "Projects sections are only appropriate for senior candidates",
+      "It demonstrates practical, applied skills even without extensive paid work history",
+      "It replaces the need to list any education at all",
+      "It is required by law for every resume"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A projects section lets candidates (especially early-career ones) demonstrate applied skills through independent or academic work.",
+    "source": "Generated (based on Listing Projects & Portfolio Links theory)",
+    "tags": [
+      "Projects",
+      "Portfolio",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0047",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Listing Projects & Portfolio Links",
+    "difficulty": "Easy",
+    "question": "What is a good practice when linking to a code portfolio (e.g. GitHub) from a resume?",
+    "options": [
+      "Link only to the account's homepage with no context on which projects to view",
+      "Avoid including any portfolio link at all",
+      "Link to specific, well-organized, and relevant repositories rather than a generic unfiltered profile",
+      "Link to unrelated personal repositories with no connection to the target role"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Guiding the reviewer to specific, relevant, well-organized work is far more effective than an unfiltered link to everything.",
+    "source": "Generated (based on Listing Projects & Portfolio Links theory)",
+    "tags": [
+      "Projects",
+      "Portfolio",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0048",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Listing Projects & Portfolio Links",
+    "difficulty": "Medium",
+    "question": "A project description says only \"Built a web app using React.\" What would most improve this entry?",
+    "options": [
+      "Removing the mention of the tech stack entirely",
+      "Making the description shorter with less detail",
+      "Listing every single library used with no other context",
+      "Adding what problem it solved, key technical decisions, and any measurable outcome or scale"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Explaining the problem solved, key decisions, and outcome gives far more insight into the candidate's actual contribution and judgment than a bare tech-stack mention.",
+    "source": "Generated (based on Listing Projects & Portfolio Links theory)",
+    "tags": [
+      "Projects",
+      "Portfolio",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0049",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Listing Projects & Portfolio Links",
+    "difficulty": "Medium",
+    "question": "Why might including a live demo link (in addition to source code) strengthen a projects section?",
+    "options": [
+      "It lets a reviewer quickly experience the working product, not just read code",
+      "Live demo links are never checked by reviewers in practice",
+      "Source code links alone are always considered more persuasive than a working demo",
+      "Live demos replace the need for any project description"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A working live demo provides tangible, quick evidence of a finished, functioning product, complementing the code itself.",
+    "source": "Generated (based on Listing Projects & Portfolio Links theory)",
+    "tags": [
+      "Projects",
+      "Portfolio",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0050",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Listing Projects & Portfolio Links",
+    "difficulty": "Hard",
+    "question": "A candidate's most impressive project was built collaboratively with a team, but the resume implies it was entirely solo work. What is the most professional way to present this?",
+    "options": [
+      "Present it as entirely individual work to appear more impressive",
+      "Clearly indicate it was a team project and specify the candidate's own specific contributions within it",
+      "Omit the project entirely since it involved a team",
+      "Avoid specifying any individual contribution and let the ambiguity stand"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Honest framing (team project, clear personal contribution) respects the collaborative reality while still clearly conveying the candidate's own specific role and impact.",
+    "source": "Generated (based on Listing Projects & Portfolio Links theory)",
+    "tags": [
+      "Projects",
+      "Portfolio",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0051",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Education Section Placement",
+    "difficulty": "Easy",
+    "question": "For a recent graduate with limited work experience, where is the \"Education\" section typically placed on a resume?",
+    "options": [
+      "At the very bottom regardless of experience level",
+      "Omitted entirely if the candidate has any work experience",
+      "Near the top, since it is currently the most relevant and substantial credential",
+      "In the middle, between two unrelated work experience entries"
+    ],
+    "correctAnswer": 2,
+    "explanation": "For candidates with limited work history, education is usually the strongest current credential and is placed prominently near the top.",
+    "source": "Generated (based on Education Section Placement theory)",
+    "tags": [
+      "Education Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0052",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Education Section Placement",
+    "difficulty": "Easy",
+    "question": "For an experienced professional with 10+ years of relevant work history, where does education typically move on the resume?",
+    "options": [
+      "It should be removed entirely once someone has any experience",
+      "It should move above the most recent job, regardless of experience",
+      "Education section placement never changes with experience level",
+      "Toward the bottom, since work experience has become the more relevant credential"
+    ],
+    "correctAnswer": 3,
+    "explanation": "As work experience accumulates and becomes more relevant, education is typically deprioritized in placement (though still included).",
+    "source": "Generated (based on Education Section Placement theory)",
+    "tags": [
+      "Education Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0053",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Education Section Placement",
+    "difficulty": "Medium",
+    "question": "Should GPA generally be included on a resume for an experienced professional several years into their career?",
+    "options": [
+      "Usually not, unless it is exceptionally strong or specifically requested",
+      "Always, regardless of how many years of experience the candidate has",
+      "Never under any circumstances, even for new graduates",
+      "Only if the GPA is below a certain average threshold"
+    ],
+    "correctAnswer": 0,
+    "explanation": "GPA is generally more relevant early in a career; once meaningful work experience exists, it typically carries less weight and is often omitted unless especially strong or requested.",
+    "source": "Generated (based on Education Section Placement theory)",
+    "tags": [
+      "Education Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0054",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Education Section Placement",
+    "difficulty": "Medium",
+    "question": "A candidate has a degree unrelated to their current target role but strong relevant work experience. How should this typically be handled?",
+    "options": [
+      "Omit the degree entirely to avoid confusion",
+      "Include the degree, but let it play a smaller role relative to the more relevant work experience section",
+      "Feature the unrelated degree prominently above the relevant work experience",
+      "List the degree as if it were directly related to the target role"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The degree is still honestly listed, but placement and emphasis should reflect that the work experience is currently more relevant to the target role.",
+    "source": "Generated (based on Education Section Placement theory)",
+    "tags": [
+      "Education Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0055",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Education Section Placement",
+    "difficulty": "Hard",
+    "question": "A self-taught candidate with no formal degree has strong, demonstrable relevant experience and projects. How should the education section be handled without appearing evasive?",
+    "options": [
+      "Fabricate a degree to avoid the topic entirely",
+      "Omit any mention of educational background at all, leaving an unexplained gap",
+      "Include an honest, brief note on relevant self-directed learning or certifications, without fabricating a formal degree",
+      "List an unrelated degree from years ago as if it were relevant"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Honest representation of real self-directed learning or certifications avoids both fabrication and an unexplained gap in the resume's structure.",
+    "source": "Generated (based on Education Section Placement theory)",
+    "tags": [
+      "Education Section",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0056",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Certifications & Relevance",
+    "difficulty": "Easy",
+    "question": "What is the main value a relevant certification adds to a resume?",
+    "options": [
+      "It always guarantees a job offer regardless of other qualifications",
+      "It replaces the need to list any actual work experience",
+      "It is only useful for entry-level candidates",
+      "It signals verified, structured knowledge in a specific relevant area"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A relevant certification signals structured, often externally-validated knowledge, complementing (not replacing) real experience.",
+    "source": "Generated (based on Certifications & Relevance theory)",
+    "tags": [
+      "Certifications",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0057",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Certifications & Relevance",
+    "difficulty": "Easy",
+    "question": "Why might listing an outdated or irrelevant certification actually weaken a resume slightly?",
+    "options": [
+      "It can dilute focus and use limited space on something not relevant to the target role",
+      "Certifications never expire or become outdated in any field",
+      "All certifications are always relevant to every job regardless of field",
+      "Listing more certifications is always strictly better regardless of relevance"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Irrelevant or outdated certifications use limited resume space without adding meaningful signal for the specific target role.",
+    "source": "Generated (based on Certifications & Relevance theory)",
+    "tags": [
+      "Certifications",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0058",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Certifications & Relevance",
+    "difficulty": "Medium",
+    "question": "A candidate lists a certification but does not specify when it was earned. Why might this raise a minor concern for some technical roles?",
+    "options": [
+      "Certification dates are never relevant to any technical field",
+      "Some fields evolve quickly, so recency can matter for judging how current the underlying knowledge likely is",
+      "Omitting the date always makes the certification appear stronger",
+      "Only degrees, never certifications, need a listed date"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In fast-moving technical fields, the date can matter for judging whether the underlying skills are likely still current.",
+    "source": "Generated (based on Certifications & Relevance theory)",
+    "tags": [
+      "Certifications",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0059",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Certifications & Relevance",
+    "difficulty": "Medium",
+    "question": "Why might a candidate list a certification in progress (not yet completed) differently from a completed one?",
+    "options": [
+      "There is no meaningful difference in how these should be presented",
+      "In-progress certifications should never be mentioned at all",
+      "To be transparent about current status, avoiding the impression that it is already fully earned",
+      "In-progress certifications should always be listed identically to completed ones"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Clear labeling (e.g. \"in progress, expected [date]\") avoids misrepresenting an unfinished credential as complete.",
+    "source": "Generated (based on Certifications & Relevance theory)",
+    "tags": [
+      "Certifications",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0060",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Certifications & Relevance",
+    "difficulty": "Hard",
+    "question": "A candidate holds several certifications that are well-regarded but from a vendor unrelated to the specific tools used at the target company. How should relevance be weighed when deciding what to include?",
+    "options": [
+      "Only include certifications from the exact same vendor as the target company's tools",
+      "Exclude all certifications since none perfectly match the target company's tools",
+      "Include every certification regardless of relevance to maximize the list's length",
+      "Prioritize certifications that demonstrate transferable skills or fundamentals relevant to the role, even if not an exact vendor match"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Even without an exact vendor match, certifications demonstrating transferable fundamentals can still add relevant signal — prioritized over an exhaustive, unfiltered list.",
+    "source": "Generated (based on Certifications & Relevance theory)",
+    "tags": [
+      "Certifications",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0061",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Reverse-Chronological vs Functional Format",
+    "difficulty": "Easy",
+    "question": "What defines a \"reverse-chronological\" resume format?",
+    "options": [
+      "Work experience is listed with the most recent role first",
+      "Skills are grouped by category instead of by employer",
+      "Experience is listed from oldest to most recent",
+      "Only the most recent job is included, omitting all others"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reverse-chronological format lists the most recent experience first, descending backward in time — the most common resume format.",
+    "source": "Generated (based on Reverse-Chronological vs Functional Format theory)",
+    "tags": [
+      "Resume Format",
+      "Chronological",
+      "Functional"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0062",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Reverse-Chronological vs Functional Format",
+    "difficulty": "Easy",
+    "question": "What is a \"functional\" resume format primarily organized around?",
+    "options": [
+      "Only listing education with no work experience at all",
+      "Skill categories rather than a strict chronological work history",
+      "A strict alphabetical listing of past employers",
+      "Listing achievements only from the most recent 6 months"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A functional format groups content by skill/competency area rather than emphasizing a strict timeline of employers.",
+    "source": "Generated (based on Reverse-Chronological vs Functional Format theory)",
+    "tags": [
+      "Resume Format",
+      "Chronological",
+      "Functional"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0063",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Reverse-Chronological vs Functional Format",
+    "difficulty": "Medium",
+    "question": "Why is a functional resume format sometimes viewed with more scrutiny by recruiters?",
+    "options": [
+      "It always guarantees faster ATS parsing than chronological formats",
+      "Recruiters are legally required to reject all functional-format resumes",
+      "It can obscure a clear timeline, sometimes raising questions about gaps or job-hopping being hidden",
+      "It is always the preferred format regardless of context"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because it de-emphasizes the timeline, some recruiters associate functional formats with an attempt to obscure gaps — leading to more scrutiny.",
+    "source": "Generated (based on Reverse-Chronological vs Functional Format theory)",
+    "tags": [
+      "Resume Format",
+      "Chronological",
+      "Functional"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0064",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Reverse-Chronological vs Functional Format",
+    "difficulty": "Medium",
+    "question": "For a candidate with a very consistent, strong chronological career, what format is generally recommended?",
+    "options": [
+      "A purely functional format to avoid mentioning any employer at all",
+      "A random ordering unrelated to time or skill category",
+      "Combining every possible format into one document",
+      "A standard reverse-chronological format, since it is widely expected and their timeline is a strength"
+    ],
+    "correctAnswer": 3,
+    "explanation": "When the career timeline itself is a strength, the standard reverse-chronological format is generally the safest, most expected choice.",
+    "source": "Generated (based on Reverse-Chronological vs Functional Format theory)",
+    "tags": [
+      "Resume Format",
+      "Chronological",
+      "Functional"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0065",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Reverse-Chronological vs Functional Format",
+    "difficulty": "Hard",
+    "question": "A candidate is changing careers and has scattered, non-linear relevant experience across unrelated roles. What is a reasonable compromise between a pure functional and pure chronological format?",
+    "options": [
+      "A \"hybrid\" format that opens with a skills/competency summary but still includes a clear chronological work history below it",
+      "A purely functional format that omits any timeline information",
+      "A purely chronological format with no skill-based grouping at all",
+      "Two entirely separate resumes with no shared structure"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A hybrid format gets the benefit of skill-based framing for a career changer while still providing the timeline transparency recruiters expect.",
+    "source": "Generated (based on Reverse-Chronological vs Functional Format theory)",
+    "tags": [
+      "Resume Format",
+      "Chronological",
+      "Functional"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0066",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Common Resume Red Flags",
+    "difficulty": "Easy",
+    "question": "What is generally considered a resume red flag during screening?",
+    "options": [
+      "A single, well-documented long tenure at one company",
+      "Frequent, unexplained short tenures at multiple jobs with no context",
+      "A clear, consistent chronological work history",
+      "A resume tailored specifically to the job posting"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Frequent short, unexplained tenures can raise questions during screening, though context (e.g. layoffs, contract roles) can reasonably explain it.",
+    "source": "Generated (based on Common Resume Red Flags theory)",
+    "tags": [
+      "Red Flags",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0067",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Common Resume Red Flags",
+    "difficulty": "Easy",
+    "question": "Why do spelling and grammar errors on a resume often raise concern for screeners?",
+    "options": [
+      "Errors are always intentional stylistic choices",
+      "Screeners never actually notice these kinds of errors",
+      "They can suggest a lack of attention to detail on a document the candidate had full control to review",
+      "Spelling errors are only relevant for writing-focused roles"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Since a resume is fully within a candidate's control to proofread, errors can suggest reduced attention to detail — a concern for many roles.",
+    "source": "Generated (based on Common Resume Red Flags theory)",
+    "tags": [
+      "Red Flags",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0068",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Common Resume Red Flags",
+    "difficulty": "Medium",
+    "question": "Why might inconsistent formatting (e.g. mismatched date formats or fonts) be interpreted as a red flag?",
+    "options": [
+      "Formatting inconsistency has no bearing on a screener's impression",
+      "It is always intentional and a sign of strong design skill",
+      "Inconsistent formatting always improves ATS parsing accuracy",
+      "It may suggest a rushed, unedited resume, especially if copy-pasted from multiple sources without review"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Inconsistent formatting often signals a hastily assembled resume, which can subtly affect a screener's impression of thoroughness.",
+    "source": "Generated (based on Common Resume Red Flags theory)",
+    "tags": [
+      "Red Flags",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0069",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Common Resume Red Flags",
+    "difficulty": "Medium",
+    "question": "A resume claims expert-level proficiency in many unrelated tools and technologies. Why might this raise skepticism?",
+    "options": [
+      "Claiming deep expertise across an unusually broad range can seem implausible and invite closer scrutiny in an interview",
+      "Broad claims of expertise are always fully believed at face value",
+      "More claimed skills always strictly improve the impression regardless of plausibility",
+      "Skepticism about broad claims is unique to entry-level candidates only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An implausibly broad set of claimed expert-level skills can raise doubts about accuracy, prompting closer interview scrutiny.",
+    "source": "Generated (based on Common Resume Red Flags theory)",
+    "tags": [
+      "Red Flags",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0070",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Common Resume Red Flags",
+    "difficulty": "Hard",
+    "question": "A resume shows steadily increasing responsibility and titles, but each role lasted less than a year, with a plausible explanation available for each transition (acquisitions, layoffs, contract terms). How should a thoughtful screener weigh this pattern?",
+    "options": [
+      "Automatically reject the resume based on tenure length alone with no further inquiry",
+      "Consider the plausible context for each transition rather than treating short tenure alone as an automatic red flag",
+      "Assume the candidate is entirely at fault for every short tenure without investigation",
+      "Ignore the pattern of increasing responsibility entirely"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A thoughtful screener looks past a surface-level pattern (short tenures) to the underlying context and trajectory (increasing responsibility, plausible external causes) before drawing conclusions.",
+    "source": "Generated (based on Common Resume Red Flags theory)",
+    "tags": [
+      "Red Flags",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0071",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Cover Letter Best Practices",
+    "difficulty": "Easy",
+    "question": "What is the main purpose of a cover letter that a resume alone typically cannot convey as well?",
+    "options": [
+      "A duplicate list of every bullet point already on the resume",
+      "A detailed breakdown of desired salary and benefits",
+      "Narrative context connecting the candidate's motivation and experience specifically to this role and company",
+      "A full copy of the candidate's references"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A cover letter's value is in narrative context and motivation — not repeating the resume's content verbatim.",
+    "source": "Generated (based on Cover Letter Best Practices theory)",
+    "tags": [
+      "Cover Letter",
+      "Application"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0072",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Cover Letter Best Practices",
+    "difficulty": "Easy",
+    "question": "Why is a generic cover letter starting with \"To Whom It May Concern\" often discouraged when a specific contact can be identified?",
+    "options": [
+      "Generic greetings are always required by professional etiquette",
+      "Personalized greetings are considered unprofessional in every context",
+      "It has no bearing on how the letter is perceived",
+      "Personalization signals genuine interest and effort specific to that application"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A personalized greeting, when a specific name is reasonably available, signals genuine effort and interest in that particular opportunity.",
+    "source": "Generated (based on Cover Letter Best Practices theory)",
+    "tags": [
+      "Cover Letter",
+      "Application"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0073",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Cover Letter Best Practices",
+    "difficulty": "Medium",
+    "question": "A cover letter simply restates the resume's bullet points in paragraph form. What is the main missed opportunity here?",
+    "options": [
+      "It fails to add new context, motivation, or narrative connection beyond what the resume already shows",
+      "It is too short to be effective",
+      "It uses too much unique language not found on the resume",
+      "It is generally considered the ideal cover letter structure"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A cover letter that merely repeats resume content wastes the chance to add motivation, narrative, and context the resume format cannot easily convey.",
+    "source": "Generated (based on Cover Letter Best Practices theory)",
+    "tags": [
+      "Cover Letter",
+      "Application"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0074",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Cover Letter Best Practices",
+    "difficulty": "Medium",
+    "question": "Why might a candidate specifically research the company before writing a cover letter?",
+    "options": [
+      "Research is only useful for interviews, never for cover letters",
+      "To genuinely connect their motivation and experience to that company's specific mission or challenges",
+      "Cover letters are not expected to reference the specific company at all",
+      "Generic language always outperforms company-specific language in cover letters"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Referencing genuine, specific company context demonstrates authentic interest, rather than a copy-paste generic letter.",
+    "source": "Generated (based on Cover Letter Best Practices theory)",
+    "tags": [
+      "Cover Letter",
+      "Application"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0075",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Cover Letter Best Practices",
+    "difficulty": "Hard",
+    "question": "A candidate writes a compelling, well-researched cover letter but it noticeably contradicts specific dates or facts stated on their resume. How should a screener weigh this inconsistency?",
+    "options": [
+      "Ignore the inconsistency since only the resume matters in practice",
+      "Assume the cover letter is always the more accurate document by default",
+      "Treat it as a credibility concern worth clarifying, since consistency between application materials matters as much as either document alone",
+      "Reject the candidate immediately without seeking any clarification"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Inconsistencies between application materials are a credibility signal worth clarifying directly, rather than ignoring or assuming one document is automatically correct.",
+    "source": "Generated (based on Cover Letter Best Practices theory)",
+    "tags": [
+      "Cover Letter",
+      "Application"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0076",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "LinkedIn Profile Alignment",
+    "difficulty": "Easy",
+    "question": "Why do recruiters commonly cross-check a candidate's LinkedIn profile against their resume?",
+    "options": [
+      "LinkedIn profiles are never viewed by recruiters in practice",
+      "To find personal information unrelated to the candidate's qualifications",
+      "Cross-checking is required by law in every jurisdiction",
+      "To verify consistency in employment history, titles, and dates across both sources"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Cross-checking employment consistency is a common, informal verification step recruiters use alongside formal reference checks.",
+    "source": "Generated (based on LinkedIn Profile Alignment theory)",
+    "tags": [
+      "LinkedIn",
+      "Online Presence",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0077",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "LinkedIn Profile Alignment",
+    "difficulty": "Easy",
+    "question": "What is a reasonable practice regarding job titles listed on LinkedIn versus a resume?",
+    "options": [
+      "Keep them consistent, or explain any deliberate difference (e.g. a more descriptive but accurate self-given title)",
+      "Use completely different, unrelated titles on each platform for variety",
+      "Titles on LinkedIn never need to match anything on the resume",
+      "Always use a more senior-sounding title on LinkedIn regardless of accuracy"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Consistency between resume and LinkedIn titles (or a reasonable, honest explanation for any difference) avoids raising credibility concerns.",
+    "source": "Generated (based on LinkedIn Profile Alignment theory)",
+    "tags": [
+      "LinkedIn",
+      "Online Presence",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0078",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "LinkedIn Profile Alignment",
+    "difficulty": "Medium",
+    "question": "A candidate's resume lists a role ending in \"Present\" but their LinkedIn shows they left that company months ago. What concern does this raise?",
+    "options": [
+      "This kind of discrepancy is completely irrelevant to a hiring decision",
+      "It suggests the resume may not be up to date or accurate, which could raise credibility questions",
+      "LinkedIn is always assumed to be inaccurate, not the resume",
+      "It has no bearing on how a recruiter perceives the application"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A clear discrepancy in current employment status is exactly the kind of inconsistency that undermines confidence in the accuracy of the application materials.",
+    "source": "Generated (based on LinkedIn Profile Alignment theory)",
+    "tags": [
+      "LinkedIn",
+      "Online Presence",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0079",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "LinkedIn Profile Alignment",
+    "difficulty": "Medium",
+    "question": "Why might a recommendation or endorsement from a former manager on LinkedIn add credibility beyond the resume alone?",
+    "options": [
+      "Endorsements are purely decorative and carry no informational value",
+      "Endorsements always replace the need for a formal reference check",
+      "It offers independent, third-party validation of the candidate's work, which a self-written resume cannot provide",
+      "LinkedIn recommendations are legally binding statements"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Third-party endorsements provide independent corroboration of a candidate's claims, complementing (not replacing) the resume and formal references.",
+    "source": "Generated (based on LinkedIn Profile Alignment theory)",
+    "tags": [
+      "LinkedIn",
+      "Online Presence",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0080",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "LinkedIn Profile Alignment",
+    "difficulty": "Hard",
+    "question": "A candidate's resume and LinkedIn profile are consistent, but their LinkedIn activity (posts, comments) reveals views or conduct that seem to conflict with how they present themselves professionally. How should a hiring team reasonably weigh this?",
+    "options": [
+      "Ignore all online activity entirely regardless of relevance",
+      "Automatically disqualify the candidate based solely on informal online posts",
+      "Treat online activity as more important than the interview and resume combined",
+      "Consider it as one data point among several, weighed carefully and fairly, without over-relying on informal online activity as the sole basis for a decision"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Informal online activity can be a relevant data point, but a fair process weighs it carefully alongside structured interview and resume evidence rather than making it the dominant factor.",
+    "source": "Generated (based on LinkedIn Profile Alignment theory)",
+    "tags": [
+      "LinkedIn",
+      "Online Presence",
+      "Resume"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0081",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Screening for Culture Fit",
+    "difficulty": "Easy",
+    "question": "What is a more defensible framing than vague \"culture fit,\" commonly recommended in modern hiring practice?",
+    "options": [
+      "\"Culture add\" or values alignment based on specific, job-relevant criteria",
+      "Personal similarity to the current team",
+      "Shared unrelated hobbies with the interviewer",
+      "Attending the same schools as current employees"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Modern hiring guidance favors specific, job-relevant \"culture add\"/values-alignment framing over vague, bias-prone \"fit\" based on personal similarity.",
+    "source": "Generated (based on Screening for Culture Fit theory)",
+    "tags": [
+      "Culture Fit",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0082",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Screening for Culture Fit",
+    "difficulty": "Easy",
+    "question": "Why is evaluating \"culture fit\" purely through informal conversation considered risky?",
+    "options": [
+      "Informal conversation is always the single most objective evaluation method",
+      "It can introduce unconscious bias and inconsistent criteria across different candidates",
+      "It eliminates the need for any structured interview process",
+      "It guarantees equally fair treatment of every candidate automatically"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Unstructured, informal evaluation is a well-documented source of inconsistent, bias-prone hiring decisions.",
+    "source": "Generated (based on Screening for Culture Fit theory)",
+    "tags": [
+      "Culture Fit",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0083",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Screening for Culture Fit",
+    "difficulty": "Medium",
+    "question": "What is a more structured way to assess values alignment during screening, compared to a purely subjective impression?",
+    "options": [
+      "Relying solely on whether the candidate seems personally likable",
+      "Skipping any evaluation of values or culture entirely",
+      "Using specific behavioral questions tied to defined company values, evaluated against a consistent rubric",
+      "Asking about unrelated personal interests outside of work"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Structured, rubric-based behavioral questions tied to defined values reduce the subjectivity and bias of a purely impressionistic assessment.",
+    "source": "Generated (based on Screening for Culture Fit theory)",
+    "tags": [
+      "Culture Fit",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0084",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Screening for Culture Fit",
+    "difficulty": "Medium",
+    "question": "Why might a resume alone provide limited signal for genuine values alignment?",
+    "options": [
+      "A resume always fully captures a candidate's values with no additional evaluation needed",
+      "Values alignment has no relevance to the interview process at all",
+      "Resumes are designed specifically to communicate personal values directly",
+      "Values alignment is typically better assessed through behavioral evidence and direct conversation than through a static document"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A resume conveys experience and skills; values alignment generally requires the richer, interactive evidence a behavioral interview can provide.",
+    "source": "Generated (based on Screening for Culture Fit theory)",
+    "tags": [
+      "Culture Fit",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0085",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Screening for Culture Fit",
+    "difficulty": "Hard",
+    "question": "A hiring panel disagrees on a candidate: some feel they are a strong \"culture fit\" based on personality, while others note the candidate has no concrete evidence of the company's specific stated values in their answers. How should this disagreement be resolved most fairly?",
+    "options": [
+      "Prioritize the structured, evidence-based evaluation of specific values over a general subjective personality impression",
+      "Prioritize whichever panelist has the most seniority in the room",
+      "Default to the more favorable \"fit\" impression regardless of evidence",
+      "Avoid resolving the disagreement and decide the outcome randomly"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A fair resolution weighs concrete, evidence-based evaluation of specific values more heavily than a vague, unstructured personality-based impression, consistent with best practice against \"fit\" bias.",
+    "source": "Generated (based on Screening for Culture Fit theory)",
+    "tags": [
+      "Culture Fit",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0086",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Recruiter Skimming Behavior",
+    "difficulty": "Easy",
+    "question": "Studies on recruiter resume review commonly report initial skim times in what general range?",
+    "options": [
+      "Multiple hours per resume on the first pass",
+      "A few seconds to under a minute for the first pass",
+      "Exactly one full day per resume",
+      "Recruiters generally do not skim at all before a full read"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Widely cited studies and industry reports describe an initial skim of roughly seconds, not minutes or hours, before deciding whether to read further.",
+    "source": "Generated (based on Recruiter Skimming Behavior theory)",
+    "tags": [
+      "Recruiter Behavior",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0087",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Recruiter Skimming Behavior",
+    "difficulty": "Easy",
+    "question": "Given very short initial skim times, why is clear visual hierarchy on a resume important?",
+    "options": [
+      "Visual hierarchy is irrelevant if the content itself is strong",
+      "Short skim times mean formatting never actually matters",
+      "It helps the most important information get noticed quickly during a brief first pass",
+      "Recruiters read every resume in full regardless of skim time"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because the first pass is brief, clear visual hierarchy helps critical information stand out immediately rather than requiring deep reading to find.",
+    "source": "Generated (based on Recruiter Skimming Behavior theory)",
+    "tags": [
+      "Recruiter Behavior",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0088",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Recruiter Skimming Behavior",
+    "difficulty": "Medium",
+    "question": "Why might placing the most impressive, relevant achievement early in a resume (rather than buried at the bottom) matter for recruiter skimming?",
+    "options": [
+      "Order within a resume has no bearing on what a recruiter notices",
+      "Recruiters always read a resume completely regardless of ordering",
+      "The most impressive achievement should always be hidden to build suspense",
+      "It increases the odds that key achievement is actually seen during the brief initial skim"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Given brief skim behavior, placement of key achievements earlier increases the chance they are actually seen before a decision to read further (or not) is made.",
+    "source": "Generated (based on Recruiter Skimming Behavior theory)",
+    "tags": [
+      "Recruiter Behavior",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0089",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Recruiter Skimming Behavior",
+    "difficulty": "Medium",
+    "question": "Why do recruiters commonly scan job titles and company names before reading detailed bullet points?",
+    "options": [
+      "Titles and companies provide a fast initial signal of relevant seniority and industry background",
+      "Job titles and companies are never actually looked at during skimming",
+      "Bullet points are always read before any title or company name",
+      "Recruiter scanning order is completely random and unpredictable"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Titles and companies act as quick, high-signal anchors for relevant background before investing time in detailed bullet content.",
+    "source": "Generated (based on Recruiter Skimming Behavior theory)",
+    "tags": [
+      "Recruiter Behavior",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0090",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Recruiter Skimming Behavior",
+    "difficulty": "Hard",
+    "question": "Given how brief the initial recruiter skim tends to be, what does this imply about the tradeoff between resume completeness and clarity?",
+    "options": [
+      "Completeness should always be maximized regardless of any impact on clarity",
+      "Prioritizing clarity and the most relevant highlights over exhaustive completeness generally improves the odds of a resume surviving the initial skim",
+      "Skim behavior has no implication for how a resume should be structured",
+      "Clarity and completeness are always in perfect alignment with no real tradeoff"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Given very limited initial attention, resumes optimized for quick clarity on the most relevant points tend to perform better than exhaustively complete but harder-to-skim documents.",
+    "source": "Generated (based on Recruiter Skimming Behavior theory)",
+    "tags": [
+      "Recruiter Behavior",
+      "Resume Screening"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0091",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length for Different Seniority",
+    "difficulty": "Easy",
+    "question": "What resume length is generally recommended for a candidate with 20+ years of highly relevant senior experience?",
+    "options": [
+      "Always exactly one page regardless of experience",
+      "A minimum of five pages to list every past role",
+      "Typically two pages, focused on the most relevant and recent achievements",
+      "No limit at all, listing the entire career history in full detail"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Even very senior candidates are generally advised to stay concise (commonly around two pages), prioritizing relevance over an exhaustive history.",
+    "source": "Generated (based on Resume Length for Different Seniority theory)",
+    "tags": [
+      "Seniority",
+      "Resume Length"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0092",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length for Different Seniority",
+    "difficulty": "Easy",
+    "question": "Why might an executive-level resume sometimes include a one-page addendum of board memberships or speaking engagements?",
+    "options": [
+      "Because it is required by law for any executive-level application",
+      "Because executive resumes are never allowed to exceed one page total",
+      "Because board memberships are always irrelevant to a hiring decision",
+      "To highlight relevant external leadership activity that is distinct from core employment history"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Executive-level external activities (board seats, speaking) reflect a distinct type of relevant leadership signal, sometimes warranting a short separate addendum.",
+    "source": "Generated (based on Resume Length for Different Seniority theory)",
+    "tags": [
+      "Seniority",
+      "Resume Length"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0093",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length for Different Seniority",
+    "difficulty": "Medium",
+    "question": "A senior candidate's resume approaches four pages due to a long career history. What is a reasonable way to manage length while preserving relevant experience?",
+    "options": [
+      "Condense or summarize older, less relevant roles while giving more space to recent, high-impact experience",
+      "Remove all older experience entirely, even if still relevant to the target role",
+      "Keep every role at equal length regardless of relevance or recency",
+      "Add even more detail to further lengthen the document"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Prioritizing recent, high-impact experience while condensing older roles balances completeness with the practical need for a manageable length.",
+    "source": "Generated (based on Resume Length for Different Seniority theory)",
+    "tags": [
+      "Seniority",
+      "Resume Length"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0094",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length for Different Seniority",
+    "difficulty": "Medium",
+    "question": "Why is a rigid \"one page for everyone\" rule considered an oversimplification of resume length guidance?",
+    "options": [
+      "One page is always correct regardless of career length or complexity",
+      "Appropriate length reasonably varies with years of relevant experience and career complexity",
+      "Length guidance is universally identical across all industries and seniority levels",
+      "Resume length has no relationship to years of experience"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Length guidance is a rule of thumb, not an absolute rule — appropriate length reasonably scales with the amount of genuinely relevant experience to summarize.",
+    "source": "Generated (based on Resume Length for Different Seniority theory)",
+    "tags": [
+      "Seniority",
+      "Resume Length"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0095",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "Resume Length for Different Seniority",
+    "difficulty": "Hard",
+    "question": "An executive candidate has an extensive, impressive career but insists on cramming all of it into a single dense page with tiny font. What is the likely tradeoff being made here?",
+    "options": [
+      "There is no tradeoff since dense, tiny-font single pages are always ideal for executives",
+      "This approach always improves ATS parsing regardless of density",
+      "Prioritizing an arbitrary page-count rule over genuine readability and clarity for the reviewer",
+      "Executive resumes are exempt from any consideration of visual readability"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Rigidly forcing extensive content into one page at the cost of readability (tiny font, cramped layout) sacrifices real clarity for an arbitrary length rule — usually a worse tradeoff than a clean two-page version.",
+    "source": "Generated (based on Resume Length for Different Seniority theory)",
+    "tags": [
+      "Seniority",
+      "Resume Length"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "res_0096",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "References Section Etiquette",
+    "difficulty": "Easy",
+    "question": "What is the generally recommended practice regarding a \"References available upon request\" line on modern resumes?",
+    "options": [
+      "Always include it prominently at the very top of the resume",
+      "List full reference contact details directly on the resume by default",
+      "It must be included by law on every resume",
+      "Omit it, since it is now assumed and takes up unnecessary space"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Modern resume guidance generally recommends omitting this line entirely, since it is assumed and considered outdated, unnecessary filler.",
+    "source": "Generated (based on References Section Etiquette theory)",
+    "tags": [
+      "References",
+      "Resume Etiquette"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0097",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "References Section Etiquette",
+    "difficulty": "Easy",
+    "question": "Why should a candidate typically ask permission before listing someone as a reference?",
+    "options": [
+      "To ensure the reference is prepared and willing to speak positively and accurately on the candidate's behalf",
+      "Permission is never actually necessary in any context",
+      "Listing someone without asking always results in a stronger reference",
+      "References cannot legally be contacted without written consent forms"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Asking permission ensures the reference is prepared, willing, and can speak knowledgeably and positively, avoiding an awkward unprepared response.",
+    "source": "Generated (based on References Section Etiquette theory)",
+    "tags": [
+      "References",
+      "Resume Etiquette"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "res_0098",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "References Section Etiquette",
+    "difficulty": "Medium",
+    "question": "Why might a candidate prepare a separate reference list document, rather than including it on the resume itself?",
+    "options": [
+      "A separate document is never expected by any employer",
+      "It keeps the resume focused and lets references be shared only when specifically requested later in the process",
+      "It replaces the need to prepare a resume at all",
+      "It is required to be submitted before the resume in every process"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A separate reference document keeps the resume itself focused on qualifications, sharing contact details only when actually requested later in the process.",
+    "source": "Generated (based on References Section Etiquette theory)",
+    "tags": [
+      "References",
+      "Resume Etiquette"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0099",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "References Section Etiquette",
+    "difficulty": "Medium",
+    "question": "What is a reasonable practice when choosing which references to list for a specific application?",
+    "options": [
+      "Always list the same references regardless of role or relevance",
+      "Choose references purely based on their job title, regardless of what they can speak to",
+      "Choose people who can speak specifically to skills and experience relevant to that particular role",
+      "List as many references as possible for maximum coverage"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Selecting references who can speak specifically and credibly to relevant skills strengthens the reference check more than an arbitrary or maximal list.",
+    "source": "Generated (based on References Section Etiquette theory)",
+    "tags": [
+      "References",
+      "Resume Etiquette"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "res_0100",
+    "level": "Level 16",
+    "category": "Resume Screening",
+    "topic": "References Section Etiquette",
+    "difficulty": "Hard",
+    "question": "A candidate's strongest potential reference is a former manager they had a difficult professional relationship with, despite genuinely strong work output. How should this be handled?",
+    "options": [
+      "Always list them anyway since strong work output guarantees a positive reference regardless of relationship",
+      "Never consider workplace relationship dynamics when selecting references",
+      "List only that person and no other references at all",
+      "Consider whether other references can speak just as credibly to the relevant work, since a strained relationship risks an unpredictable reference outcome"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Given the risk of an unpredictable outcome from a strained relationship, weighing whether other credible references exist is a reasonable, low-risk approach to reference selection.",
+    "source": "Generated (based on References Section Etiquette theory)",
+    "tags": [
+      "References",
+      "Resume Etiquette"
+    ],
+    "company": [
+      "Generic Hiring Teams"
+    ],
+    "estimatedTime": 60
+  }
+]

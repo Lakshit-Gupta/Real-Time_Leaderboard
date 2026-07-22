@@ -1,0 +1,2671 @@
+[
+  {
+    "id": "fe_0001",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "React Basics",
+    "difficulty": "Easy",
+    "question": "What does React primarily use to describe what the UI should look like?",
+    "options": [
+      "A declarative component tree",
+      "Direct DOM mutation calls",
+      "Inline HTML templates only",
+      "Server-rendered strings exclusively"
+    ],
+    "correctAnswer": 0,
+    "explanation": "React is declarative: you describe the UI as a tree of components for a given state, and React figures out the DOM operations needed to match it. You do not imperatively mutate the DOM yourself.",
+    "source": "Generated (based on React Basics theory)",
+    "tags": [
+      "React",
+      "Fundamentals"
+    ],
+    "company": [
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0002",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "React Basics",
+    "difficulty": "Easy",
+    "question": "In modern React 19, what is the recommended way to define a component?",
+    "options": [
+      "A class extending React.Component",
+      "A function that returns JSX",
+      "An object literal with a render key",
+      "A string of HTML markup"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Modern React favors functional components: plain JavaScript functions that accept props and return JSX. Hooks give them state and lifecycle behavior, so class components are rarely needed.",
+    "source": "Generated (based on React Basics theory)",
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0003",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "React Basics",
+    "difficulty": "Medium",
+    "question": "Why must the value passed to a list item's key prop be stable and unique among siblings?",
+    "options": [
+      "Keys set the DOM element id attribute",
+      "Keys are shown to the user as labels",
+      "Keys let React match items across renders to preserve state",
+      "Keys control the CSS render order"
+    ],
+    "correctAnswer": 2,
+    "explanation": "React uses keys to identify which list items changed, moved, or were removed between renders. A stable unique key lets React preserve component state and reuse DOM nodes instead of recreating them; array index keys break this when the list reorders.",
+    "source": "Generated (based on React Basics theory)",
+    "tags": [
+      "React",
+      "Lists",
+      "Keys"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0004",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "React Basics",
+    "difficulty": "Medium",
+    "question": "What is the correct way to update React state so the UI re-renders?",
+    "options": [
+      "Mutate the state variable directly",
+      "Reassign the state variable with =",
+      "Edit the DOM node and let React sync back",
+      "Call the setter function returned by useState"
+    ],
+    "correctAnswer": 3,
+    "explanation": "React state is immutable from your code's perspective. You must call the setter (e.g. setCount) so React schedules a re-render. Mutating or reassigning the variable directly does not notify React and the UI will not update.",
+    "source": "Generated (based on React Basics theory)",
+    "tags": [
+      "React",
+      "State"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0005",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "React Basics",
+    "difficulty": "Hard",
+    "question": "In React's rendering model, what best describes a component's render phase?",
+    "options": [
+      "It is a pure calculation of UI that React may pause, restart, or discard",
+      "It immediately writes to the DOM synchronously",
+      "It always runs exactly once per component",
+      "It blocks the event loop until painting completes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Rendering should be a pure function of props and state. With concurrent features, React may render, then pause, abort, or restart that work before committing, so render logic must be side-effect free and produce the same output for the same inputs.",
+    "source": "Generated (based on React Basics theory)",
+    "tags": [
+      "React",
+      "Concurrency",
+      "Rendering"
+    ],
+    "company": [
+      "Meta",
+      "Vercel"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0006",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "JSX",
+    "difficulty": "Easy",
+    "question": "What is JSX in a React application?",
+    "options": [
+      "A new templating language separate from JavaScript",
+      "A syntax extension that compiles to JavaScript function calls",
+      "A CSS-in-JS styling system",
+      "A browser-native HTML dialect"
+    ],
+    "correctAnswer": 1,
+    "explanation": "JSX is syntactic sugar that a compiler like Babel transforms into plain JavaScript calls (createElement or the automatic runtime's jsx function). Browsers never run JSX directly; it becomes ordinary JS objects describing elements.",
+    "source": "Generated (based on JSX theory)",
+    "tags": [
+      "JSX",
+      "Tooling"
+    ],
+    "company": [
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0007",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "JSX",
+    "difficulty": "Easy",
+    "question": "Which attribute name is used in JSX instead of HTML's class?",
+    "options": [
+      "classList",
+      "class",
+      "className",
+      "cssClass"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because class is a reserved word in JavaScript, JSX uses className to set the CSS class. Similarly, for is written as htmlFor. JSX attribute names generally follow camelCase DOM property naming.",
+    "source": "Generated (based on JSX theory)",
+    "tags": [
+      "JSX",
+      "Attributes"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0008",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "JSX",
+    "difficulty": "Medium",
+    "question": "Why must a component's JSX return a single root element or a fragment?",
+    "options": [
+      "HTML forbids multiple tags on a page",
+      "React limits components to one child forever",
+      "The browser rejects sibling elements",
+      "JSX expressions must evaluate to one value"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Each JSX block compiles to a single function call that returns one element object. Returning multiple siblings would be like returning multiple values from one expression. Wrapping them in a parent element or a Fragment (<>...</>) yields one root.",
+    "source": "Generated (based on JSX theory)",
+    "tags": [
+      "JSX",
+      "Fragments"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0009",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "JSX",
+    "difficulty": "Medium",
+    "question": "In JSX, how do you embed a dynamic JavaScript value inside markup?",
+    "options": [
+      "Wrap it in single curly braces like {value}",
+      "Wrap it in double braces like {{value}}",
+      "Use ${value} template syntax",
+      "Use <%= value %> tags"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Single curly braces {} embed any JavaScript expression into JSX. Double braces {{}} are just an object literal inside those braces, which is why inline style props like style={{color:'red'}} look doubled.",
+    "source": "Generated (based on JSX theory)",
+    "tags": [
+      "JSX",
+      "Expressions"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0010",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "JSX",
+    "difficulty": "Hard",
+    "question": "What will {condition && <Item />} render when condition is the number 0?",
+    "options": [
+      "Nothing, because 0 is falsy",
+      "The literal text 0",
+      "The <Item /> component",
+      "It throws a render error"
+    ],
+    "correctAnswer": 1,
+    "explanation": "With && short-circuiting, React returns the left operand when it is falsy. React ignores true, false, null, and undefined, but 0 is a number React actually renders as text. Use condition > 0 && ... or a ternary to avoid a stray 0 appearing.",
+    "source": "Generated (based on JSX theory)",
+    "tags": [
+      "JSX",
+      "Conditional Rendering",
+      "Pitfalls"
+    ],
+    "company": [
+      "Meta",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0011",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Components",
+    "difficulty": "Easy",
+    "question": "What must a React component name start with to be treated as a component in JSX?",
+    "options": [
+      "A lowercase letter",
+      "An underscore",
+      "A capital letter",
+      "A dollar sign"
+    ],
+    "correctAnswer": 2,
+    "explanation": "JSX treats lowercase tags as built-in DOM elements (like div) and capitalized tags as component references. So a custom component must be named with an uppercase first letter, e.g. MyButton, or React will look for an HTML element instead.",
+    "source": "Generated (based on Components theory)",
+    "tags": [
+      "Components",
+      "JSX"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0012",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Components",
+    "difficulty": "Easy",
+    "question": "What is composition in the context of React components?",
+    "options": [
+      "Merging two components into one file",
+      "Inheriting behavior via class extends",
+      "Compiling components into one bundle",
+      "Building UIs by nesting and combining smaller components"
+    ],
+    "correctAnswer": 3,
+    "explanation": "React favors composition over inheritance: you build complex UIs by nesting reusable components and passing content through props (including children). This keeps components small, focused, and reusable.",
+    "source": "Generated (based on Components theory)",
+    "tags": [
+      "Components",
+      "Composition"
+    ],
+    "company": [
+      "Google",
+      "Airbnb"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0013",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Components",
+    "difficulty": "Medium",
+    "question": "What does the special children prop contain?",
+    "options": [
+      "Whatever JSX is nested between the component's tags",
+      "The component's internal state values",
+      "A list of all sibling components",
+      "The parent component instance"
+    ],
+    "correctAnswer": 0,
+    "explanation": "props.children holds the content placed between a component's opening and closing tags. This enables wrapper and layout components (like a Card) to render arbitrary nested content, a core composition pattern.",
+    "source": "Generated (based on Components theory)",
+    "tags": [
+      "Components",
+      "Props",
+      "children"
+    ],
+    "company": [
+      "Meta",
+      "Shopify"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0014",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Components",
+    "difficulty": "Medium",
+    "question": "What is a controlled way to share reusable logic (not UI) between components in modern React?",
+    "options": [
+      "Higher-order components only",
+      "Custom hooks",
+      "Mixins",
+      "Global variables"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Custom hooks (functions named useSomething that call other hooks) are the idiomatic way to extract and reuse stateful logic between components without changing the component hierarchy, replacing older patterns like mixins and most HOCs.",
+    "source": "Generated (based on Components theory)",
+    "tags": [
+      "Components",
+      "Custom Hooks"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0015",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Components",
+    "difficulty": "Hard",
+    "question": "What is the primary purpose of a React error boundary?",
+    "options": [
+      "To catch and handle rejected promises in effects",
+      "To validate prop types at runtime",
+      "To catch render-phase errors in its child tree and show a fallback UI",
+      "To retry failed network requests automatically"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An error boundary is a component that catches JavaScript errors thrown during rendering, in lifecycle methods, and in constructors of its descendants, then renders a fallback instead of crashing the whole tree. It does not catch errors in event handlers or async code.",
+    "source": "Generated (based on Components theory)",
+    "tags": [
+      "Components",
+      "Error Boundaries",
+      "Resilience"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0016",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Props vs State",
+    "difficulty": "Easy",
+    "question": "Which statement about props is correct?",
+    "options": [
+      "Props are mutable inside the receiving component",
+      "Props automatically trigger effects when read",
+      "Props are stored in the browser localStorage",
+      "Props are read-only inputs passed from a parent"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Props are read-only data a parent passes to a child. A component must never modify its own props; to change what a child shows, the parent passes new props. This one-way data flow keeps behavior predictable.",
+    "source": "Generated (based on Props vs State theory)",
+    "tags": [
+      "Props",
+      "Data Flow"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0017",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Props vs State",
+    "difficulty": "Easy",
+    "question": "What best describes component state?",
+    "options": [
+      "Data owned and managed within a component that can change over time",
+      "Static configuration passed from a parent",
+      "A global object shared across the whole app",
+      "CSS styling rules for the component"
+    ],
+    "correctAnswer": 0,
+    "explanation": "State is private, mutable-over-time data a component manages internally (via useState). When state changes through its setter, the component re-renders. Props come from outside; state is owned locally.",
+    "source": "Generated (based on Props vs State theory)",
+    "tags": [
+      "State",
+      "Fundamentals"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0018",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Props vs State",
+    "difficulty": "Medium",
+    "question": "A child needs to change a value that a parent owns. What is the idiomatic React approach?",
+    "options": [
+      "Mutate the received prop directly",
+      "The parent passes a callback prop the child calls",
+      "Store the value in a module-level variable",
+      "Use a global window property"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Data flows down; events flow up. The parent owns the state and passes a callback (like onChange) as a prop. The child invokes that callback, and the parent updates its own state, then re-renders both with new props.",
+    "source": "Generated (based on Props vs State theory)",
+    "tags": [
+      "Props",
+      "State",
+      "Lifting State Up"
+    ],
+    "company": [
+      "Airbnb",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0019",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Props vs State",
+    "difficulty": "Medium",
+    "question": "When two sibling components need to share and stay in sync with the same changing data, what is the recommended pattern?",
+    "options": [
+      "Duplicate the state in both siblings",
+      "Use a browser cookie to sync them",
+      "Lift the state up to their common parent",
+      "Pass refs between the siblings"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Lifting state up means moving shared state to the closest common ancestor, which passes it down as props to both siblings. This creates a single source of truth and avoids two copies drifting out of sync.",
+    "source": "Generated (based on Props vs State theory)",
+    "tags": [
+      "State",
+      "Lifting State Up"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0020",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Props vs State",
+    "difficulty": "Hard",
+    "question": "You initialize state with useState(props.value). Later the parent changes props.value. What happens to the state?",
+    "options": [
+      "State automatically updates to the new prop",
+      "React throws an error about derived state",
+      "The component unmounts and remounts",
+      "State keeps its original value; the initializer runs only on mount"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The initial value passed to useState is used only on the first render. Subsequent prop changes do not re-run it, so state becomes stale relative to the prop. This 'derived state' anti-pattern usually means you should compute the value during render instead of storing it.",
+    "source": "Generated (based on Props vs State theory)",
+    "tags": [
+      "State",
+      "Props",
+      "Pitfalls"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0021",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useState Hook",
+    "difficulty": "Easy",
+    "question": "What does useState return?",
+    "options": [
+      "An array with the current state and a setter function",
+      "A single mutable state object",
+      "A promise resolving to the state",
+      "The previous and next state as an object"
+    ],
+    "correctAnswer": 0,
+    "explanation": "useState returns a two-element array: the current state value and a function to update it. It is commonly destructured, e.g. const [count, setCount] = useState(0).",
+    "source": "Generated (based on useState Hook theory)",
+    "tags": [
+      "useState",
+      "Hooks"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0022",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useState Hook",
+    "difficulty": "Easy",
+    "question": "Where must Hooks like useState be called?",
+    "options": [
+      "Inside loops for each item",
+      "At the top level of a component or custom hook",
+      "Inside event handlers only",
+      "After a conditional return"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Rules of Hooks require calling Hooks at the top level of a function component or custom hook, never inside loops, conditions, or nested functions. This guarantees Hooks run in the same order on every render so React can track their state correctly.",
+    "source": "Generated (based on useState Hook theory)",
+    "tags": [
+      "useState",
+      "Rules of Hooks"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0023",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useState Hook",
+    "difficulty": "Medium",
+    "question": "Why is the updater form setCount(c => c + 1) safer than setCount(count + 1) inside a handler that updates multiple times?",
+    "options": [
+      "It runs synchronously and blocks the UI",
+      "It skips re-rendering entirely",
+      "It reads the latest queued state rather than a possibly stale closure value",
+      "It resets the state to zero first"
+    ],
+    "correctAnswer": 2,
+    "explanation": "State updates are batched and the count captured in the closure can be stale. The functional updater receives the most recent pending state, so multiple calls in one handler correctly accumulate instead of all basing off the same old value.",
+    "source": "Generated (based on useState Hook theory)",
+    "tags": [
+      "useState",
+      "Batching",
+      "Closures"
+    ],
+    "company": [
+      "Meta",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0024",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useState Hook",
+    "difficulty": "Medium",
+    "question": "To update one field of an object stored in state, what should you do?",
+    "options": [
+      "Mutate the object property then call the setter with it",
+      "Assign to the state variable directly",
+      "Call the setter with only the changed field",
+      "Create a new object copy with the changed field and pass it to the setter"
+    ],
+    "correctAnswer": 3,
+    "explanation": "React state should be treated as immutable. Spread the existing object into a new one and override the field, e.g. setUser({...user, name}). Mutating the same object reference can skip re-renders because React compares references to decide changes.",
+    "source": "Generated (based on useState Hook theory)",
+    "tags": [
+      "useState",
+      "Immutability",
+      "Objects"
+    ],
+    "company": [
+      "Airbnb",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0025",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useState Hook",
+    "difficulty": "Hard",
+    "question": "You pass an expensive function call as useState(computeInitial()). What is the performance issue and the fix?",
+    "options": [
+      "computeInitial runs on every render; pass a function useState(computeInitial) instead",
+      "It never runs; wrap it in useEffect",
+      "It memoizes automatically; no fix needed",
+      "It runs twice; wrap it in useMemo only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Passing computeInitial() calls it on every render even though the result is used only once. Passing the function itself (lazy initializer) makes React call it only on the initial render, avoiding repeated expensive work.",
+    "source": "Generated (based on useState Hook theory)",
+    "tags": [
+      "useState",
+      "Lazy Initialization",
+      "Performance"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0026",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useEffect Hook",
+    "difficulty": "Easy",
+    "question": "What is useEffect primarily used for?",
+    "options": [
+      "Rendering JSX to the screen",
+      "Synchronizing a component with external systems (side effects)",
+      "Declaring component state",
+      "Defining CSS styles"
+    ],
+    "correctAnswer": 1,
+    "explanation": "useEffect lets a component run side effects (subscriptions, network requests, manual DOM work, timers) after render to synchronize with systems outside React. Rendering itself should stay pure and free of side effects.",
+    "source": "Generated (based on useEffect Hook theory)",
+    "tags": [
+      "useEffect",
+      "Side Effects"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0027",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useEffect Hook",
+    "difficulty": "Easy",
+    "question": "When does an effect with an empty dependency array [] run?",
+    "options": [
+      "After every render",
+      "Never",
+      "Only once, after the initial render (plus cleanup on unmount)",
+      "Before the first render"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An empty dependency array tells React the effect does not depend on any reactive values, so it runs once after mount and its cleanup runs on unmount. Omitting the array entirely would run it after every render.",
+    "source": "Generated (based on useEffect Hook theory)",
+    "tags": [
+      "useEffect",
+      "Dependencies"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0028",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useEffect Hook",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the function you return from useEffect?",
+    "options": [
+      "It provides the effect's return value to the component",
+      "It memoizes the effect result",
+      "It defines the effect's dependencies",
+      "It is cleanup that runs before the next effect and on unmount"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The returned cleanup function lets you undo the effect (remove listeners, cancel timers, close connections). React runs it before re-running the effect due to changed dependencies, and once more when the component unmounts, preventing leaks.",
+    "source": "Generated (based on useEffect Hook theory)",
+    "tags": [
+      "useEffect",
+      "Cleanup"
+    ],
+    "company": [
+      "Netflix",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0029",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useEffect Hook",
+    "difficulty": "Medium",
+    "question": "You fetch data in an effect but the component may unmount before it resolves. What prevents setting state on an unmounted component?",
+    "options": [
+      "Using an ignore flag or AbortController in the cleanup function",
+      "Wrapping the fetch in useMemo",
+      "Adding the response to the dependency array",
+      "Calling the setter twice"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Because async responses may arrive after unmount or after dependencies change, the cleanup function should set an ignore flag or call AbortController.abort(). The resolved handler then checks the flag before updating state, avoiding stale updates and race conditions.",
+    "source": "Generated (based on useEffect Hook theory)",
+    "tags": [
+      "useEffect",
+      "Data Fetching",
+      "Race Conditions"
+    ],
+    "company": [
+      "Uber",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0030",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "useEffect Hook",
+    "difficulty": "Hard",
+    "question": "An effect depends on a function defined in the component body, causing it to re-run every render. What is the root cause?",
+    "options": [
+      "Effects always run every render regardless",
+      "A new function reference is created each render, so the dependency looks changed",
+      "Functions cannot be dependencies",
+      "The dependency array is ignored for functions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Functions declared in the component body get a new identity on every render, so listing one as a dependency makes React think it changed each time. Wrapping it in useCallback (or moving it inside the effect) stabilizes the reference and stops the loop.",
+    "source": "Generated (based on useEffect Hook theory)",
+    "tags": [
+      "useEffect",
+      "useCallback",
+      "Dependencies"
+    ],
+    "company": [
+      "Meta",
+      "Vercel"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0031",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Virtual DOM",
+    "difficulty": "Easy",
+    "question": "What is the Virtual DOM?",
+    "options": [
+      "A faster browser engine built into React",
+      "A separate DOM stored on the server",
+      "An in-memory JavaScript representation of the UI",
+      "A CSS abstraction layer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Virtual DOM is a lightweight in-memory tree of JavaScript objects describing what the UI should look like. React compares versions of this tree to compute the minimal set of real DOM updates needed.",
+    "source": "Generated (based on Virtual DOM theory)",
+    "tags": [
+      "Virtual DOM",
+      "Fundamentals"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0032",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Virtual DOM",
+    "difficulty": "Easy",
+    "question": "Why does React use a Virtual DOM instead of updating the real DOM directly for every change?",
+    "options": [
+      "The real DOM cannot be modified by JavaScript",
+      "The Virtual DOM renders pixels faster",
+      "Browsers block direct DOM access",
+      "Direct DOM operations can be costly, so React batches minimal updates"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Real DOM mutations can trigger expensive layout and paint work. React updates the cheap Virtual DOM first, diffs it, and applies only the necessary real changes in a batch, reducing redundant and costly operations.",
+    "source": "Generated (based on Virtual DOM theory)",
+    "tags": [
+      "Virtual DOM",
+      "Performance"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0033",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Virtual DOM",
+    "difficulty": "Medium",
+    "question": "What is the diffing step in the Virtual DOM process?",
+    "options": [
+      "Comparing the new virtual tree against the previous one to find changes",
+      "Rendering the virtual tree to a canvas",
+      "Downloading the DOM from the server",
+      "Encrypting the DOM for security"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Diffing compares the newly rendered Virtual DOM tree with the previous snapshot to determine what actually changed. React then commits only those differences to the real DOM, which is the core efficiency of the approach.",
+    "source": "Generated (based on Virtual DOM theory)",
+    "tags": [
+      "Virtual DOM",
+      "Diffing"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0034",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Virtual DOM",
+    "difficulty": "Medium",
+    "question": "Is the Virtual DOM always faster than carefully hand-written direct DOM manipulation?",
+    "options": [
+      "Yes, it is always faster in every case",
+      "No, its value is a predictable programming model, not guaranteed peak speed",
+      "Yes, because it skips the real DOM entirely",
+      "No, it is always slower than any alternative"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Virtual DOM adds diffing overhead; hand-tuned direct updates can be faster in narrow cases. Its real benefit is a declarative model that makes efficient-enough updates automatic and maintainable, not that it beats every manual optimization.",
+    "source": "Generated (based on Virtual DOM theory)",
+    "tags": [
+      "Virtual DOM",
+      "Performance",
+      "Tradeoffs"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0035",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Virtual DOM",
+    "difficulty": "Hard",
+    "question": "How does React's diffing keep comparison efficient across two large trees?",
+    "options": [
+      "It runs a full O(n^3) tree edit-distance algorithm",
+      "It compares every node against every other node",
+      "It uses heuristics: different element types replace subtrees, and keys match list children",
+      "It relies on the browser to diff the DOM"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A general tree diff is O(n^3), too slow for UIs. React uses heuristics reducing it toward O(n): if an element's type changes it rebuilds that subtree, and stable keys let it match children across positions instead of recomputing them.",
+    "source": "Generated (based on Virtual DOM theory)",
+    "tags": [
+      "Virtual DOM",
+      "Diffing",
+      "Algorithms"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0036",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Reconciliation",
+    "difficulty": "Easy",
+    "question": "What is reconciliation in React?",
+    "options": [
+      "Merging two Git branches of components",
+      "Resolving CSS conflicts between rules",
+      "Syncing state to a backend database",
+      "The process of deciding what DOM updates are needed after a render"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Reconciliation is the algorithm React uses to compare the new element tree with the previous one and determine the minimal DOM operations required to make the UI match the latest render output.",
+    "source": "Generated (based on Reconciliation theory)",
+    "tags": [
+      "Reconciliation",
+      "Fundamentals"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0037",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Reconciliation",
+    "difficulty": "Easy",
+    "question": "During reconciliation, what happens if an element's type changes from <div> to <span> at the same position?",
+    "options": [
+      "React tears down the old node and builds a new one",
+      "React updates attributes in place",
+      "React ignores the change",
+      "React throws a type error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "React assumes different element types produce different trees. When the type at a position changes, it unmounts the old node and its subtree (losing their state) and mounts a fresh node rather than trying to patch attributes.",
+    "source": "Generated (based on Reconciliation theory)",
+    "tags": [
+      "Reconciliation",
+      "Element Types"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0038",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Reconciliation",
+    "difficulty": "Medium",
+    "question": "Using an array index as a key while reordering a list can cause what bug?",
+    "options": [
+      "Compilation failure",
+      "Component state and inputs attaching to the wrong items",
+      "Keys becoming globally unique",
+      "The list rendering twice"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Index keys stay the same when items move, so React matches items by position, not identity. State like input text or focus stays bound to the old position, attaching to the wrong data after reordering, insertion, or deletion.",
+    "source": "Generated (based on Reconciliation theory)",
+    "tags": [
+      "Reconciliation",
+      "Keys",
+      "Pitfalls"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0039",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Reconciliation",
+    "difficulty": "Medium",
+    "question": "Changing a component's key prop between renders causes React to do what?",
+    "options": [
+      "Update the same instance with new props",
+      "Ignore the change silently",
+      "Unmount the old instance and mount a fresh one, resetting its state",
+      "Throw a duplicate key warning"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A different key signals a different logical component. React discards the old instance and creates a new one, resetting all its internal state. This is a deliberate technique to reset a subtree, e.g. remounting a form when the selected user changes.",
+    "source": "Generated (based on Reconciliation theory)",
+    "tags": [
+      "Reconciliation",
+      "Keys",
+      "State Reset"
+    ],
+    "company": [
+      "Stripe",
+      "Uber"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0040",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Reconciliation",
+    "difficulty": "Hard",
+    "question": "Why does React preserve component state when the same element type stays at the same tree position across renders?",
+    "options": [
+      "Because state is stored in the DOM node",
+      "Because the key is always the variable name",
+      "Because state lives in a global registry keyed by props",
+      "Because React identifies a component by its type and position in the tree"
+    ],
+    "correctAnswer": 3,
+    "explanation": "React associates state with a position in the render tree, identified by element type (and key, if present). Same type at the same slot means the same logical instance, so its state persists. Conditionally rendering different components at one slot can unexpectedly reset state.",
+    "source": "Generated (based on Reconciliation theory)",
+    "tags": [
+      "Reconciliation",
+      "State Preservation",
+      "Tree Position"
+    ],
+    "company": [
+      "Meta",
+      "Vercel"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0041",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Event Handling",
+    "difficulty": "Easy",
+    "question": "How do you attach a click handler in JSX?",
+    "options": [
+      "onClick={handler}",
+      "onclick=\"handler()\"",
+      "on-click={handler}",
+      "addEventListener('click', handler)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "React uses camelCase event props and passes a function reference, e.g. onClick={handleClick}. Note you pass the function itself, not a call like onClick={handleClick()}, which would invoke it during render.",
+    "source": "Generated (based on Event Handling theory)",
+    "tags": [
+      "Event Handling",
+      "JSX"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0042",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Event Handling",
+    "difficulty": "Easy",
+    "question": "What is a SyntheticEvent in React?",
+    "options": [
+      "A fake event used only in tests",
+      "A cross-browser wrapper around the native DOM event",
+      "An event that never reaches the DOM",
+      "A custom event you must define manually"
+    ],
+    "correctAnswer": 1,
+    "explanation": "React wraps native events in a SyntheticEvent that normalizes behavior across browsers with a consistent API (like preventDefault and stopPropagation). The underlying native event is still available via nativeEvent.",
+    "source": "Generated (based on Event Handling theory)",
+    "tags": [
+      "Event Handling",
+      "SyntheticEvent"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0043",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Event Handling",
+    "difficulty": "Medium",
+    "question": "How do you pass an extra argument to an event handler without calling it during render?",
+    "options": [
+      "onClick={handleClick(id)}",
+      "onClick=handleClick(id)",
+      "onClick={() => handleClick(id)}",
+      "onClick={handleClick, id}"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Wrap the call in an inline arrow function: onClick={() => handleClick(id)}. This passes a function that React calls on click. Writing handleClick(id) directly would execute it immediately during rendering and pass its return value instead.",
+    "source": "Generated (based on Event Handling theory)",
+    "tags": [
+      "Event Handling",
+      "Handlers",
+      "Arguments"
+    ],
+    "company": [
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0044",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Event Handling",
+    "difficulty": "Medium",
+    "question": "To stop a form from reloading the page on submit in React, what do you call?",
+    "options": [
+      "event.stopPropagation()",
+      "return false from the handler",
+      "event.cancelBubble()",
+      "event.preventDefault()"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Calling event.preventDefault() in the onSubmit handler cancels the browser's default full-page reload so you can handle the submission in JavaScript. stopPropagation only stops the event from bubbling to parent handlers; it does not cancel default behavior.",
+    "source": "Generated (based on Event Handling theory)",
+    "tags": [
+      "Event Handling",
+      "Forms",
+      "preventDefault"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0045",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Event Handling",
+    "difficulty": "Hard",
+    "question": "In modern React, where are most event listeners actually attached in the DOM?",
+    "options": [
+      "On the root container where React delegates events",
+      "Directly on each individual element",
+      "On the window for every event type",
+      "On document.body via inline attributes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "React uses event delegation: rather than binding a listener to every node, it attaches listeners at the root container the app is mounted into and dispatches synthetic events through the component tree. This improves performance and memory use for large trees.",
+    "source": "Generated (based on Event Handling theory)",
+    "tags": [
+      "Event Handling",
+      "Event Delegation",
+      "Internals"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0046",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Controlled Forms",
+    "difficulty": "Easy",
+    "question": "What defines a controlled input in React?",
+    "options": [
+      "It stores its value only in the DOM",
+      "Its value is driven by React state and updated via onChange",
+      "It uses a ref to read its value",
+      "It cannot be edited by the user"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A controlled input has its value prop bound to React state and an onChange handler that updates that state. React is the single source of truth for the field, so the displayed value always reflects state.",
+    "source": "Generated (based on Controlled Forms theory)",
+    "tags": [
+      "Controlled Forms",
+      "Inputs"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0047",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Controlled Forms",
+    "difficulty": "Easy",
+    "question": "What is an uncontrolled input in React?",
+    "options": [
+      "An input bound to state via value",
+      "An input that ignores user typing",
+      "An input whose value lives in the DOM, read via a ref when needed",
+      "An input without an onChange handler that also has no value"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An uncontrolled input keeps its own state in the DOM, like a plain HTML field. You read its value with a ref (e.g. on submit) rather than tracking every keystroke in React state. It is useful for simple forms or integrating non-React code.",
+    "source": "Generated (based on Controlled Forms theory)",
+    "tags": [
+      "Controlled Forms",
+      "Uncontrolled",
+      "Refs"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0048",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Controlled Forms",
+    "difficulty": "Medium",
+    "question": "You set value={name} on an input but omit onChange. What happens?",
+    "options": [
+      "The input works normally",
+      "React throws a fatal error",
+      "The value updates but state does not",
+      "The input becomes read-only and typing has no effect"
+    ],
+    "correctAnswer": 3,
+    "explanation": "With a value prop and no onChange, React keeps the field locked to state that never changes, so typing does nothing and you get a console warning. Provide onChange to make it editable, or use defaultValue for an uncontrolled field.",
+    "source": "Generated (based on Controlled Forms theory)",
+    "tags": [
+      "Controlled Forms",
+      "onChange",
+      "Pitfalls"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0049",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Controlled Forms",
+    "difficulty": "Medium",
+    "question": "How is a controlled checkbox's state bound compared to a text input?",
+    "options": [
+      "The checkbox uses the checked prop bound to a boolean",
+      "Both use the value prop",
+      "The checkbox uses selected",
+      "The checkbox cannot be controlled"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Checkboxes and radios are controlled through the checked prop bound to a boolean state, not value. The onChange handler reads event.target.checked to update that boolean. Text inputs use value with event.target.value.",
+    "source": "Generated (based on Controlled Forms theory)",
+    "tags": [
+      "Controlled Forms",
+      "Checkbox"
+    ],
+    "company": [
+      "Stripe",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0050",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Controlled Forms",
+    "difficulty": "Hard",
+    "question": "A controlled input feels laggy on large forms because every keystroke re-renders a heavy tree. Which approach best addresses this?",
+    "options": [
+      "Remove the value prop entirely",
+      "Isolate the field, or use uncontrolled inputs with refs, and memoize expensive children",
+      "Call setState twice per keystroke",
+      "Move the input into a class component"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Each keystroke updates state and re-renders. Fixes include localizing state to the field so only it re-renders, memoizing expensive sibling subtrees, or switching heavy fields to uncontrolled inputs read via refs so typing does not trigger React renders at all.",
+    "source": "Generated (based on Controlled Forms theory)",
+    "tags": [
+      "Controlled Forms",
+      "Performance",
+      "Optimization"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0051",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Context API",
+    "difficulty": "Easy",
+    "question": "What problem does the Context API primarily solve?",
+    "options": [
+      "Slow network requests",
+      "Styling components",
+      "Passing data deeply without threading props through every level",
+      "Running side effects"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Context lets you share values (like theme, locale, or the current user) with a subtree without manually passing props through every intermediate component, avoiding 'prop drilling'.",
+    "source": "Generated (based on Context API theory)",
+    "tags": [
+      "Context API",
+      "Prop Drilling"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0052",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Context API",
+    "difficulty": "Easy",
+    "question": "Which Hook reads the current value of a context in a functional component?",
+    "options": [
+      "useState",
+      "useReducer",
+      "useRef",
+      "useContext"
+    ],
+    "correctAnswer": 3,
+    "explanation": "useContext(MyContext) returns the value of the nearest matching Provider above the component. When the provider's value changes, components that read it via useContext re-render.",
+    "source": "Generated (based on Context API theory)",
+    "tags": [
+      "Context API",
+      "useContext",
+      "Hooks"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0053",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Context API",
+    "difficulty": "Medium",
+    "question": "A component calls useContext but there is no matching Provider above it. What value does it receive?",
+    "options": [
+      "The default value passed to createContext",
+      "undefined always",
+      "The last value from another context",
+      "It throws immediately"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When no Provider is found in the tree, useContext returns the default value supplied to createContext(defaultValue). Teams often set that default to a sentinel and throw in a custom hook to catch missing providers early.",
+    "source": "Generated (based on Context API theory)",
+    "tags": [
+      "Context API",
+      "Default Value"
+    ],
+    "company": [
+      "Meta",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0054",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Context API",
+    "difficulty": "Medium",
+    "question": "Why can passing an inline object like value={{user, setUser}} to a Provider hurt performance?",
+    "options": [
+      "Objects are not allowed as context values",
+      "A new object identity each render makes all consumers re-render",
+      "Context cannot hold functions",
+      "It disables memoization globally"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A fresh object literal is created on every render, so its reference changes each time. Context compares by reference, so all consumers re-render even if the underlying data did not change. Memoize the value with useMemo to keep its identity stable.",
+    "source": "Generated (based on Context API theory)",
+    "tags": [
+      "Context API",
+      "Performance",
+      "useMemo"
+    ],
+    "company": [
+      "Uber",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0055",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Context API",
+    "difficulty": "Hard",
+    "question": "One large context holds many unrelated values, and unrelated components re-render on any change. What is the best structural fix?",
+    "options": [
+      "Wrap every consumer in useMemo",
+      "Store everything in a single ref instead",
+      "Split it into multiple focused contexts so consumers subscribe only to what they use",
+      "Disable the Provider's value prop"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Any consumer of a context re-renders when that context's value changes, regardless of which field it uses. Splitting one broad context into several narrow ones lets components subscribe only to relevant slices, limiting unnecessary re-renders.",
+    "source": "Generated (based on Context API theory)",
+    "tags": [
+      "Context API",
+      "Performance",
+      "Architecture"
+    ],
+    "company": [
+      "Meta",
+      "Vercel"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0056",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "State Management",
+    "difficulty": "Easy",
+    "question": "What is 'local' component state best suited for?",
+    "options": [
+      "Data used by many unrelated parts of the app",
+      "Persisted server data",
+      "Global authentication tokens",
+      "UI state confined to a single component, like whether a dropdown is open"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Local state (useState/useReducer) fits data that only one component or its close children need, such as toggle, input, or hover state. Reach for shared or global solutions only when state genuinely needs to be accessed across distant parts of the tree.",
+    "source": "Generated (based on State Management theory)",
+    "tags": [
+      "State Management",
+      "Local State"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0057",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "State Management",
+    "difficulty": "Easy",
+    "question": "In Redux, how is the state changed?",
+    "options": [
+      "By dispatching actions that reducers use to produce new state",
+      "By mutating the store object directly",
+      "By calling setState on the store",
+      "By editing the DOM"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Redux uses a unidirectional flow: you dispatch an action (a plain object describing what happened), and a pure reducer returns a new state based on the previous state and that action. State is never mutated directly.",
+    "source": "Generated (based on State Management theory)",
+    "tags": [
+      "State Management",
+      "Redux",
+      "Reducers"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0058",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "State Management",
+    "difficulty": "Medium",
+    "question": "Why is server state (data fetched from an API) often managed differently from client UI state?",
+    "options": [
+      "Server state cannot be stored in React",
+      "It needs caching, revalidation, and sync concerns that tools like React Query handle",
+      "Client state is always asynchronous",
+      "Server state never changes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Server data is asynchronous, shared, and can go stale, requiring caching, background refetching, deduplication, and error/loading handling. Libraries like TanStack Query specialize in this, whereas simple useState is better for purely local UI state.",
+    "source": "Generated (based on State Management theory)",
+    "tags": [
+      "State Management",
+      "Server State",
+      "Caching"
+    ],
+    "company": [
+      "Vercel",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0059",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "State Management",
+    "difficulty": "Medium",
+    "question": "When is useReducer generally preferred over useState?",
+    "options": [
+      "When state is a single boolean",
+      "When you never update state",
+      "When state transitions are complex or the next state depends on structured logic",
+      "When you only read props"
+    ],
+    "correctAnswer": 2,
+    "explanation": "useReducer centralizes complex or interrelated state transitions into a single reducer function keyed by action type. This is clearer and more testable than juggling several useState calls when updates involve multiple sub-values or intricate logic.",
+    "source": "Generated (based on State Management theory)",
+    "tags": [
+      "State Management",
+      "useReducer"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0060",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "State Management",
+    "difficulty": "Hard",
+    "question": "A team uses global state for everything, causing tight coupling and needless re-renders. What principle best guides the fix?",
+    "options": [
+      "Always store all state globally for consistency",
+      "Never use any global state library",
+      "Store state in the URL only",
+      "Keep state as local as possible and lift or globalize only when genuinely shared"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Colocation: keep state near where it is used and only promote it to a wider scope when multiple distant components truly need it. Over-globalizing creates unnecessary coupling and re-renders; the goal is the narrowest scope that still satisfies the requirement.",
+    "source": "Generated (based on State Management theory)",
+    "tags": [
+      "State Management",
+      "Architecture",
+      "Colocation"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0061",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Box Model",
+    "difficulty": "Easy",
+    "question": "From innermost to outermost, what is the order of the CSS box model layers?",
+    "options": [
+      "content, padding, border, margin",
+      "margin, border, padding, content",
+      "padding, content, margin, border",
+      "border, margin, content, padding"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Every element box is composed of, from the inside out: content, then padding around it, then the border, then the margin that separates it from other elements. Understanding this order is key to controlling spacing and sizing.",
+    "source": "Generated (based on CSS Box Model theory)",
+    "tags": [
+      "CSS",
+      "Box Model"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0062",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Box Model",
+    "difficulty": "Easy",
+    "question": "What does box-sizing: border-box change about width calculation?",
+    "options": [
+      "Width includes only the content",
+      "Width includes content, padding, and border",
+      "Width includes the margin too",
+      "Width becomes the viewport width"
+    ],
+    "correctAnswer": 1,
+    "explanation": "With border-box, the width you set includes content plus padding plus border, so adding padding does not grow the element's total width. The default content-box counts only content, so padding and border add on top, often causing overflow surprises.",
+    "source": "Generated (based on CSS Box Model theory)",
+    "tags": [
+      "CSS",
+      "Box Model",
+      "box-sizing"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0063",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Box Model",
+    "difficulty": "Medium",
+    "question": "What is margin collapsing?",
+    "options": [
+      "Margins disappearing when an element is hidden",
+      "Horizontal margins adding together",
+      "Adjacent vertical margins combining into a single margin equal to the larger one",
+      "Padding merging with margin"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Vertical margins of adjacent block elements can collapse: instead of summing, they merge into one margin equal to the larger of the two. This applies to top/bottom margins in normal flow, not horizontal margins, and can be surprising when spacing sections.",
+    "source": "Generated (based on CSS Box Model theory)",
+    "tags": [
+      "CSS",
+      "Box Model",
+      "Margin Collapse"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0064",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Box Model",
+    "difficulty": "Medium",
+    "question": "How does padding differ from margin regarding the element's background?",
+    "options": [
+      "Both are transparent to the background",
+      "Margin shows the background; padding does not",
+      "Neither interacts with the background",
+      "Padding is inside the background; margin is outside and transparent"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Padding sits between content and border and is covered by the element's background, so background color or image extends through the padding. Margin is space outside the border and is always transparent, showing whatever is behind the element.",
+    "source": "Generated (based on CSS Box Model theory)",
+    "tags": [
+      "CSS",
+      "Box Model",
+      "Padding",
+      "Margin"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0065",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Box Model",
+    "difficulty": "Hard",
+    "question": "An element has width:300px, padding:20px, border:5px, box-sizing:content-box. What is its total rendered width excluding margin?",
+    "options": [
+      "350px",
+      "300px",
+      "345px",
+      "325px"
+    ],
+    "correctAnswer": 0,
+    "explanation": "With content-box, the set width applies only to content. Total width = 300 (content) + 20*2 (padding) + 5*2 (border) = 350px. Margins are excluded from the box's own rendered width. Switching to border-box would keep the total at 300px.",
+    "source": "Generated (based on CSS Box Model theory)",
+    "tags": [
+      "CSS",
+      "Box Model",
+      "Calculation"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0066",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Flexbox",
+    "difficulty": "Easy",
+    "question": "Which property establishes a flex container?",
+    "options": [
+      "position: flex",
+      "display: flex",
+      "float: flex",
+      "flex-mode: on"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Setting display: flex (or inline-flex) on an element turns it into a flex container, and its direct children become flex items laid out along the main axis. This unlocks flex alignment and distribution properties.",
+    "source": "Generated (based on Flexbox theory)",
+    "tags": [
+      "CSS",
+      "Flexbox"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0067",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Flexbox",
+    "difficulty": "Easy",
+    "question": "In a flex container with default row direction, which property aligns items along the main (horizontal) axis?",
+    "options": [
+      "align-items",
+      "align-content",
+      "justify-content",
+      "place-self"
+    ],
+    "correctAnswer": 2,
+    "explanation": "justify-content distributes items along the main axis (horizontal in the default row direction), enabling values like flex-start, center, space-between, and space-around. align-items handles the cross axis (vertical in a row).",
+    "source": "Generated (based on Flexbox theory)",
+    "tags": [
+      "CSS",
+      "Flexbox",
+      "Alignment"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0068",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Flexbox",
+    "difficulty": "Medium",
+    "question": "What does the shorthand flex: 1 expand to?",
+    "options": [
+      "flex-grow:1; flex-shrink:0; flex-basis:auto",
+      "flex-grow:0; flex-shrink:1; flex-basis:100%",
+      "flex-grow:1; flex-shrink:1; flex-basis:auto",
+      "flex-grow:1; flex-shrink:1; flex-basis:0%"
+    ],
+    "correctAnswer": 3,
+    "explanation": "flex: 1 is shorthand for flex-grow:1, flex-shrink:1, flex-basis:0%. The zero basis makes items share free space proportionally from nothing, so equal flex values produce equal widths regardless of content size.",
+    "source": "Generated (based on Flexbox theory)",
+    "tags": [
+      "CSS",
+      "Flexbox",
+      "flex shorthand"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0069",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Flexbox",
+    "difficulty": "Medium",
+    "question": "Which property controls the direction of the main axis in a flex container?",
+    "options": [
+      "flex-direction",
+      "flex-wrap",
+      "align-content",
+      "order"
+    ],
+    "correctAnswer": 0,
+    "explanation": "flex-direction (row, row-reverse, column, column-reverse) sets which way the main axis runs and thus how items flow. It also determines which axis justify-content and align-items act on, since those are relative to the main and cross axes.",
+    "source": "Generated (based on Flexbox theory)",
+    "tags": [
+      "CSS",
+      "Flexbox",
+      "flex-direction"
+    ],
+    "company": [
+      "Netflix",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0070",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Flexbox",
+    "difficulty": "Hard",
+    "question": "A flex item with a long word overflows its container despite flex-shrink. What commonly fixes it?",
+    "options": [
+      "Adding flex-grow: 0",
+      "Setting min-width: 0 (or overflow) on the item so it can shrink below content size",
+      "Removing display: flex",
+      "Increasing flex-basis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Flex items have an implicit min-width:auto, which prevents them from shrinking below their content's intrinsic size, so long text overflows. Setting min-width:0 (or overflow:hidden) lets the item shrink past content width so wrapping or truncation can take effect.",
+    "source": "Generated (based on Flexbox theory)",
+    "tags": [
+      "CSS",
+      "Flexbox",
+      "Overflow",
+      "Pitfalls"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0071",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Grid",
+    "difficulty": "Easy",
+    "question": "What does display: grid enable?",
+    "options": [
+      "One-dimensional layout only",
+      "Absolute positioning of all children",
+      "Two-dimensional layout with rows and columns",
+      "Automatic image compression"
+    ],
+    "correctAnswer": 2,
+    "explanation": "CSS Grid provides a two-dimensional layout system, letting you define both rows and columns simultaneously. This makes it well suited for page-level and complex layouts, whereas Flexbox is primarily one-dimensional.",
+    "source": "Generated (based on CSS Grid theory)",
+    "tags": [
+      "CSS",
+      "Grid"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0072",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Grid",
+    "difficulty": "Easy",
+    "question": "Which property defines the column tracks of a grid?",
+    "options": [
+      "grid-columns",
+      "column-count",
+      "grid-gap",
+      "grid-template-columns"
+    ],
+    "correctAnswer": 3,
+    "explanation": "grid-template-columns defines the number and size of column tracks, e.g. grid-template-columns: 1fr 2fr 1fr. The analogous grid-template-rows defines row tracks. The fr unit distributes available space proportionally.",
+    "source": "Generated (based on CSS Grid theory)",
+    "tags": [
+      "CSS",
+      "Grid",
+      "Tracks"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0073",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Grid",
+    "difficulty": "Medium",
+    "question": "What does the fr unit represent in a grid track definition?",
+    "options": [
+      "A fraction of the remaining free space in the container",
+      "A fixed number of pixels",
+      "A font-relative size",
+      "A percentage of the viewport"
+    ],
+    "correctAnswer": 0,
+    "explanation": "fr means fraction: it distributes the leftover space after fixed-size tracks and gaps are accounted for. For example, 1fr 2fr splits remaining space so the second track gets twice the width of the first, making responsive proportional layouts simple.",
+    "source": "Generated (based on CSS Grid theory)",
+    "tags": [
+      "CSS",
+      "Grid",
+      "fr unit"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0074",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Grid",
+    "difficulty": "Medium",
+    "question": "What is a common purpose of repeat(auto-fit, minmax(200px, 1fr))?",
+    "options": [
+      "Fix the grid to exactly three columns",
+      "Create responsive columns that fit as many as possible at a minimum size",
+      "Stack all items in one column",
+      "Disable wrapping"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This pattern creates a responsive grid where each column is at least 200px and grows to share space (1fr). auto-fit fits as many columns as the width allows and collapses empty tracks, giving a fluid card layout without media queries.",
+    "source": "Generated (based on CSS Grid theory)",
+    "tags": [
+      "CSS",
+      "Grid",
+      "Responsive",
+      "minmax"
+    ],
+    "company": [
+      "Netflix",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0075",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Grid",
+    "difficulty": "Hard",
+    "question": "What is the practical difference between auto-fit and auto-fill in repeat()?",
+    "options": [
+      "They are identical in all cases",
+      "auto-fit adds infinite columns",
+      "auto-fill keeps empty tracks; auto-fit collapses them, letting items stretch",
+      "auto-fill only works with fixed pixels"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Both create as many tracks as fit, but when there are fewer items than tracks: auto-fill preserves the empty leftover tracks (items stay their minimum size), while auto-fit collapses empty tracks to zero so existing items can expand to fill the row.",
+    "source": "Generated (based on CSS Grid theory)",
+    "tags": [
+      "CSS",
+      "Grid",
+      "auto-fit",
+      "auto-fill"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0076",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Specificity",
+    "difficulty": "Easy",
+    "question": "Which selector type has the highest specificity among these?",
+    "options": [
+      "Element (type) selector",
+      "Class selector",
+      "Universal selector",
+      "ID selector"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Specificity increases from element/pseudo-element, to class/attribute/pseudo-class, to ID selectors. An ID selector outranks classes and element selectors, so it wins conflicts against them. Inline styles rank even higher, and !important overrides normal declarations.",
+    "source": "Generated (based on CSS Specificity theory)",
+    "tags": [
+      "CSS",
+      "Specificity"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0077",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Specificity",
+    "difficulty": "Easy",
+    "question": "When two rules have equal specificity, which one wins?",
+    "options": [
+      "The one that appears later in the source order",
+      "The one written first",
+      "The shorter selector",
+      "Neither applies"
+    ],
+    "correctAnswer": 0,
+    "explanation": "With equal specificity and origin, the cascade uses source order: the declaration that appears later in the stylesheet (or in the last-loaded stylesheet) wins. This is why later overrides typically take effect over earlier equal-weight rules.",
+    "source": "Generated (based on CSS Specificity theory)",
+    "tags": [
+      "CSS",
+      "Specificity",
+      "Cascade"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0078",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Specificity",
+    "difficulty": "Medium",
+    "question": "How is specificity commonly represented for the selector #nav .item a?",
+    "options": [
+      "(0,1,2) meaning 1 ID, 1 class, ... — actually 1 ID, 1 class, 1 element",
+      "(1,1,1): one ID, one class, one element",
+      "(3,0,0): three IDs",
+      "(0,0,3): three elements"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Specificity is counted as (IDs, classes/attributes/pseudo-classes, elements/pseudo-elements). #nav is one ID, .item is one class, and a is one element, giving (1,1,1). Higher-order columns dominate lower ones when comparing selectors.",
+    "source": "Generated (based on CSS Specificity theory)",
+    "tags": [
+      "CSS",
+      "Specificity",
+      "Calculation"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0079",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Specificity",
+    "difficulty": "Medium",
+    "question": "Why is relying heavily on !important considered a code smell?",
+    "options": [
+      "It has no effect on modern browsers",
+      "It only works on ID selectors",
+      "It overrides the normal cascade and becomes hard to override or maintain",
+      "It disables inheritance"
+    ],
+    "correctAnswer": 2,
+    "explanation": "!important forces a declaration to win regardless of specificity, short-circuiting the cascade. Overusing it leads to escalating !important wars where the only way to override is more !important, making stylesheets brittle and hard to reason about.",
+    "source": "Generated (based on CSS Specificity theory)",
+    "tags": [
+      "CSS",
+      "Specificity",
+      "!important",
+      "Maintainability"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0080",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "CSS Specificity",
+    "difficulty": "Hard",
+    "question": "A rule with :where(.card) .title and another with .container .title both target an element. Which wins and why?",
+    "options": [
+      ":where(.card) .title, because :where is a newer selector",
+      "They tie and order decides",
+      "Neither applies because :where is invalid",
+      ".container .title, because :where() contributes zero specificity"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The :where() pseudo-class always has zero specificity, so :where(.card) .title counts only the .title element part, effectively (0,0,1)-ish for the class inside where being ignored. .container .title counts two classes, so it has higher specificity and wins.",
+    "source": "Generated (based on CSS Specificity theory)",
+    "tags": [
+      "CSS",
+      "Specificity",
+      ":where",
+      "Advanced"
+    ],
+    "company": [
+      "Meta",
+      "Vercel"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0081",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "DOM Manipulation",
+    "difficulty": "Easy",
+    "question": "Which method selects the first element matching a CSS selector?",
+    "options": [
+      "document.querySelector()",
+      "document.getElementByClass()",
+      "document.selectNode()",
+      "document.findElement()"
+    ],
+    "correctAnswer": 0,
+    "explanation": "document.querySelector(selector) returns the first element matching the given CSS selector, or null if none match. querySelectorAll returns a static NodeList of all matches. These are the flexible modern selection APIs.",
+    "source": "Generated (based on DOM Manipulation theory)",
+    "tags": [
+      "DOM",
+      "Selectors"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0082",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "DOM Manipulation",
+    "difficulty": "Easy",
+    "question": "What is the safer property to set an element's text without interpreting HTML?",
+    "options": [
+      "innerHTML",
+      "textContent",
+      "outerHTML",
+      "innerText only via eval"
+    ],
+    "correctAnswer": 1,
+    "explanation": "textContent sets or reads the plain text of a node and does not parse HTML, avoiding XSS from untrusted input. innerHTML parses and inserts markup, so injecting user data through it can execute scripts or inject unwanted elements.",
+    "source": "Generated (based on DOM Manipulation theory)",
+    "tags": [
+      "DOM",
+      "Security",
+      "textContent"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0083",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "DOM Manipulation",
+    "difficulty": "Medium",
+    "question": "Why is it recommended to batch DOM insertions using a DocumentFragment?",
+    "options": [
+      "Fragments are required for any DOM change",
+      "Fragments encrypt the DOM",
+      "Building nodes off-DOM then inserting once minimizes reflows and repaints",
+      "Fragments prevent event handling"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Appending many nodes one by one to the live DOM can trigger repeated layout recalculations. A DocumentFragment is an off-screen container; you build the subtree in it and insert it in a single operation, reducing costly reflows to one.",
+    "source": "Generated (based on DOM Manipulation theory)",
+    "tags": [
+      "DOM",
+      "Performance",
+      "DocumentFragment"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0084",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "DOM Manipulation",
+    "difficulty": "Medium",
+    "question": "What does event delegation rely on to handle events for many child elements with one listener?",
+    "options": [
+      "CSS inheritance",
+      "The capture phase only",
+      "Inline onclick attributes",
+      "Event bubbling up to a common ancestor"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Event delegation attaches a single listener to a parent and inspects event.target as events bubble up from children. This handles current and future children efficiently, avoiding the memory and setup cost of many individual listeners.",
+    "source": "Generated (based on DOM Manipulation theory)",
+    "tags": [
+      "DOM",
+      "Event Delegation",
+      "Bubbling"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0085",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "DOM Manipulation",
+    "difficulty": "Hard",
+    "question": "Reading offsetHeight right after changing an element's style in a loop causes jank. What is this called and why?",
+    "options": [
+      "Layout thrashing: forced synchronous reflows from interleaved reads and writes",
+      "Memory leak from listeners",
+      "Event flooding",
+      "Garbage collection pause"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Interleaving style writes with layout reads (offsetHeight, getBoundingClientRect) forces the browser to recalculate layout synchronously each iteration, called layout thrashing. Batching all reads before all writes lets the browser reflow once, restoring smoothness.",
+    "source": "Generated (based on DOM Manipulation theory)",
+    "tags": [
+      "DOM",
+      "Performance",
+      "Layout Thrashing"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0086",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Easy",
+    "question": "What does the browser build by parsing HTML?",
+    "options": [
+      "The CSSOM",
+      "The DOM tree",
+      "The render layers",
+      "The JavaScript heap"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The browser parses HTML into the DOM (Document Object Model) tree of nodes. It separately parses CSS into the CSSOM, then combines them into the render tree used for layout and painting.",
+    "source": "Generated (based on Browser Rendering theory)",
+    "tags": [
+      "Browser Rendering",
+      "DOM"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0087",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Easy",
+    "question": "In the rendering pipeline, what does the 'layout' (reflow) step compute?",
+    "options": [
+      "The colors of each pixel",
+      "The JavaScript execution order",
+      "The size and position of each element",
+      "The network request order"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Layout (also called reflow) calculates the geometry: the exact size and position of every element in the render tree. Painting then fills in pixels, and compositing assembles layers. Changing geometry triggers reflow, which is comparatively expensive.",
+    "source": "Generated (based on Browser Rendering theory)",
+    "tags": [
+      "Browser Rendering",
+      "Layout",
+      "Reflow"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0088",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Medium",
+    "question": "Why is CSS often called 'render-blocking'?",
+    "options": [
+      "It blocks all JavaScript permanently",
+      "It prevents the DOM from being parsed",
+      "It stops images from loading",
+      "The browser needs the CSSOM before it can render, so it waits for CSS"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The browser must construct the CSSOM to know how to render content, so it delays first paint until required CSS is downloaded and parsed to avoid a flash of unstyled content. This is why minimizing and prioritizing critical CSS speeds up rendering.",
+    "source": "Generated (based on Browser Rendering theory)",
+    "tags": [
+      "Browser Rendering",
+      "CSSOM",
+      "Render Blocking"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0089",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Medium",
+    "question": "How does a script tag with the defer attribute affect parsing?",
+    "options": [
+      "It downloads in parallel and executes after HTML parsing, in order",
+      "It blocks parsing until the script downloads and runs",
+      "It runs before the DOM exists",
+      "It prevents the script from ever running"
+    ],
+    "correctAnswer": 0,
+    "explanation": "defer lets the script download in parallel without blocking HTML parsing, then executes after the document is fully parsed and before DOMContentLoaded, preserving order among deferred scripts. async also downloads in parallel but runs as soon as ready, out of order.",
+    "source": "Generated (based on Browser Rendering theory)",
+    "tags": [
+      "Browser Rendering",
+      "Scripts",
+      "defer async"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0090",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Browser Rendering",
+    "difficulty": "Hard",
+    "question": "Animating transform and opacity is smoother than animating top/left. Why?",
+    "options": [
+      "They are simpler CSS properties",
+      "They can be handled by the compositor, often skipping layout and paint",
+      "They use less memory in the DOM",
+      "They are cached by the network layer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "transform and opacity can be applied on the compositor thread by moving or blending existing layers, typically avoiding layout and paint. Animating top/left changes geometry, forcing reflow and repaint each frame, which is far more likely to drop frames.",
+    "source": "Generated (based on Browser Rendering theory)",
+    "tags": [
+      "Browser Rendering",
+      "Animation",
+      "Compositing"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0091",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Web Performance",
+    "difficulty": "Easy",
+    "question": "What does the Largest Contentful Paint (LCP) metric measure?",
+    "options": [
+      "Time until the page is interactive",
+      "Total page weight in kilobytes",
+      "Render time of the largest visible content element",
+      "Number of network requests"
+    ],
+    "correctAnswer": 2,
+    "explanation": "LCP, a Core Web Vital, measures how long it takes for the largest visible content element (often a hero image or heading) to render, approximating when the main content appears. Good LCP is generally under about 2.5 seconds.",
+    "source": "Generated (based on Web Performance theory)",
+    "tags": [
+      "Web Performance",
+      "Core Web Vitals",
+      "LCP"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0092",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Web Performance",
+    "difficulty": "Easy",
+    "question": "What is lazy loading of images?",
+    "options": [
+      "Loading all images at highest resolution upfront",
+      "Compressing images on the server",
+      "Removing images from the page",
+      "Deferring off-screen image loading until they are about to enter the viewport"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Lazy loading defers loading images (and iframes) that are off-screen until the user scrolls near them, reducing initial payload and speeding up first render. The native loading=\"lazy\" attribute enables this without JavaScript.",
+    "source": "Generated (based on Web Performance theory)",
+    "tags": [
+      "Web Performance",
+      "Lazy Loading",
+      "Images"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0093",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Web Performance",
+    "difficulty": "Medium",
+    "question": "What does code splitting achieve in a bundled application?",
+    "options": [
+      "It breaks the bundle so only needed code loads, reducing initial download",
+      "It removes all JavaScript",
+      "It merges all modules into one file",
+      "It encrypts the source code"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Code splitting divides a large bundle into smaller chunks loaded on demand (for example per route or via dynamic import). Users download only the code needed for the current view, improving initial load time and time to interactive.",
+    "source": "Generated (based on Web Performance theory)",
+    "tags": [
+      "Web Performance",
+      "Code Splitting",
+      "Bundling"
+    ],
+    "company": [
+      "Vercel",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0094",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Web Performance",
+    "difficulty": "Medium",
+    "question": "Which Core Web Vital captures unexpected layout shifts during page load?",
+    "options": [
+      "First Input Delay (FID)",
+      "Cumulative Layout Shift (CLS)",
+      "Largest Contentful Paint (LCP)",
+      "Time to First Byte (TTFB)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cumulative Layout Shift (CLS) quantifies how much visible content unexpectedly moves during loading, such as content jumping when an image or ad loads without reserved space. Setting explicit dimensions and reserving space for dynamic content keeps CLS low.",
+    "source": "Generated (based on Web Performance theory)",
+    "tags": [
+      "Web Performance",
+      "Core Web Vitals",
+      "CLS"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0095",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Web Performance",
+    "difficulty": "Hard",
+    "question": "What is the difference between debouncing and throttling an expensive event handler?",
+    "options": [
+      "They are identical techniques",
+      "Throttle waits for silence; debounce fires on a fixed cadence",
+      "Debounce waits until activity stops before firing; throttle fires at most once per interval",
+      "Both disable the event permanently"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Debouncing delays the call until events stop for a set period (good for search-as-you-type after the user pauses). Throttling guarantees the handler runs at most once every interval during continuous activity (good for scroll or resize), trading precision for a steady rate.",
+    "source": "Generated (based on Web Performance theory)",
+    "tags": [
+      "Web Performance",
+      "Debounce",
+      "Throttle"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "fe_0096",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Accessibility",
+    "difficulty": "Easy",
+    "question": "What is the purpose of the alt attribute on an image?",
+    "options": [
+      "To style the image border",
+      "To lazy load the image",
+      "To set the image resolution",
+      "To provide a text alternative for screen readers and when the image fails to load"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The alt attribute gives a textual description that assistive technologies announce and that displays if the image cannot load. Decorative images should use an empty alt=\"\" so screen readers skip them rather than reading a filename.",
+    "source": "Generated (based on Accessibility theory)",
+    "tags": [
+      "Accessibility",
+      "Images",
+      "alt"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0097",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Accessibility",
+    "difficulty": "Easy",
+    "question": "Why should you prefer a semantic <button> over a clickable <div> for actions?",
+    "options": [
+      "Buttons are keyboard focusable and expose the correct role to assistive tech by default",
+      "Divs cannot be styled",
+      "Buttons load faster",
+      "Divs are deprecated"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A native button is focusable, activatable with Enter and Space, and announces itself as a button to screen readers automatically. A div requires manual tabindex, key handlers, and ARIA roles to replicate this, so the semantic element is more accessible with less code.",
+    "source": "Generated (based on Accessibility theory)",
+    "tags": [
+      "Accessibility",
+      "Semantic HTML",
+      "Buttons"
+    ],
+    "company": [
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "fe_0098",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Accessibility",
+    "difficulty": "Medium",
+    "question": "When should you add an ARIA role to an element?",
+    "options": [
+      "Always, on every element",
+      "Only when no native HTML element conveys the needed semantics",
+      "Never, ARIA is deprecated",
+      "Only on images"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The first rule of ARIA is to prefer native semantic HTML, which comes with built-in roles, states, and keyboard behavior. Add ARIA roles and attributes only when building custom widgets that no standard element expresses, since misused ARIA can harm accessibility.",
+    "source": "Generated (based on Accessibility theory)",
+    "tags": [
+      "Accessibility",
+      "ARIA",
+      "Semantic HTML"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0099",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Accessibility",
+    "difficulty": "Medium",
+    "question": "What does the WCAG minimum contrast guideline (AA) require for normal-size body text?",
+    "options": [
+      "A contrast ratio of at least 1:1",
+      "Only that colors differ",
+      "A contrast ratio of at least 4.5:1",
+      "A ratio of at least 2:1"
+    ],
+    "correctAnswer": 2,
+    "explanation": "WCAG 2.1 Level AA requires a contrast ratio of at least 4.5:1 between normal text and its background (3:1 for large text). Sufficient contrast ensures readability for users with low vision or color deficiencies and in poor lighting.",
+    "source": "Generated (based on Accessibility theory)",
+    "tags": [
+      "Accessibility",
+      "WCAG",
+      "Contrast"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "fe_0100",
+    "level": "Level 7",
+    "category": "Frontend Development",
+    "topic": "Accessibility",
+    "difficulty": "Hard",
+    "question": "For a custom modal dialog, which accessibility behavior is most critical to implement?",
+    "options": [
+      "Auto-closing after five seconds",
+      "Playing a sound when it opens",
+      "Disabling the mouse",
+      "Trapping keyboard focus within the dialog and restoring focus on close"
+    ],
+    "correctAnswer": 3,
+    "explanation": "An accessible modal must trap focus so Tab cycles only within the dialog, prevent interaction with background content (often via aria-modal and inert), and return focus to the triggering element when closed. This keeps keyboard and screen reader users oriented.",
+    "source": "Generated (based on Accessibility theory)",
+    "tags": [
+      "Accessibility",
+      "Focus Management",
+      "Modals"
+    ],
+    "company": [
+      "Meta",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  }
+]

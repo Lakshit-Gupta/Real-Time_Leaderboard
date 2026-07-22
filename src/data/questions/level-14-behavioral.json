@@ -1,0 +1,2792 @@
+[
+  {
+    "id": "beh_0001",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "STAR Method",
+    "difficulty": "Easy",
+    "question": "In the STAR method for answering behavioral questions, what does the \"T\" stand for?",
+    "options": [
+      "Task",
+      "Time",
+      "Team",
+      "Talent"
+    ],
+    "correctAnswer": 0,
+    "explanation": "STAR = Situation, Task, Action, Result. \"Task\" describes your specific responsibility in that situation.",
+    "source": "Generated (based on STAR Method theory)",
+    "tags": [
+      "STAR",
+      "Behavioral",
+      "Storytelling"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0002",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "STAR Method",
+    "difficulty": "Easy",
+    "question": "Which part of a STAR answer should take up the least amount of speaking time?",
+    "options": [
+      "Action taken",
+      "Situation/context setup",
+      "Result achieved",
+      "Task description"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Interviewers want depth on Action and Result; the Situation is just enough context to make the rest make sense.",
+    "source": "Generated (based on STAR Method theory)",
+    "tags": [
+      "STAR",
+      "Behavioral",
+      "Storytelling"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0003",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "STAR Method",
+    "difficulty": "Medium",
+    "question": "A candidate gives a STAR answer but never says \"I\" — only \"we.\" What is the main risk?",
+    "options": [
+      "It sounds too confident",
+      "It makes the story too short",
+      "The interviewer cannot tell the candidate's individual contribution",
+      "It violates confidentiality rules"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Behavioral interviews assess individual impact; overusing \"we\" hides what the candidate personally did.",
+    "source": "Generated (based on STAR Method theory)",
+    "tags": [
+      "STAR",
+      "Behavioral",
+      "Storytelling"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0004",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "STAR Method",
+    "difficulty": "Medium",
+    "question": "Why do interviewers often ask \"What would you do differently?\" after a STAR story?",
+    "options": [
+      "To catch the candidate in a lie",
+      "To fill remaining interview time",
+      "To test memory of dates",
+      "To test self-reflection and growth mindset beyond the rehearsed result"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A good candidate can critically reflect on their own action even when the result was positive — showing reflective learning, not just recall.",
+    "source": "Generated (based on STAR Method theory)",
+    "tags": [
+      "STAR",
+      "Behavioral",
+      "Storytelling"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0005",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "STAR Method",
+    "difficulty": "Hard",
+    "question": "A candidate's STAR result is vague (\"things worked out well\"). What follow-up best diagnoses if the result is genuine impact?",
+    "options": [
+      "Ask for a specific measurable outcome (metric, timeline, or stakeholder feedback) tied to that action",
+      "Ask them to repeat the same story again",
+      "Move to a coding question instead",
+      "Accept the answer and move on"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Quantifiable, verifiable results separate a real accomplishment from a vague or exaggerated one.",
+    "source": "Generated (based on STAR Method theory)",
+    "tags": [
+      "STAR",
+      "Behavioral",
+      "Storytelling"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0006",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Situational Judgment",
+    "difficulty": "Easy",
+    "question": "In a situational judgment question, what is being evaluated primarily?",
+    "options": [
+      "Your typing speed",
+      "How you would reason through and act in a hypothetical workplace scenario",
+      "Your knowledge of a specific programming language",
+      "Your resume formatting"
+    ],
+    "correctAnswer": 1,
+    "explanation": "SJTs measure judgment and prioritization in realistic scenarios, not technical recall.",
+    "source": "Generated (based on Situational Judgment theory)",
+    "tags": [
+      "SJT",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Deloitte",
+      "Accenture"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0007",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Situational Judgment",
+    "difficulty": "Easy",
+    "question": "You are asked: \"Your teammate takes credit for your idea in a meeting. What do you do?\" What is generally the best first response?",
+    "options": [
+      "Publicly confront them mid-meeting",
+      "Say nothing and quit the project",
+      "Address it calmly and privately with the teammate after the meeting",
+      "Escalate to HR immediately without talking to them first"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A calm, direct, private conversation is usually the professional first step before escalation.",
+    "source": "Generated (based on Situational Judgment theory)",
+    "tags": [
+      "SJT",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Deloitte",
+      "Accenture"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0008",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Situational Judgment",
+    "difficulty": "Medium",
+    "question": "A situational question describes a project falling behind due to a vendor delay outside your control. What answer demonstrates the strongest judgment?",
+    "options": [
+      "Blame the vendor entirely and wait",
+      "Hide the delay from stakeholders to avoid concern",
+      "Quit the project to avoid the delay affecting your record",
+      "Explain how you would communicate the risk early and adjust the plan or scope proactively"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Good judgment favors early, transparent risk communication and proactive re-planning over blame or concealment.",
+    "source": "Generated (based on Situational Judgment theory)",
+    "tags": [
+      "SJT",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Deloitte",
+      "Accenture"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0009",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Situational Judgment",
+    "difficulty": "Medium",
+    "question": "Two situational answers both solve the described problem. What typically separates a stronger answer?",
+    "options": [
+      "It accounts for the impact on other stakeholders, not just the immediate task",
+      "It uses more technical jargon",
+      "It is longer in word count",
+      "It avoids mentioning any people"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Strong judgment weighs broader stakeholder impact, not just narrow task completion.",
+    "source": "Generated (based on Situational Judgment theory)",
+    "tags": [
+      "SJT",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Deloitte",
+      "Accenture"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0010",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Situational Judgment",
+    "difficulty": "Hard",
+    "question": "A situational scenario has no clearly \"correct\" option — all choices involve some tradeoff. What is the best way to answer?",
+    "options": [
+      "Refuse to answer since there is no perfect option",
+      "Pick the option that best balances the competing priorities and explain the reasoning behind the tradeoff",
+      "Pick the shortest option",
+      "Ask the interviewer to skip the question"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Judgment questions often intentionally have no perfect answer — the reasoning behind the tradeoff is what is assessed.",
+    "source": "Generated (based on Situational Judgment theory)",
+    "tags": [
+      "SJT",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Deloitte",
+      "Accenture"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0011",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Prioritization Under Deadlines",
+    "difficulty": "Easy",
+    "question": "When given three tasks with the same deadline, what is a sound first step in prioritizing them?",
+    "options": [
+      "Do the easiest one first regardless of impact",
+      "Do them in the order they were assigned",
+      "Assess the impact and urgency of each task before deciding order",
+      "Ask a coworker to choose for you"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Impact and urgency assessment (like an Eisenhower matrix) is the standard first step in prioritization.",
+    "source": "Generated (based on Prioritization Under Deadlines theory)",
+    "tags": [
+      "Prioritization",
+      "Time Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0012",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Prioritization Under Deadlines",
+    "difficulty": "Easy",
+    "question": "What best describes a \"quick win\" in prioritization frameworks?",
+    "options": [
+      "High effort, low impact task",
+      "A task with no deadline",
+      "A task assigned by the most senior person",
+      "Low effort, high impact task"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Quick wins are low-effort, high-impact items tackled early to build momentum.",
+    "source": "Generated (based on Prioritization Under Deadlines theory)",
+    "tags": [
+      "Prioritization",
+      "Time Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0013",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Prioritization Under Deadlines",
+    "difficulty": "Medium",
+    "question": "Two urgent tasks compete for your time before a deadline. Your manager is unavailable. What is the best action?",
+    "options": [
+      "Make a reasoned call based on business impact, document it, and inform your manager once available",
+      "Wait idle until the manager responds",
+      "Do both tasks simultaneously at reduced quality",
+      "Escalate to a different manager without context"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When immediate guidance is unavailable, using sound judgment and documenting the decision keeps things moving responsibly.",
+    "source": "Generated (based on Prioritization Under Deadlines theory)",
+    "tags": [
+      "Prioritization",
+      "Time Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0014",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Prioritization Under Deadlines",
+    "difficulty": "Medium",
+    "question": "A stakeholder asks you to add a new \"urgent\" task mid-sprint. What is the best response?",
+    "options": [
+      "Immediately drop current work without discussion",
+      "Clarify its true priority against existing committed work before agreeing to insert it",
+      "Refuse outright without discussion",
+      "Silently ignore the request"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Clarifying relative priority protects committed work while still taking the new request seriously.",
+    "source": "Generated (based on Prioritization Under Deadlines theory)",
+    "tags": [
+      "Prioritization",
+      "Time Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0015",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Prioritization Under Deadlines",
+    "difficulty": "Hard",
+    "question": "You realize halfway through a sprint that the highest-priority task was mis-scoped and will blow the deadline. What is the best move?",
+    "options": [
+      "Keep working silently hoping to catch up",
+      "Cut corners on quality without telling anyone",
+      "Re-scope or re-negotiate the deadline transparently with stakeholders as early as possible",
+      "Blame the original requirements document publicly"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Transparent, early re-negotiation of scope or timeline is far better than silent risk or blame after the fact.",
+    "source": "Generated (based on Prioritization Under Deadlines theory)",
+    "tags": [
+      "Prioritization",
+      "Time Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0016",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Ambiguity",
+    "difficulty": "Easy",
+    "question": "What is a healthy first step when given a task with unclear requirements?",
+    "options": [
+      "Guess and start building immediately",
+      "Wait indefinitely for someone else to clarify",
+      "Refuse the task",
+      "Ask clarifying questions to the requester before starting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Clarifying questions reduce wasted effort and align expectations before work begins.",
+    "source": "Generated (based on Handling Ambiguity theory)",
+    "tags": [
+      "Ambiguity",
+      "Problem Solving",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0017",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Ambiguity",
+    "difficulty": "Easy",
+    "question": "Which trait is most associated with comfort in ambiguous situations?",
+    "options": [
+      "Tolerance for incomplete information while still making progress",
+      "Needing every detail specified before acting",
+      "Avoiding decisions until certainty is total",
+      "Delegating all unclear tasks to others"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Comfort with ambiguity means being able to make reasonable progress despite incomplete information.",
+    "source": "Generated (based on Handling Ambiguity theory)",
+    "tags": [
+      "Ambiguity",
+      "Problem Solving",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0018",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Ambiguity",
+    "difficulty": "Medium",
+    "question": "A project has vague success criteria. What is a good approach before starting execution?",
+    "options": [
+      "Start immediately and define success at the end",
+      "Propose a concrete definition of success and confirm it with stakeholders",
+      "Assume success means whatever feels right to you",
+      "Postpone the project indefinitely"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Proposing and confirming a definition of success up front reduces later disagreement and wasted work.",
+    "source": "Generated (based on Handling Ambiguity theory)",
+    "tags": [
+      "Ambiguity",
+      "Problem Solving",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0019",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Ambiguity",
+    "difficulty": "Medium",
+    "question": "Halfway through an ambiguous project, priorities shift due to new information. What is the best reaction?",
+    "options": [
+      "Ignore the new information to avoid extra work",
+      "Abandon the project entirely",
+      "Re-evaluate the plan against the new information and adjust course",
+      "Complain that the requirements changed and stop working"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Adapting the plan to new information is central to handling ambiguity well; rigidity or abandonment is not.",
+    "source": "Generated (based on Handling Ambiguity theory)",
+    "tags": [
+      "Ambiguity",
+      "Problem Solving",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0020",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Ambiguity",
+    "difficulty": "Hard",
+    "question": "You must ship a decision with only 60% of the information you would like. What is the best practice?",
+    "options": [
+      "Delay the decision until 100% information is available",
+      "Make an irreversible decision without any review plan",
+      "Delegate the decision entirely to avoid personal risk",
+      "Make the best reversible decision possible and set a checkpoint to revisit as more data arrives"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Favoring reversible, revisitable decisions under uncertainty is a well-known technique for progressing despite incomplete data.",
+    "source": "Generated (based on Handling Ambiguity theory)",
+    "tags": [
+      "Ambiguity",
+      "Problem Solving",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0021",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Cross-functional Collaboration",
+    "difficulty": "Easy",
+    "question": "What best describes cross-functional collaboration?",
+    "options": [
+      "Working effectively with people from different teams or disciplines toward a shared goal",
+      "Working only within your own team",
+      "Managing a team of direct reports",
+      "Competing with other departments for resources"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Cross-functional collaboration specifically means partnering across different functions (e.g. engineering, design, sales) toward one goal.",
+    "source": "Generated (based on Cross-functional Collaboration theory)",
+    "tags": [
+      "Collaboration",
+      "Teamwork",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0022",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Cross-functional Collaboration",
+    "difficulty": "Easy",
+    "question": "A designer and an engineer disagree on a UI approach. What is the best first step?",
+    "options": [
+      "Escalate immediately to management",
+      "Discuss the tradeoffs directly and find shared criteria to decide",
+      "Let the more senior person decide by default",
+      "Ignore the disagreement and proceed with the engineer's choice"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Direct discussion using shared, objective criteria typically resolves cross-functional disagreements better than escalation or seniority alone.",
+    "source": "Generated (based on Cross-functional Collaboration theory)",
+    "tags": [
+      "Collaboration",
+      "Teamwork",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0023",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Cross-functional Collaboration",
+    "difficulty": "Medium",
+    "question": "A cross-functional project stalls because two teams define \"done\" differently. What is the best fix?",
+    "options": [
+      "Let each team use its own definition permanently",
+      "Cancel the project",
+      "Agree on a single, shared definition of done across both teams before continuing",
+      "Assign one team to silently redo the other's work"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A shared definition of done eliminates the root cause of the misalignment.",
+    "source": "Generated (based on Cross-functional Collaboration theory)",
+    "tags": [
+      "Collaboration",
+      "Teamwork",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0024",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Cross-functional Collaboration",
+    "difficulty": "Medium",
+    "question": "You need buy-in from a team that does not report to you. What approach tends to work best?",
+    "options": [
+      "Use your title to demand compliance",
+      "Bypass them and go directly to their manager",
+      "Wait for them to volunteer on their own",
+      "Understand their goals and frame the request in terms of mutual benefit"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Influence without authority relies on understanding the other team's incentives and framing requests around mutual benefit.",
+    "source": "Generated (based on Cross-functional Collaboration theory)",
+    "tags": [
+      "Collaboration",
+      "Teamwork",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0025",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Cross-functional Collaboration",
+    "difficulty": "Hard",
+    "question": "Two departments each believe their KPI should take priority in a joint initiative, creating a stalemate. What is the most effective resolution approach?",
+    "options": [
+      "Facilitate a discussion to find a shared higher-level goal both KPIs serve, then re-align priorities to it",
+      "Let whichever department escalates loudest win",
+      "Split resources evenly regardless of impact",
+      "Cancel the joint initiative permanently"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reframing around a shared higher-level objective is a standard technique to resolve competing-priority stalemates between departments.",
+    "source": "Generated (based on Cross-functional Collaboration theory)",
+    "tags": [
+      "Collaboration",
+      "Teamwork",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0026",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Mentoring Others",
+    "difficulty": "Easy",
+    "question": "What is the primary goal of mentoring a junior colleague?",
+    "options": [
+      "Doing their work for them",
+      "Helping them grow their skills and confidence over time",
+      "Assigning them the most tasks possible",
+      "Evaluating them for termination"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mentoring is about growth and development, not task delegation or performance policing.",
+    "source": "Generated (based on Mentoring Others theory)",
+    "tags": [
+      "Mentorship",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Microsoft",
+      "IBM"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0027",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Mentoring Others",
+    "difficulty": "Easy",
+    "question": "A mentee makes a mistake on a task. What is the best mentoring response?",
+    "options": [
+      "Fix it silently without telling them",
+      "Publicly criticize the mistake",
+      "Discuss what happened and guide them to find the fix themselves",
+      "Reassign all their future tasks to someone else"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Guiding them to find and understand the fix builds their capability; silent fixes or public criticism do not.",
+    "source": "Generated (based on Mentoring Others theory)",
+    "tags": [
+      "Mentorship",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Microsoft",
+      "IBM"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0028",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Mentoring Others",
+    "difficulty": "Medium",
+    "question": "A mentee keeps asking you to solve problems instead of attempting them first. What is the best approach?",
+    "options": [
+      "Always give the full answer immediately",
+      "Stop mentoring them",
+      "Tell them to figure it out completely alone with no support",
+      "Encourage them to propose their own solution first, then discuss it together"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Encouraging a first attempt before discussion builds independent problem-solving while still providing support.",
+    "source": "Generated (based on Mentoring Others theory)",
+    "tags": [
+      "Mentorship",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Microsoft",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0029",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Mentoring Others",
+    "difficulty": "Medium",
+    "question": "How should a mentor calibrate the amount of guidance given over time?",
+    "options": [
+      "Gradually reduce direct guidance as the mentee demonstrates more independent competence",
+      "Keep guidance constant regardless of the mentee's growth",
+      "Increase guidance over time regardless of progress",
+      "Stop all guidance abruptly after one session"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Effective mentoring scales down direct guidance as competence grows, similar to scaffolding in teaching.",
+    "source": "Generated (based on Mentoring Others theory)",
+    "tags": [
+      "Mentorship",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Microsoft",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0030",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Mentoring Others",
+    "difficulty": "Hard",
+    "question": "A mentee is technically strong but struggles with communicating updates to stakeholders. What is the most effective mentoring focus?",
+    "options": [
+      "Ignore it since it is a \"soft skill\" issue",
+      "Practice structuring and rehearsing stakeholder updates together, with specific feedback each time",
+      "Do all their stakeholder communication for them going forward",
+      "Recommend they change roles entirely"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Deliberate practice with targeted feedback is the most effective way to build a specific communication skill.",
+    "source": "Generated (based on Mentoring Others theory)",
+    "tags": [
+      "Mentorship",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Microsoft",
+      "IBM"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0031",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Persuasion & Influence",
+    "difficulty": "Easy",
+    "question": "What is \"influence without authority\"?",
+    "options": [
+      "Giving direct orders to subordinates",
+      "Using your job title to force compliance",
+      "Getting others to act or agree without having formal power over them",
+      "Avoiding all disagreement with peers"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Influence without authority describes persuading peers or other teams despite having no direct managerial power over them.",
+    "source": "Generated (based on Persuasion & Influence theory)",
+    "tags": [
+      "Persuasion",
+      "Influence",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0032",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Persuasion & Influence",
+    "difficulty": "Easy",
+    "question": "Which approach is generally most persuasive when proposing an idea to stakeholders?",
+    "options": [
+      "Insisting the idea is correct without evidence",
+      "Avoiding any mention of downsides",
+      "Pressuring stakeholders to agree quickly",
+      "Backing the proposal with data and addressing likely objections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Data-backed proposals that proactively address objections are consistently more persuasive than assertion alone.",
+    "source": "Generated (based on Persuasion & Influence theory)",
+    "tags": [
+      "Persuasion",
+      "Influence",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0033",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Persuasion & Influence",
+    "difficulty": "Medium",
+    "question": "A stakeholder rejects your proposal without much explanation. What is the best next step?",
+    "options": [
+      "Ask questions to understand their underlying concern before re-pitching",
+      "Repeat the same pitch louder",
+      "Give up on the idea immediately",
+      "Escalate over their head right away"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Understanding the underlying concern lets you address the real objection instead of repeating an unconvincing pitch.",
+    "source": "Generated (based on Persuasion & Influence theory)",
+    "tags": [
+      "Persuasion",
+      "Influence",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0034",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Persuasion & Influence",
+    "difficulty": "Medium",
+    "question": "You need two competing teams to agree on one technical direction. What persuasion tactic tends to work best?",
+    "options": [
+      "Convince each team separately with different arguments",
+      "Present objective evaluation criteria and let the data guide the decision jointly",
+      "Pick the direction preferred by the more senior team",
+      "Avoid deciding and let the disagreement continue"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Shared objective criteria remove the “us vs them” dynamic and let evidence, not politics, decide.",
+    "source": "Generated (based on Persuasion & Influence theory)",
+    "tags": [
+      "Persuasion",
+      "Influence",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0035",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Persuasion & Influence",
+    "difficulty": "Hard",
+    "question": "A well-reasoned proposal keeps failing to gain traction because of unstated political resistance. What is the most effective strategy?",
+    "options": [
+      "Repeat the same public pitch until it eventually works",
+      "Abandon the proposal entirely",
+      "Identify key influencers, understand their concerns individually, and build support before the group meeting",
+      "Force a vote to overrule the resistance"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Building support with key influencers ahead of a group decision (\"pre-wiring\") is a well-known technique to overcome unstated political resistance.",
+    "source": "Generated (based on Persuasion & Influence theory)",
+    "tags": [
+      "Persuasion",
+      "Influence",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0036",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Decision Making Under Uncertainty",
+    "difficulty": "Easy",
+    "question": "What is a \"one-way door\" decision, in Amazon's decision-making terminology?",
+    "options": [
+      "A decision that can be undone easily",
+      "A decision made by only one person",
+      "A decision requiring no approval",
+      "A decision that is hard or costly to reverse"
+    ],
+    "correctAnswer": 3,
+    "explanation": "One-way door decisions are high-consequence and hard to reverse, warranting more deliberation than two-way door (easily reversible) ones.",
+    "source": "Generated (based on Decision Making Under Uncertainty theory)",
+    "tags": [
+      "Decision Making",
+      "Uncertainty",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0037",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Decision Making Under Uncertainty",
+    "difficulty": "Easy",
+    "question": "For a reversible (\"two-way door\") decision, what pace of decision-making is generally recommended?",
+    "options": [
+      "Decide quickly since it can be adjusted later if wrong",
+      "Deliberate for weeks before deciding",
+      "Avoid deciding at all",
+      "Escalate every such decision to senior leadership"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reversible decisions should be made quickly since the cost of being wrong is low and easily corrected.",
+    "source": "Generated (based on Decision Making Under Uncertainty theory)",
+    "tags": [
+      "Decision Making",
+      "Uncertainty",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0038",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Decision Making Under Uncertainty",
+    "difficulty": "Medium",
+    "question": "You must decide between two options with incomplete data and a tight deadline. What is the best approach?",
+    "options": [
+      "Wait for perfect data even if it delays the deadline significantly",
+      "Make the best available judgment call, note the assumptions, and move forward",
+      "Flip a coin without noting any reasoning",
+      "Escalate every uncertain decision to avoid personal responsibility"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Deciding with documented assumptions under time pressure is generally better than paralysis or reasoning-free choices.",
+    "source": "Generated (based on Decision Making Under Uncertainty theory)",
+    "tags": [
+      "Decision Making",
+      "Uncertainty",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0039",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Decision Making Under Uncertainty",
+    "difficulty": "Medium",
+    "question": "After making a decision under uncertainty, new information suggests it may be wrong. What is the best action?",
+    "options": [
+      "Stick with the original decision no matter what to appear consistent",
+      "Ignore the new information to avoid looking indecisive",
+      "Re-evaluate promptly and change course if the new information is credible",
+      "Blame others for the outcome without reviewing the decision"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Willingness to update a decision when credible new information arrives is a hallmark of good judgment, not weakness.",
+    "source": "Generated (based on Decision Making Under Uncertainty theory)",
+    "tags": [
+      "Decision Making",
+      "Uncertainty",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0040",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Decision Making Under Uncertainty",
+    "difficulty": "Hard",
+    "question": "A high-stakes, hard-to-reverse decision must be made with significant uncertainty remaining. What is the most sound process?",
+    "options": [
+      "Delay indefinitely until all uncertainty is resolved",
+      "Decide instantly with no analysis to save time",
+      "Delegate the entire decision to avoid accountability",
+      "Gather the most critical missing information within a reasonable time box, then decide with explicit risk mitigation for the largest unknowns"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Time-boxed information gathering plus explicit risk mitigation balances speed and rigor for high-stakes irreversible decisions.",
+    "source": "Generated (based on Decision Making Under Uncertainty theory)",
+    "tags": [
+      "Decision Making",
+      "Uncertainty",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0041",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Difficult Stakeholders",
+    "difficulty": "Easy",
+    "question": "A stakeholder repeatedly changes requirements late in a project. What is a good first step?",
+    "options": [
+      "Have a direct conversation to understand the reason behind the changes and set expectations going forward",
+      "Silently accept every change without discussion",
+      "Refuse to speak with them again",
+      "Complain to other teams about the stakeholder"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Understanding the reason behind repeated changes helps address the root cause and set clearer expectations.",
+    "source": "Generated (based on Handling Difficult Stakeholders theory)",
+    "tags": [
+      "Stakeholder Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0042",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Difficult Stakeholders",
+    "difficulty": "Easy",
+    "question": "What is generally the best way to handle a stakeholder who is consistently unresponsive to emails?",
+    "options": [
+      "Keep sending the same email repeatedly",
+      "Try a different, more direct communication channel and set a clear deadline",
+      "Give up on getting a response",
+      "Publicly call out their unresponsiveness in a large meeting"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Switching channels and adding a clear deadline is a practical escalation before resorting to public callouts.",
+    "source": "Generated (based on Handling Difficult Stakeholders theory)",
+    "tags": [
+      "Stakeholder Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0043",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Difficult Stakeholders",
+    "difficulty": "Medium",
+    "question": "A senior stakeholder pushes for a technically unsound approach. What is the best way to respond?",
+    "options": [
+      "Comply silently despite knowing it is unsound",
+      "Refuse outright without offering an alternative",
+      "Present the technical risks clearly with data, and propose an alternative that meets their underlying goal",
+      "Escalate immediately without first raising the concern with them"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Presenting risk data plus an alternative addresses the concern professionally while still respecting the relationship.",
+    "source": "Generated (based on Handling Difficult Stakeholders theory)",
+    "tags": [
+      "Stakeholder Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0044",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Difficult Stakeholders",
+    "difficulty": "Medium",
+    "question": "A stakeholder is frustrated and speaks harshly in a meeting. What is the best immediate response?",
+    "options": [
+      "Respond with equal harshness",
+      "Leave the meeting immediately",
+      "Agree to everything just to end the conflict",
+      "Stay calm, acknowledge their concern, and refocus the discussion on solving the problem"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Staying calm and refocusing on problem-solving de-escalates the situation without conceding on substance unnecessarily.",
+    "source": "Generated (based on Handling Difficult Stakeholders theory)",
+    "tags": [
+      "Stakeholder Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0045",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Handling Difficult Stakeholders",
+    "difficulty": "Hard",
+    "question": "A key stakeholder consistently undermines a project in meetings but is cooperative one-on-one. What is the most effective long-term strategy?",
+    "options": [
+      "Address the pattern directly in a private conversation, seeking to understand their underlying concern about the project",
+      "Ignore the pattern since one-on-one interactions are fine",
+      "Publicly call out the behavior in the next group meeting",
+      "Exclude them from future project meetings without discussion"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A private, direct conversation about the pattern (not just individual incidents) uncovers the root concern driving the public/private inconsistency.",
+    "source": "Generated (based on Handling Difficult Stakeholders theory)",
+    "tags": [
+      "Stakeholder Management",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0046",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Innovation & Initiative",
+    "difficulty": "Easy",
+    "question": "What best demonstrates \"taking initiative\" in a behavioral interview answer?",
+    "options": [
+      "Waiting for explicit instructions before acting",
+      "Proactively identifying and acting on a problem without being asked",
+      "Only doing exactly what is listed in the job description",
+      "Asking a manager to make every small decision"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Initiative is specifically about proactive action beyond what was explicitly assigned.",
+    "source": "Generated (based on Innovation & Initiative theory)",
+    "tags": [
+      "Innovation",
+      "Initiative",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0047",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Innovation & Initiative",
+    "difficulty": "Easy",
+    "question": "A candidate describes automating a manual process nobody asked them to fix. What quality does this best show?",
+    "options": [
+      "Strict rule-following",
+      "Risk aversion",
+      "Initiative and process improvement mindset",
+      "Delegation skills"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Identifying and fixing an unrequested inefficiency is a classic initiative example.",
+    "source": "Generated (based on Innovation & Initiative theory)",
+    "tags": [
+      "Innovation",
+      "Initiative",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0048",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Innovation & Initiative",
+    "difficulty": "Medium",
+    "question": "You spot a promising new idea outside your current role scope. What is the best first step?",
+    "options": [
+      "Immediately build the full solution without validating it",
+      "Keep the idea to yourself indefinitely",
+      "Assume it will fail and drop it without exploration",
+      "Do enough lightweight validation to gauge feasibility, then propose it to the relevant stakeholders"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Lightweight validation before proposing balances initiative with responsible use of time and resources.",
+    "source": "Generated (based on Innovation & Initiative theory)",
+    "tags": [
+      "Innovation",
+      "Initiative",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0049",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Innovation & Initiative",
+    "difficulty": "Medium",
+    "question": "An innovative idea you proposed is rejected due to resource constraints. What is the best next step?",
+    "options": [
+      "Ask for specific feedback and look for a smaller-scale version that could be tried first",
+      "Abandon all future proposals",
+      "Argue repeatedly until it is approved",
+      "Implement it anyway without approval"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Seeking feedback and proposing a smaller pilot keeps the idea alive within real constraints.",
+    "source": "Generated (based on Innovation & Initiative theory)",
+    "tags": [
+      "Innovation",
+      "Initiative",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0050",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Innovation & Initiative",
+    "difficulty": "Hard",
+    "question": "You want to pursue an innovative but unproven idea that could disrupt an established, revenue-generating process. What is the most responsible approach?",
+    "options": [
+      "Launch it broadly immediately to prove impact fast",
+      "Propose a small, low-risk pilot with clear success metrics before any wider rollout",
+      "Avoid all disruption and never pursue the idea",
+      "Implement it quietly without informing stakeholders who own the existing process"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A small, metric-driven pilot manages the risk of disrupting a proven revenue process while still testing the innovation.",
+    "source": "Generated (based on Innovation & Initiative theory)",
+    "tags": [
+      "Innovation",
+      "Initiative",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0051",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Learning from Mistakes",
+    "difficulty": "Easy",
+    "question": "What is the most important element interviewers look for in a \"tell me about a mistake\" answer?",
+    "options": [
+      "A story with no real consequences",
+      "Blaming external factors for the mistake",
+      "Evidence of genuine reflection and a concrete change in behavior afterward",
+      "Avoiding any mention of a real mistake"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Interviewers want to see genuine ownership, reflection, and behavioral change — not blame-shifting or a low-stakes non-answer.",
+    "source": "Generated (based on Learning from Mistakes theory)",
+    "tags": [
+      "Growth Mindset",
+      "Failure",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0052",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Learning from Mistakes",
+    "difficulty": "Easy",
+    "question": "Which response to a mistake shows the strongest growth mindset?",
+    "options": [
+      "\"It wasn't really my fault\"",
+      "\"I never make mistakes\"",
+      "\"I avoided thinking about it afterward\"",
+      "\"I analyzed what went wrong and changed my process to prevent it\""
+    ],
+    "correctAnswer": 3,
+    "explanation": "Analyzing the root cause and changing the process demonstrates ownership and growth, unlike blame-shifting or avoidance.",
+    "source": "Generated (based on Learning from Mistakes theory)",
+    "tags": [
+      "Growth Mindset",
+      "Failure",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0053",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Learning from Mistakes",
+    "difficulty": "Medium",
+    "question": "A candidate describes a mistake that hurt a teammate's work. What follow-up best assesses accountability?",
+    "options": [
+      "\"What did you do to repair the impact on your teammate?\"",
+      "\"What was the exact date it happened?\"",
+      "\"Did anyone else find out about it?\"",
+      "\"Was the mistake technically your fault or your manager's?\""
+    ],
+    "correctAnswer": 0,
+    "explanation": "Asking how they repaired the impact reveals accountability and follow-through, beyond just naming the mistake.",
+    "source": "Generated (based on Learning from Mistakes theory)",
+    "tags": [
+      "Growth Mindset",
+      "Failure",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0054",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Learning from Mistakes",
+    "difficulty": "Medium",
+    "question": "Why do interviewers often prefer a \"medium-sized\" mistake story over a trivial or catastrophic one?",
+    "options": [
+      "Trivial and catastrophic mistakes are both against interview rules",
+      "It is substantial enough to show real learning, without appearing reckless or dishonest",
+      "Medium mistakes are easier to fabricate convincingly",
+      "It fills the allotted interview time better"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A trivial mistake shows little learning; an extreme one may raise concerns about judgment — a substantial-but-recoverable mistake shows genuine growth.",
+    "source": "Generated (based on Learning from Mistakes theory)",
+    "tags": [
+      "Growth Mindset",
+      "Failure",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0055",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Learning from Mistakes",
+    "difficulty": "Hard",
+    "question": "A candidate's mistake story shows they repeated a very similar error twice, years apart. What does this most likely signal to an interviewer?",
+    "options": [
+      "They are exceptionally self-aware",
+      "It has no bearing on the hiring decision",
+      "The lesson from the first mistake may not have been fully internalized into their working process",
+      "It demonstrates strong risk tolerance"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Repeating a similar mistake suggests the earlier \"lesson learned\" did not translate into a durable process change — a genuine reflection would typically prevent recurrence.",
+    "source": "Generated (based on Learning from Mistakes theory)",
+    "tags": [
+      "Growth Mindset",
+      "Failure",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0056",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Work-Life Balance",
+    "difficulty": "Easy",
+    "question": "What is a healthy way to communicate a personal boundary about after-hours work?",
+    "options": [
+      "Silently ignore all after-hours messages without explanation",
+      "Complain about it publicly on social media",
+      "Quit without any conversation",
+      "Clearly and respectfully state the boundary and the reasoning behind it"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Clear, respectful, direct communication of boundaries is more effective and professional than silence or public complaint.",
+    "source": "Generated (based on Work-Life Balance theory)",
+    "tags": [
+      "Work-Life Balance",
+      "Wellbeing",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0057",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Work-Life Balance",
+    "difficulty": "Easy",
+    "question": "Which best demonstrates sustainable pacing on a demanding project?",
+    "options": [
+      "Planning realistic milestones and flagging risk of burnout early",
+      "Working unsustainable hours indefinitely without raising concerns",
+      "Refusing to discuss workload with a manager",
+      "Ignoring deadlines entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Realistic milestone planning and early risk communication sustain performance without burnout.",
+    "source": "Generated (based on Work-Life Balance theory)",
+    "tags": [
+      "Work-Life Balance",
+      "Wellbeing",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0058",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Work-Life Balance",
+    "difficulty": "Medium",
+    "question": "A manager repeatedly assigns work outside agreed hours. What is the most constructive response?",
+    "options": [
+      "Comply silently while resentment builds",
+      "Discuss the pattern directly with the manager and propose a sustainable workload plan",
+      "Immediately resign without discussion",
+      "Under-deliver on tasks as passive protest"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A direct, solution-oriented conversation addresses the pattern without damaging the relationship or performance.",
+    "source": "Generated (based on Work-Life Balance theory)",
+    "tags": [
+      "Work-Life Balance",
+      "Wellbeing",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0059",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Work-Life Balance",
+    "difficulty": "Medium",
+    "question": "You are the only one on your team consistently working weekends to keep up. What should you evaluate first?",
+    "options": [
+      "Whether you need a completely new job immediately",
+      "Whether to hide the extra hours from your manager",
+      "Whether the workload itself, not just your effort, needs to be re-scoped or re-distributed",
+      "Whether to ask the rest of the team to also work weekends"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The root issue is often workload/scope, which should be addressed structurally rather than absorbed personally or spread to others.",
+    "source": "Generated (based on Work-Life Balance theory)",
+    "tags": [
+      "Work-Life Balance",
+      "Wellbeing",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0060",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Work-Life Balance",
+    "difficulty": "Hard",
+    "question": "A high performer is quietly burning out but still delivering excellent results. What is the most responsible action for their manager to take?",
+    "options": [
+      "Wait until performance visibly drops before acting",
+      "Reward them with even more work since results are strong",
+      "Assume no action is needed since output looks fine",
+      "Proactively check in on workload and wellbeing rather than waiting for a visible drop in performance"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Waiting for visible performance drops means the damage (and risk of losing a strong performer) has already begun; proactive check-ins catch burnout earlier.",
+    "source": "Generated (based on Work-Life Balance theory)",
+    "tags": [
+      "Work-Life Balance",
+      "Wellbeing",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0061",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Remote Work Collaboration",
+    "difficulty": "Easy",
+    "question": "What is a key practice for effective asynchronous collaboration in a remote team?",
+    "options": [
+      "Writing clear, self-contained updates that do not require real-time back-and-forth",
+      "Requiring every discussion to happen in a live meeting",
+      "Avoiding written documentation entirely",
+      "Assuming everyone is online at the same time"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Clear, self-contained async updates let distributed teammates in different time zones make progress without waiting for live meetings.",
+    "source": "Generated (based on Remote Work Collaboration theory)",
+    "tags": [
+      "Remote Work",
+      "Collaboration",
+      "Behavioral"
+    ],
+    "company": [
+      "GitLab",
+      "Microsoft",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0062",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Remote Work Collaboration",
+    "difficulty": "Easy",
+    "question": "Why is over-communication generally encouraged in remote teams compared to co-located ones?",
+    "options": [
+      "Remote workers type faster",
+      "Remote teams lack the informal in-person context that co-located teams pick up naturally",
+      "It is required by law in most countries",
+      "It replaces the need for any documentation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Without hallway conversations and visual cues, remote teams rely more on explicit written communication to stay aligned.",
+    "source": "Generated (based on Remote Work Collaboration theory)",
+    "tags": [
+      "Remote Work",
+      "Collaboration",
+      "Behavioral"
+    ],
+    "company": [
+      "GitLab",
+      "Microsoft",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0063",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Remote Work Collaboration",
+    "difficulty": "Medium",
+    "question": "A remote teammate seems increasingly disengaged in meetings. What is a good first step?",
+    "options": [
+      "Assume they are simply lazy and report it immediately",
+      "Ignore it since remote engagement is hard to judge",
+      "Reach out privately to check in on how they are doing and if anything is blocking them",
+      "Publicly call out their disengagement in the team meeting"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A private, supportive check-in is more effective and humane than public callouts or immediate escalation.",
+    "source": "Generated (based on Remote Work Collaboration theory)",
+    "tags": [
+      "Remote Work",
+      "Collaboration",
+      "Behavioral"
+    ],
+    "company": [
+      "GitLab",
+      "Microsoft",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0064",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Remote Work Collaboration",
+    "difficulty": "Medium",
+    "question": "Your remote team spans multiple time zones and meetings are hard to schedule fairly. What is a good practice?",
+    "options": [
+      "Always schedule at the convenience of the largest time zone group only",
+      "Cancel all synchronous meetings permanently",
+      "Require everyone to work the same hours regardless of time zone",
+      "Rotate meeting times so the inconvenience of early/late calls is shared across time zones"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Rotating meeting times distributes the burden of inconvenient hours fairly across the whole team.",
+    "source": "Generated (based on Remote Work Collaboration theory)",
+    "tags": [
+      "Remote Work",
+      "Collaboration",
+      "Behavioral"
+    ],
+    "company": [
+      "GitLab",
+      "Microsoft",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0065",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Remote Work Collaboration",
+    "difficulty": "Hard",
+    "question": "A distributed team consistently makes decisions in one region's working hours, leaving other regions feeling excluded. What is the most effective long-term fix?",
+    "options": [
+      "Establish a documented, asynchronous decision-making process that any region can contribute to and review before it is finalized",
+      "Require all regions to match the dominant region's hours permanently",
+      "Ignore the issue since decisions are still getting made",
+      "Let only the dominant region make all future decisions to keep things simple"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A documented async process that allows contribution and review from any time zone removes the structural bias toward one region's working hours.",
+    "source": "Generated (based on Remote Work Collaboration theory)",
+    "tags": [
+      "Remote Work",
+      "Collaboration",
+      "Behavioral"
+    ],
+    "company": [
+      "GitLab",
+      "Microsoft",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0066",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Giving Constructive Criticism",
+    "difficulty": "Easy",
+    "question": "What is a hallmark of constructive (as opposed to purely negative) criticism?",
+    "options": [
+      "It focuses on the person's character rather than their behavior",
+      "It focuses on specific, actionable behavior and includes a path to improve",
+      "It is delivered publicly for maximum visibility",
+      "It avoids offering any suggestions for improvement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Constructive feedback targets specific, changeable behavior and offers a path forward, rather than attacking character.",
+    "source": "Generated (based on Giving Constructive Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Netflix",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0067",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Giving Constructive Criticism",
+    "difficulty": "Easy",
+    "question": "Which setting is generally best for delivering critical feedback to an individual?",
+    "options": [
+      "In front of the whole team",
+      "Over a public group chat",
+      "A private one-on-one conversation",
+      "Via an anonymous note"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Private delivery preserves dignity and reduces defensiveness compared to public criticism.",
+    "source": "Generated (based on Giving Constructive Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Netflix",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0068",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Giving Constructive Criticism",
+    "difficulty": "Medium",
+    "question": "A common feedback framework suggests starting with a specific observation, then impact, then a suggestion. What is this generally called?",
+    "options": [
+      "The STAR method",
+      "The Eisenhower matrix",
+      "A performance improvement plan",
+      "Situation-Behavior-Impact (SBI) style feedback"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Situation-Behavior-Impact is a widely used structured feedback model distinct from STAR (used for interview answers) or PIPs.",
+    "source": "Generated (based on Giving Constructive Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Netflix",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0069",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Giving Constructive Criticism",
+    "difficulty": "Medium",
+    "question": "You need to give feedback about a recurring pattern, not a single incident. What is the best approach?",
+    "options": [
+      "Describe the pattern with multiple concrete examples rather than one isolated event",
+      "Wait for one dramatic incident to use as the sole example",
+      "Avoid mentioning the pattern to prevent conflict",
+      "Address it only through a formal written warning, skipping conversation entirely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Citing multiple concrete examples makes clear it is a pattern, not an isolated incident being unfairly generalized.",
+    "source": "Generated (based on Giving Constructive Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Netflix",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0070",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Giving Constructive Criticism",
+    "difficulty": "Hard",
+    "question": "You must give critical feedback to a peer who is emotionally invested in their work and prone to defensiveness. What approach is most likely to land well?",
+    "options": [
+      "Soften the feedback so much that the actual issue is left unclear",
+      "Lead with genuine respect for their effort, then give specific, behavior-focused feedback with a collaborative tone",
+      "Deliver the feedback bluntly with no framing to save time",
+      "Avoid giving the feedback at all to prevent conflict"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Balancing respect and clarity (neither overly blunt nor vague) tends to reduce defensiveness while still making the issue actionable.",
+    "source": "Generated (based on Giving Constructive Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Netflix",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0071",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Receiving Criticism",
+    "difficulty": "Easy",
+    "question": "What is the best immediate reaction when receiving unexpected critical feedback?",
+    "options": [
+      "Interrupt to defend yourself immediately",
+      "Dismiss the feedback outright",
+      "Listen fully and ask clarifying questions before responding",
+      "Walk away from the conversation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Listening fully before responding avoids reacting defensively before fully understanding the feedback.",
+    "source": "Generated (based on Receiving Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Self-Awareness",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0072",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Receiving Criticism",
+    "difficulty": "Easy",
+    "question": "Why is it useful to say \"thank you for the feedback\" even when it stings?",
+    "options": [
+      "It obligates you to fully agree with the feedback",
+      "It ends the conversation immediately",
+      "It is required by workplace policy everywhere",
+      "It signals openness and encourages people to keep giving honest feedback in the future"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Signaling openness encourages a culture of honest, ongoing feedback rather than people avoiding hard conversations with you.",
+    "source": "Generated (based on Receiving Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Self-Awareness",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0073",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Receiving Criticism",
+    "difficulty": "Medium",
+    "question": "You receive feedback you believe is factually inaccurate. What is the best response?",
+    "options": [
+      "Acknowledge the intent behind the feedback, then respectfully share the correcting information",
+      "Argue forcefully that the person is wrong",
+      "Accept it silently even though you believe it is inaccurate",
+      "Ignore the feedback entirely without response"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Acknowledging intent while respectfully correcting facts keeps the relationship constructive without conceding inaccurate information.",
+    "source": "Generated (based on Receiving Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Self-Awareness",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0074",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Receiving Criticism",
+    "difficulty": "Medium",
+    "question": "A pattern of similar feedback has come from multiple people over time. What is the best interpretation?",
+    "options": [
+      "It is a coincidence and can be dismissed",
+      "It likely reflects a real blind spot worth addressing, even if each instance felt minor",
+      "It means those people are colluding against you",
+      "It should be dismissed since no single instance was serious"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Convergent feedback from multiple independent sources is a strong signal of a real pattern, not coincidence.",
+    "source": "Generated (based on Receiving Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Self-Awareness",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0075",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Receiving Criticism",
+    "difficulty": "Hard",
+    "question": "You receive harsh feedback delivered poorly (blunt, emotional) but the underlying point seems valid. What is the most mature response?",
+    "options": [
+      "Dismiss the entire feedback because of the poor delivery",
+      "Respond with equally harsh feedback in return",
+      "Separate the delivery from the content, and focus on evaluating and acting on the valid underlying point",
+      "Report the person for the way it was delivered without addressing the substance"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mature feedback processing separates tone/delivery from substance, extracting the valid signal even from a poorly delivered message.",
+    "source": "Generated (based on Receiving Criticism theory)",
+    "tags": [
+      "Feedback",
+      "Self-Awareness",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0076",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Managing Up",
+    "difficulty": "Easy",
+    "question": "What does \"managing up\" generally mean?",
+    "options": [
+      "Managing employees who report to your manager",
+      "Criticizing your manager to peers",
+      "Avoiding all communication with your manager",
+      "Proactively communicating and working effectively with your own manager to align expectations"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Managing up is about proactively aligning with and supporting your manager, not managing people above them.",
+    "source": "Generated (based on Managing Up theory)",
+    "tags": [
+      "Managing Up",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0077",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Managing Up",
+    "difficulty": "Easy",
+    "question": "Which practice best supports managing up effectively?",
+    "options": [
+      "Giving your manager clear, concise status updates before they have to ask",
+      "Waiting for your manager to ask for every update",
+      "Hiding problems until they become large enough to escalate",
+      "Only communicating during scheduled annual reviews"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Proactive, concise updates reduce your manager's need to chase information and build trust.",
+    "source": "Generated (based on Managing Up theory)",
+    "tags": [
+      "Managing Up",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0078",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Managing Up",
+    "difficulty": "Medium",
+    "question": "Your manager sets a deadline you believe is unrealistic. What is the best way to manage up here?",
+    "options": [
+      "Agree to the deadline and quietly miss it later",
+      "Present the specific risks and propose a realistic alternative or reduced scope",
+      "Refuse the deadline without offering any alternative",
+      "Complain to peers instead of raising it with the manager"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Raising specific risks with an alternative gives the manager the information needed to make a good decision, rather than silent failure or blanket refusal.",
+    "source": "Generated (based on Managing Up theory)",
+    "tags": [
+      "Managing Up",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0079",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Managing Up",
+    "difficulty": "Medium",
+    "question": "Your manager has a very different working style from you (e.g., prefers detail vs. summaries). What is the best adaptation?",
+    "options": [
+      "Insist they adapt to your preferred style",
+      "Ignore the mismatch and communicate however is easiest for you",
+      "Adjust your communication format to match their preference while keeping the content accurate",
+      "Stop communicating updates altogether"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Adapting communication style to the manager's preference (without distorting content) is a core managing-up skill.",
+    "source": "Generated (based on Managing Up theory)",
+    "tags": [
+      "Managing Up",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0080",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Managing Up",
+    "difficulty": "Hard",
+    "question": "You believe your manager is making a decision that will hurt the team, but they outrank you and seem confident. What is the most effective approach?",
+    "options": [
+      "Publicly challenge the decision in a team meeting",
+      "Say nothing and let the team suffer the consequences",
+      "Go over your manager's head immediately without raising it with them first",
+      "Privately share your specific concerns and reasoning, framed around shared goals, while respecting their final call"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Privately raising well-reasoned, goal-aligned concerns respects the relationship and hierarchy while still surfacing important information before a final decision.",
+    "source": "Generated (based on Managing Up theory)",
+    "tags": [
+      "Managing Up",
+      "Communication",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Consulting Firms"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0081",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Delegation",
+    "difficulty": "Easy",
+    "question": "What is a common mistake when delegating a task?",
+    "options": [
+      "Giving the task without enough context or clear success criteria",
+      "Explaining the desired outcome clearly",
+      "Checking in periodically on progress",
+      "Matching the task to the person's skill level"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Delegating without context or clear success criteria is a classic failure mode — the person cannot succeed without knowing what \"done\" looks like.",
+    "source": "Generated (based on Delegation theory)",
+    "tags": [
+      "Delegation",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0082",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Delegation",
+    "difficulty": "Easy",
+    "question": "Why is delegation important for a growing team or leader?",
+    "options": [
+      "It removes all leader responsibility for outcomes",
+      "It frees up the leader's time while developing others' skills and ownership",
+      "It is only useful when the leader is too busy",
+      "It replaces the need for any leader involvement afterward"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Delegation scales a leader's impact and builds team capability, not just offloads work with no further involvement.",
+    "source": "Generated (based on Delegation theory)",
+    "tags": [
+      "Delegation",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0083",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Delegation",
+    "difficulty": "Medium",
+    "question": "You delegate a task but the person keeps returning to you with small decisions. What is the best next step?",
+    "options": [
+      "Take the task back entirely",
+      "Continue answering every small question indefinitely without addressing the pattern",
+      "Clarify their decision-making boundaries so they know what they can decide independently",
+      "Reprimand them for asking questions"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Clarifying decision-making boundaries addresses the root cause — unclear scope of authority — rather than just tolerating or punishing the behavior.",
+    "source": "Generated (based on Delegation theory)",
+    "tags": [
+      "Delegation",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0084",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Delegation",
+    "difficulty": "Medium",
+    "question": "What is the best way to match a delegated task to a team member?",
+    "options": [
+      "Always give the hardest tasks to the most senior person only",
+      "Assign tasks randomly to be fair",
+      "Give every task to whoever is fastest, regardless of learning opportunity",
+      "Consider both their current skill level and their growth goals"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Balancing current skill with growth goals develops the team over time, not just optimizes short-term speed.",
+    "source": "Generated (based on Delegation theory)",
+    "tags": [
+      "Delegation",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0085",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Delegation",
+    "difficulty": "Hard",
+    "question": "You delegated an important task, and the result is significantly below expectations close to the deadline. What is the most effective response?",
+    "options": [
+      "Assess whether the gap is due to unclear expectations, skill gaps, or execution, then address the specific root cause together",
+      "Redo the entire task yourself without discussion",
+      "Publicly criticize the person's performance",
+      "Avoid delegating anything important to anyone in the future"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Diagnosing the actual root cause (expectations vs. skill vs. execution) leads to a targeted fix, rather than overreacting or abandoning delegation altogether.",
+    "source": "Generated (based on Delegation theory)",
+    "tags": [
+      "Delegation",
+      "Leadership",
+      "Behavioral"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0086",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Risk Taking",
+    "difficulty": "Easy",
+    "question": "What best characterizes a \"calculated risk\" in a professional context?",
+    "options": [
+      "Any decision made without any analysis",
+      "A risk taken after weighing likely benefits, costs, and downside scenarios",
+      "Avoiding all risk entirely",
+      "A risk taken purely on gut feeling with no thought"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A calculated risk involves deliberate weighing of costs, benefits, and downside — distinguishing it from recklessness or risk-aversion.",
+    "source": "Generated (based on Risk Taking theory)",
+    "tags": [
+      "Risk",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Startups"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0087",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Risk Taking",
+    "difficulty": "Easy",
+    "question": "Why might an interviewer ask about a time you took a risk that failed?",
+    "options": [
+      "To disqualify anyone who has ever failed",
+      "To test unrelated technical skills",
+      "To assess how you evaluate risk and learn from a negative outcome",
+      "Because failed risks are required for the role"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The goal is understanding your risk evaluation process and resilience/learning, not punishing the fact that it failed.",
+    "source": "Generated (based on Risk Taking theory)",
+    "tags": [
+      "Risk",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Startups"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0088",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Risk Taking",
+    "difficulty": "Medium",
+    "question": "You are considering a risky approach that could significantly speed up a project but might also fail outright. What is a good practice before proceeding?",
+    "options": [
+      "Commit fully immediately without any validation",
+      "Avoid all risk regardless of potential benefit",
+      "Proceed without informing any stakeholders of the risk",
+      "Identify a way to test the riskiest assumption cheaply before committing fully"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Testing the riskiest assumption cheaply (de-risking) before full commitment is a standard way to manage upside potential with limited downside.",
+    "source": "Generated (based on Risk Taking theory)",
+    "tags": [
+      "Risk",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Startups"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0089",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Risk Taking",
+    "difficulty": "Medium",
+    "question": "A risk you took did not pay off as hoped. What is the most valuable follow-up action?",
+    "options": [
+      "Analyze what was knowable in advance versus what was truly unpredictable, to refine future risk judgment",
+      "Avoid all future risk-taking permanently",
+      "Blame the outcome entirely on bad luck without analysis",
+      "Hide the failed risk from your team or manager"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Distinguishing knowable-in-advance factors from true unpredictability sharpens future judgment, rather than overcorrecting to risk-aversion or avoiding accountability.",
+    "source": "Generated (based on Risk Taking theory)",
+    "tags": [
+      "Risk",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Startups"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0090",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Risk Taking",
+    "difficulty": "Hard",
+    "question": "You must choose between a safe option with modest guaranteed value and a risky option with much higher potential value but real chance of failure, and the decision is not easily reversible. What is the best decision process?",
+    "options": [
+      "Always choose the safe option regardless of context",
+      "Quantify the range of outcomes and probabilities as best as possible, and weigh them against how reversible/costly the downside is",
+      "Always choose the risky option since higher reward is always better",
+      "Flip a coin since the situation is inherently uncertain"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For high-stakes, low-reversibility decisions, structured evaluation of probability-weighted outcomes and downside cost is more sound than blanket rules or randomness.",
+    "source": "Generated (based on Risk Taking theory)",
+    "tags": [
+      "Risk",
+      "Judgment",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix",
+      "Startups"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0091",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Customer Focus",
+    "difficulty": "Easy",
+    "question": "What does \"customer obsession\" generally mean in a company culture context?",
+    "options": [
+      "Prioritizing internal politics over customer needs",
+      "Ignoring customer feedback in favor of internal opinions",
+      "Starting from customer needs and working backward to the solution",
+      "Only considering customers after a product ships"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Customer obsession means genuinely centering the customer's needs from the start of the process, not as an afterthought.",
+    "source": "Generated (based on Customer Focus theory)",
+    "tags": [
+      "Customer Obsession",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Zappos",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0092",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Customer Focus",
+    "difficulty": "Easy",
+    "question": "A customer reports a bug that is hard to reproduce. What is the best first step?",
+    "options": [
+      "Assume the customer is mistaken and close the ticket",
+      "Ignore the report since it is hard to reproduce",
+      "Ask the customer to stop using that feature",
+      "Gather as much specific detail as possible from the customer about their exact steps and environment"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Gathering specific reproduction details is the standard first step for hard-to-reproduce issues, rather than dismissing the report.",
+    "source": "Generated (based on Customer Focus theory)",
+    "tags": [
+      "Customer Obsession",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Zappos",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0093",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Customer Focus",
+    "difficulty": "Medium",
+    "question": "A feature loved by a small group of vocal customers would hurt usability for the majority. What is the best approach?",
+    "options": [
+      "Weigh the aggregate impact across the full customer base, not just the vocal minority, before deciding",
+      "Always prioritize the loudest customers",
+      "Ignore customer feedback altogether",
+      "Remove the feature immediately without analysis"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Customer focus means weighing overall customer impact, not simply satisfying whoever is loudest.",
+    "source": "Generated (based on Customer Focus theory)",
+    "tags": [
+      "Customer Obsession",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Zappos",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0094",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Customer Focus",
+    "difficulty": "Medium",
+    "question": "Internal deadlines pressure a team to ship a feature that customer research suggests is not ready. What is the most customer-focused response?",
+    "options": [
+      "Ship it anyway to hit the internal deadline regardless of research",
+      "Raise the research findings to stakeholders and propose adjusting scope or timeline",
+      "Ignore the customer research since it was inconvenient",
+      "Delay indefinitely without communicating a plan"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Surfacing research findings and proposing an adjustment keeps the decision informed by real customer impact rather than pure internal pressure.",
+    "source": "Generated (based on Customer Focus theory)",
+    "tags": [
+      "Customer Obsession",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Zappos",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0095",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Customer Focus",
+    "difficulty": "Hard",
+    "question": "Customer feedback is split — power users want more configuration options, while most users want simplicity. What is the most effective resolution approach?",
+    "options": [
+      "Pick whichever group is larger and ignore the other entirely",
+      "Add every requested option regardless of the impact on simplicity",
+      "Segment the customer base and design a solution (e.g., progressive disclosure) that serves both needs without compromising either",
+      "Avoid making any changes to avoid upsetting either group"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Segment-aware design (e.g. simple defaults with optional advanced settings) is a standard way to serve conflicting user needs without a binary tradeoff.",
+    "source": "Generated (based on Customer Focus theory)",
+    "tags": [
+      "Customer Obsession",
+      "Behavioral"
+    ],
+    "company": [
+      "Amazon",
+      "Zappos",
+      "Salesforce"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "beh_0096",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Diversity & Inclusion Awareness",
+    "difficulty": "Easy",
+    "question": "What is a practical way to make team meetings more inclusive of different communication styles?",
+    "options": [
+      "Only allow the most vocal participants to speak",
+      "Require every contribution to happen live in real time",
+      "Discourage written follow-up questions",
+      "Provide multiple ways to contribute, such as async written input alongside live discussion"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Offering multiple contribution channels accommodates different communication styles and comfort levels, increasing genuine participation.",
+    "source": "Generated (based on Diversity & Inclusion Awareness theory)",
+    "tags": [
+      "Diversity",
+      "Inclusion",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0097",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Diversity & Inclusion Awareness",
+    "difficulty": "Easy",
+    "question": "Why might a hiring panel be trained to use structured interview criteria?",
+    "options": [
+      "To reduce the influence of unconscious bias on hiring decisions",
+      "To make interviews shorter regardless of quality",
+      "To eliminate the need for any interview at all",
+      "To ensure every candidate is asked identical trick questions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Structured criteria applied consistently reduce the room for unconscious bias to affect the evaluation.",
+    "source": "Generated (based on Diversity & Inclusion Awareness theory)",
+    "tags": [
+      "Diversity",
+      "Inclusion",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "beh_0098",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Diversity & Inclusion Awareness",
+    "difficulty": "Medium",
+    "question": "A team member says a joke made them uncomfortable, but others found it harmless. What is the best response?",
+    "options": [
+      "Dismiss it since most people were not offended",
+      "Take the discomfort seriously and address it directly, regardless of others' reactions",
+      "Tell the person they are overreacting",
+      "Ignore it since intent was not to offend"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Taking impact seriously, not just majority reaction or intent, is central to building an inclusive environment.",
+    "source": "Generated (based on Diversity & Inclusion Awareness theory)",
+    "tags": [
+      "Diversity",
+      "Inclusion",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0099",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Diversity & Inclusion Awareness",
+    "difficulty": "Medium",
+    "question": "You notice one team member is repeatedly interrupted in meetings while others are not. What is a good way to address this?",
+    "options": [
+      "Ignore it since it may resolve itself",
+      "Tell the interrupted person to speak louder next time",
+      "Actively facilitate airtime by redirecting back to the interrupted person and naming the pattern if it continues",
+      "Address it only in a private complaint channel with no facilitation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Active facilitation in the moment directly addresses the pattern, rather than placing the burden solely on the person being interrupted.",
+    "source": "Generated (based on Diversity & Inclusion Awareness theory)",
+    "tags": [
+      "Diversity",
+      "Inclusion",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "beh_0100",
+    "level": "Level 14",
+    "category": "Behavioral",
+    "topic": "Diversity & Inclusion Awareness",
+    "difficulty": "Hard",
+    "question": "A well-intentioned policy change unintentionally disadvantages a specific group on the team. What is the most responsible way to handle this once discovered?",
+    "options": [
+      "Defend the policy since the intent was good",
+      "Quietly discontinue the policy without explanation",
+      "Dismiss concerns since only a subset of the team is affected",
+      "Acknowledge the unintended impact, gather input from those affected, and revise the policy collaboratively"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Acknowledging unintended impact and collaboratively revising the policy addresses the real harm, rather than relying on good intent or dismissing a minority impact.",
+    "source": "Generated (based on Diversity & Inclusion Awareness theory)",
+    "tags": [
+      "Diversity",
+      "Inclusion",
+      "Behavioral"
+    ],
+    "company": [
+      "Microsoft",
+      "Google",
+      "Salesforce"
+    ],
+    "estimatedTime": 60
+  }
+]

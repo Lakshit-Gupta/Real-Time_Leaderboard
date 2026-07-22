@@ -1,0 +1,2747 @@
+[
+  {
+    "id": "cs_0001",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Leadership Principles",
+    "difficulty": "Easy",
+    "question": "Amazon's \"Customer Obsession\" leadership principle emphasizes what?",
+    "options": [
+      "Starting with the customer and working backward",
+      "Prioritizing internal politics over customer needs",
+      "Following the loudest customer request only",
+      "Ignoring customer feedback after launch"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Customer Obsession is famously described as leaders starting with the customer and working backward, rather than starting from internal capability.",
+    "source": "Generated (based on Amazon Leadership Principles public information)",
+    "tags": [
+      "Amazon",
+      "Leadership Principles",
+      "Company Culture"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0002",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Leadership Principles",
+    "difficulty": "Easy",
+    "question": "Which Amazon leadership principle is most associated with being frugal and doing more with less?",
+    "options": [
+      "Bias for Action",
+      "Frugality",
+      "Insist on the Highest Standards",
+      "Earn Trust"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Frugality specifically emphasizes accomplishing more with fewer resources.",
+    "source": "Generated (based on Amazon Leadership Principles public information)",
+    "tags": [
+      "Amazon",
+      "Leadership Principles",
+      "Company Culture"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0003",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Leadership Principles",
+    "difficulty": "Medium",
+    "question": "In an Amazon-style behavioral interview, a candidate is asked for an example of \"Bias for Action.\" What best fits this principle?",
+    "options": [
+      "A time they delayed a decision for months to gather more data",
+      "A time they refused to make any decision without full consensus",
+      "A time they made a well-reasoned decision quickly despite incomplete information",
+      "A time they avoided taking any calculated risk"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\"Bias for Action\" values calculated speed — many decisions are reversible and do not require exhaustive analysis before acting.",
+    "source": "Generated (based on Amazon Leadership Principles public information)",
+    "tags": [
+      "Amazon",
+      "Leadership Principles",
+      "Company Culture"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0004",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Leadership Principles",
+    "difficulty": "Medium",
+    "question": "What is the purpose of Amazon's \"Disagree and Commit\" principle?",
+    "options": [
+      "To require unanimous agreement before any decision",
+      "To let dissenters ignore a decision they disagree with",
+      "To discourage raising any disagreement at all",
+      "To let people voice respectful disagreement, but fully commit to the team's decision once made"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Disagree and Commit allows healthy debate, but expects full commitment to execution once a decision is reached, even by those who disagreed.",
+    "source": "Generated (based on Amazon Leadership Principles public information)",
+    "tags": [
+      "Amazon",
+      "Leadership Principles",
+      "Company Culture"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0005",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Leadership Principles",
+    "difficulty": "Hard",
+    "question": "A candidate's story shows they were \"right, a lot\" by making a good call, but they never mention consulting any data or diverse perspectives. Why might this weaken the answer against the \"Are Right, A Lot\" principle?",
+    "options": [
+      "That principle explicitly emphasizes strong judgment informed by seeking out diverse perspectives, not just being right by instinct",
+      "The principle only cares about the final outcome, not the process",
+      "Being right by instinct is exactly what interviewers want to hear",
+      "Data and diverse perspectives are irrelevant to this specific principle"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Amazon's published description of \"Are Right, A Lot\" explicitly ties good judgment to seeking out diverse perspectives, not just an instinctively correct outcome.",
+    "source": "Generated (based on Amazon Leadership Principles public information)",
+    "tags": [
+      "Amazon",
+      "Leadership Principles",
+      "Company Culture"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0006",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Hiring Philosophy",
+    "difficulty": "Easy",
+    "question": "What does \"Googleyness\" broadly refer to in Google's hiring evaluation?",
+    "options": [
+      "A specific programming language proficiency requirement",
+      "A set of soft attributes like comfort with ambiguity and intellectual humility that align with the culture",
+      "A minimum required years of experience",
+      "A single standardized personality test score"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\"Googleyness\" is a qualitative cultural-fit dimension, not a technical or tenure requirement.",
+    "source": "Generated (based on Google Hiring Philosophy public information)",
+    "tags": [
+      "Google",
+      "Hiring",
+      "Company Culture"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0007",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Hiring Philosophy",
+    "difficulty": "Easy",
+    "question": "Historically, why did Google move away from asking classic \"brainteaser\" interview questions (e.g. manhole cover riddles)?",
+    "options": [
+      "They were banned by government regulation",
+      "Candidates complained they took too long",
+      "Internal analysis found they did not meaningfully predict job performance",
+      "They were replaced entirely by personality tests"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Google's own internal data review found brainteasers had little correlation with actual job performance, leading to their decline in favor of structured behavioral/technical questions.",
+    "source": "Generated (based on Google Hiring Philosophy public information)",
+    "tags": [
+      "Google",
+      "Hiring",
+      "Company Culture"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0008",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Hiring Philosophy",
+    "difficulty": "Medium",
+    "question": "Google's interview process traditionally uses multiple independent interviewers per candidate. What is the main reason for this?",
+    "options": [
+      "To make the process take as long as possible",
+      "To let one interviewer make the whole decision",
+      "To require candidates to repeat the same answer many times",
+      "To reduce the effect of any single interviewer's bias on the overall hiring decision"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Aggregating independent assessments across multiple interviewers is a structured technique to reduce single-rater bias.",
+    "source": "Generated (based on Google Hiring Philosophy public information)",
+    "tags": [
+      "Google",
+      "Hiring",
+      "Company Culture"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0009",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Hiring Philosophy",
+    "difficulty": "Medium",
+    "question": "What role does a hiring committee typically play in Google's process, distinct from the interviewers themselves?",
+    "options": [
+      "They review interview feedback collectively and make the hiring decision, separate from the interviewers",
+      "They conduct the technical interviews personally",
+      "They are the same people as the interviewers",
+      "They only handle salary negotiation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The hiring committee reviews aggregated interviewer feedback and decides, keeping the interviewers' assessments separate from the final call — reducing individual influence.",
+    "source": "Generated (based on Google Hiring Philosophy public information)",
+    "tags": [
+      "Google",
+      "Hiring",
+      "Company Culture"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0010",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Hiring Philosophy",
+    "difficulty": "Hard",
+    "question": "Why might a structured interview scorecard (rating specific competencies rather than an overall gut impression) improve hiring decisions?",
+    "options": [
+      "It removes the need for any interviewer training",
+      "It reduces halo-effect bias where one strong impression skews the rating of unrelated competencies",
+      "It guarantees every hire will succeed",
+      "It eliminates the need for a hiring committee"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rating discrete, defined competencies limits the halo effect, where a strong overall impression can distort ratings of unrelated skills.",
+    "source": "Generated (based on Google Hiring Philosophy public information)",
+    "tags": [
+      "Google",
+      "Hiring",
+      "Company Culture"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0011",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Microsoft Growth Mindset Culture",
+    "difficulty": "Easy",
+    "question": "Microsoft's well-known cultural shift under Satya Nadella emphasized moving from a \"know-it-all\" culture to what?",
+    "options": [
+      "A strictly hierarchical command culture",
+      "A culture focused solely on individual competition",
+      "A \"learn-it-all\" growth mindset culture",
+      "A culture that discourages any risk-taking"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The \"learn-it-all vs. know-it-all\" framing is central to Microsoft's publicly discussed cultural transformation.",
+    "source": "Generated (based on Microsoft Growth Mindset Culture public information)",
+    "tags": [
+      "Microsoft",
+      "Growth Mindset",
+      "Company Culture"
+    ],
+    "company": [
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0012",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Microsoft Growth Mindset Culture",
+    "difficulty": "Easy",
+    "question": "In a growth-mindset culture, how is failure typically framed?",
+    "options": [
+      "As something to be hidden at all costs",
+      "As proof the person is not suited for the role",
+      "As irrelevant to future performance",
+      "As a learning opportunity if reflected on and acted upon"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Growth mindset culture reframes failure as a source of learning, not simply a permanent judgment on ability.",
+    "source": "Generated (based on Microsoft Growth Mindset Culture public information)",
+    "tags": [
+      "Microsoft",
+      "Growth Mindset",
+      "Company Culture"
+    ],
+    "company": [
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0013",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Microsoft Growth Mindset Culture",
+    "difficulty": "Medium",
+    "question": "How might a growth-mindset culture change the way performance reviews are conducted?",
+    "options": [
+      "Emphasizing learning and progress over time rather than only stack-ranking against peers",
+      "Removing performance reviews entirely",
+      "Focusing solely on comparing employees against each other",
+      "Basing all reviews only on a single annual test score"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A growth mindset shifts emphasis toward individual learning and improvement, contrasted with purely comparative stack-ranking systems.",
+    "source": "Generated (based on Microsoft Growth Mindset Culture public information)",
+    "tags": [
+      "Microsoft",
+      "Growth Mindset",
+      "Company Culture"
+    ],
+    "company": [
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0014",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Microsoft Growth Mindset Culture",
+    "difficulty": "Medium",
+    "question": "A manager in a growth-mindset culture receives a project failure report from a team member. What response best fits that culture?",
+    "options": [
+      "Immediately reassign the team member to a lesser role",
+      "Discuss what was learned and how to apply it going forward",
+      "Publicly criticize them in front of peers",
+      "Avoid discussing the failure at all"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Focusing the conversation on extracted learning and forward application is consistent with a growth-mindset response to failure.",
+    "source": "Generated (based on Microsoft Growth Mindset Culture public information)",
+    "tags": [
+      "Microsoft",
+      "Growth Mindset",
+      "Company Culture"
+    ],
+    "company": [
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0015",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Microsoft Growth Mindset Culture",
+    "difficulty": "Hard",
+    "question": "Why is genuine psychological safety considered a prerequisite for a growth-mindset culture to actually work, rather than just being a slogan?",
+    "options": [
+      "Psychological safety has no real connection to learning behavior",
+      "It is only relevant to entry-level employees",
+      "Without safety to admit mistakes or gaps, employees will hide problems instead of surfacing them for learning",
+      "It guarantees that all projects will succeed"
+    ],
+    "correctAnswer": 2,
+    "explanation": "If admitting mistakes carries real career risk, people conceal problems rather than surface them — undermining the learning the culture is meant to enable.",
+    "source": "Generated (based on Microsoft Growth Mindset Culture public information)",
+    "tags": [
+      "Microsoft",
+      "Growth Mindset",
+      "Company Culture"
+    ],
+    "company": [
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0016",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Meta Execution Culture",
+    "difficulty": "Easy",
+    "question": "Meta (Facebook) is historically known for a cultural motto associated with fast, iterative shipping. Which phrase is most associated with this?",
+    "options": [
+      "\"Measure twice, cut once\"",
+      "\"Slow and steady wins the race\"",
+      "\"Perfect is the enemy of shipped, so never ship\"",
+      "\"Move fast\""
+    ],
+    "correctAnswer": 3,
+    "explanation": "\"Move fast\" (originally \"move fast and break things,\" later refined) is a well-known part of the company's early public culture.",
+    "source": "Generated (based on Meta Execution Culture public information)",
+    "tags": [
+      "Meta",
+      "Execution",
+      "Company Culture"
+    ],
+    "company": [
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0017",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Meta Execution Culture",
+    "difficulty": "Easy",
+    "question": "What is a common criticism of an extreme \"move fast\" culture without adequate safeguards?",
+    "options": [
+      "It can lead to instability, technical debt, or unintended user-facing issues if unchecked",
+      "It always improves code quality automatically",
+      "It removes the need for testing entirely and safely",
+      "It has no tradeoffs at all"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Speed without safeguards can trade short-term velocity for stability, quality, or user trust — a well-documented tradeoff of aggressive iteration cultures.",
+    "source": "Generated (based on Meta Execution Culture public information)",
+    "tags": [
+      "Meta",
+      "Execution",
+      "Company Culture"
+    ],
+    "company": [
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0018",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Meta Execution Culture",
+    "difficulty": "Medium",
+    "question": "Why do many fast-iterating engineering cultures pair \"move fast\" with strong feature-flagging and rollback practices?",
+    "options": [
+      "To make deployments permanent and irreversible",
+      "To limit the blast radius of a bad change and allow quick recovery without slowing down shipping",
+      "To eliminate the need for monitoring after launch",
+      "To require manual approval for every single commit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Feature flags and rollback let teams ship quickly while containing the impact of mistakes — a way to keep speed without unchecked risk.",
+    "source": "Generated (based on Meta Execution Culture public information)",
+    "tags": [
+      "Meta",
+      "Execution",
+      "Company Culture"
+    ],
+    "company": [
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0019",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Meta Execution Culture",
+    "difficulty": "Medium",
+    "question": "What is a typical purpose of internal \"hackathon\" style events at fast-moving tech companies?",
+    "options": [
+      "To replace the standard performance review process",
+      "To finalize production-ready code for immediate release without review",
+      "To let engineers rapidly prototype and validate new ideas outside normal roadmap constraints",
+      "To assign permanent headcount to every idea generated"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Hackathons are typically a low-stakes space for rapid prototyping and idea validation, not a substitute for standard release processes.",
+    "source": "Generated (based on Meta Execution Culture public information)",
+    "tags": [
+      "Meta",
+      "Execution",
+      "Company Culture"
+    ],
+    "company": [
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0020",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Meta Execution Culture",
+    "difficulty": "Hard",
+    "question": "A fast-execution culture ships a feature that turns out to have a significant unintended user-impact issue discovered post-launch. What does a mature version of this culture typically do next?",
+    "options": [
+      "Ignore the issue since shipping fast is more important than fixing it",
+      "Publicly blame the individual engineer involved",
+      "Slow down all future shipping permanently as an overcorrection",
+      "Quickly roll back or mitigate, then conduct a blameless post-mortem to improve future safeguards"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A mature fast-moving culture pairs speed with quick mitigation and blameless learning, rather than ignoring harm or permanently abandoning velocity.",
+    "source": "Generated (based on Meta Execution Culture public information)",
+    "tags": [
+      "Meta",
+      "Execution",
+      "Company Culture"
+    ],
+    "company": [
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0021",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Netflix Freedom & Responsibility Culture",
+    "difficulty": "Easy",
+    "question": "Netflix's widely publicized culture memo is closely associated with which pairing of concepts?",
+    "options": [
+      "Freedom and Responsibility",
+      "Hierarchy and Control",
+      "Secrecy and Compliance",
+      "Uniformity and Process"
+    ],
+    "correctAnswer": 0,
+    "explanation": "\"Freedom and Responsibility\" is the well-known core pairing described in Netflix's publicly shared culture materials.",
+    "source": "Generated (based on Netflix Freedom & Responsibility Culture public information)",
+    "tags": [
+      "Netflix",
+      "Culture",
+      "Company Culture"
+    ],
+    "company": [
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0022",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Netflix Freedom & Responsibility Culture",
+    "difficulty": "Easy",
+    "question": "In this style of culture, what typically replaces heavy approval processes for routine decisions?",
+    "options": [
+      "Requiring every decision to go through multiple approval layers",
+      "Trusting employees to use good judgment within their area of ownership",
+      "Removing all guidelines entirely with no context given",
+      "Assigning a single person to approve all decisions company-wide"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The model relies on well-informed employee judgment rather than layered approvals for routine decisions.",
+    "source": "Generated (based on Netflix Freedom & Responsibility Culture public information)",
+    "tags": [
+      "Netflix",
+      "Culture",
+      "Company Culture"
+    ],
+    "company": [
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0023",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Netflix Freedom & Responsibility Culture",
+    "difficulty": "Medium",
+    "question": "Why does this kind of high-freedom culture typically require unusually high transparency about company context and strategy?",
+    "options": [
+      "Transparency has no real connection to decision quality",
+      "It is only needed for legal compliance reasons",
+      "Employees need enough context to make good independent judgment calls aligned with company goals",
+      "It replaces the need for any strategy communication at all"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Freedom without context leads to inconsistent or misaligned decisions; sharing strategic context helps employees make good calls \"freely.\"",
+    "source": "Generated (based on Netflix Freedom & Responsibility Culture public information)",
+    "tags": [
+      "Netflix",
+      "Culture",
+      "Company Culture"
+    ],
+    "company": [
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0024",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Netflix Freedom & Responsibility Culture",
+    "difficulty": "Medium",
+    "question": "A \"high performance\" culture that pairs freedom with high standards typically manages underperformance how?",
+    "options": [
+      "By ignoring performance gaps indefinitely",
+      "By adding many layers of process to catch every mistake",
+      "By avoiding any honest conversation about performance at all",
+      "Through direct, honest feedback and a generous severance approach if a role is not the right fit"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This model favors direct feedback and clean separations over heavy process or avoidance, consistent with publicly described \"keeper test\" style thinking.",
+    "source": "Generated (based on Netflix Freedom & Responsibility Culture public information)",
+    "tags": [
+      "Netflix",
+      "Culture",
+      "Company Culture"
+    ],
+    "company": [
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0025",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Netflix Freedom & Responsibility Culture",
+    "difficulty": "Hard",
+    "question": "What is a commonly cited risk of a \"freedom and responsibility\" culture if company context-sharing or hiring bar is inconsistent?",
+    "options": [
+      "Employees may make poorly informed or misaligned decisions, or the high-trust model may not hold together evenly across teams",
+      "The culture becomes strictly hierarchical automatically",
+      "It guarantees uniformly excellent decisions regardless of context",
+      "It removes any need for a hiring bar at all"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This model depends heavily on context-sharing and a consistently high hiring bar; if either weakens, the \"freedom\" side can produce inconsistent or poor decisions.",
+    "source": "Generated (based on Netflix Freedom & Responsibility Culture public information)",
+    "tags": [
+      "Netflix",
+      "Culture",
+      "Company Culture"
+    ],
+    "company": [
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0026",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Apple Design Philosophy",
+    "difficulty": "Easy",
+    "question": "Apple's product design philosophy is most closely associated with which principle?",
+    "options": [
+      "Maximizing configuration options for every user",
+      "Simplicity and tight integration between hardware and software",
+      "Prioritizing the lowest possible price above all else",
+      "Releasing as many product variants as possible"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Apple's well-known design approach favors simplicity and deep hardware-software integration over configuration-heavy alternatives.",
+    "source": "Generated (based on Apple Design Philosophy public information)",
+    "tags": [
+      "Apple",
+      "Design",
+      "Company Culture"
+    ],
+    "company": [
+      "Apple"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0027",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Apple Design Philosophy",
+    "difficulty": "Easy",
+    "question": "What does \"saying no to a thousand things\" (a phrase associated with Apple's product philosophy) refer to?",
+    "options": [
+      "Rejecting all customer feedback",
+      "Refusing to ship any new products",
+      "Deliberately limiting scope and features to focus on doing fewer things exceptionally well",
+      "Avoiding all product testing before release"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The phrase describes intentional focus — declining many possible features/directions to concentrate on a smaller, well-executed set.",
+    "source": "Generated (based on Apple Design Philosophy public information)",
+    "tags": [
+      "Apple",
+      "Design",
+      "Company Culture"
+    ],
+    "company": [
+      "Apple"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0028",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Apple Design Philosophy",
+    "difficulty": "Medium",
+    "question": "Why does a design philosophy centered on tight hardware-software integration often enable smoother user experiences?",
+    "options": [
+      "Because it always makes products cheaper to manufacture",
+      "Because it eliminates the need for any quality testing",
+      "Because it requires no design collaboration between teams",
+      "Because the software can be optimized specifically for the known hardware it will run on"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Owning both hardware and software allows optimization specific to that combination, often producing more consistent performance than generic cross-hardware software.",
+    "source": "Generated (based on Apple Design Philosophy public information)",
+    "tags": [
+      "Apple",
+      "Design",
+      "Company Culture"
+    ],
+    "company": [
+      "Apple"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0029",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Apple Design Philosophy",
+    "difficulty": "Medium",
+    "question": "A design-driven culture that prioritizes user experience above internal engineering convenience is likely to make which kind of tradeoff?",
+    "options": [
+      "Accepting more engineering complexity internally to deliver a simpler experience externally",
+      "Always choosing whichever internal implementation is easiest regardless of user impact",
+      "Avoiding design reviews to ship faster",
+      "Letting engineering constraints fully dictate the user-facing design"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Design-led cultures often absorb internal complexity to keep the external experience simple — the opposite of letting engineering ease dictate UX.",
+    "source": "Generated (based on Apple Design Philosophy public information)",
+    "tags": [
+      "Apple",
+      "Design",
+      "Company Culture"
+    ],
+    "company": [
+      "Apple"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0030",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Apple Design Philosophy",
+    "difficulty": "Hard",
+    "question": "What is a common criticism leveled at a highly opinionated, tightly-integrated design philosophy?",
+    "options": [
+      "It always produces the cheapest possible products",
+      "It can limit flexibility or customization for users and third-party developers compared to more open ecosystems",
+      "It guarantees no design disagreements will ever occur internally",
+      "It removes any need for user research"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A frequent critique of tightly controlled ecosystems is reduced flexibility/customization relative to more open platforms — a real tradeoff of the approach.",
+    "source": "Generated (based on Apple Design Philosophy public information)",
+    "tags": [
+      "Apple",
+      "Design",
+      "Company Culture"
+    ],
+    "company": [
+      "Apple"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0031",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "FAANG System Design Interview Format",
+    "difficulty": "Easy",
+    "question": "What is typically the first step recommended when starting a system design interview?",
+    "options": [
+      "Immediately draw a detailed database schema",
+      "Start writing code for one specific microservice",
+      "Clarify functional and non-functional requirements before proposing any architecture",
+      "Ask the interviewer to just tell you the correct answer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Clarifying requirements (scale, use cases, constraints) before designing prevents building the wrong solution efficiently.",
+    "source": "Generated (based on FAANG System Design Interview Format public information)",
+    "tags": [
+      "System Design",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0032",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "FAANG System Design Interview Format",
+    "difficulty": "Easy",
+    "question": "What is a common non-functional requirement discussed early in system design interviews?",
+    "options": [
+      "The exact font used in the UI",
+      "The specific interviewer's personal preference",
+      "The color scheme of the admin dashboard",
+      "Expected scale (requests per second, data volume, users)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Scale expectations directly shape architectural choices (e.g. caching, sharding, replication needs), making them a key early discussion point.",
+    "source": "Generated (based on FAANG System Design Interview Format public information)",
+    "tags": [
+      "System Design",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0033",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "FAANG System Design Interview Format",
+    "difficulty": "Medium",
+    "question": "Why do interviewers often push candidates to discuss tradeoffs (e.g. SQL vs NoSQL) rather than a single \"correct\" answer?",
+    "options": [
+      "System design decisions are context-dependent, and articulating tradeoffs reveals deeper understanding than a memorized answer",
+      "There is always exactly one correct choice regardless of context",
+      "Tradeoff discussion is only used to waste interview time",
+      "Interviewers want candidates to avoid ever committing to a decision"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Real system design has few universally \"correct\" answers; explaining tradeoffs demonstrates the deeper reasoning interviewers are trying to assess.",
+    "source": "Generated (based on FAANG System Design Interview Format public information)",
+    "tags": [
+      "System Design",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0034",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "FAANG System Design Interview Format",
+    "difficulty": "Medium",
+    "question": "In a system design interview, why might a candidate intentionally start with a simple design before adding complexity?",
+    "options": [
+      "Because complex designs are never appropriate in interviews",
+      "To establish a working baseline, then layer in scaling, reliability, and edge-case handling incrementally",
+      "Because interviewers penalize any mention of scaling",
+      "Because the simple design is always the final expected answer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Starting simple and iterating demonstrates structured thinking and gives the interviewer visibility into the reasoning behind each added layer of complexity.",
+    "source": "Generated (based on FAANG System Design Interview Format public information)",
+    "tags": [
+      "System Design",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0035",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "FAANG System Design Interview Format",
+    "difficulty": "Hard",
+    "question": "A candidate proposes a technically sound design but never explicitly discusses failure modes (e.g., what happens if a service or database goes down). Why is this a significant gap in a senior-level system design interview?",
+    "options": [
+      "Failure modes are irrelevant since production systems never fail",
+      "Only junior candidates are expected to discuss failure modes",
+      "Reliability and graceful degradation under failure are core to real-world system design, not an optional add-on",
+      "Discussing failure modes is considered overengineering in interviews"
+    ],
+    "correctAnswer": 2,
+    "explanation": "At senior levels, reasoning about failure modes and graceful degradation is considered essential system design maturity, not an optional extra.",
+    "source": "Generated (based on FAANG System Design Interview Format public information)",
+    "tags": [
+      "System Design",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0036",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Behavioral Interview Rubrics at Big Tech",
+    "difficulty": "Easy",
+    "question": "What is a \"rubric\" in the context of structured behavioral interviews?",
+    "options": [
+      "A single interviewer's personal gut feeling",
+      "A script the candidate must read verbatim",
+      "A random scoring method with no defined criteria",
+      "A defined set of criteria used to consistently evaluate candidate answers"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A rubric defines specific, consistent evaluation criteria, reducing subjectivity compared to unstructured gut-feel assessment.",
+    "source": "Generated (based on Behavioral Interview Rubrics at Big Tech public information)",
+    "tags": [
+      "Behavioral Interview",
+      "Rubrics",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0037",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Behavioral Interview Rubrics at Big Tech",
+    "difficulty": "Easy",
+    "question": "Why do many large tech companies train interviewers to take detailed notes during behavioral interviews?",
+    "options": [
+      "To support an accurate, evidence-based write-up for the hiring decision later",
+      "Notes are only used to fill interview time",
+      "Notes replace the need for any interview questions",
+      "Notes are required only for legal recordkeeping and never reviewed"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Detailed notes let the interviewer (and later reviewers/hiring committees) evaluate the answer based on actual evidence, not memory or impression alone.",
+    "source": "Generated (based on Behavioral Interview Rubrics at Big Tech public information)",
+    "tags": [
+      "Behavioral Interview",
+      "Rubrics",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0038",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Behavioral Interview Rubrics at Big Tech",
+    "difficulty": "Medium",
+    "question": "Why might a behavioral interview rubric specifically look for \"specific, individual actions\" rather than general statements?",
+    "options": [
+      "General statements are always more informative than specifics",
+      "Specific actions are verifiable evidence of a candidate's actual contribution, unlike vague or generalized claims",
+      "Specificity is only relevant for technical interviews",
+      "Vague claims are easier to score consistently"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Specific, individual actions provide concrete, checkable evidence of the candidate's real contribution — the basis rubrics are built to evaluate.",
+    "source": "Generated (based on Behavioral Interview Rubrics at Big Tech public information)",
+    "tags": [
+      "Behavioral Interview",
+      "Rubrics",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0039",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Behavioral Interview Rubrics at Big Tech",
+    "difficulty": "Medium",
+    "question": "A candidate gives a strong story for one leadership-principle-style question but a weak one for another. How do structured interview processes typically handle this?",
+    "options": [
+      "The strongest single answer always determines the entire hiring outcome",
+      "The weakest single answer always disqualifies the candidate regardless of other evidence",
+      "Each competency area is generally evaluated on its own evidence rather than let one strong area fully offset a weak one",
+      "Only the very first answer given in the interview counts"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Structured evaluation typically scores each competency area independently, then synthesizes across areas — preventing one strong or weak answer from dominating unfairly.",
+    "source": "Generated (based on Behavioral Interview Rubrics at Big Tech public information)",
+    "tags": [
+      "Behavioral Interview",
+      "Rubrics",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0040",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Behavioral Interview Rubrics at Big Tech",
+    "difficulty": "Hard",
+    "question": "Why do interview training programs at large tech companies often specifically warn against the \"halo effect\" during behavioral interviews?",
+    "options": [
+      "The halo effect improves rubric consistency",
+      "It is only a concern in technical interviews, not behavioral ones",
+      "It has no measurable impact on hiring decisions",
+      "A strong first impression (e.g., confidence or eloquence) can bias the evaluation of unrelated competencies later in the interview"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The halo effect is a well-documented bias where one strong (or weak) trait skews perception of unrelated qualities — a key reason for training interviewers to evaluate discrete competencies independently.",
+    "source": "Generated (based on Behavioral Interview Rubrics at Big Tech public information)",
+    "tags": [
+      "Behavioral Interview",
+      "Rubrics",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0041",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Bar Raiser Process",
+    "difficulty": "Easy",
+    "question": "What is the general purpose of Amazon's \"Bar Raiser\" role in the hiring process?",
+    "options": [
+      "An interviewer trained to help ensure the candidate raises, not lowers, the overall hiring bar",
+      "The hiring manager who makes the final decision alone",
+      "A candidate's internal reference contact",
+      "The person responsible only for salary negotiation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Bar Raiser is a specially trained interviewer whose role is to help protect the overall quality bar of hiring decisions, independent of hiring-manager pressure to fill the role quickly.",
+    "source": "Generated (based on Amazon Bar Raiser Process public information)",
+    "tags": [
+      "Amazon",
+      "Bar Raiser",
+      "Hiring Process"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0042",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Bar Raiser Process",
+    "difficulty": "Easy",
+    "question": "Why is a Bar Raiser typically someone outside the immediate hiring team?",
+    "options": [
+      "Because people outside the team always have better technical skills",
+      "To provide a more objective perspective, less influenced by pressure to fill the specific open role quickly",
+      "Because internal team members are not allowed to interview at all",
+      "Because it reduces the total number of interview rounds needed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Being outside the immediate team reduces the incentive to relax standards just to fill an urgent headcount need.",
+    "source": "Generated (based on Amazon Bar Raiser Process public information)",
+    "tags": [
+      "Amazon",
+      "Bar Raiser",
+      "Hiring Process"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0043",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Bar Raiser Process",
+    "difficulty": "Medium",
+    "question": "In Amazon's process, what happens if a Bar Raiser has significant reservations about a candidate that other interviewers do not share?",
+    "options": [
+      "Their opinion is automatically disregarded in favor of the hiring manager",
+      "They have no more influence than any other single interviewer",
+      "Their input carries significant weight and can meaningfully influence or override the overall hiring decision",
+      "The decision is made purely by majority vote with no special weighting"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Bar Raiser role specifically carries elevated influence in the debrief precisely to safeguard the bar even against hiring-manager pressure.",
+    "source": "Generated (based on Amazon Bar Raiser Process public information)",
+    "tags": [
+      "Amazon",
+      "Bar Raiser",
+      "Hiring Process"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0044",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Bar Raiser Process",
+    "difficulty": "Medium",
+    "question": "Why might a company use a dedicated bar-raiser-style role instead of relying solely on the hiring manager's judgment?",
+    "options": [
+      "Because hiring managers are never involved in hiring decisions",
+      "Because it eliminates the need for structured interview questions",
+      "Because it guarantees the hiring manager will always disagree with the outcome",
+      "To counterbalance potential pressure or bias toward filling an open role quickly at the expense of quality"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A dedicated, differently-incentivized evaluator helps counteract the natural pressure a hiring manager may feel to close an open requisition quickly.",
+    "source": "Generated (based on Amazon Bar Raiser Process public information)",
+    "tags": [
+      "Amazon",
+      "Bar Raiser",
+      "Hiring Process"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0045",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Amazon Bar Raiser Process",
+    "difficulty": "Hard",
+    "question": "What is the underlying organizational risk that a bar-raiser-style process is specifically designed to mitigate over time?",
+    "options": [
+      "Gradual erosion of hiring standards (\"bar lowering\") as urgency to fill roles increases across the company",
+      "The risk of hiring too few candidates overall",
+      "The risk of interviews taking too little time",
+      "The risk of candidates receiving too much interview feedback"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Without a countervailing mechanism, hiring bars can erode over time under repeated pressure to fill roles quickly — the core risk this role structurally addresses.",
+    "source": "Generated (based on Amazon Bar Raiser Process public information)",
+    "tags": [
+      "Amazon",
+      "Bar Raiser",
+      "Hiring Process"
+    ],
+    "company": [
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0046",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Structured Interview Process",
+    "difficulty": "Easy",
+    "question": "What does it mean for an interview process to be \"structured\"?",
+    "options": [
+      "Each interviewer asks whatever comes to mind in the moment",
+      "The same core set of questions and evaluation criteria are used consistently across candidates for a given role",
+      "Only one interviewer is involved in the entire process",
+      "No notes or written feedback are collected"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Structure means consistent questions/criteria across candidates, which improves fairness and comparability versus fully improvised interviews.",
+    "source": "Generated (based on Google Structured Interview Process public information)",
+    "tags": [
+      "Google",
+      "Structured Interviews",
+      "Hiring Process"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0047",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Structured Interview Process",
+    "difficulty": "Easy",
+    "question": "Why does research generally favor structured interviews over unstructured ones for predicting job performance?",
+    "options": [
+      "Unstructured interviews are always faster to conduct",
+      "Structured interviews eliminate the need for any interviewer training",
+      "Consistent questions and criteria reduce variability and bias compared to freeform conversations",
+      "Unstructured interviews are more consistent across interviewers"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A large body of industrial psychology research shows structured interviews correlate more strongly with job performance than unstructured ones, due to reduced variability and bias.",
+    "source": "Generated (based on Google Structured Interview Process public information)",
+    "tags": [
+      "Google",
+      "Structured Interviews",
+      "Hiring Process"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0048",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Structured Interview Process",
+    "difficulty": "Medium",
+    "question": "In Google's process, why are interview packets (written feedback) submitted to a hiring committee rather than the interviewer deciding alone?",
+    "options": [
+      "Because interviewers are not trusted to write feedback at all",
+      "Because it removes the need for any interviews",
+      "Because it always speeds up the hiring timeline",
+      "To separate the interviewer's assessment from the final hiring decision, adding a layer of independent review"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Separating assessment from decision-making is a bias-reduction technique — the interviewer's judgment is one input, not the sole determinant.",
+    "source": "Generated (based on Google Structured Interview Process public information)",
+    "tags": [
+      "Google",
+      "Structured Interviews",
+      "Hiring Process"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0049",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Structured Interview Process",
+    "difficulty": "Medium",
+    "question": "Why might a structured process use the same interview question across many candidates for the same role?",
+    "options": [
+      "It allows more direct, apples-to-apples comparison of answers across candidates",
+      "It makes the question easier to leak, which is intentional",
+      "It guarantees every candidate will give the same answer",
+      "It removes the need for any evaluation criteria"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Using consistent questions enables fairer comparison, since differences in answers reflect the candidates rather than differing question difficulty.",
+    "source": "Generated (based on Google Structured Interview Process public information)",
+    "tags": [
+      "Google",
+      "Structured Interviews",
+      "Hiring Process"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0050",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Google Structured Interview Process",
+    "difficulty": "Hard",
+    "question": "A structured interview process still shows inconsistent outcomes across different interview panels. What is a likely root cause worth investigating?",
+    "options": [
+      "The existence of a rubric guarantees perfect consistency automatically",
+      "Interviewer calibration — even with a fixed rubric, individual interviewers may apply the scoring criteria differently without regular calibration sessions",
+      "The candidates themselves are always the sole cause of any inconsistency",
+      "Structured processes cannot have any inconsistency by definition"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Even a well-designed rubric requires ongoing interviewer calibration (norming sessions, feedback on past scoring) to stay consistent in practice — a known limitation of structured interviewing.",
+    "source": "Generated (based on Google Structured Interview Process public information)",
+    "tags": [
+      "Google",
+      "Structured Interviews",
+      "Hiring Process"
+    ],
+    "company": [
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0051",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Coding Interview Formats",
+    "difficulty": "Easy",
+    "question": "What is a key difference between a \"whiteboard\" coding interview and an \"online IDE\" coding interview?",
+    "options": [
+      "Whiteboard interviews always take longer than online ones",
+      "Online IDE interviews never involve algorithmic questions",
+      "Whether the candidate has access to compiler/runtime feedback (syntax checking, execution) while coding",
+      "Whiteboard interviews are always conducted remotely"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The core practical difference is compiler/runtime feedback availability — whiteboard interviews typically rely on the candidate reasoning through code without execution.",
+    "source": "Generated (based on Coding Interview Formats public information)",
+    "tags": [
+      "Coding Interview",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0052",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Coding Interview Formats",
+    "difficulty": "Easy",
+    "question": "Why do many companies now prefer collaborative online coding tools (e.g. shared editors) over pure whiteboard formats?",
+    "options": [
+      "They make the interview shorter automatically",
+      "They eliminate the need to explain your reasoning out loud",
+      "They remove the ability to ask clarifying questions",
+      "They better simulate a realistic coding environment and reduce the artificial memory burden of exact syntax"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Realistic tooling reduces artificial friction (like recalling exact syntax from memory) that does not reflect real day-to-day coding conditions.",
+    "source": "Generated (based on Coding Interview Formats public information)",
+    "tags": [
+      "Coding Interview",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0053",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Coding Interview Formats",
+    "difficulty": "Medium",
+    "question": "Why is \"thinking out loud\" during a coding interview commonly recommended, beyond just solving the problem correctly?",
+    "options": [
+      "It lets the interviewer follow your reasoning process, which is often weighted as heavily as the final solution",
+      "It has no impact on the evaluation at all",
+      "It is only relevant for junior-level candidates",
+      "It replaces the need to write any actual code"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Interviewers commonly evaluate the reasoning process, not just correctness — verbalizing thought process gives them visibility into that reasoning.",
+    "source": "Generated (based on Coding Interview Formats public information)",
+    "tags": [
+      "Coding Interview",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0054",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Coding Interview Formats",
+    "difficulty": "Medium",
+    "question": "A candidate solves a coding problem correctly but never discusses time or space complexity. What is a likely evaluation gap?",
+    "options": [
+      "Complexity analysis is irrelevant if the answer works at all",
+      "Complexity analysis is typically an expected part of demonstrating strong engineering judgment, not just producing a correct answer",
+      "Complexity discussion is only relevant for system design interviews",
+      "Correctness alone always satisfies senior-level bar"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Most coding interview rubrics explicitly expect complexity analysis as part of demonstrating engineering rigor beyond a merely-working solution.",
+    "source": "Generated (based on Coding Interview Formats public information)",
+    "tags": [
+      "Coding Interview",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0055",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Coding Interview Formats",
+    "difficulty": "Hard",
+    "question": "Two candidates produce equally correct solutions to the same coding problem, but one required several hints while the other solved it mostly independently. How do most interview rubrics treat this difference?",
+    "options": [
+      "Hints have no bearing on the final evaluation once the answer is correct",
+      "The candidate who used more hints is automatically rated higher for seeking help",
+      "The degree of independent problem-solving is typically factored into the evaluation, not just the final correctness",
+      "Only the first candidate to finish is rated favorably regardless of process"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Most structured coding rubrics explicitly weigh how much guidance was needed, since the final correct output alone does not capture independent problem-solving ability.",
+    "source": "Generated (based on Coding Interview Formats public information)",
+    "tags": [
+      "Coding Interview",
+      "Interview Format",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0056",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Take-Home Assignment Expectations",
+    "difficulty": "Easy",
+    "question": "What is a common purpose of a take-home coding assignment compared to a live coding interview?",
+    "options": [
+      "To eliminate the need for any further interview rounds",
+      "To test how fast a candidate can type",
+      "To replace all behavioral evaluation entirely",
+      "To evaluate work produced in a lower-pressure setting closer to real day-to-day conditions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Take-homes aim to reduce interview-anxiety pressure and better reflect how someone works with time to think, research, and iterate.",
+    "source": "Generated (based on Take-Home Assignment Expectations public information)",
+    "tags": [
+      "Take-Home Assignment",
+      "Interview Format"
+    ],
+    "company": [
+      "Startups",
+      "Mid-size Tech Companies"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0057",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Take-Home Assignment Expectations",
+    "difficulty": "Easy",
+    "question": "Why do many take-home assignments specify a recommended time limit even though the deadline may be longer?",
+    "options": [
+      "To set a fair, comparable expectation of effort across candidates",
+      "Because going over the limit always disqualifies a candidate automatically",
+      "Because the time limit is purely arbitrary with no purpose",
+      "Because it removes the need to review the actual submitted code"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A recommended time limit keeps the comparison fair, since some candidates could otherwise spend disproportionately more time than others.",
+    "source": "Generated (based on Take-Home Assignment Expectations public information)",
+    "tags": [
+      "Take-Home Assignment",
+      "Interview Format"
+    ],
+    "company": [
+      "Startups",
+      "Mid-size Tech Companies"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0058",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Take-Home Assignment Expectations",
+    "difficulty": "Medium",
+    "question": "What is generally considered a strong practice when submitting a take-home assignment?",
+    "options": [
+      "Submitting only the code with no explanation of any decisions made",
+      "Including a README documenting assumptions, tradeoffs, and what would be improved with more time",
+      "Avoiding any mention of limitations in the solution",
+      "Adding as many unrelated features as possible to look impressive"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Documenting assumptions/tradeoffs/next-steps demonstrates communication and judgment beyond the raw code itself, which reviewers value.",
+    "source": "Generated (based on Take-Home Assignment Expectations public information)",
+    "tags": [
+      "Take-Home Assignment",
+      "Interview Format"
+    ],
+    "company": [
+      "Startups",
+      "Mid-size Tech Companies"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0059",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Take-Home Assignment Expectations",
+    "difficulty": "Medium",
+    "question": "A take-home submission has clean code but no tests at all. What is this likely to signal to a reviewer, especially for a role involving production code?",
+    "options": [
+      "Nothing, since tests are irrelevant to code quality evaluation",
+      "That the candidate definitely cannot write tests under any circumstances",
+      "A potential gap in engineering rigor around verifying correctness, worth probing further in a follow-up interview",
+      "That the assignment instructions were unclear regardless of what they said"
+    ],
+    "correctAnswer": 2,
+    "explanation": "For production-oriented roles, the absence of any tests is often flagged as a rigor gap worth exploring further, rather than being ignored.",
+    "source": "Generated (based on Take-Home Assignment Expectations public information)",
+    "tags": [
+      "Take-Home Assignment",
+      "Interview Format"
+    ],
+    "company": [
+      "Startups",
+      "Mid-size Tech Companies"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0060",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Take-Home Assignment Expectations",
+    "difficulty": "Hard",
+    "question": "A candidate's take-home solution is functionally correct but noticeably over-engineered relative to the assignment's actual scope. What is this most likely to signal to an experienced reviewer?",
+    "options": [
+      "That the candidate is clearly the strongest possible hire",
+      "That over-engineering has no bearing on real-world engineering judgment",
+      "That the assignment scope itself was invalid",
+      "A possible tendency toward premature complexity or unnecessary abstraction that could affect maintainability on real projects"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Reviewers often read over-engineering relative to the stated scope as a signal about judgment on real-world tradeoffs (YAGNI, appropriate complexity), not as a purely positive sign of skill.",
+    "source": "Generated (based on Take-Home Assignment Expectations public information)",
+    "tags": [
+      "Take-Home Assignment",
+      "Interview Format"
+    ],
+    "company": [
+      "Startups",
+      "Mid-size Tech Companies"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0061",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Startup vs Big Tech Culture",
+    "difficulty": "Easy",
+    "question": "What is a common tradeoff of joining an early-stage startup compared to a large established company?",
+    "options": [
+      "Broader individual scope and ownership, but typically less structure, stability, and established process",
+      "Guaranteed higher total compensation in every case",
+      "Always significantly less work per week",
+      "Automatically more formal career-leveling structure"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Startups often trade structure and stability for broader scope, faster iteration, and higher equity-based upside risk.",
+    "source": "Generated (based on Startup vs Big Tech Culture public information)",
+    "tags": [
+      "Startup Culture",
+      "Big Tech Culture",
+      "Career"
+    ],
+    "company": [
+      "Startups",
+      "Big Tech"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0062",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Startup vs Big Tech Culture",
+    "difficulty": "Easy",
+    "question": "Why might a large tech company have more formalized leveling and promotion processes than a small startup?",
+    "options": [
+      "Formal processes are irrelevant once a company has any employees at all",
+      "Scale requires more standardized, comparable frameworks to fairly evaluate large numbers of employees",
+      "Startups are legally required to avoid all formal processes",
+      "Formal leveling has no relationship to organizational size"
+    ],
+    "correctAnswer": 1,
+    "explanation": "As headcount grows, ad hoc individual judgment does not scale fairly, driving companies toward standardized leveling frameworks.",
+    "source": "Generated (based on Startup vs Big Tech Culture public information)",
+    "tags": [
+      "Startup Culture",
+      "Big Tech Culture",
+      "Career"
+    ],
+    "company": [
+      "Startups",
+      "Big Tech"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0063",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Startup vs Big Tech Culture",
+    "difficulty": "Medium",
+    "question": "A candidate values fast, visible individual impact above all else early in their career. Which environment might better fit that specific priority, all else equal?",
+    "options": [
+      "A very large organization with many approval layers for any given change",
+      "Neither environment can offer visible individual impact",
+      "A smaller company or startup with broader individual ownership and fewer layers between work and outcome",
+      "The size of the company has no bearing on individual visibility"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Smaller organizations with fewer layers of approval often allow individual contributions to have more directly visible impact, though with tradeoffs in stability and resources.",
+    "source": "Generated (based on Startup vs Big Tech Culture public information)",
+    "tags": [
+      "Startup Culture",
+      "Big Tech Culture",
+      "Career"
+    ],
+    "company": [
+      "Startups",
+      "Big Tech"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0064",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Startup vs Big Tech Culture",
+    "difficulty": "Medium",
+    "question": "Why might engineers moving from a large company to a startup need to adjust their expectations around available infrastructure and tooling?",
+    "options": [
+      "Startups always have superior infrastructure due to using only new technology",
+      "Tooling maturity has no correlation with company age or size",
+      "Large companies never invest in internal tooling",
+      "Startups often have far less mature internal tooling and infrastructure than long-established large companies"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Large companies typically have years of investment in internal tools/infrastructure that early-stage startups have not yet built or cannot yet justify investing in.",
+    "source": "Generated (based on Startup vs Big Tech Culture public information)",
+    "tags": [
+      "Startup Culture",
+      "Big Tech Culture",
+      "Career"
+    ],
+    "company": [
+      "Startups",
+      "Big Tech"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0065",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Startup vs Big Tech Culture",
+    "difficulty": "Hard",
+    "question": "An engineer thrives on ambiguity and dislikes rigid process, but also wants strong technical mentorship from senior engineers with deep, narrow expertise. What tension does this create in choosing between a startup and a large company?",
+    "options": [
+      "Startups better satisfy the ambiguity/process preference, while large companies more often provide access to narrow, deep technical specialists — the two preferences can pull toward different environments",
+      "There is no meaningful tradeoff since all companies offer identical mentorship and process levels",
+      "Large companies always have less rigid process than startups",
+      "Startups always have more narrow technical specialists available than large companies"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This highlights a real tension: startups typically offer more ambiguity/autonomy, while large companies more often have depth of narrow specialists for mentorship — satisfying both fully in one environment is uncommon.",
+    "source": "Generated (based on Startup vs Big Tech Culture public information)",
+    "tags": [
+      "Startup Culture",
+      "Big Tech Culture",
+      "Career"
+    ],
+    "company": [
+      "Startups",
+      "Big Tech"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0066",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Remote-First Company Practices",
+    "difficulty": "Easy",
+    "question": "What best distinguishes a \"remote-first\" company from one that simply \"allows\" remote work?",
+    "options": [
+      "Remote-first companies never have any physical office at all",
+      "Core processes, documentation, and decision-making are designed around distributed work by default",
+      "It only affects hiring, not day-to-day operations",
+      "There is no practical difference between the two"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Remote-first means the default operating model (docs, meetings, decisions) is built for distributed teams, not merely permitting remote work within an office-centric default.",
+    "source": "Generated (based on Remote-First Company Practices public information)",
+    "tags": [
+      "Remote-First",
+      "Company Practices"
+    ],
+    "company": [
+      "GitLab",
+      "Automattic",
+      "Remote-First Companies"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0067",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Remote-First Company Practices",
+    "difficulty": "Easy",
+    "question": "Why do remote-first companies often invest heavily in written documentation culture?",
+    "options": [
+      "Documentation is a legal requirement for all companies",
+      "Written documentation replaces the need for any hiring process",
+      "Written documentation lets asynchronous, distributed teams stay aligned without relying on informal in-person context",
+      "It has no particular benefit for distributed teams specifically"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Without shared physical space, written docs become the primary way institutional knowledge and decisions are captured and shared across time zones.",
+    "source": "Generated (based on Remote-First Company Practices public information)",
+    "tags": [
+      "Remote-First",
+      "Company Practices"
+    ],
+    "company": [
+      "GitLab",
+      "Automattic",
+      "Remote-First Companies"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0068",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Remote-First Company Practices",
+    "difficulty": "Medium",
+    "question": "Why might a remote-first company deliberately default to asynchronous communication over real-time chat for many decisions?",
+    "options": [
+      "Asynchronous communication is always faster than real-time chat",
+      "Real-time chat is banned entirely in remote-first companies",
+      "It has no bearing on time zone considerations",
+      "It respects contributors across many time zones and avoids requiring everyone to be online simultaneously"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Defaulting to async respects the reality that a globally distributed team cannot reasonably all be online at the same time.",
+    "source": "Generated (based on Remote-First Company Practices public information)",
+    "tags": [
+      "Remote-First",
+      "Company Practices"
+    ],
+    "company": [
+      "GitLab",
+      "Automattic",
+      "Remote-First Companies"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0069",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Remote-First Company Practices",
+    "difficulty": "Medium",
+    "question": "What is a common practice remote-first companies use to preserve informal social connection normally built through in-person interaction?",
+    "options": [
+      "Intentional virtual social activities or optional non-work-focused calls",
+      "Banning all non-work conversation entirely",
+      "Requiring mandatory daily video calls for every employee",
+      "Assuming social connection is unnecessary in a remote setting"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Remote-first companies often intentionally design lightweight social rituals to replace what informal office interactions would otherwise provide.",
+    "source": "Generated (based on Remote-First Company Practices public information)",
+    "tags": [
+      "Remote-First",
+      "Company Practices"
+    ],
+    "company": [
+      "GitLab",
+      "Automattic",
+      "Remote-First Companies"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0070",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Remote-First Company Practices",
+    "difficulty": "Hard",
+    "question": "A remote-first company notices that despite good tooling, cross-team collaboration on ambiguous problems is slower than when co-located. What is a likely underlying cause worth investigating?",
+    "options": [
+      "Remote tooling always eliminates any collaboration challenges automatically",
+      "A lack of information about the reasoning and context behind decisions can be harder to convey asynchronously than tacit understanding built through in-person interaction",
+      "Ambiguous problems are always resolved faster remotely than in person",
+      "Cross-team collaboration is impossible in any remote environment"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ambiguous, exploratory problem-solving often relies on tacit, iterative back-and-forth that async tools handle less naturally than in-person conversation — a documented friction point even in mature remote-first cultures.",
+    "source": "Generated (based on Remote-First Company Practices public information)",
+    "tags": [
+      "Remote-First",
+      "Company Practices"
+    ],
+    "company": [
+      "GitLab",
+      "Automattic",
+      "Remote-First Companies"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0071",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "On-site Interview Loop Structure",
+    "difficulty": "Easy",
+    "question": "What is a typical purpose of having 4-6 separate interview rounds in a big-tech \"loop\"?",
+    "options": [
+      "To make the process intentionally as exhausting as possible",
+      "Because a single interviewer is never allowed to ask any questions",
+      "To assess the candidate across multiple distinct competencies (coding, design, behavioral, etc.) with different interviewers",
+      "Because each round evaluates the exact same competency redundantly"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Multiple rounds typically target different competency areas, giving a broader, more reliable picture than any single interview could.",
+    "source": "Generated (based on On-site Interview Loop Structure public information)",
+    "tags": [
+      "Interview Loop",
+      "Hiring Process",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0072",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "On-site Interview Loop Structure",
+    "difficulty": "Easy",
+    "question": "What is commonly the purpose of a debrief meeting after a candidate's interview loop is complete?",
+    "options": [
+      "To let one interviewer overrule everyone else automatically",
+      "To let the candidate join and defend their answers",
+      "To replace the need for any written feedback beforehand",
+      "For interviewers to share independent feedback and collectively decide on the hiring outcome"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The debrief lets interviewers share their independently-formed assessments, often before hearing others' opinions, to preserve independent judgment.",
+    "source": "Generated (based on On-site Interview Loop Structure public information)",
+    "tags": [
+      "Interview Loop",
+      "Hiring Process",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0073",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "On-site Interview Loop Structure",
+    "difficulty": "Medium",
+    "question": "Why are interviewers in many structured loops asked to submit written feedback before the debrief discussion begins?",
+    "options": [
+      "To preserve each interviewer's independent judgment before group discussion can influence it",
+      "Because written feedback is only used after the discussion concludes",
+      "To ensure everyone reaches the same score before discussing",
+      "Because verbal feedback is not allowed under any circumstances"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Submitting feedback before discussion prevents groupthink or anchoring on the first opinion shared, preserving each interviewer's independent read.",
+    "source": "Generated (based on On-site Interview Loop Structure public information)",
+    "tags": [
+      "Interview Loop",
+      "Hiring Process",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0074",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "On-site Interview Loop Structure",
+    "difficulty": "Medium",
+    "question": "A loop includes both a \"deep dive\" technical round and a broader system design round. What is the general rationale for including both?",
+    "options": [
+      "The two rounds always test the exact same skill in different words",
+      "To assess both depth in a specific area and the ability to reason about broader, more open-ended tradeoffs",
+      "System design rounds are only relevant for candidates with no coding background",
+      "Deep dive rounds are always redundant if a system design round exists"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Depth-focused and breadth-focused rounds are intentionally complementary — assessing different but related dimensions of a candidate's ability.",
+    "source": "Generated (based on On-site Interview Loop Structure public information)",
+    "tags": [
+      "Interview Loop",
+      "Hiring Process",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0075",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "On-site Interview Loop Structure",
+    "difficulty": "Hard",
+    "question": "In a loop where one interviewer strongly advocates against hiring while the rest are positive, how do many well-run structured processes typically handle this?",
+    "options": [
+      "Always let majority opinion override any dissent immediately",
+      "Discard the dissenting interviewer's feedback automatically as an outlier",
+      "Give real weight to the dissenting, well-reasoned feedback rather than simply overriding it by majority vote",
+      "Cancel the entire hiring loop and restart from scratch"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Well-run hiring processes generally treat a strong, well-reasoned \"no\" as a serious signal worth real consideration, not just something to be outvoted — since false negatives are often preferred over false positives at the bar-raising level.",
+    "source": "Generated (based on On-site Interview Loop Structure public information)",
+    "tags": [
+      "Interview Loop",
+      "Hiring Process",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0076",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Leveling & Compensation Bands",
+    "difficulty": "Easy",
+    "question": "What is the general purpose of an engineering leveling framework (e.g. junior/mid/senior/staff)?",
+    "options": [
+      "To assign salaries completely at random",
+      "To eliminate the need for performance reviews entirely",
+      "To guarantee identical pay for every employee at a company",
+      "To provide a consistent, comparable way to describe scope of impact and expectations at each career stage"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Leveling frameworks standardize expectations of scope and impact across a large workforce, supporting consistent evaluation and compensation decisions.",
+    "source": "Generated (based on Leveling & Compensation Bands public information)",
+    "tags": [
+      "Leveling",
+      "Compensation",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0077",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Leveling & Compensation Bands",
+    "difficulty": "Easy",
+    "question": "Why do many large tech companies publish internal or external \"leveling guides\" describing expectations at each level?",
+    "options": [
+      "To create shared, transparent understanding of what is expected for promotion or a given hire level",
+      "Because it is legally required in every country",
+      "To replace the need for any manager feedback",
+      "Because leveling guides have no practical use"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Leveling guides create a shared reference so employees, managers, and interviewers have a consistent understanding of expectations at each stage.",
+    "source": "Generated (based on Leveling & Compensation Bands public information)",
+    "tags": [
+      "Leveling",
+      "Compensation",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0078",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Leveling & Compensation Bands",
+    "difficulty": "Medium",
+    "question": "Why does compensation typically increase non-linearly (rather than a flat multiplier) as engineering levels rise at large tech companies?",
+    "options": [
+      "Compensation bands are set completely randomly with no relationship to level",
+      "Scope and impact expectations grow substantially at senior levels, and compensation (including equity) reflects that outsized expected impact",
+      "Higher levels always mean fewer hours worked per week",
+      "Non-linear compensation growth is purely arbitrary tradition with no rationale"
+    ],
+    "correctAnswer": 1,
+    "explanation": "As scope of impact and expected influence grow substantially at senior/staff+ levels, compensation (particularly equity) is often structured to reflect that outsized potential impact.",
+    "source": "Generated (based on Leveling & Compensation Bands public information)",
+    "tags": [
+      "Leveling",
+      "Compensation",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0079",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Leveling & Compensation Bands",
+    "difficulty": "Medium",
+    "question": "A candidate is deciding between two competing offers at different levels and companies. What is a sound first step before comparing base salary alone?",
+    "options": [
+      "Compare only the base salary number, ignoring bonus and equity entirely",
+      "Assume all companies use identical leveling definitions automatically",
+      "Compare total compensation (base, bonus, equity) and understand each company's leveling equivalence",
+      "Ignore equity since it is never a meaningful part of compensation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Total compensation and cross-company level equivalence (a \"level 5\" at one company may not equal a \"level 5\" at another) are both essential to a fair comparison.",
+    "source": "Generated (based on Leveling & Compensation Bands public information)",
+    "tags": [
+      "Leveling",
+      "Compensation",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0080",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Leveling & Compensation Bands",
+    "difficulty": "Hard",
+    "question": "An engineer is promoted to a senior title but their actual day-to-day scope of work has not meaningfully changed. What is this situation commonly a sign of, in leveling terms?",
+    "options": [
+      "A guaranteed sign the promotion was a mistake with no further nuance",
+      "Proof that leveling frameworks are universally meaningless",
+      "Evidence the engineer will automatically be promoted again soon",
+      "A misalignment between the title/level and the actual scope of impact expected at that level, which can create ambiguity in future evaluations"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Leveling frameworks are meant to tie title to actual scope of impact; a title/scope mismatch creates ambiguity for future performance evaluation against that level's expectations.",
+    "source": "Generated (based on Leveling & Compensation Bands public information)",
+    "tags": [
+      "Leveling",
+      "Compensation",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0081",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Performance Review Cycles",
+    "difficulty": "Easy",
+    "question": "What is the general purpose of a periodic (e.g. semi-annual or annual) performance review cycle?",
+    "options": [
+      "To formally assess an employee's impact and growth over a defined period and inform decisions like promotion or compensation",
+      "To replace all day-to-day manager feedback entirely",
+      "To assign performance scores at completely random intervals",
+      "To eliminate the need for goal-setting throughout the year"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Formal review cycles create a structured checkpoint for impact assessment, distinct from (and complementary to) ongoing informal feedback.",
+    "source": "Generated (based on Performance Review Cycles public information)",
+    "tags": [
+      "Performance Reviews",
+      "Career",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0082",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Performance Review Cycles",
+    "difficulty": "Easy",
+    "question": "Why do many companies encourage employees to keep an ongoing \"brag document\" or log of accomplishments throughout the review period?",
+    "options": [
+      "It replaces the manager's role in the review entirely",
+      "Specific, concrete accomplishments are easier to recall and document accurately in real time than months later",
+      "It is required by law in most countries",
+      "Accomplishments only matter if written down at the very end of the cycle"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Recording accomplishments as they happen produces more accurate, specific evidence than trying to remember everything months later at review time.",
+    "source": "Generated (based on Performance Review Cycles public information)",
+    "tags": [
+      "Performance Reviews",
+      "Career",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0083",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Performance Review Cycles",
+    "difficulty": "Medium",
+    "question": "What is a common critique of purely \"stack ranking\" style performance review systems (forcing a fixed distribution of ratings)?",
+    "options": [
+      "It guarantees perfectly fair outcomes in every team regardless of context",
+      "It removes any need for manager judgment",
+      "It can force artificial distinctions between employees with genuinely similar performance, potentially harming morale and collaboration",
+      "It has no documented downsides in any organization"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Forced distribution systems have been widely criticized for creating artificial competition and morale issues when team performance does not naturally fit a fixed curve.",
+    "source": "Generated (based on Performance Review Cycles public information)",
+    "tags": [
+      "Performance Reviews",
+      "Career",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0084",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Performance Review Cycles",
+    "difficulty": "Medium",
+    "question": "Why is 360-degree feedback (input from peers, not just a manager) often incorporated into performance reviews?",
+    "options": [
+      "Peer feedback always replaces manager judgment entirely",
+      "Managers are legally prohibited from evaluating employees alone",
+      "360 feedback is only used for the most junior employees",
+      "A manager may not directly observe all of an employee's cross-functional impact, so peer input adds a fuller picture"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Peer feedback captures collaboration and impact a manager may not personally witness, complementing (not replacing) the manager's own assessment.",
+    "source": "Generated (based on Performance Review Cycles public information)",
+    "tags": [
+      "Performance Reviews",
+      "Career",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0085",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Performance Review Cycles",
+    "difficulty": "Hard",
+    "question": "An employee consistently receives strong peer feedback but their manager's rating is notably lower than that feedback would suggest. What is a reasonable next step for a fair review process to take?",
+    "options": [
+      "Investigate the discrepancy directly — checking for miscommunicated expectations, differing visibility into impact, or possible manager bias — before finalizing the rating",
+      "Automatically default to whichever rating is higher without investigation",
+      "Automatically default to the manager's rating with no further discussion",
+      "Ignore the discrepancy since peer feedback is never relevant to the final rating"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A fair process investigates discrepancies between peer and manager assessments rather than mechanically defaulting to either source, since either could reflect a real gap worth understanding.",
+    "source": "Generated (based on Performance Review Cycles public information)",
+    "tags": [
+      "Performance Reviews",
+      "Career",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0086",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Promotion Calibration Process",
+    "difficulty": "Easy",
+    "question": "What is the general purpose of a \"calibration\" meeting in a promotion process?",
+    "options": [
+      "To let a single manager decide every promotion alone with no review",
+      "To compare candidates and ratings across managers to ensure consistent standards are applied",
+      "To eliminate the need for any written promotion packet",
+      "To randomly assign promotion outcomes across the organization"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Calibration brings multiple managers together to compare evidence and apply a consistent bar, rather than leaving each manager's standard unchecked.",
+    "source": "Generated (based on Promotion Calibration Process public information)",
+    "tags": [
+      "Promotion",
+      "Calibration",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0087",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Promotion Calibration Process",
+    "difficulty": "Easy",
+    "question": "Why do many companies require a written \"promotion packet\" documenting specific examples of impact?",
+    "options": [
+      "Because packets are purely a formality with no real influence on the outcome",
+      "To replace the need for any performance review at all",
+      "To give calibration committee members concrete evidence to evaluate, rather than relying on a manager's general impression",
+      "Because verbal descriptions of impact are always sufficient on their own"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Concrete, documented examples let people outside the immediate team evaluate impact fairly, rather than trusting an unverified general impression.",
+    "source": "Generated (based on Promotion Calibration Process public information)",
+    "tags": [
+      "Promotion",
+      "Calibration",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0088",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Promotion Calibration Process",
+    "difficulty": "Medium",
+    "question": "Why might a promotion committee specifically look for evidence of impact at the next level, not just strong performance at the current level?",
+    "options": [
+      "Performance at the current level is always sufficient for any promotion",
+      "The next level's expectations are identical to the current level's by definition",
+      "Promotion committees do not consider level-specific criteria at all",
+      "Promotion criteria are typically tied to demonstrating readiness for the next level's scope, not simply excelling at the current one"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Most promotion frameworks specifically require evidence the candidate is already operating at (or near) the next level's scope, not just performing well within the current one.",
+    "source": "Generated (based on Promotion Calibration Process public information)",
+    "tags": [
+      "Promotion",
+      "Calibration",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0089",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Promotion Calibration Process",
+    "difficulty": "Medium",
+    "question": "A promotion packet is strong on individual technical contributions but has little evidence of cross-team influence. Why might this be a gap for a promotion to a more senior level?",
+    "options": [
+      "Senior-level expectations often include broader influence beyond individual contribution, which the packet does not yet demonstrate",
+      "Cross-team influence is never relevant to any promotion decision",
+      "Individual technical contribution alone is always sufficient at every level",
+      "This gap only matters for management-track promotions, never for individual contributors"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Many senior individual-contributor tracks explicitly expect broader cross-team influence, not just strong individual technical output, as part of the promotion bar.",
+    "source": "Generated (based on Promotion Calibration Process public information)",
+    "tags": [
+      "Promotion",
+      "Calibration",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0090",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Promotion Calibration Process",
+    "difficulty": "Hard",
+    "question": "A promotion is denied despite strong individual metrics, because the calibration committee felt the scope of impact did not yet match the target level. What is the most constructive interpretation of this outcome for the employee's manager to communicate?",
+    "options": [
+      "The denial means the employee has no future promotion path at the company",
+      "The gap is specifically about scope of impact, not effort or ability, and can be addressed with a clear plan targeting that specific gap",
+      "The committee's decision was arbitrary and has no useful information for the employee",
+      "The employee should stop taking on any new responsibilities going forward"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A constructive manager response isolates the specific gap (scope of impact) that calibration identified, turning the outcome into a clear, actionable development plan rather than a vague or discouraging message.",
+    "source": "Generated (based on Promotion Calibration Process public information)",
+    "tags": [
+      "Promotion",
+      "Calibration",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0091",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Cross-Team Collaboration at Scale",
+    "difficulty": "Easy",
+    "question": "Why does cross-team collaboration typically become harder as a company grows from dozens to thousands of engineers?",
+    "options": [
+      "Larger companies always have simpler organizational structures",
+      "More engineers always means proportionally easier collaboration",
+      "Communication paths grow faster than headcount, and shared context becomes harder to maintain informally",
+      "Company size has no real effect on collaboration difficulty"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The number of potential communication paths grows much faster than headcount (a well-known organizational scaling effect), making informal shared context harder to sustain.",
+    "source": "Generated (based on Cross-Team Collaboration at Scale public information)",
+    "tags": [
+      "Cross-Team Collaboration",
+      "Scale",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0092",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Cross-Team Collaboration at Scale",
+    "difficulty": "Easy",
+    "question": "What is a common tool large organizations use to formally define ownership boundaries between teams?",
+    "options": [
+      "Assuming ownership is always obvious without documentation",
+      "Rotating ownership randomly every week",
+      "Avoiding any documentation of ownership at all",
+      "A documented service or system ownership map (who owns which component)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Documented ownership maps reduce ambiguity about who is responsible for a given service, especially important as the number of services and teams grows.",
+    "source": "Generated (based on Cross-Team Collaboration at Scale public information)",
+    "tags": [
+      "Cross-Team Collaboration",
+      "Scale",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0093",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Cross-Team Collaboration at Scale",
+    "difficulty": "Medium",
+    "question": "Why do many large companies establish formal \"API contracts\" or interface agreements between teams' systems?",
+    "options": [
+      "To let teams build and evolve independently while still integrating reliably with each other's systems",
+      "To require every team to share the exact same codebase",
+      "To eliminate the need for teams to communicate at all going forward",
+      "Because contracts are purely a legal requirement unrelated to engineering"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Well-defined interface contracts let teams iterate independently on their internal implementation while still integrating predictably with dependent teams.",
+    "source": "Generated (based on Cross-Team Collaboration at Scale public information)",
+    "tags": [
+      "Cross-Team Collaboration",
+      "Scale",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0094",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Cross-Team Collaboration at Scale",
+    "difficulty": "Medium",
+    "question": "Two teams both depend on a shared piece of infrastructure but have conflicting roadmap priorities for it. What is a sound way to resolve this at scale?",
+    "options": [
+      "Let whichever team complains loudest get their way each time",
+      "Escalate to a shared stakeholder or use agreed prioritization criteria to make a transparent tradeoff decision",
+      "Duplicate the infrastructure for each team to avoid ever coordinating",
+      "Ignore the conflict indefinitely and let both roadmaps stall"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Escalating to a shared decision-maker or using agreed criteria resolves the conflict transparently, rather than defaulting to whoever is loudest or duplicating effort unsustainably.",
+    "source": "Generated (based on Cross-Team Collaboration at Scale public information)",
+    "tags": [
+      "Cross-Team Collaboration",
+      "Scale",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0095",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Cross-Team Collaboration at Scale",
+    "difficulty": "Hard",
+    "question": "A large organization notices that many cross-team projects stall due to unclear ownership of the overall outcome, even though each team completes its individual piece. What organizational fix most directly addresses this root cause?",
+    "options": [
+      "Add more individual team-level metrics with no overall outcome owner",
+      "Remove all cross-team projects going forward to avoid the issue",
+      "Assign a single accountable owner (e.g. a program or project lead) for the end-to-end outcome, not just individual team deliverables",
+      "Assume the issue will resolve itself once each team finishes its own piece"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The described failure pattern (each piece done, overall outcome unowned) is a classic gap addressed by assigning end-to-end accountability, not just more team-level metrics.",
+    "source": "Generated (based on Cross-Team Collaboration at Scale public information)",
+    "tags": [
+      "Cross-Team Collaboration",
+      "Scale",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cs_0096",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Company Values Alignment",
+    "difficulty": "Easy",
+    "question": "What is generally meant by \"values alignment\" in a hiring context?",
+    "options": [
+      "Whether a candidate agrees with every company policy without exception",
+      "Whether a candidate has the exact same personal hobbies as the interviewer",
+      "Whether a candidate has previously worked at the same company before",
+      "Whether a candidate's working style and priorities are compatible with how the company operates"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Values alignment refers to compatibility between a candidate's working style/priorities and the company's actual operating norms, not superficial similarity.",
+    "source": "Generated (based on Company Values Alignment public information)",
+    "tags": [
+      "Company Values",
+      "Culture Fit",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0097",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Company Values Alignment",
+    "difficulty": "Easy",
+    "question": "Why do interviewers often ask candidates to describe a situation illustrating a specific company value (e.g., ownership, customer focus) rather than asking directly \"do you have this value?\"",
+    "options": [
+      "A specific example provides verifiable evidence, while a direct self-report is easy to answer favorably regardless of truth",
+      "Direct questions about values are illegal in every jurisdiction",
+      "Specific examples are always faster to evaluate than direct questions",
+      "There is no meaningful difference between the two approaches"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Behavioral, evidence-based questions are harder to answer with an unsubstantiated favorable claim than a direct yes/no self-assessment.",
+    "source": "Generated (based on Company Values Alignment public information)",
+    "tags": [
+      "Company Values",
+      "Culture Fit",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cs_0098",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Company Values Alignment",
+    "difficulty": "Medium",
+    "question": "A candidate's answers show strong technical skill but consistently reflect a preference for individual credit over team success. Why might this raise a values-alignment concern at a collaboration-heavy company?",
+    "options": [
+      "Technical skill always fully compensates for any values mismatch",
+      "A strong preference for individual credit may conflict with a culture that explicitly weighs collaborative and team-oriented behavior",
+      "Individual credit preference is irrelevant to how someone will perform in any role",
+      "Values alignment is only relevant for non-technical roles"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Even strong technical candidates can be a poor values fit if their demonstrated priorities (individual credit) conflict with what the specific culture explicitly values (collaboration).",
+    "source": "Generated (based on Company Values Alignment public information)",
+    "tags": [
+      "Company Values",
+      "Culture Fit",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0099",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Company Values Alignment",
+    "difficulty": "Medium",
+    "question": "Why is it considered risky to evaluate \"culture fit\" purely based on whether a candidate is personally likable or similar to the interviewer?",
+    "options": [
+      "Likability is always the single best predictor of job performance",
+      "It guarantees a more objective hiring decision than structured criteria",
+      "It can introduce bias and reduce diversity of thought, rather than genuinely assessing alignment with stated company values",
+      "Culture fit and personal similarity are functionally identical concepts"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Conflating \"culture fit\" with personal likability/similarity is a well-documented source of bias that can reduce diversity and does not reliably reflect actual values alignment.",
+    "source": "Generated (based on Company Values Alignment public information)",
+    "tags": [
+      "Company Values",
+      "Culture Fit",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cs_0100",
+    "level": "Level 15",
+    "category": "Company-Specific Prep",
+    "topic": "Company Values Alignment",
+    "difficulty": "Hard",
+    "question": "A company's stated values emphasize risk-taking and innovation, but its actual promotion and reward patterns consistently favor safe, incremental work. What does this inconsistency suggest for a candidate evaluating values alignment?",
+    "options": [
+      "Stated company values are always perfectly reflected in actual day-to-day incentives",
+      "The candidate should ignore incentive structures entirely and trust only the stated values",
+      "This kind of inconsistency is extremely rare and not worth investigating",
+      "Actual incentive structures and revealed behavior are a more reliable signal of real culture than stated values alone, and this gap is worth probing in interviews"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Revealed behavior (what is actually rewarded/promoted) is generally a stronger signal of real culture than stated values — a well-known gap worth directly probing (e.g. asking for concrete examples) during interviews.",
+    "source": "Generated (based on Company Values Alignment public information)",
+    "tags": [
+      "Company Values",
+      "Culture Fit",
+      "Big Tech"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  }
+]

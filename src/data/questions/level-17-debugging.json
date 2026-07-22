@@ -1,0 +1,2632 @@
+[
+  {
+    "id": "dbg_0001",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reading Stack Traces",
+    "difficulty": "Easy",
+    "question": "In a typical stack trace, which frame usually represents where the error actually occurred?",
+    "options": [
+      "The topmost frame, closest to where the exception was thrown",
+      "The bottommost frame, farthest from the exception",
+      "The frame with the shortest file name",
+      "Whichever frame is printed in bold"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Stack traces conventionally list the innermost call (where the error occurred) at the top, with the call chain unwinding below it.",
+    "source": "Generated (based on Reading Stack Traces theory)",
+    "tags": [
+      "Stack Trace",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0002",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reading Stack Traces",
+    "difficulty": "Easy",
+    "question": "What does a stack trace fundamentally represent?",
+    "options": [
+      "A list of all variables currently in memory",
+      "The chain of function/method calls active when an exception or error occurred",
+      "The full history of every function ever called in the program",
+      "A record of every file changed in the current git commit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A stack trace is a snapshot of the active call stack at the moment of the error, not a history of the whole program or unrelated state.",
+    "source": "Generated (based on Reading Stack Traces theory)",
+    "tags": [
+      "Stack Trace",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0003",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reading Stack Traces",
+    "difficulty": "Medium",
+    "question": "A stack trace includes several frames from third-party library code before reaching your own code. What is a good strategy here?",
+    "options": [
+      "Ignore the entire stack trace since it includes library code",
+      "Assume the bug is always in the library and never your own code",
+      "Focus first on the frame where your own code called into the library, since that is usually the most actionable point",
+      "Rewrite the third-party library to fix the error"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The point where your own code invokes the library is usually the most actionable place to start, since you control that call site directly.",
+    "source": "Generated (based on Reading Stack Traces theory)",
+    "tags": [
+      "Stack Trace",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0004",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reading Stack Traces",
+    "difficulty": "Medium",
+    "question": "Why can \"caused by\" chains in some stack traces (e.g. Java's chained exceptions) be important to read fully?",
+    "options": [
+      "The outermost exception is always the real root cause",
+      "Chained exceptions never provide additional useful information",
+      "Only the first line of a chained exception needs to be read",
+      "The root cause may be a lower-level exception wrapped by a higher-level one, and the true origin is often in the innermost cause"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Wrapped/chained exceptions often obscure the true root cause behind a more generic outer exception — reading down the \"caused by\" chain reveals the original failure.",
+    "source": "Generated (based on Reading Stack Traces theory)",
+    "tags": [
+      "Stack Trace",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0005",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reading Stack Traces",
+    "difficulty": "Hard",
+    "question": "A production stack trace points to a generic framework internal file with no application code frames visible at all. What is the most likely explanation and next debugging step?",
+    "options": [
+      "The application frames may have been stripped by minification/optimization or the error originated in an async callback losing its original call context; check source maps or async stack trace support",
+      "The bug is definitely inside the framework itself and cannot involve application code",
+      "Stack traces without application frames cannot be debugged under any circumstances",
+      "This always indicates a hardware failure unrelated to code"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Missing application frames are commonly caused by minification (needing source maps) or async boundaries losing the original synchronous call context — both have concrete remediation steps rather than being undebuggable.",
+    "source": "Generated (based on Reading Stack Traces theory)",
+    "tags": [
+      "Stack Trace",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0006",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Binary Search Debugging",
+    "difficulty": "Easy",
+    "question": "What is the core idea behind using \"binary search\" as a debugging strategy?",
+    "options": [
+      "Randomly guessing where the bug might be located",
+      "Repeatedly narrowing down the location of a bug by testing the midpoint of the remaining suspect range",
+      "Reading every single line of code from top to bottom in order",
+      "Rewriting the entire codebase from scratch"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Binary search debugging systematically halves the search space each iteration, similar to the binary search algorithm, to efficiently isolate a bug.",
+    "source": "Generated (based on Binary Search Debugging theory)",
+    "tags": [
+      "Binary Search Debugging",
+      "Bisection"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0007",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Binary Search Debugging",
+    "difficulty": "Easy",
+    "question": "When did a regression get introduced is a common question binary search debugging can help answer using what version-control technique?",
+    "options": [
+      "git blame on a single unrelated file",
+      "git stash on the current working directory",
+      "git bisect, testing commits at the midpoint of a suspect commit range",
+      "git clone of an unrelated repository"
+    ],
+    "correctAnswer": 2,
+    "explanation": "`git bisect` automates binary-search-style commit testing to find the exact commit that introduced a regression.",
+    "source": "Generated (based on Binary Search Debugging theory)",
+    "tags": [
+      "Binary Search Debugging",
+      "Bisection"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0008",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Binary Search Debugging",
+    "difficulty": "Medium",
+    "question": "You suspect a bug lies somewhere within a long data-processing pipeline of 10 sequential steps. How would you apply binary search debugging here?",
+    "options": [
+      "Check every single step in strict sequential order from the very first step",
+      "Only check the very last step of the pipeline",
+      "Rewrite all 10 steps simultaneously without testing any individually",
+      "Check the intermediate output at roughly the middle step, then narrow to the half where the data first becomes incorrect"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Checking the midpoint step first (rather than sequentially) lets you eliminate half of the remaining pipeline in one check, just like classic binary search.",
+    "source": "Generated (based on Binary Search Debugging theory)",
+    "tags": [
+      "Binary Search Debugging",
+      "Bisection"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0009",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Binary Search Debugging",
+    "difficulty": "Medium",
+    "question": "Why does binary search debugging require the bug to be consistently reproducible at each candidate point tested?",
+    "options": [
+      "If a check is unreliable (flaky), you cannot trust whether a given point is \"good\" or \"bad,\" breaking the narrowing process",
+      "Reproducibility is irrelevant to this technique",
+      "Binary search debugging works equally well with completely random results",
+      "Only truly random bugs benefit from this technique"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The technique relies on being able to reliably classify each tested point as showing the bug or not — an unreliable/flaky check invalidates the narrowing logic.",
+    "source": "Generated (based on Binary Search Debugging theory)",
+    "tags": [
+      "Binary Search Debugging",
+      "Bisection"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0010",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Binary Search Debugging",
+    "difficulty": "Hard",
+    "question": "While using git bisect, you land on a commit that does not build at all (a \"bad\" build unrelated to the actual bug). What is the correct way to handle this in the bisect process?",
+    "options": [
+      "Mark it as \"bad\" even though the actual regression cannot be verified there",
+      "Mark that specific commit as \"skip\" so bisect continues narrowing using other testable commits",
+      "Abandon the entire bisect process permanently",
+      "Mark it as \"good\" to avoid dealing with the broken build"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Most bisect tools (including git bisect) support explicitly skipping untestable commits, preserving the validity of the narrowing search around them.",
+    "source": "Generated (based on Binary Search Debugging theory)",
+    "tags": [
+      "Binary Search Debugging",
+      "Bisection"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0011",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Print/Log Debugging",
+    "difficulty": "Easy",
+    "question": "What is the main advantage of print/log-based debugging over a live debugger in some situations?",
+    "options": [
+      "It always eliminates the need to reason about the code at all",
+      "It works only for single-threaded programs",
+      "It can capture behavior over time or across processes without interrupting execution",
+      "It requires no code changes whatsoever"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Logging captures an ongoing timeline of behavior (including across processes or over long-running executions) without pausing execution the way a breakpoint does.",
+    "source": "Generated (based on Print/Log Debugging theory)",
+    "tags": [
+      "Print Debugging",
+      "Logging"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0012",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Print/Log Debugging",
+    "difficulty": "Easy",
+    "question": "Why is it good practice to remove or gate temporary debug print statements before merging code?",
+    "options": [
+      "Debug prints always improve production performance",
+      "Leaving them in is required for future debugging sessions",
+      "Print statements have no effect on log volume",
+      "Leftover debug output can clutter logs and leak internal details in production"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Unremoved debug prints add noise to production logs and can unintentionally leak internal state or sensitive details.",
+    "source": "Generated (based on Print/Log Debugging theory)",
+    "tags": [
+      "Print Debugging",
+      "Logging"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0013",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Print/Log Debugging",
+    "difficulty": "Medium",
+    "question": "Why is including contextual identifiers (e.g. request ID, user ID) in log statements especially useful in a concurrent or distributed system?",
+    "options": [
+      "It lets you correlate log lines belonging to the same logical operation across interleaved or distributed output",
+      "Context identifiers always slow down the system significantly",
+      "Concurrent systems never produce interleaved log output",
+      "Context identifiers are only useful in single-threaded programs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "In concurrent/distributed systems, log lines from different operations interleave; a consistent identifier lets you filter and follow just one operation's trace.",
+    "source": "Generated (based on Print/Log Debugging theory)",
+    "tags": [
+      "Print Debugging",
+      "Logging"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0014",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Print/Log Debugging",
+    "difficulty": "Medium",
+    "question": "What is a downside of relying purely on print statements instead of a structured logging library with severity levels?",
+    "options": [
+      "Print statements always run faster than any logging library",
+      "You lose the ability to easily filter by importance (e.g. debug vs error) or route logs differently in production",
+      "Structured logging libraries cannot be disabled or configured at all",
+      "Severity levels are purely cosmetic and provide no operational value"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Structured logging with levels (debug/info/warn/error) enables filtering and different handling in production — a capability plain print statements lack.",
+    "source": "Generated (based on Print/Log Debugging theory)",
+    "tags": [
+      "Print Debugging",
+      "Logging"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0015",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Print/Log Debugging",
+    "difficulty": "Hard",
+    "question": "Adding a print statement to narrow down a race condition changes the bug's timing enough that it stops reproducing (\"a Heisenbug\"). What does this suggest about the debugging approach needed?",
+    "options": [
+      "Print statements always have zero effect on program timing",
+      "The bug has been fully fixed simply by adding the print statement",
+      "The act of instrumenting (I/O, added delay) is likely masking a timing-sensitive concurrency issue, so lower-overhead tracing or dedicated concurrency tools may be needed",
+      "This behavior proves the original bug report was incorrect"
+    ],
+    "correctAnswer": 2,
+    "explanation": "When observation itself changes timing enough to hide a bug, it strongly suggests a genuine race condition sensitive to relative timing — calling for lower-overhead tracing or dedicated concurrency debugging tools instead of naive print statements.",
+    "source": "Generated (based on Print/Log Debugging theory)",
+    "tags": [
+      "Print Debugging",
+      "Logging"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0016",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Using a Debugger (Breakpoints)",
+    "difficulty": "Easy",
+    "question": "What does a \"breakpoint\" do when using an interactive debugger?",
+    "options": [
+      "Automatically fixes the bug at that line",
+      "Permanently deletes the line of code it is set on",
+      "Speeds up execution past that specific line",
+      "Pauses program execution at a specified line so state can be inspected"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A breakpoint pauses execution at a chosen point, letting you inspect variables, the call stack, and step through subsequent execution.",
+    "source": "Generated (based on Using a Debugger (Breakpoints) theory)",
+    "tags": [
+      "Debugger",
+      "Breakpoints"
+    ],
+    "company": [
+      "Microsoft",
+      "JetBrains"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0017",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Using a Debugger (Breakpoints)",
+    "difficulty": "Easy",
+    "question": "What is the difference between \"step over\" and \"step into\" when debugging a function call?",
+    "options": [
+      "\"Step into\" enters the called function's code, while \"step over\" executes it without entering",
+      "They are functionally identical in every debugger",
+      "\"Step over\" always terminates the program",
+      "\"Step into\" skips the current line entirely without executing it"
+    ],
+    "correctAnswer": 0,
+    "explanation": "\"Step into\" drills down into the called function's internals; \"step over\" runs the call as a single step without descending into it.",
+    "source": "Generated (based on Using a Debugger (Breakpoints) theory)",
+    "tags": [
+      "Debugger",
+      "Breakpoints"
+    ],
+    "company": [
+      "Microsoft",
+      "JetBrains"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0018",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Using a Debugger (Breakpoints)",
+    "difficulty": "Medium",
+    "question": "What is a \"conditional breakpoint\" useful for?",
+    "options": [
+      "Pausing execution on every single line of the program unconditionally",
+      "Pausing execution only when a specified condition is true, useful for bugs that occur under specific circumstances (e.g. a particular loop iteration)",
+      "Automatically fixing the code once the condition becomes true",
+      "Disabling all other breakpoints in the program permanently"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Conditional breakpoints avoid manually stepping through many irrelevant iterations by only pausing when a specific, relevant condition holds.",
+    "source": "Generated (based on Using a Debugger (Breakpoints) theory)",
+    "tags": [
+      "Debugger",
+      "Breakpoints"
+    ],
+    "company": [
+      "Microsoft",
+      "JetBrains"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0019",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Using a Debugger (Breakpoints)",
+    "difficulty": "Medium",
+    "question": "Why might a \"watch expression\" be useful during a debugging session?",
+    "options": [
+      "Watch expressions permanently modify the value of the variable being watched",
+      "Watch expressions can only be used on global variables",
+      "It lets you continuously monitor how a specific variable or expression changes as execution proceeds",
+      "Watch expressions replace the need for any breakpoints at all"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A watch expression tracks a chosen variable/expression's value across steps, helping observe exactly when and how it changes.",
+    "source": "Generated (based on Using a Debugger (Breakpoints) theory)",
+    "tags": [
+      "Debugger",
+      "Breakpoints"
+    ],
+    "company": [
+      "Microsoft",
+      "JetBrains"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0020",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Using a Debugger (Breakpoints)",
+    "difficulty": "Hard",
+    "question": "A bug only occurs in production under real load but not when reproduced locally in the debugger with breakpoints. What is the most likely reason breakpoint-based debugging is failing here, and what is a better approach?",
+    "options": [
+      "Debuggers are always equally effective regardless of load or timing conditions",
+      "The bug must be a compiler error unrelated to runtime behavior",
+      "The correct fix is to add more breakpoints until the bug reproduces locally",
+      "Breakpoints alter execution timing and may mask a concurrency or load-dependent issue; production tracing/logging or load-testing tools are more appropriate"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Breakpoints pause execution, changing relative timing — exactly the kind of interference that can hide load- or timing-dependent bugs, making production-safe tracing or load testing more appropriate than interactive breakpoints for this class of issue.",
+    "source": "Generated (based on Using a Debugger (Breakpoints) theory)",
+    "tags": [
+      "Debugger",
+      "Breakpoints"
+    ],
+    "company": [
+      "Microsoft",
+      "JetBrains"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0021",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reproducing Bugs Reliably",
+    "difficulty": "Easy",
+    "question": "Why is reliably reproducing a bug generally considered the most important first step in debugging?",
+    "options": [
+      "Without a reliable reproduction, you cannot confirm whether a proposed fix actually resolves the issue",
+      "Reproduction is optional and rarely helps with debugging",
+      "Reproducing a bug always fixes it automatically",
+      "Only bugs reported by customers need to be reproduced"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Without reliable reproduction, there is no way to verify whether any change actually addressed the root cause versus coincidence.",
+    "source": "Generated (based on Reproducing Bugs Reliably theory)",
+    "tags": [
+      "Bug Reproduction",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0022",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reproducing Bugs Reliably",
+    "difficulty": "Easy",
+    "question": "What information is generally most useful to collect from a bug report to aid reproduction?",
+    "options": [
+      "Only the reporter's name and the date the bug was found",
+      "Exact steps taken, environment details, and the expected versus actual behavior",
+      "The reporter's general opinion of the software",
+      "Nothing beyond the general symptom description"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Specific steps, environment, and clear expected-vs-actual behavior give the most actionable basis for reproduction.",
+    "source": "Generated (based on Reproducing Bugs Reliably theory)",
+    "tags": [
+      "Bug Reproduction",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0023",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reproducing Bugs Reliably",
+    "difficulty": "Medium",
+    "question": "A bug is reported as \"sometimes happens\" with no clear pattern. What is a good next step to move toward reliable reproduction?",
+    "options": [
+      "Assume it cannot be reproduced and close the report immediately",
+      "Guess at a fix without ever attempting to reproduce it first",
+      "Systematically vary conditions (input size, timing, environment) while tracking when the bug does and does not occur",
+      "Wait indefinitely for the exact same conditions to occur again by chance"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Systematic variation of conditions while tracking outcomes helps identify what factor actually correlates with the bug appearing.",
+    "source": "Generated (based on Reproducing Bugs Reliably theory)",
+    "tags": [
+      "Bug Reproduction",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0024",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reproducing Bugs Reliably",
+    "difficulty": "Medium",
+    "question": "Why is isolating a minimal reproduction case (removing unrelated code/data) valuable once a bug is reproducible at all?",
+    "options": [
+      "Minimal reproductions always take longer to create than the original full report",
+      "Isolating a minimal case usually hides the real root cause",
+      "Minimal reproduction cases are only useful for reporting to others, never for debugging yourself",
+      "It reduces the scope of what could be causing the issue, making the root cause much easier to identify"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A minimal reproduction strips away irrelevant complexity, focusing investigation on the smallest set of factors that still trigger the bug.",
+    "source": "Generated (based on Reproducing Bugs Reliably theory)",
+    "tags": [
+      "Bug Reproduction",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0025",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Reproducing Bugs Reliably",
+    "difficulty": "Hard",
+    "question": "A bug reproduces reliably in a staging environment but never in production, despite seemingly identical code versions. What is a reasonable hypothesis-driven approach to explain the discrepancy?",
+    "options": [
+      "Systematically compare configuration, data volume/shape, dependency versions, and infrastructure differences between the two environments",
+      "Assume staging is simply \"wrong\" and ignore the discrepancy entirely",
+      "Conclude the bug does not actually exist since it does not reproduce in production",
+      "Deploy the exact same staging environment configuration to production without further investigation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Environment-specific discrepancies are usually explained by configuration, data, dependency version, or infrastructure differences — a systematic comparison is the standard way to find the actual differentiator.",
+    "source": "Generated (based on Reproducing Bugs Reliably theory)",
+    "tags": [
+      "Bug Reproduction",
+      "Debugging"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0026",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Race Conditions",
+    "difficulty": "Easy",
+    "question": "What is a \"race condition\"?",
+    "options": [
+      "A bug that only occurs when a program runs unusually slowly",
+      "A bug where the outcome depends on the unpredictable relative timing or ordering of concurrent operations",
+      "A bug caused by an incorrect mathematical calculation",
+      "A bug that only affects single-threaded programs"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A race condition specifically arises when correctness depends on the relative timing/ordering of concurrent operations, which is not guaranteed.",
+    "source": "Generated (based on Race Conditions theory)",
+    "tags": [
+      "Race Conditions",
+      "Concurrency",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0027",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Race Conditions",
+    "difficulty": "Easy",
+    "question": "Why are race conditions often difficult to reproduce consistently?",
+    "options": [
+      "They always occur on every single run of the program",
+      "They are the easiest class of bug to reproduce reliably",
+      "Their occurrence depends on precise, often nondeterministic timing between threads or processes",
+      "They only occur when the program is run with no other processes active"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Nondeterministic timing between concurrent operations means the exact interleaving that triggers the bug may not recur reliably.",
+    "source": "Generated (based on Race Conditions theory)",
+    "tags": [
+      "Race Conditions",
+      "Concurrency",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0028",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Race Conditions",
+    "difficulty": "Medium",
+    "question": "What is a common fix for a race condition involving two threads writing to a shared variable?",
+    "options": [
+      "Adding an arbitrary sleep() call and hoping the timing happens to work out",
+      "Removing all threads from the program entirely",
+      "Ignoring the issue since it does not always reproduce",
+      "Introducing proper synchronization (e.g. a lock or mutex) around the shared access"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Proper synchronization (locks/mutexes, atomic operations) addresses the actual root cause of unsafe concurrent access, unlike a fragile sleep-based workaround.",
+    "source": "Generated (based on Race Conditions theory)",
+    "tags": [
+      "Race Conditions",
+      "Concurrency",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0029",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Race Conditions",
+    "difficulty": "Medium",
+    "question": "Why is adding an arbitrary sleep() call generally considered a poor fix for a suspected race condition?",
+    "options": [
+      "It may mask the symptom under specific conditions without actually guaranteeing correct ordering, and can fail under different load",
+      "sleep() calls always fully and permanently eliminate race conditions",
+      "sleep() is the industry-standard recommended fix for all concurrency bugs",
+      "Arbitrary sleeps have no effect on the observed timing at all"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A sleep-based \"fix\" happens to work under current conditions but does not guarantee correct ordering, and can fail again under different load or hardware.",
+    "source": "Generated (based on Race Conditions theory)",
+    "tags": [
+      "Race Conditions",
+      "Concurrency",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0030",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Race Conditions",
+    "difficulty": "Hard",
+    "question": "A race condition causes intermittent test failures in CI but is very hard to reproduce locally. What is an effective strategy to increase the odds of catching it during testing?",
+    "options": [
+      "Simply re-run the flaky test until it happens to pass",
+      "Use a thread-sanitizer/concurrency-testing tool, or deliberately introduce controlled timing perturbations (e.g. randomized delays) to increase the odds of triggering the race",
+      "Disable the failing test permanently to avoid dealing with it",
+      "Assume CI itself is broken rather than investigating the actual code"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dedicated concurrency-testing tools (thread sanitizers) or deliberately perturbing timing are established techniques to surface race conditions more reliably than hoping for a lucky reproduction.",
+    "source": "Generated (based on Race Conditions theory)",
+    "tags": [
+      "Race Conditions",
+      "Concurrency",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0031",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Memory Leaks",
+    "difficulty": "Easy",
+    "question": "What is a \"memory leak\" in a running program?",
+    "options": [
+      "Memory that is released too early while still in use",
+      "A CPU usage spike unrelated to memory",
+      "Memory that is no longer needed but is never released, causing usage to grow over time",
+      "A disk space shortage caused by log files"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A memory leak specifically refers to unreachable-but-unreleased memory that accumulates over time, distinct from a use-after-free or CPU issue.",
+    "source": "Generated (based on Memory Leaks theory)",
+    "tags": [
+      "Memory Leaks",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0032",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Memory Leaks",
+    "difficulty": "Easy",
+    "question": "In garbage-collected languages, what is a common cause of a \"logical\" memory leak?",
+    "options": [
+      "The garbage collector permanently stops running after the first collection",
+      "All objects are automatically freed at fixed time intervals",
+      "Memory leaks are impossible in any garbage-collected language",
+      "Objects remaining reachable via unintended references (e.g. forgotten event listeners or caches) even though they are no longer needed"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Even with automatic garbage collection, objects can leak if something still holds a reference to them (e.g. an uncleared event listener), preventing collection.",
+    "source": "Generated (based on Memory Leaks theory)",
+    "tags": [
+      "Memory Leaks",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0033",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Memory Leaks",
+    "difficulty": "Medium",
+    "question": "What is a common tool-based technique for diagnosing a memory leak?",
+    "options": [
+      "Taking and comparing heap snapshots over time to see which object types are steadily accumulating",
+      "Reading the source code once without running the program at all",
+      "Increasing the available memory until the symptom disappears without further investigation",
+      "Restarting the process regularly instead of investigating the cause"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Comparing heap snapshots over time is a standard technique to identify which object types are growing unexpectedly, pointing toward the leak's source.",
+    "source": "Generated (based on Memory Leaks theory)",
+    "tags": [
+      "Memory Leaks",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0034",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Memory Leaks",
+    "difficulty": "Medium",
+    "question": "Why might a growing in-memory cache with no eviction policy cause a memory leak over time?",
+    "options": [
+      "Caches without eviction policies are guaranteed to stay a fixed size regardless of usage",
+      "Without eviction, the cache keeps accumulating entries indefinitely as new keys are added, eventually exhausting available memory",
+      "This scenario can never actually happen in a well-written program",
+      "Caches always automatically clear themselves without any explicit eviction logic"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An unbounded cache is a classic, easily overlooked source of memory leaks — it grows without limit unless an explicit eviction policy (e.g. LRU, TTL) is added.",
+    "source": "Generated (based on Memory Leaks theory)",
+    "tags": [
+      "Memory Leaks",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0035",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Memory Leaks",
+    "difficulty": "Hard",
+    "question": "Heap snapshots reveal a steadily growing number of closures holding references to a large object, even after that object's intended lifecycle has ended. What is the most likely underlying cause and fix?",
+    "options": [
+      "The garbage collector has a permanent bug that cannot be addressed in application code",
+      "Closures never retain references to enclosing scope, so this cannot be the actual cause",
+      "Long-lived callbacks or event listeners are capturing the large object in their closure scope and never being unregistered — the fix is to explicitly remove the listener/callback when it is no longer needed",
+      "The object itself should be made immutable to fix the leak"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is a classic closure-retention leak: a listener or callback that outlives its intended purpose keeps its captured variables (including large objects) alive — fixed by properly unregistering the listener/callback.",
+    "source": "Generated (based on Memory Leaks theory)",
+    "tags": [
+      "Memory Leaks",
+      "Debugging"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0036",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Off-by-One Errors",
+    "difficulty": "Easy",
+    "question": "What is a classic example of an \"off-by-one\" error?",
+    "options": [
+      "A variable that is declared but never used",
+      "A function that is called with the wrong number of arguments",
+      "A typo in a string literal",
+      "A loop that iterates one time too many or too few, such as using <= instead of < in a bound check"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Off-by-one errors are specifically about boundary miscounts — a loop or index that is exactly one iteration/position off from correct.",
+    "source": "Generated (based on Off-by-One Errors theory)",
+    "tags": [
+      "Off-by-One",
+      "Bugs"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0037",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Off-by-One Errors",
+    "difficulty": "Easy",
+    "question": "When looping over a zero-indexed array of length n, what is a common off-by-one mistake?",
+    "options": [
+      "Using index <= n instead of index < n, causing an out-of-bounds access",
+      "Using index < n, which is the correct standard bound",
+      "Starting the loop at index 1 instead of 0 intentionally",
+      "Never using an index variable at all"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Using <= n instead of < n accesses index n, which is one past the last valid index (n-1) in a zero-indexed array of length n.",
+    "source": "Generated (based on Off-by-One Errors theory)",
+    "tags": [
+      "Off-by-One",
+      "Bugs"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0038",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Off-by-One Errors",
+    "difficulty": "Medium",
+    "question": "Why do off-by-one errors often occur specifically at the boundaries of a range (start or end), rather than in the middle of typical execution?",
+    "options": [
+      "Middle-of-range logic is always more complex than boundary logic",
+      "Boundary conditions require precise reasoning about inclusive vs exclusive bounds, which is easy to get subtly wrong",
+      "Off-by-one errors are equally likely anywhere in a range with no pattern",
+      "Boundaries never involve any comparison operators"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Boundaries require precise inclusive/exclusive reasoning (e.g., \"up to and including\" vs \"up to but not including\"), which is a common source of subtle miscounting.",
+    "source": "Generated (based on Off-by-One Errors theory)",
+    "tags": [
+      "Off-by-One",
+      "Bugs"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0039",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Off-by-One Errors",
+    "difficulty": "Medium",
+    "question": "A function meant to return the last k elements of a list instead returns k+1 elements. What is a likely cause?",
+    "options": [
+      "The function is using the wrong programming language",
+      "The list itself contains the wrong data entirely",
+      "An off-by-one error in the starting index calculation, such as using length - k instead of length - k (verify boundary) or an incorrect slice bound",
+      "The function has no relationship to indexing at all"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Returning one extra element is a textbook off-by-one symptom, typically traceable to an incorrect slice/index boundary calculation.",
+    "source": "Generated (based on Off-by-One Errors theory)",
+    "tags": [
+      "Off-by-One",
+      "Bugs"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0040",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Off-by-One Errors",
+    "difficulty": "Hard",
+    "question": "A binary search implementation occasionally fails to find an element that is actually present, only for certain array sizes. What is the most likely off-by-one-related cause to investigate first?",
+    "options": [
+      "The array must be unsorted, which is unrelated to indexing",
+      "Binary search cannot have off-by-one errors by design",
+      "The element being searched for must not actually exist in the array",
+      "The midpoint or boundary update logic (e.g. high = mid vs high = mid - 1) may be incorrectly excluding or including elements, causing certain valid indices to never be checked"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Subtle boundary update mistakes (e.g., failing to adjust `high`/`low` by exactly one when narrowing the search range) are a very common, size-dependent source of binary search bugs that skip valid indices.",
+    "source": "Generated (based on Off-by-One Errors theory)",
+    "tags": [
+      "Off-by-One",
+      "Bugs"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0041",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Null Pointer/Reference Errors",
+    "difficulty": "Easy",
+    "question": "What generally causes a null pointer (or null reference) error?",
+    "options": [
+      "Attempting to access a property or method on a reference that currently holds no object",
+      "Successfully accessing a valid, fully initialized object",
+      "A syntax error in the source code",
+      "An out-of-memory condition in the operating system"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A null pointer/reference error occurs specifically when code tries to use a reference that points to nothing (null/None/nil).",
+    "source": "Generated (based on Null Pointer/Reference Errors theory)",
+    "tags": [
+      "Null Pointer",
+      "NullPointerException"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0042",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Null Pointer/Reference Errors",
+    "difficulty": "Easy",
+    "question": "What is a common defensive technique to avoid null reference errors when a value might be absent?",
+    "options": [
+      "Ignoring the possibility that a value could ever be missing",
+      "Checking for null/None explicitly, or using language features like optional/nullable types",
+      "Always assuming every reference is guaranteed to be non-null",
+      "Wrapping every line of code in an unrelated try/catch with no specific handling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Explicit null checks or optional/nullable type systems are standard defensive techniques against this class of error.",
+    "source": "Generated (based on Null Pointer/Reference Errors theory)",
+    "tags": [
+      "Null Pointer",
+      "NullPointerException"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0043",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Null Pointer/Reference Errors",
+    "difficulty": "Medium",
+    "question": "A function receives an object from an external API call and immediately accesses a nested property without checking the response. Why is this risky?",
+    "options": [
+      "External API responses are always guaranteed to have a fixed, non-null shape",
+      "Checking API responses for null values is unnecessary defensive overhead",
+      "If the API call fails or returns an unexpected shape, the response (or a nested field) may be null/undefined, causing a reference error",
+      "Nested property access is never a source of null reference errors"
+    ],
+    "correctAnswer": 2,
+    "explanation": "External responses can fail, time out, or return unexpected shapes; accessing nested properties without validation risks a null reference error on the unexpected case.",
+    "source": "Generated (based on Null Pointer/Reference Errors theory)",
+    "tags": [
+      "Null Pointer",
+      "NullPointerException"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0044",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Null Pointer/Reference Errors",
+    "difficulty": "Medium",
+    "question": "What is the benefit of a language feature like optional chaining (e.g., `obj?.prop`) for handling potential null values?",
+    "options": [
+      "It guarantees the value will never actually be null under any circumstance",
+      "It permanently removes the possibility of any reference error in the codebase",
+      "It is functionally identical to ignoring the possibility of null entirely",
+      "It lets you safely access a possibly-null value without an explicit multi-line null check, short-circuiting to a safe result if null"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Optional chaining provides concise, safe access that short-circuits gracefully to a safe value (e.g. undefined) instead of throwing, without eliminating the underlying possibility of a missing value.",
+    "source": "Generated (based on Null Pointer/Reference Errors theory)",
+    "tags": [
+      "Null Pointer",
+      "NullPointerException"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0045",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Null Pointer/Reference Errors",
+    "difficulty": "Hard",
+    "question": "A null reference error occurs intermittently in production, but code review shows a null check exists just before the failing access. What is a likely explanation worth investigating?",
+    "options": [
+      "A race condition may allow the value to become null between the check and the actual access (a time-of-check to time-of-use gap), especially in concurrent code",
+      "Null checks always guarantee complete safety with zero possible exceptions",
+      "The error must be unrelated to the null check entirely and can be ignored",
+      "This can only happen due to a compiler bug"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A time-of-check-to-time-of-use (TOCTOU) gap — where the value changes between the check and the actual use, often due to concurrent modification — is a well-known cause of null errors surviving an apparently correct null check.",
+    "source": "Generated (based on Null Pointer/Reference Errors theory)",
+    "tags": [
+      "Null Pointer",
+      "NullPointerException"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0046",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Concurrency Issues",
+    "difficulty": "Easy",
+    "question": "What is a \"deadlock\" in concurrent programming?",
+    "options": [
+      "A situation where a single thread runs unusually fast",
+      "A situation where two or more threads are each waiting on a resource the other holds, so none can proceed",
+      "A situation where a program crashes immediately at startup",
+      "A situation where memory usage decreases unexpectedly"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A deadlock specifically involves a circular wait where each involved thread holds a resource another needs, halting all of them indefinitely.",
+    "source": "Generated (based on Debugging Concurrency Issues theory)",
+    "tags": [
+      "Concurrency Debugging",
+      "Threading"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0047",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Concurrency Issues",
+    "difficulty": "Easy",
+    "question": "What is a common necessary condition for a deadlock to occur (one of the classic \"deadlock conditions\")?",
+    "options": [
+      "All threads always acquiring locks in the exact same fixed order",
+      "The program using no locks or synchronization at all",
+      "Threads acquiring locks in inconsistent orders relative to each other",
+      "Only a single thread being active in the program"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Inconsistent lock acquisition order across threads is a classic precondition that can produce a circular wait, one of the standard deadlock conditions.",
+    "source": "Generated (based on Debugging Concurrency Issues theory)",
+    "tags": [
+      "Concurrency Debugging",
+      "Threading"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0048",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Concurrency Issues",
+    "difficulty": "Medium",
+    "question": "What is a standard technique to prevent deadlocks caused by inconsistent lock ordering?",
+    "options": [
+      "Acquiring as many locks as possible upfront regardless of order",
+      "Avoiding all synchronization entirely to eliminate the possibility of locks",
+      "Randomizing the order in which locks are acquired each time",
+      "Establishing and consistently enforcing a global, fixed order in which locks must always be acquired"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Enforcing a consistent global lock-acquisition order eliminates the circular-wait condition that causes deadlocks from inconsistent ordering.",
+    "source": "Generated (based on Debugging Concurrency Issues theory)",
+    "tags": [
+      "Concurrency Debugging",
+      "Threading"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0049",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Concurrency Issues",
+    "difficulty": "Medium",
+    "question": "Why are concurrency bugs often described as \"non-deterministic\"?",
+    "options": [
+      "The exact interleaving of threads can vary between runs, so the bug may or may not manifest depending on timing",
+      "Concurrency bugs always produce the exact same result on every single run",
+      "Non-determinism only applies to single-threaded programs",
+      "Non-deterministic bugs are always the easiest bugs to fix immediately"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Thread scheduling and timing can vary between runs, so the specific interleaving that triggers a concurrency bug may not reliably recur — hence \"non-deterministic.\"",
+    "source": "Generated (based on Debugging Concurrency Issues theory)",
+    "tags": [
+      "Concurrency Debugging",
+      "Threading"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0050",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Concurrency Issues",
+    "difficulty": "Hard",
+    "question": "A deadlock occurs only under high load in production but never in isolated local testing. What debugging approach is most likely to help identify the cause?",
+    "options": [
+      "Assume the deadlock cannot be investigated since it does not reproduce locally",
+      "Capture and analyze thread dumps during a production deadlock to see exactly which locks each blocked thread is holding and waiting on",
+      "Restart the affected service repeatedly instead of investigating root cause",
+      "Conclude the issue must be a hardware problem unrelated to the code"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A thread dump captured during the actual deadlock reveals the exact lock-holding/waiting relationships between threads — the most direct way to diagnose a deadlock that only manifests under specific load conditions.",
+    "source": "Generated (based on Debugging Concurrency Issues theory)",
+    "tags": [
+      "Concurrency Debugging",
+      "Threading"
+    ],
+    "company": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0051",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Performance Regressions",
+    "difficulty": "Easy",
+    "question": "What is a \"performance regression\"?",
+    "options": [
+      "A change that improves the correctness of an algorithm",
+      "A change that only affects the user interface's visual style",
+      "A change that makes previously acceptable performance noticeably worse",
+      "A change that adds a new unrelated feature"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A performance regression specifically refers to a measurable worsening in speed/resource usage compared to a prior baseline, not a correctness or UI change.",
+    "source": "Generated (based on Debugging Performance Regressions theory)",
+    "tags": [
+      "Performance Debugging",
+      "Profiling"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0052",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Performance Regressions",
+    "difficulty": "Easy",
+    "question": "What is the general purpose of a \"profiler\" tool in debugging a performance regression?",
+    "options": [
+      "To automatically rewrite slow code into faster code with no analysis needed",
+      "To find syntax errors in the source code",
+      "To manage version control branches",
+      "To measure where time or resources are actually being spent during execution"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A profiler measures actual runtime behavior (time spent per function, memory allocation, etc.), providing data rather than guesswork about where the slowdown lies.",
+    "source": "Generated (based on Debugging Performance Regressions theory)",
+    "tags": [
+      "Performance Debugging",
+      "Profiling"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0053",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Performance Regressions",
+    "difficulty": "Medium",
+    "question": "Why is comparing profiler output before and after a suspected change more useful than profiling only the current (slow) version alone?",
+    "options": [
+      "It isolates exactly what changed in resource usage, pointing directly to the specific regression's cause",
+      "A single profile of only the current version always fully explains the exact cause of the regression",
+      "Comparing before and after never yields useful information",
+      "Profiling is not meaningful unless done in production"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A before/after comparison isolates the delta caused specifically by the suspected change, rather than requiring the investigator to guess which part of the current profile represents the newly introduced regression.",
+    "source": "Generated (based on Debugging Performance Regressions theory)",
+    "tags": [
+      "Performance Debugging",
+      "Profiling"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0054",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Performance Regressions",
+    "difficulty": "Medium",
+    "question": "A performance regression correlates with a recent change that added a database query inside a loop. What is the most likely root cause pattern here?",
+    "options": [
+      "A CSS styling issue unrelated to the database",
+      "An \"N+1 query\" pattern, where a query is unnecessarily repeated once per loop iteration instead of being batched",
+      "A memory leak unrelated to database access",
+      "A compiler optimization flag being disabled"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Repeatedly querying inside a loop (instead of batching once) is the classic N+1 query pattern — a very common, well-known performance regression source.",
+    "source": "Generated (based on Debugging Performance Regressions theory)",
+    "tags": [
+      "Performance Debugging",
+      "Profiling"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0055",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Performance Regressions",
+    "difficulty": "Hard",
+    "question": "A profiler shows no single function taking unusually long, yet overall latency has clearly regressed. What is a likely explanation worth investigating?",
+    "options": [
+      "The profiler tool itself must be broken and cannot be trusted at all",
+      "This scenario is impossible since regressions always show up as one obviously slow function",
+      "The regression may come from increased call frequency, added synchronization/lock contention, or increased data volume rather than any single slow function",
+      "The regression must be caused by a change in font rendering"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Some regressions are caused by many small increases (call count, contention, data size) spread across the system rather than one obviously slow hotspot — profiler analysis needs to look at aggregate/frequency metrics, not just per-function duration.",
+    "source": "Generated (based on Debugging Performance Regressions theory)",
+    "tags": [
+      "Performance Debugging",
+      "Profiling"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0056",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Network Issues",
+    "difficulty": "Easy",
+    "question": "What is a common first tool used to inspect HTTP requests and responses when debugging a web application network issue?",
+    "options": [
+      "A text editor with no network capability",
+      "A spreadsheet application",
+      "A version control diff tool",
+      "The browser's network developer tools panel"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Browser dev tools provide direct visibility into request/response headers, status codes, timing, and payloads — a standard first step for web network debugging.",
+    "source": "Generated (based on Debugging Network Issues theory)",
+    "tags": [
+      "Network Debugging",
+      "HTTP"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0057",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Network Issues",
+    "difficulty": "Easy",
+    "question": "What does an HTTP 504 status code typically indicate?",
+    "options": [
+      "A gateway timeout, where an upstream server did not respond in time",
+      "A successful request with no content",
+      "A client-side validation error",
+      "A permanent redirect to another URL"
+    ],
+    "correctAnswer": 0,
+    "explanation": "504 Gateway Timeout specifically indicates an upstream/backend server failed to respond within the expected time, as observed by a gateway or proxy.",
+    "source": "Generated (based on Debugging Network Issues theory)",
+    "tags": [
+      "Network Debugging",
+      "HTTP"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0058",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Network Issues",
+    "difficulty": "Medium",
+    "question": "A request intermittently times out only under high concurrent load. What is a reasonable hypothesis to investigate first?",
+    "options": [
+      "The client's network cable must be physically damaged",
+      "Connection pool exhaustion or a resource bottleneck (e.g. thread pool, database connections) being hit under concurrent load",
+      "The issue must be a DNS misconfiguration unrelated to load",
+      "Concurrent load never has any effect on timeout behavior"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Load-dependent timeouts commonly point to a shared, limited resource (connection pool, thread pool, DB connections) being exhausted under concurrency — a natural first hypothesis to test.",
+    "source": "Generated (based on Debugging Network Issues theory)",
+    "tags": [
+      "Network Debugging",
+      "HTTP"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0059",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Network Issues",
+    "difficulty": "Medium",
+    "question": "Why might tools like traceroute or examining DNS resolution be useful early steps in diagnosing a network connectivity issue?",
+    "options": [
+      "They always fully diagnose any application-level bug automatically",
+      "DNS and routing are never relevant to any network debugging scenario",
+      "They help determine whether the problem is happening at the network/routing/DNS layer versus within the application itself",
+      "These tools are only useful for debugging local file system issues"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Traceroute and DNS checks help isolate whether an issue lies at the network/infrastructure layer, narrowing the investigation before assuming the bug is purely in application code.",
+    "source": "Generated (based on Debugging Network Issues theory)",
+    "tags": [
+      "Network Debugging",
+      "HTTP"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0060",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Network Issues",
+    "difficulty": "Hard",
+    "question": "A service works correctly when tested directly but fails intermittently only when accessed through a load balancer. What is a reasonable hypothesis-driven debugging approach?",
+    "options": [
+      "Assume the load balancer is entirely irrelevant to network debugging",
+      "Conclude the bug is unrelated to networking since direct access works fine",
+      "Replace the load balancer immediately without further investigation",
+      "Investigate load balancer configuration (health checks, timeouts, session/connection handling, retry behavior) as the differentiating factor between direct and load-balanced access"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Since the load balancer is the key difference between working and failing scenarios, its specific configuration (timeouts, health checks, connection handling) is the most direct place to investigate the discrepancy.",
+    "source": "Generated (based on Debugging Network Issues theory)",
+    "tags": [
+      "Network Debugging",
+      "HTTP"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0061",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Production Incidents",
+    "difficulty": "Easy",
+    "question": "During an active production incident, what is generally the highest priority before deep root-cause analysis?",
+    "options": [
+      "Mitigating user impact (e.g. rollback, failover, or scaling) as quickly and safely as possible",
+      "Writing the complete post-mortem document immediately",
+      "Refactoring the affected code for long-term maintainability",
+      "Adding new unrelated features to the affected service"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Immediate mitigation of user impact generally takes priority over deep root-cause analysis, which can follow once the incident is stabilized.",
+    "source": "Generated (based on Debugging Production Incidents theory)",
+    "tags": [
+      "Production Incidents",
+      "Incident Response"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0062",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Production Incidents",
+    "difficulty": "Easy",
+    "question": "What is a \"rollback\" in the context of a production incident?",
+    "options": [
+      "Adding new code on top of the current broken deployment",
+      "Reverting to a previous known-good version of the deployed code or configuration",
+      "Permanently deleting the affected service",
+      "Increasing the number of servers without changing any code"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A rollback specifically restores a prior known-good state, which is often the fastest way to mitigate impact from a bad recent deployment.",
+    "source": "Generated (based on Debugging Production Incidents theory)",
+    "tags": [
+      "Production Incidents",
+      "Incident Response"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0063",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Production Incidents",
+    "difficulty": "Medium",
+    "question": "Why is a \"blameless\" post-mortem culture generally recommended after a production incident?",
+    "options": [
+      "Blameless post-mortems always guarantee the incident will never happen again",
+      "Blame-focused post-mortems are more effective at finding root causes",
+      "It encourages honest, detailed reporting of what happened, which improves the quality and completeness of the root-cause analysis",
+      "Blameless culture means no analysis or documentation is needed at all"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A blameless approach reduces fear of punishment, encouraging people to share full, honest details needed for accurate root-cause analysis, rather than defensive omissions.",
+    "source": "Generated (based on Debugging Production Incidents theory)",
+    "tags": [
+      "Production Incidents",
+      "Incident Response"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0064",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Production Incidents",
+    "difficulty": "Medium",
+    "question": "Why do many incident response processes use a defined \"incident commander\" role during a major outage?",
+    "options": [
+      "The incident commander is solely responsible for writing all the code fixes personally",
+      "This role is only relevant for incidents lasting more than a week",
+      "It replaces the need for any engineers to be involved in the response",
+      "To centralize decision-making and communication so the response stays coordinated rather than chaotic"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A defined incident commander centralizes coordination and communication during a chaotic, time-pressured event, distinct from being the sole technical fixer.",
+    "source": "Generated (based on Debugging Production Incidents theory)",
+    "tags": [
+      "Production Incidents",
+      "Incident Response"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0065",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Production Incidents",
+    "difficulty": "Hard",
+    "question": "A production incident is mitigated quickly via rollback, but the post-mortem reveals the same underlying issue caused a very similar incident eight months earlier. What does this most likely indicate about the previous incident's handling?",
+    "options": [
+      "The earlier post-mortem's action items may not have been fully implemented or verified, allowing the same root cause to recur",
+      "This kind of recurrence is expected and requires no further investigation",
+      "The two incidents are unrelated coincidences with no shared cause",
+      "Post-mortems are inherently ineffective and should be discontinued"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A recurring root cause strongly suggests the earlier post-mortem's remediation action items were not fully implemented, tracked, or verified — a common failure mode worth explicitly investigating rather than dismissing as coincidence.",
+    "source": "Generated (based on Debugging Production Incidents theory)",
+    "tags": [
+      "Production Incidents",
+      "Incident Response"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0066",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Root Cause Analysis",
+    "difficulty": "Easy",
+    "question": "What is the goal of \"root cause analysis\" as distinct from simply fixing the immediate symptom?",
+    "options": [
+      "Fixing only the most visible symptom as quickly as possible with no further investigation",
+      "Identifying the underlying, systemic reason a problem occurred, so it can be prevented from recurring",
+      "Assigning blame to a specific individual involved in the incident",
+      "Avoiding any documentation of what was found"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Root cause analysis specifically targets the underlying systemic cause, aiming for prevention rather than a superficial symptom patch.",
+    "source": "Generated (based on Root Cause Analysis theory)",
+    "tags": [
+      "Root Cause Analysis",
+      "RCA"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Toyota"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0067",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Root Cause Analysis",
+    "difficulty": "Easy",
+    "question": "What does the \"5 Whys\" technique involve?",
+    "options": [
+      "Asking exactly five different unrelated people about the problem",
+      "Waiting five days before beginning any investigation",
+      "Repeatedly asking \"why\" about a problem to drill down past surface symptoms toward the underlying cause",
+      "Testing exactly five different possible fixes before choosing one"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The \"5 Whys\" technique iteratively asks \"why did that happen\" to peel back layers of symptoms toward the systemic root cause.",
+    "source": "Generated (based on Root Cause Analysis theory)",
+    "tags": [
+      "Root Cause Analysis",
+      "RCA"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Toyota"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0068",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Root Cause Analysis",
+    "difficulty": "Medium",
+    "question": "A team fixes a bug by adding a null check at the exact point where a crash occurred, without investigating why the value was null in the first place. What is the risk of stopping here?",
+    "options": [
+      "This approach always constitutes a complete and sufficient root cause fix",
+      "Null checks are inherently a full root-cause-level fix by definition",
+      "There is no meaningful difference between a symptom fix and a root cause fix",
+      "The underlying reason the value became null is still unaddressed and could cause similar issues elsewhere in the codebase"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A local null check treats the symptom at one call site, but the underlying reason the value became null unexpectedly could still cause failures at other unguarded call sites.",
+    "source": "Generated (based on Root Cause Analysis theory)",
+    "tags": [
+      "Root Cause Analysis",
+      "RCA"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Toyota"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0069",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Root Cause Analysis",
+    "difficulty": "Medium",
+    "question": "Why is it useful to distinguish between \"contributing factors\" and the true \"root cause\" in an incident analysis?",
+    "options": [
+      "Multiple factors often combine to cause an incident, and addressing only a contributing factor may not prevent recurrence if the true root cause remains",
+      "Contributing factors and root causes are always identical concepts",
+      "Only the very first factor identified should ever be considered relevant",
+      "Distinguishing between them has no practical value for prevention"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Complex incidents often have several contributing factors; distinguishing the true root cause(s) from merely contributing factors ensures the fix actually prevents recurrence.",
+    "source": "Generated (based on Root Cause Analysis theory)",
+    "tags": [
+      "Root Cause Analysis",
+      "RCA"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Toyota"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0070",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Root Cause Analysis",
+    "difficulty": "Hard",
+    "question": "A root cause analysis concludes \"human error\" caused an incident (e.g. an engineer ran the wrong command). Why is this often considered an incomplete root cause in a mature RCA process?",
+    "options": [
+      "\"Human error\" is always the deepest possible root cause and requires no further analysis",
+      "It typically stops the analysis too early — deeper investigation often reveals systemic factors (e.g. missing safeguards, unclear tooling, or lack of confirmation prompts) that made the error possible",
+      "Only the individual involved should be blamed, with no further systemic investigation needed",
+      "Systemic factors are never relevant when a human directly triggered the incident"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mature RCA practice treats \"human error\" as a symptom, not a root cause — it typically points to a deeper systemic gap (missing safeguards, confusing tooling, absent confirmation steps) that allowed the error to have impact, and that gap is the more actionable root cause.",
+    "source": "Generated (based on Root Cause Analysis theory)",
+    "tags": [
+      "Root Cause Analysis",
+      "RCA"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Toyota"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0071",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Rubber Duck Debugging",
+    "difficulty": "Easy",
+    "question": "What is the core idea behind \"rubber duck debugging\"?",
+    "options": [
+      "Physically testing code on a device shaped like a rubber duck",
+      "A formal debugging tool built into most IDEs",
+      "Explaining your code or problem out loud, line by line, to an inanimate object (or anyone), often surfacing the bug in the process",
+      "A technique that only works with two or more human participants present"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The technique gets its name from developers literally explaining their code to a rubber duck; the act of verbalizing often reveals the bug without any input from the \"listener.\"",
+    "source": "Generated (based on Rubber Duck Debugging theory)",
+    "tags": [
+      "Rubber Duck Debugging",
+      "Debugging Technique"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0072",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Rubber Duck Debugging",
+    "difficulty": "Easy",
+    "question": "Why can explaining a problem out loud help you find a bug, even without another person actually responding?",
+    "options": [
+      "Speaking out loud has no cognitive effect different from thinking silently",
+      "It works only if the listener actively answers back with suggestions",
+      "It is purely a psychological placebo with no real mechanism",
+      "Verbalizing forces you to slow down and articulate assumptions you might otherwise skip over silently"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The forced, sequential articulation of assumptions and logic (rather than skimming silently) often surfaces gaps or errors that silent review misses.",
+    "source": "Generated (based on Rubber Duck Debugging theory)",
+    "tags": [
+      "Rubber Duck Debugging",
+      "Debugging Technique"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0073",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Rubber Duck Debugging",
+    "difficulty": "Medium",
+    "question": "A developer explaining a bug to a colleague realizes the mistake mid-sentence before the colleague says anything. What best explains this common experience?",
+    "options": [
+      "The act of structuring an explanation for another listener forces more rigorous, step-by-step reasoning than the original silent debugging attempt",
+      "The colleague must have silently transmitted the answer telepathically",
+      "This kind of realization is extremely rare and usually coincidental",
+      "Explaining a bug out loud never actually changes how thoroughly it is reasoned through"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is the well-documented rubber-duck effect: framing an explanation for someone else's understanding imposes a more rigorous, sequential reasoning process than unstructured internal thought.",
+    "source": "Generated (based on Rubber Duck Debugging theory)",
+    "tags": [
+      "Rubber Duck Debugging",
+      "Debugging Technique"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0074",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Rubber Duck Debugging",
+    "difficulty": "Medium",
+    "question": "Why might rubber duck debugging be particularly effective for bugs caused by an incorrect assumption, rather than a typo?",
+    "options": [
+      "Rubber duck debugging can only ever catch typos, never logical assumption errors",
+      "Verbalizing each step out loud forces the assumption to be explicitly stated, making an incorrect one more likely to be noticed",
+      "Assumption-based bugs are never affected by verbalization techniques",
+      "This technique is equally likely to help with every category of bug, with no particular strength"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Incorrect assumptions are often silently skipped over during fast internal review; forcing them into explicit spoken statements makes them much easier to catch than scanning code visually.",
+    "source": "Generated (based on Rubber Duck Debugging theory)",
+    "tags": [
+      "Rubber Duck Debugging",
+      "Debugging Technique"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0075",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Rubber Duck Debugging",
+    "difficulty": "Hard",
+    "question": "A developer tries rubber duck debugging on a complex distributed system bug and it fails to reveal anything new, unlike with simpler bugs in the past. What is the most likely limitation of the technique being exposed here?",
+    "options": [
+      "Rubber duck debugging always works equally well regardless of the bug's scope or complexity",
+      "This proves the technique is entirely useless and should never be used again",
+      "The technique relies on the developer already having (or being able to construct) a mental model of the relevant logic — if the bug spans across systems the developer cannot fully reason about alone, verbalizing alone may not surface it",
+      "Complex distributed bugs are always caused by rubber ducks specifically failing as a tool"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The technique surfaces gaps in reasoning the developer can already access; for bugs that genuinely require cross-system data (e.g. logs, traces from multiple services) rather than local reasoning, verbalization alone has less to work with.",
+    "source": "Generated (based on Rubber Duck Debugging theory)",
+    "tags": [
+      "Rubber Duck Debugging",
+      "Debugging Technique"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0076",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Third-Party Library Issues",
+    "difficulty": "Easy",
+    "question": "Before assuming a bug is caused by your own code, what is a reasonable first check when a third-party library behaves unexpectedly?",
+    "options": [
+      "Immediately rewrite the entire library from scratch",
+      "Assume it must be a bug in your own code with no further investigation of the library",
+      "Delete the dependency entirely without understanding the actual cause",
+      "Check the library's changelog/issue tracker for known bugs matching the observed symptom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Checking the library's known issues/changelog is a quick, low-cost step that can immediately confirm or rule out a known library-side bug.",
+    "source": "Generated (based on Debugging Third-Party Library Issues theory)",
+    "tags": [
+      "Third-Party Libraries",
+      "Dependencies"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0077",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Third-Party Library Issues",
+    "difficulty": "Easy",
+    "question": "Why is pinning a specific dependency version (rather than always using \"latest\") useful when debugging a regression?",
+    "options": [
+      "It lets you reliably test whether a specific version upgrade introduced the regression",
+      "Pinning a version always guarantees there are no bugs in that dependency",
+      "Version pinning has no effect on reproducibility of a bug",
+      "Always using \"latest\" is required to debug any dependency issue"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A pinned version creates a stable, comparable baseline, letting you test specific version changes as a hypothesis for what introduced a regression.",
+    "source": "Generated (based on Debugging Third-Party Library Issues theory)",
+    "tags": [
+      "Third-Party Libraries",
+      "Dependencies"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0078",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Third-Party Library Issues",
+    "difficulty": "Medium",
+    "question": "A minimal reproduction using only the third-party library (without your application code) still shows the bug. What does this strongly suggest?",
+    "options": [
+      "This proves the bug must be in your own application code specifically",
+      "The issue likely lies within the library itself rather than in how your application uses it",
+      "Minimal reproductions are never useful for isolating library-vs-application bugs",
+      "The result is inconclusive and provides no useful information either way"
+    ],
+    "correctAnswer": 1,
+    "explanation": "If the bug reproduces without any of your application code involved, it strongly points to the library itself as the source, rather than how it is being used.",
+    "source": "Generated (based on Debugging Third-Party Library Issues theory)",
+    "tags": [
+      "Third-Party Libraries",
+      "Dependencies"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0079",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Third-Party Library Issues",
+    "difficulty": "Medium",
+    "question": "What is a reasonable interim workaround if a confirmed bug exists in a third-party library with no fix released yet?",
+    "options": [
+      "Wait indefinitely with no interim mitigation until the library maintainers respond",
+      "Silently ignore the bug and hope users never encounter it",
+      "Apply a documented workaround (e.g. avoiding the specific buggy code path, or a patch/shim) while tracking the upstream fix",
+      "Immediately fork and rewrite the entire library from scratch as the only option"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A targeted workaround (avoiding the buggy path, applying a small patch/shim) is usually more practical than either waiting indefinitely or rewriting the whole library.",
+    "source": "Generated (based on Debugging Third-Party Library Issues theory)",
+    "tags": [
+      "Third-Party Libraries",
+      "Dependencies"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0080",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Third-Party Library Issues",
+    "difficulty": "Hard",
+    "question": "You suspect a bug in a third-party library but the library's maintainers deny it, citing lack of reports from other users. What is a rigorous next step to build a stronger case?",
+    "options": [
+      "Assume you must be wrong simply because other users have not also reported it",
+      "Give up on the issue entirely since the maintainers disagree",
+      "Publicly criticize the maintainers without providing any additional reproduction evidence",
+      "Create a minimal, fully isolated reproduction (ideally in a fresh project with only the library) and file a detailed, reproducible bug report with exact versions and steps"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A minimal, fully isolated, precisely documented reproduction is the strongest way to substantiate a bug report and get it taken seriously, regardless of how many other users have reported it.",
+    "source": "Generated (based on Debugging Third-Party Library Issues theory)",
+    "tags": [
+      "Third-Party Libraries",
+      "Dependencies"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0081",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Intermittent/Flaky Bugs",
+    "difficulty": "Easy",
+    "question": "What best describes a \"flaky\" test or bug?",
+    "options": [
+      "It sometimes passes and sometimes fails under seemingly identical conditions",
+      "It always fails consistently every single time it runs",
+      "It always passes consistently every single time it runs",
+      "It only ever occurs in a single fixed environment with no variation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Flakiness specifically refers to inconsistent pass/fail results under apparently identical conditions, distinct from a bug that fails deterministically every time.",
+    "source": "Generated (based on Debugging Intermittent/Flaky Bugs theory)",
+    "tags": [
+      "Flaky Bugs",
+      "Intermittent Failures"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0082",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Intermittent/Flaky Bugs",
+    "difficulty": "Easy",
+    "question": "Why is simply re-running a flaky test until it passes generally considered a poor long-term strategy?",
+    "options": [
+      "Re-running a test always permanently fixes the underlying issue",
+      "It does not address the underlying cause, and the intermittent failure will likely recur later, possibly in production",
+      "Flaky tests are guaranteed to become reliable after enough reruns",
+      "Re-running has no relationship to whether the underlying bug still exists"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Re-running until green masks the symptom without fixing the underlying nondeterminism, which can still surface later, including in production.",
+    "source": "Generated (based on Debugging Intermittent/Flaky Bugs theory)",
+    "tags": [
+      "Flaky Bugs",
+      "Intermittent Failures"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0083",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Intermittent/Flaky Bugs",
+    "difficulty": "Medium",
+    "question": "What is a common underlying cause of test flakiness in automated test suites?",
+    "options": [
+      "Tests that use completely deterministic, isolated logic with no shared state",
+      "Flakiness always indicates a hardware failure in the test-running machine",
+      "Reliance on timing assumptions (e.g. fixed sleeps) or shared mutable state between tests",
+      "Flakiness cannot be caused by anything related to test design"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Fragile timing assumptions and shared mutable state between tests are two of the most common, well-documented sources of test flakiness.",
+    "source": "Generated (based on Debugging Intermittent/Flaky Bugs theory)",
+    "tags": [
+      "Flaky Bugs",
+      "Intermittent Failures"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0084",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Intermittent/Flaky Bugs",
+    "difficulty": "Medium",
+    "question": "Why might running a suspected flaky test many times in a tight loop (locally or in CI) be a useful diagnostic step?",
+    "options": [
+      "Running a test repeatedly always eliminates flakiness automatically",
+      "This approach provides no additional diagnostic information beyond a single run",
+      "Repeated runs are only useful for performance testing, never for flakiness",
+      "It increases the chance of observing the failure directly and gathering more data on how often and under what conditions it occurs"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Repeated execution increases the sample size of observed outcomes, helping to characterize failure frequency and potentially catch the failure with more logging/diagnostics attached.",
+    "source": "Generated (based on Debugging Intermittent/Flaky Bugs theory)",
+    "tags": [
+      "Flaky Bugs",
+      "Intermittent Failures"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0085",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Intermittent/Flaky Bugs",
+    "difficulty": "Hard",
+    "question": "A flaky integration test fails roughly 1 in 200 runs, and initial investigation shows no obvious shared state or timing issue in the test itself. What broader area should be investigated next?",
+    "options": [
+      "Look beyond the test code itself to the system under test — possible low-probability race conditions, resource contention, or environmental factors (e.g. CI runner variability) in the actual application",
+      "Assume the test framework itself must be fundamentally broken with no further investigation needed",
+      "Conclude flakiness this rare is not worth investigating any further at all",
+      "Increase the test's timeout value as the only necessary fix"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A low but nonzero flake rate with no obvious test-level cause often points to a genuine, low-probability issue in the system under test itself (race condition, resource contention, environment variance) rather than the test code — worth investigating rather than dismissing or masking with a timeout increase.",
+    "source": "Generated (based on Debugging Intermittent/Flaky Bugs theory)",
+    "tags": [
+      "Flaky Bugs",
+      "Intermittent Failures"
+    ],
+    "company": [
+      "Google",
+      "Meta",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0086",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Legacy Code",
+    "difficulty": "Easy",
+    "question": "What is a common first step recommended when debugging unfamiliar legacy code with little to no documentation?",
+    "options": [
+      "Rewrite the entire legacy system immediately before doing any investigation",
+      "Trace through actual execution (e.g. with logging or a debugger) to build an accurate mental model, rather than relying solely on assumptions",
+      "Assume the code works exactly as its outdated documentation describes without verification",
+      "Ignore the legacy code entirely and hope the bug resolves itself"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Since documentation may be outdated or missing, tracing actual execution behavior is a more reliable way to build an accurate understanding than trusting untested assumptions.",
+    "source": "Generated (based on Debugging Legacy Code theory)",
+    "tags": [
+      "Legacy Code",
+      "Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0087",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Legacy Code",
+    "difficulty": "Easy",
+    "question": "Why is adding automated tests around legacy code before making changes often recommended, even if the tests just capture current behavior?",
+    "options": [
+      "Tests written after the fact provide no protective value at all",
+      "Legacy code never benefits from having any test coverage added later",
+      "It creates a safety net that can detect unintended behavior changes introduced by your fix",
+      "Writing tests always requires fully understanding every line of the codebase first"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Characterization tests (capturing existing behavior) act as a regression safety net, even without deep understanding of every implementation detail.",
+    "source": "Generated (based on Debugging Legacy Code theory)",
+    "tags": [
+      "Legacy Code",
+      "Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0088",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Legacy Code",
+    "difficulty": "Medium",
+    "question": "A legacy function has no tests and unclear intent, but changing it is necessary to fix a bug. What is a prudent approach before modifying it?",
+    "options": [
+      "Change the function directly with no safety net and hope nothing else breaks",
+      "Refuse to fix the bug at all because the legacy code is poorly understood",
+      "Delete the function entirely without understanding what currently depends on it",
+      "Write characterization tests capturing its current observed behavior, then make the change and verify only the intended behavior differs"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Characterization tests capture the current, real behavior before modification, giving a concrete baseline to confirm that only the intended change occurred.",
+    "source": "Generated (based on Debugging Legacy Code theory)",
+    "tags": [
+      "Legacy Code",
+      "Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0089",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Legacy Code",
+    "difficulty": "Medium",
+    "question": "Why might legacy code debugging often reveal implicit, undocumented assumptions relied upon by other parts of the system?",
+    "options": [
+      "Over time, other code may have been written to depend on the legacy code's actual (rather than intended) behavior, even quirks or bugs",
+      "Legacy code never has any other code depending on its specific behavior",
+      "Implicit dependencies are always fully documented in legacy systems",
+      "This phenomenon only occurs in newly written code, never legacy systems"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Long-lived systems often accumulate dependencies on a component's actual behavior (including quirks), which is why \"fixing\" an old bug can sometimes break something relying on it — a well-known legacy-code hazard.",
+    "source": "Generated (based on Debugging Legacy Code theory)",
+    "tags": [
+      "Legacy Code",
+      "Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0090",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Legacy Code",
+    "difficulty": "Hard",
+    "question": "While debugging, you discover that a legacy function's widely-relied-upon behavior is actually a bug relative to its original documented intent, but multiple downstream systems now depend on the buggy behavior. What is the most responsible approach?",
+    "options": [
+      "Silently fix the bug immediately without informing any dependent teams",
+      "Treat it as a breaking-change decision — coordinate with affected downstream owners, document the discrepancy, and plan a careful, communicated migration rather than silently \"fixing\" it",
+      "Ignore the discrepancy indefinitely since it was noticed only during unrelated debugging",
+      "Immediately delete the function since it does not match its original documentation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When downstream systems depend on the actual (buggy) behavior, changing it becomes a coordinated breaking-change decision, not a unilateral \"fix\" — requiring communication and a migration plan rather than a silent change.",
+    "source": "Generated (based on Debugging Legacy Code theory)",
+    "tags": [
+      "Legacy Code",
+      "Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0091",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging with Version Control (git bisect)",
+    "difficulty": "Easy",
+    "question": "What is the primary purpose of `git bisect`?",
+    "options": [
+      "To merge two branches together automatically",
+      "To permanently delete old commits from history",
+      "To efficiently find the specific commit that introduced a regression by testing commits between a known-good and known-bad point",
+      "To rename a branch across the entire repository"
+    ],
+    "correctAnswer": 2,
+    "explanation": "`git bisect` automates a binary search over commit history to isolate exactly which commit introduced a given regression.",
+    "source": "Generated (based on Debugging with Version Control (git bisect) theory)",
+    "tags": [
+      "git bisect",
+      "Version Control Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0092",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging with Version Control (git bisect)",
+    "difficulty": "Easy",
+    "question": "What two pieces of information does `git bisect` require to begin narrowing down a regression?",
+    "options": [
+      "The name of the current branch only",
+      "The exact line number where the bug occurs",
+      "The full list of every file changed in the repository",
+      "A known-good commit and a known-bad commit"
+    ],
+    "correctAnswer": 3,
+    "explanation": "`git bisect` needs a known-good starting point and a known-bad ending point to define the range it will binary-search through.",
+    "source": "Generated (based on Debugging with Version Control (git bisect) theory)",
+    "tags": [
+      "git bisect",
+      "Version Control Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0093",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging with Version Control (git bisect)",
+    "difficulty": "Medium",
+    "question": "During a git bisect session, how do you tell git that the currently checked-out commit does not exhibit the bug?",
+    "options": [
+      "Run `git bisect good`",
+      "Run `git bisect bad`",
+      "Run `git bisect skip`",
+      "Run `git bisect reset`"
+    ],
+    "correctAnswer": 0,
+    "explanation": "`git bisect good` marks the current commit as not exhibiting the bug, narrowing the remaining search range accordingly.",
+    "source": "Generated (based on Debugging with Version Control (git bisect) theory)",
+    "tags": [
+      "git bisect",
+      "Version Control Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0094",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging with Version Control (git bisect)",
+    "difficulty": "Medium",
+    "question": "Why is automating the good/bad check with `git bisect run <script>` often more efficient than manually testing each commit?",
+    "options": [
+      "Automated scripts always run instantly with zero execution time",
+      "It lets git automatically test every candidate commit without requiring manual verification at each step",
+      "Manual testing is always faster and more reliable than any automated script",
+      "`git bisect run` cannot be used with any automated test script"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Automating the good/bad determination with a script lets bisect run the entire binary search unattended, which is far faster than manually building/testing each candidate commit by hand.",
+    "source": "Generated (based on Debugging with Version Control (git bisect) theory)",
+    "tags": [
+      "git bisect",
+      "Version Control Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0095",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging with Version Control (git bisect)",
+    "difficulty": "Hard",
+    "question": "A `git bisect` session identifies a merge commit as the first \"bad\" commit, but that merge commit itself contains no direct code changes (just merging two branches). What is the most useful next step to pinpoint the actual regression?",
+    "options": [
+      "Assume the merge commit itself is inherently un-investigatable and stop the search",
+      "Conclude that merge commits can never introduce regressions",
+      "Use `git bisect` (or manual inspection) on the individual commits within the merged branch, since the regression was likely introduced by one of the underlying commits being merged in",
+      "Revert the entire merge without identifying which specific underlying commit caused the issue"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Since a merge commit itself typically has no independent code changes, the actual regression lies in one of the commits being merged in — bisecting or inspecting those underlying commits is the way to pinpoint the true cause.",
+    "source": "Generated (based on Debugging with Version Control (git bisect) theory)",
+    "tags": [
+      "git bisect",
+      "Version Control Debugging"
+    ],
+    "company": [
+      "General Software Engineering"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "dbg_0096",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Distributed Systems",
+    "difficulty": "Easy",
+    "question": "Why is debugging a distributed system generally harder than debugging a single-process application?",
+    "options": [
+      "Distributed systems always have simpler logic than single-process applications",
+      "Distributed systems never experience any network-related failures",
+      "There is no meaningful difference in debugging difficulty between the two",
+      "A single logical request may span multiple services, each with its own state, timing, and potential point of failure"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A distributed request crossing multiple services introduces more independent points of failure, timing variability, and partial-state possibilities than a single process.",
+    "source": "Generated (based on Debugging Distributed Systems theory)",
+    "tags": [
+      "Distributed Systems Debugging",
+      "Observability"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0097",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Distributed Systems",
+    "difficulty": "Easy",
+    "question": "What is the general purpose of \"distributed tracing\" (e.g. tools implementing OpenTelemetry-style tracing)?",
+    "options": [
+      "To follow a single logical request as it flows across multiple services, recording timing and context at each step",
+      "To permanently store all data ever processed by any service",
+      "To replace the need for any logging within individual services",
+      "To automatically fix any latency issues found without further investigation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Distributed tracing correlates and visualizes a single request's journey across service boundaries, which individual per-service logs alone cannot easily reconstruct.",
+    "source": "Generated (based on Debugging Distributed Systems theory)",
+    "tags": [
+      "Distributed Systems Debugging",
+      "Observability"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "dbg_0098",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Distributed Systems",
+    "difficulty": "Medium",
+    "question": "Why is a consistent \"trace ID\" or \"correlation ID\" propagated across service calls essential for distributed debugging?",
+    "options": [
+      "Trace IDs are only useful for a single service and have no cross-service value",
+      "It lets you reconstruct the full path and timing of one logical request across many independently-logging services",
+      "Correlation IDs are purely for security auditing and unrelated to debugging",
+      "Distributed systems function identically whether or not a trace ID is used"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A shared trace/correlation ID is the mechanism that lets separate logs from different services be joined into a single coherent picture of one logical request's path.",
+    "source": "Generated (based on Debugging Distributed Systems theory)",
+    "tags": [
+      "Distributed Systems Debugging",
+      "Observability"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0099",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Distributed Systems",
+    "difficulty": "Medium",
+    "question": "A distributed system exhibits a failure that only manifests when two specific services experience it simultaneously (e.g. both under load at once). What debugging technique is well suited to reproducing this?",
+    "options": [
+      "Testing each service in complete isolation, one at a time, with no coordination",
+      "Assuming the failure cannot be reproduced and relying only on production logs",
+      "Coordinated load testing or chaos engineering that deliberately induces the specific combined failure conditions across both services at once",
+      "Reducing load on both services to avoid the condition entirely without investigating it"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Reproducing a failure that depends on a specific combined condition across services generally requires deliberately inducing that combination (e.g. via coordinated load tests or chaos engineering), not isolated single-service testing.",
+    "source": "Generated (based on Debugging Distributed Systems theory)",
+    "tags": [
+      "Distributed Systems Debugging",
+      "Observability"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "dbg_0100",
+    "level": "Level 17",
+    "category": "Debugging",
+    "topic": "Debugging Distributed Systems",
+    "difficulty": "Hard",
+    "question": "A distributed trace shows a request took an unusually long time, but the sum of the individual service processing times in the trace does not account for most of the total duration. What is the most likely explanation to investigate?",
+    "options": [
+      "The tracing tool must be reporting entirely fabricated numbers with no real meaning",
+      "This kind of discrepancy is impossible in any correctly instrumented tracing system",
+      "The request must have been processed twice by the same service",
+      "Time spent in queues, network transit, or waiting on a connection/thread pool between the traced spans, which may not be fully captured by the service-level spans themselves"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Unaccounted time in a trace commonly hides in the gaps between spans — network transit, queueing, or waiting for a pooled resource — which basic service-level instrumentation may not fully capture unless spans are added specifically for those wait periods.",
+    "source": "Generated (based on Debugging Distributed Systems theory)",
+    "tags": [
+      "Distributed Systems Debugging",
+      "Observability"
+    ],
+    "company": [
+      "Amazon",
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  }
+]

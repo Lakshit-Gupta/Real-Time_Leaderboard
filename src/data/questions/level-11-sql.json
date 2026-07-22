@@ -1,0 +1,2569 @@
+[
+  {
+    "id": "sql_0001",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Joins",
+    "difficulty": "Easy",
+    "question": "Which JOIN returns only rows with matching values in both tables?",
+    "options": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "FULL OUTER JOIN",
+      "CROSS JOIN"
+    ],
+    "correctAnswer": 0,
+    "explanation": "INNER JOIN returns rows where the join predicate matches in both tables; unmatched rows from either side are excluded, unlike outer joins which keep them with NULLs.",
+    "source": "Generated (based on Joins theory)",
+    "tags": [
+      "inner-join",
+      "joins"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0002",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Joins",
+    "difficulty": "Easy",
+    "question": "A LEFT JOIN between table A and table B keeps which rows?",
+    "options": [
+      "All rows from B, matched rows from A with NULLs where no match exists",
+      "All rows from A, matched rows from B with NULLs where no match exists",
+      "Only rows present in both A and B",
+      "Only rows from A that have no match in B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "LEFT JOIN preserves every row of the left table regardless of match, filling right-side columns with NULL when no matching row exists in B.",
+    "source": "Generated (based on Joins theory)",
+    "tags": [
+      "left-join",
+      "joins"
+    ],
+    "company": [
+      "Amazon",
+      "LinkedIn"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0003",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Joins",
+    "difficulty": "Medium",
+    "question": "What does a CROSS JOIN between a 3-row table and a 4-row table produce?",
+    "options": [
+      "7 rows, the union of both tables",
+      "3 rows, one for each row in the smaller table",
+      "12 rows, the Cartesian product of both tables",
+      "0 rows unless a join condition is supplied"
+    ],
+    "correctAnswer": 2,
+    "explanation": "CROSS JOIN pairs every row of the first table with every row of the second with no join predicate, so the result size is the product of the two row counts.",
+    "source": "Generated (based on Joins theory)",
+    "tags": [
+      "cross-join",
+      "cartesian-product"
+    ],
+    "company": [
+      "Microsoft",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0004",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Joins",
+    "difficulty": "Medium",
+    "question": "A self-join is best described as?",
+    "options": [
+      "A join that only matches a row to itself and nothing else",
+      "A join that automatically removes duplicate rows",
+      "A join reserved for tables without a primary key",
+      "A table joined to itself using two aliases to compare rows within the same table"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A self-join uses two aliases of the same table so rows can be compared against other rows in that table, common for hierarchical or pairwise comparisons like employee-manager relationships.",
+    "source": "Generated (based on Joins theory)",
+    "tags": [
+      "self-join",
+      "aliases"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0005",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Joins",
+    "difficulty": "Hard",
+    "question": "Given tables Orders(1M rows) and Customers(100K rows) joined on customer_id with an index on Customers.customer_id but not Orders.customer_id, which join strategy is the optimizer most likely to pick, and why?",
+    "options": [
+      "Nested loop join driving from Orders, probing the indexed Customers.customer_id for each row",
+      "Hash join building a hash table on the larger Orders table only",
+      "Merge join requiring no sort since neither side is ordered",
+      "Cross join followed by a filter step"
+    ],
+    "correctAnswer": 0,
+    "explanation": "With an index available on the smaller/lookup side (Customers.customer_id), a nested loop that scans Orders and probes the index per row is typically cheaper than building/sorting for a hash or merge join, especially when Orders is scanned via an existing access path.",
+    "source": "Generated (based on Joins theory)",
+    "tags": [
+      "nested-loop",
+      "query-plan",
+      "optimizer"
+    ],
+    "company": [
+      "Oracle",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0006",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Subqueries",
+    "difficulty": "Easy",
+    "question": "A subquery that returns a single value for use in a comparison is called?",
+    "options": [
+      "A correlated subquery",
+      "A scalar subquery",
+      "A table-valued subquery",
+      "A lateral subquery"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A scalar subquery returns exactly one row and one column, so its result can be used directly wherever a single value is expected, such as in a WHERE clause comparison.",
+    "source": "Generated (based on Subqueries theory)",
+    "tags": [
+      "scalar-subquery"
+    ],
+    "company": [
+      "IBM",
+      "PayPal"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0007",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Subqueries",
+    "difficulty": "Easy",
+    "question": "What keyword tests whether a subquery returns any rows at all?",
+    "options": [
+      "IN",
+      "ANY",
+      "EXISTS",
+      "ALL"
+    ],
+    "correctAnswer": 2,
+    "explanation": "EXISTS returns true or false based purely on whether the subquery produces at least one row, without caring about the row's actual values, which lets the engine short-circuit as soon as one match is found.",
+    "source": "Generated (based on Subqueries theory)",
+    "tags": [
+      "exists"
+    ],
+    "company": [
+      "Uber",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0008",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Subqueries",
+    "difficulty": "Medium",
+    "question": "What makes a subquery \"correlated\"?",
+    "options": [
+      "It always runs exactly once before the outer query starts",
+      "It can only appear in the FROM clause",
+      "It cannot use aggregate functions",
+      "It references a column from the outer query, so it re-evaluates once per outer row"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A correlated subquery depends on values from the enclosing query, meaning conceptually the engine re-evaluates it for every candidate outer row rather than computing it once.",
+    "source": "Generated (based on Subqueries theory)",
+    "tags": [
+      "correlated-subquery"
+    ],
+    "company": [
+      "Netflix",
+      "SAP"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0009",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Subqueries",
+    "difficulty": "Medium",
+    "question": "Why can NOT IN behave surprisingly if the subquery's column contains a NULL?",
+    "options": [
+      "If any value in the subquery result is NULL, NOT IN can return an empty result for every outer row",
+      "NOT IN automatically excludes NULLs from the subquery before comparing",
+      "NOT IN throws a syntax error when NULLs are present",
+      "NOT IN treats NULL as equal to any value"
+    ],
+    "correctAnswer": 0,
+    "explanation": "NOT IN is defined using equality comparisons ANDed together; comparing against a NULL yields UNKNOWN, and UNKNOWN mixed into the AND chain makes the whole NOT IN expression UNKNOWN (excluded), so a single NULL in the subquery can silently zero out the outer result.",
+    "source": "Generated (based on Subqueries theory)",
+    "tags": [
+      "not-in",
+      "null-pitfall"
+    ],
+    "company": [
+      "LinkedIn",
+      "Snowflake"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0010",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Subqueries",
+    "difficulty": "Hard",
+    "question": "A query uses `WHERE salary > (SELECT AVG(salary) FROM employees e2 WHERE e2.department_id = e1.department_id)` inside an outer query aliased e1. What is this, and what's a common rewrite for performance on large datasets?",
+    "options": [
+      "A scalar subquery evaluated once for the whole query, no rewrite needed",
+      "A correlated subquery recomputing the per-department average for every row; often rewritten as a window function AVG(salary) OVER (PARTITION BY department_id) to compute it once per partition",
+      "A derived table that must be materialized before the outer query runs",
+      "A lateral join that cannot be expressed with window functions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because the subquery depends on e1.department_id, it conceptually re-runs per outer row; a window function computes the same per-department aggregate in a single pass over pre-partitioned data, avoiding repeated aggregation.",
+    "source": "Generated (based on Subqueries theory)",
+    "tags": [
+      "correlated-subquery",
+      "window-function",
+      "optimization"
+    ],
+    "company": [
+      "Salesforce",
+      "MongoDB"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0011",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Indexes",
+    "difficulty": "Easy",
+    "question": "What is the primary purpose of a database index?",
+    "options": [
+      "To enforce that a column's values are unique",
+      "To compress the data stored in a table",
+      "To speed up row lookups by avoiding a full table scan",
+      "To automatically back up table data"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An index is an auxiliary data structure (commonly a B-tree) that lets the engine locate matching rows quickly, trading extra storage and write overhead for faster reads.",
+    "source": "Generated (based on Indexes theory)",
+    "tags": [
+      "index-basics"
+    ],
+    "company": [
+      "Airbnb",
+      "Databricks"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0012",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Indexes",
+    "difficulty": "Easy",
+    "question": "What is a downside of adding many indexes to a heavily-written table?",
+    "options": [
+      "Indexes make SELECT queries slower",
+      "Indexes prevent the table from having a primary key",
+      "Indexes cannot coexist with foreign keys",
+      "Every INSERT/UPDATE/DELETE must also maintain each index, slowing writes"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Each index is a separate structure that must stay in sync with the table, so write operations pay the cost of updating every index in addition to the base table.",
+    "source": "Generated (based on Indexes theory)",
+    "tags": [
+      "index-tradeoffs"
+    ],
+    "company": [
+      "Stripe",
+      "Cisco"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0013",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "What is a composite (multi-column) index on (a, b) most useful for?",
+    "options": [
+      "Queries filtering on a alone, or on a and b together, in that column order",
+      "Queries filtering on b alone with equal efficiency to filtering on a",
+      "Any query touching either column regardless of order",
+      "Only queries that use both columns in an OR condition"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A composite index is ordered first by a then by b, so it serves lookups on a prefix of its columns (a, or a+b) efficiently, but generally can't be used efficiently to seek on b alone.",
+    "source": "Generated (based on Indexes theory)",
+    "tags": [
+      "composite-index"
+    ],
+    "company": [
+      "PayPal",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0014",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Indexes",
+    "difficulty": "Medium",
+    "question": "What does a \"covering index\" mean for a given query?",
+    "options": [
+      "An index that spans every column in the table",
+      "The index contains all columns the query needs, so the engine can answer it without touching the base table",
+      "An index that wraps around another index for redundancy",
+      "An index that automatically covers foreign key constraints"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When every selected and filtered column is present in the index itself, the engine can satisfy the query from the index structure alone, skipping the extra lookup into the heap/table.",
+    "source": "Generated (based on Indexes theory)",
+    "tags": [
+      "covering-index"
+    ],
+    "company": [
+      "Adobe",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0015",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Indexes",
+    "difficulty": "Hard",
+    "question": "A query filters `WHERE status = 'active' AND created_at > '2026-01-01'` and returns few rows out of a 50M-row table, yet the optimizer chooses a full table scan over an existing index on status. What is the most likely explanation?",
+    "options": [
+      "The index is corrupted and must be rebuilt before use",
+      "Indexes are never used when two conditions are ANDed together",
+      "Low selectivity on status (e.g., most rows are 'active') makes the index scan+lookup costlier than scanning the whole table, so the optimizer estimates the scan as cheaper",
+      "The table lacks a primary key so no index can be chosen"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Cost-based optimizers weigh estimated selectivity: if status = 'active' matches a large fraction of rows, following the index means many random row lookups, often pricier than one sequential scan — the fix is usually a more selective composite index (status, created_at) or filtering on the more selective column first.",
+    "source": "Generated (based on Indexes theory)",
+    "tags": [
+      "selectivity",
+      "query-plan",
+      "optimizer"
+    ],
+    "company": [
+      "SAP",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0016",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Normalization",
+    "difficulty": "Easy",
+    "question": "What problem does database normalization primarily aim to reduce?",
+    "options": [
+      "Query execution time",
+      "The number of tables in a schema",
+      "The need for foreign keys",
+      "Data redundancy and update anomalies"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Normalization organizes columns and tables to minimize duplicated data, so a fact only needs to be updated in one place instead of many, avoiding inconsistent copies.",
+    "source": "Generated (based on Normalization theory)",
+    "tags": [
+      "normalization-basics"
+    ],
+    "company": [
+      "Snowflake",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0017",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Normalization",
+    "difficulty": "Easy",
+    "question": "A table is in First Normal Form (1NF) when?",
+    "options": [
+      "Each column holds atomic (indivisible) values and there are no repeating groups",
+      "Every non-key column depends on the whole primary key",
+      "There are no transitive dependencies",
+      "Every table has exactly one foreign key"
+    ],
+    "correctAnswer": 0,
+    "explanation": "1NF requires atomic values per cell — no comma-separated lists or nested structures — and forbids repeating column groups like phone1, phone2, phone3.",
+    "source": "Generated (based on Normalization theory)",
+    "tags": [
+      "1nf"
+    ],
+    "company": [
+      "MongoDB",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0018",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Normalization",
+    "difficulty": "Medium",
+    "question": "A table is in Second Normal Form (2NF) when it is in 1NF and additionally?",
+    "options": [
+      "No column repeats across rows",
+      "Every non-key column depends on the entire primary key, not just part of it",
+      "Every column is indexed",
+      "It has no NULL values anywhere"
+    ],
+    "correctAnswer": 1,
+    "explanation": "2NF eliminates partial dependencies that occur with composite primary keys — a non-key column depending on only one part of the composite key violates 2NF and should move to its own table.",
+    "source": "Generated (based on Normalization theory)",
+    "tags": [
+      "2nf"
+    ],
+    "company": [
+      "Databricks",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0019",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Normalization",
+    "difficulty": "Medium",
+    "question": "Third Normal Form (3NF) eliminates which kind of dependency?",
+    "options": [
+      "Dependencies between two different tables entirely",
+      "Any dependency involving a foreign key",
+      "Transitive dependencies, where a non-key column depends on another non-key column instead of the key",
+      "Dependencies that only involve numeric columns"
+    ],
+    "correctAnswer": 2,
+    "explanation": "3NF requires that non-key attributes depend only on the primary key, not on other non-key attributes — e.g., storing zip_code and city in an orders table where city depends on zip_code is a transitive dependency.",
+    "source": "Generated (based on Normalization theory)",
+    "tags": [
+      "3nf",
+      "transitive-dependency"
+    ],
+    "company": [
+      "Cisco",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0020",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Normalization",
+    "difficulty": "Hard",
+    "question": "A reporting team wants a heavily denormalized \"wide\" table alongside the normalized OLTP schema. What's the main tradeoff being made, and when is it justified?",
+    "options": [
+      "Denormalization always improves both read and write performance with no downside",
+      "Denormalization is only valid when the original schema violates 1NF",
+      "Denormalized tables cannot be indexed",
+      "Trading write complexity and storage duplication for read simplicity and speed; justified for read-heavy analytics workloads where join cost on the normalized schema is the bottleneck"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Denormalizing pre-computes joins into a single wide table, which speeds up read-heavy analytical queries at the cost of redundant storage and more complex, error-prone updates — a reasonable tradeoff for reporting/OLAP but risky for the transactional source of truth.",
+    "source": "Generated (based on Normalization theory)",
+    "tags": [
+      "denormalization",
+      "olap",
+      "tradeoffs"
+    ],
+    "company": [
+      "VMware",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0021",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Transactions & ACID",
+    "difficulty": "Easy",
+    "question": "In ACID, what does the \"A\" (Atomicity) guarantee?",
+    "options": [
+      "A transaction's operations either all commit or all roll back together",
+      "Transactions run in alphabetical order",
+      "Data is always available even during a crash",
+      "Transactions execute faster than single statements"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Atomicity treats a transaction as a single indivisible unit — if any part fails, the entire transaction is rolled back, leaving no partial changes.",
+    "source": "Generated (based on Transactions & ACID theory)",
+    "tags": [
+      "atomicity",
+      "acid"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0022",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Transactions & ACID",
+    "difficulty": "Easy",
+    "question": "Which ACID property ensures the database moves from one valid state to another, respecting all constraints?",
+    "options": [
+      "Isolation",
+      "Consistency",
+      "Durability",
+      "Atomicity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Consistency means a transaction only ever transforms the database from one state that satisfies all defined rules (constraints, triggers, cascades) to another such state.",
+    "source": "Generated (based on Transactions & ACID theory)",
+    "tags": [
+      "consistency",
+      "acid"
+    ],
+    "company": [
+      "Amazon",
+      "LinkedIn"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0023",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Transactions & ACID",
+    "difficulty": "Medium",
+    "question": "What does \"Durability\" guarantee once a transaction commits?",
+    "options": [
+      "The transaction can still be rolled back manually afterward",
+      "Other transactions can immediately see the uncommitted changes",
+      "The committed changes survive a subsequent crash or power loss, typically via write-ahead logging",
+      "The transaction is guaranteed to run in under one second"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Durability means once COMMIT returns success, the changes are persisted (usually flushed to a write-ahead log) so they are not lost even if the server crashes immediately after.",
+    "source": "Generated (based on Transactions & ACID theory)",
+    "tags": [
+      "durability",
+      "wal"
+    ],
+    "company": [
+      "Microsoft",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0024",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Transactions & ACID",
+    "difficulty": "Medium",
+    "question": "What is the difference between COMMIT and ROLLBACK?",
+    "options": [
+      "COMMIT and ROLLBACK are interchangeable synonyms",
+      "COMMIT only applies to SELECT statements",
+      "ROLLBACK permanently saves changes to disk",
+      "COMMIT makes a transaction's changes permanent; ROLLBACK discards all changes made since the transaction began"
+    ],
+    "correctAnswer": 3,
+    "explanation": "COMMIT finalizes and persists every change made in the transaction, while ROLLBACK undoes them entirely, returning the data to its pre-transaction state.",
+    "source": "Generated (based on Transactions & ACID theory)",
+    "tags": [
+      "commit",
+      "rollback"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0025",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Transactions & ACID",
+    "difficulty": "Hard",
+    "question": "A multi-step transaction transfers money between two accounts (debit one, credit the other) and the process crashes after the debit is written but before the credit. What guarantees prevent a permanently inconsistent balance, and why?",
+    "options": [
+      "Atomicity ensures the whole transaction rolls back as a unit on crash recovery, and durability's write-ahead log lets the engine replay/undo incomplete transactions so the debit is undone too",
+      "Isolation alone reverses the debit automatically",
+      "Nothing protects this case, it requires application-level compensation logic",
+      "Consistency guarantees the credit still eventually happens"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Because the transaction never reached COMMIT, atomicity requires all-or-nothing — on restart, the engine's recovery process reads the write-ahead log and rolls back any transaction that wasn't fully committed, undoing the debit so the accounts stay balanced.",
+    "source": "Generated (based on Transactions & ACID theory)",
+    "tags": [
+      "atomicity",
+      "durability",
+      "crash-recovery"
+    ],
+    "company": [
+      "Oracle",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0026",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Aggregate Functions",
+    "difficulty": "Easy",
+    "question": "Which aggregate function counts the number of rows, including rows with NULL in any column (when used as COUNT(*))?",
+    "options": [
+      "COUNT(column)",
+      "COUNT(*)",
+      "SUM(column)",
+      "AVG(column)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "COUNT(*) counts rows regardless of NULLs in individual columns, whereas COUNT(column) only counts rows where that specific column is non-NULL.",
+    "source": "Generated (based on Aggregate Functions theory)",
+    "tags": [
+      "count"
+    ],
+    "company": [
+      "IBM",
+      "PayPal"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0027",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Aggregate Functions",
+    "difficulty": "Easy",
+    "question": "What does AVG(salary) compute over a set of rows?",
+    "options": [
+      "The sum of all salary values including NULLs treated as zero",
+      "The median salary value",
+      "The arithmetic mean of the non-NULL salary values",
+      "The most frequently occurring salary value"
+    ],
+    "correctAnswer": 2,
+    "explanation": "AVG sums the non-NULL values in the column and divides by the count of those non-NULL values — NULLs are excluded from both the sum and the count, not treated as zero.",
+    "source": "Generated (based on Aggregate Functions theory)",
+    "tags": [
+      "avg",
+      "null-handling"
+    ],
+    "company": [
+      "Uber",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0028",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Aggregate Functions",
+    "difficulty": "Medium",
+    "question": "Why does `SELECT department, COUNT(*) FROM employees` (without GROUP BY) typically raise an error in strict SQL engines?",
+    "options": [
+      "COUNT(*) cannot be used with any other column ever",
+      "department must be cast to a numeric type first",
+      "Aggregate functions can only appear in the WHERE clause",
+      "Mixing a non-aggregated column with an aggregate function requires a GROUP BY to define how rows are grouped"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Without GROUP BY, the engine doesn't know which department value to pair with the single aggregated COUNT(*) result, since aggregates collapse many rows into one — SQL requires every non-aggregated selected column to appear in GROUP BY.",
+    "source": "Generated (based on Aggregate Functions theory)",
+    "tags": [
+      "group-by",
+      "aggregate-error"
+    ],
+    "company": [
+      "Netflix",
+      "SAP"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0029",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Aggregate Functions",
+    "difficulty": "Medium",
+    "question": "What's the difference between COUNT(column) and COUNT(DISTINCT column)?",
+    "options": [
+      "COUNT(column) counts all non-NULL rows; COUNT(DISTINCT column) counts only unique non-NULL values",
+      "They always return the same result",
+      "COUNT(DISTINCT column) includes NULLs while COUNT(column) does not",
+      "COUNT(DISTINCT column) is only valid on primary key columns"
+    ],
+    "correctAnswer": 0,
+    "explanation": "COUNT(column) tallies every row where the column is non-NULL, while COUNT(DISTINCT column) first deduplicates the non-NULL values and counts how many unique ones remain.",
+    "source": "Generated (based on Aggregate Functions theory)",
+    "tags": [
+      "count-distinct"
+    ],
+    "company": [
+      "LinkedIn",
+      "Snowflake"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0030",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Aggregate Functions",
+    "difficulty": "Hard",
+    "question": "A query computes `SUM(amount) FILTER (WHERE status = 'paid')` alongside a plain `SUM(amount)` in the same SELECT without any WHERE clause narrowing status. What does the FILTER clause achieve that a WHERE clause couldn't in this case?",
+    "options": [
+      "FILTER is purely syntactic sugar for CASE and has no behavioral difference ever",
+      "It restricts one specific aggregate to a subset of rows while still allowing other aggregates in the same query to see all rows",
+      "FILTER can only be used with COUNT, not SUM",
+      "FILTER removes the need for GROUP BY entirely"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A WHERE clause would filter rows for the entire query, breaking the plain SUM(amount) over all rows; FILTER scopes the condition to just that aggregate expression, letting multiple differently-filtered aggregates coexist in one pass over the same row set.",
+    "source": "Generated (based on Aggregate Functions theory)",
+    "tags": [
+      "filter-clause",
+      "aggregate-functions"
+    ],
+    "company": [
+      "Salesforce",
+      "MongoDB"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0031",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Window Functions",
+    "difficulty": "Easy",
+    "question": "What does the OVER() clause signal in a query?",
+    "options": [
+      "The function should ignore all NULL values",
+      "The query should return results sorted in reverse",
+      "The function is a window function, computed across a set of related rows without collapsing them into one row",
+      "The column must be indexed"
+    ],
+    "correctAnswer": 2,
+    "explanation": "OVER() marks a function as operating over a \"window\" of rows (optionally partitioned/ordered) while still returning one output row per input row, unlike GROUP BY aggregates which collapse rows.",
+    "source": "Generated (based on Window Functions theory)",
+    "tags": [
+      "window-basics"
+    ],
+    "company": [
+      "Airbnb",
+      "Databricks"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0032",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Window Functions",
+    "difficulty": "Easy",
+    "question": "What does ROW_NUMBER() OVER (ORDER BY score DESC) produce?",
+    "options": [
+      "The running total of scores",
+      "The count of rows with a higher score",
+      "A boolean flag for the highest score row",
+      "A unique sequential rank (1, 2, 3, ...) per row based on descending score, with no ties"
+    ],
+    "correctAnswer": 3,
+    "explanation": "ROW_NUMBER() assigns strictly increasing integers in the specified order, giving every row a distinct number even when score values tie, unlike RANK() which can repeat.",
+    "source": "Generated (based on Window Functions theory)",
+    "tags": [
+      "row-number"
+    ],
+    "company": [
+      "Stripe",
+      "Cisco"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0033",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Window Functions",
+    "difficulty": "Medium",
+    "question": "What's the difference between RANK() and DENSE_RANK() when there are ties?",
+    "options": [
+      "RANK() leaves gaps in the numbering after a tie; DENSE_RANK() does not",
+      "RANK() ignores ties entirely",
+      "DENSE_RANK() only works with numeric columns",
+      "RANK() and DENSE_RANK() are identical in every case"
+    ],
+    "correctAnswer": 0,
+    "explanation": "If two rows tie for rank 2, RANK() gives both rank 2 and the next row rank 4 (skipping 3), while DENSE_RANK() gives both rank 2 and the next row rank 3, with no gap.",
+    "source": "Generated (based on Window Functions theory)",
+    "tags": [
+      "rank",
+      "dense-rank"
+    ],
+    "company": [
+      "PayPal",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0034",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Window Functions",
+    "difficulty": "Medium",
+    "question": "What does PARTITION BY do inside a window function's OVER clause?",
+    "options": [
+      "Filters out rows that don't match the partition value",
+      "Splits the rows into independent groups, resetting the window computation for each group",
+      "Physically splits the table into separate database partitions",
+      "Sorts the final result set by the partition column"
+    ],
+    "correctAnswer": 1,
+    "explanation": "PARTITION BY divides rows into groups (like GROUP BY does for aggregates), but each row still appears in the output — the window function is computed independently within each partition.",
+    "source": "Generated (based on Window Functions theory)",
+    "tags": [
+      "partition-by"
+    ],
+    "company": [
+      "Adobe",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0035",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Window Functions",
+    "difficulty": "Hard",
+    "question": "A query needs, per customer, the difference between each order's amount and the customer's previous order amount, ordered by order date. Which window construct fits, and what edge case needs handling for each customer's first order?",
+    "options": [
+      "SUM(amount) OVER (PARTITION BY customer_id) gives the difference directly",
+      "LEAD(amount) OVER (ORDER BY order_date) without partitioning handles all customers correctly",
+      "LAG(amount) OVER (PARTITION BY customer_id ORDER BY order_date) subtracted from amount; the first order per customer has no prior row, so LAG returns NULL unless a default is supplied",
+      "ROW_NUMBER() computes the difference between consecutive amounts natively"
+    ],
+    "correctAnswer": 2,
+    "explanation": "LAG() looks back one row within each customer's partition ordered by date; for the very first row in a partition there's no preceding row, so LAG returns NULL by default — callers often pass a second argument to LAG or COALESCE the result to handle that first-order case explicitly.",
+    "source": "Generated (based on Window Functions theory)",
+    "tags": [
+      "lag",
+      "window-function",
+      "edge-case"
+    ],
+    "company": [
+      "SAP",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0036",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Views",
+    "difficulty": "Easy",
+    "question": "What is a database view?",
+    "options": [
+      "A physical copy of a table's data refreshed nightly",
+      "A backup snapshot of the entire database",
+      "A user permission profile",
+      "A stored, named SELECT query that behaves like a virtual table when queried"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A view saves a SELECT statement under a name; querying the view re-runs (or is folded into) that underlying query rather than reading separately stored data, so it always reflects the current base tables.",
+    "source": "Generated (based on Views theory)",
+    "tags": [
+      "view-basics"
+    ],
+    "company": [
+      "Snowflake",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0037",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Views",
+    "difficulty": "Easy",
+    "question": "Does querying a plain (non-materialized) view generally re-read the underlying base tables each time?",
+    "options": [
+      "Yes, since it has no data of its own; it just wraps the stored query definition",
+      "No, it always reads from a permanent copy stored at creation time",
+      "No, views cache their result forever until dropped",
+      "Yes, but only once per database restart"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A standard view has no independent storage — the database expands the view's definition into the outer query at execution time, so results always reflect the current state of the base tables.",
+    "source": "Generated (based on Views theory)",
+    "tags": [
+      "view-basics"
+    ],
+    "company": [
+      "MongoDB",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0038",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Views",
+    "difficulty": "Medium",
+    "question": "What is the main benefit of a materialized view over a regular view?",
+    "options": [
+      "It automatically stays perfectly in sync with base tables on every write",
+      "Query results are physically stored and precomputed, so reads are fast but can go stale until refreshed",
+      "It requires no storage space at all",
+      "It removes the need for indexes on the base tables"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A materialized view persists the query's result set to disk, trading storage and refresh overhead for much faster reads, since it avoids recomputing the underlying query — at the cost of potentially serving stale data between refreshes.",
+    "source": "Generated (based on Views theory)",
+    "tags": [
+      "materialized-view"
+    ],
+    "company": [
+      "Databricks",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0039",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Views",
+    "difficulty": "Medium",
+    "question": "Why might a view be described as \"not updatable\"?",
+    "options": [
+      "Views are never allowed to be queried more than once",
+      "Only materialized views support any writes",
+      "Its defining query includes things like joins, aggregates, or DISTINCT that make it ambiguous which base rows an INSERT/UPDATE/DELETE should affect",
+      "All views become read-only after 24 hours"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A view built from a simple single-table SELECT can often be updated transparently, but once it involves joins, GROUP BY, or aggregate functions, there's no unambiguous mapping back to base table rows, so the engine rejects direct writes through it.",
+    "source": "Generated (based on Views theory)",
+    "tags": [
+      "updatable-view"
+    ],
+    "company": [
+      "Cisco",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0040",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Views",
+    "difficulty": "Hard",
+    "question": "A team replaces a complex, frequently-run analytical join with a materialized view refreshed hourly. What tradeoff have they accepted, and what technique reduces the cost of keeping it current versus a full rebuild each time?",
+    "options": [
+      "They accepted slower reads in exchange for always-fresh data",
+      "Materialized views cannot be refreshed incrementally under any circumstance",
+      "The tradeoff only affects storage, never data freshness",
+      "They accepted eventual staleness (up to an hour old) in exchange for fast reads; an incremental refresh that applies only the changed rows since the last refresh reduces cost versus a full recompute"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Materialized views decouple read latency from query complexity but introduce a staleness window between refreshes; incremental (or \"fast\") refresh strategies track changes since the last refresh and apply deltas instead of recomputing the entire view, cutting refresh cost significantly on large datasets.",
+    "source": "Generated (based on Views theory)",
+    "tags": [
+      "materialized-view",
+      "incremental-refresh",
+      "tradeoffs"
+    ],
+    "company": [
+      "VMware",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0041",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Stored Procedures & Triggers",
+    "difficulty": "Easy",
+    "question": "What is a stored procedure?",
+    "options": [
+      "A precompiled, named block of SQL/procedural logic stored in the database and invoked by call",
+      "A single ad-hoc SELECT statement typed by a user",
+      "A file containing database backup instructions",
+      "A network configuration for the database server"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A stored procedure bundles one or more SQL statements plus procedural logic (variables, loops, conditionals) under a name, stored in the database and executed with a CALL/EXEC rather than being resent from the client each time.",
+    "source": "Generated (based on Stored Procedures & Triggers theory)",
+    "tags": [
+      "stored-procedure-basics"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0042",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Stored Procedures & Triggers",
+    "difficulty": "Easy",
+    "question": "What is a database trigger?",
+    "options": [
+      "A scheduled job that runs at a fixed time of day regardless of data changes",
+      "Procedural code that automatically runs in response to a specified table event like INSERT, UPDATE, or DELETE",
+      "A type of index used to speed up joins",
+      "A constraint that only allows numeric input"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A trigger is bound to a table and an event (before/after INSERT, UPDATE, or DELETE) and fires automatically whenever that event occurs, without being explicitly called.",
+    "source": "Generated (based on Stored Procedures & Triggers theory)",
+    "tags": [
+      "trigger-basics"
+    ],
+    "company": [
+      "Amazon",
+      "LinkedIn"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0043",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Stored Procedures & Triggers",
+    "difficulty": "Medium",
+    "question": "What is a key risk of overusing triggers for business logic?",
+    "options": [
+      "Triggers always run slower than an equivalent stored procedure call",
+      "Triggers cannot access the row values being changed",
+      "Hidden, hard-to-trace side effects — a simple UPDATE can silently cascade into other changes that aren't visible in the calling code",
+      "Triggers are limited to read-only operations"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because triggers fire implicitly and invisibly to the caller, chains of triggers calling more triggers can make debugging and reasoning about data flow difficult, since the logic isn't visible at the call site.",
+    "source": "Generated (based on Stored Procedures & Triggers theory)",
+    "tags": [
+      "trigger-pitfalls"
+    ],
+    "company": [
+      "Microsoft",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0044",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Stored Procedures & Triggers",
+    "difficulty": "Medium",
+    "question": "What's the practical difference between a BEFORE trigger and an AFTER trigger on INSERT?",
+    "options": [
+      "BEFORE triggers can only fire on SELECT statements",
+      "AFTER triggers run before the transaction even starts",
+      "There is no functional difference between them",
+      "A BEFORE trigger can inspect and modify the row before it's written; an AFTER trigger runs once the row is already committed to the table"
+    ],
+    "correctAnswer": 3,
+    "explanation": "BEFORE triggers execute prior to the actual write, letting them validate or adjust column values (e.g., via NEW.column assignment); AFTER triggers run once the row exists, useful for tasks like logging or cascading updates to other tables.",
+    "source": "Generated (based on Stored Procedures & Triggers theory)",
+    "tags": [
+      "before-trigger",
+      "after-trigger"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0045",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Stored Procedures & Triggers",
+    "difficulty": "Hard",
+    "question": "A team uses an AFTER INSERT trigger on an orders table to update a denormalized customer_totals table. Under high concurrent insert load, what failure mode should they specifically test for, and what mitigates it?",
+    "options": [
+      "Lock contention/deadlocks from many concurrent triggers updating the same customer_totals row; mitigated by keeping the trigger's update minimal, indexed, and consistent in lock-acquisition order, or moving the aggregation to an async/batch process",
+      "Triggers cannot run inside the same transaction as the INSERT, so no locking risk exists",
+      "AFTER triggers automatically serialize all inserts across the whole table",
+      "This pattern has no concurrency implications since triggers are read-only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An AFTER INSERT trigger runs in the same transaction as the insert, so if many concurrent orders for the same customer update the same customer_totals row, they contend for that row's lock, risking waits or deadlocks; keeping trigger logic minimal, using consistent access order, or deferring aggregation to an async job reduces contention.",
+    "source": "Generated (based on Stored Procedures & Triggers theory)",
+    "tags": [
+      "triggers",
+      "locking",
+      "concurrency"
+    ],
+    "company": [
+      "Oracle",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0046",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Constraints (PK/FK/Unique)",
+    "difficulty": "Easy",
+    "question": "What does a PRIMARY KEY constraint guarantee about a column (or set of columns)?",
+    "options": [
+      "Values must be numeric",
+      "Values are unique and never NULL, and there is at most one primary key per table",
+      "Values are automatically indexed on a separate replica",
+      "Values can repeat but never be NULL"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A PRIMARY KEY enforces both uniqueness and NOT NULL for the designated column(s), providing a stable identifier for each row, and a table may declare only one.",
+    "source": "Generated (based on Constraints (PK/FK/Unique) theory)",
+    "tags": [
+      "primary-key"
+    ],
+    "company": [
+      "IBM",
+      "PayPal"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0047",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Constraints (PK/FK/Unique)",
+    "difficulty": "Easy",
+    "question": "What does a FOREIGN KEY constraint enforce?",
+    "options": [
+      "The column must always contain unique values within its own table",
+      "The referencing table must have the same number of rows as the referenced table",
+      "Values in the referencing column must match an existing value in the referenced table's key column (or be NULL, if allowed)",
+      "The column must be indexed for fast writes"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A FOREIGN KEY ties a column to a key in another table, rejecting inserts/updates that would reference a non-existent row, which maintains referential integrity between related tables.",
+    "source": "Generated (based on Constraints (PK/FK/Unique) theory)",
+    "tags": [
+      "foreign-key"
+    ],
+    "company": [
+      "Uber",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0048",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Constraints (PK/FK/Unique)",
+    "difficulty": "Medium",
+    "question": "How does a UNIQUE constraint differ from a PRIMARY KEY constraint?",
+    "options": [
+      "UNIQUE constraints cannot be combined with an index",
+      "PRIMARY KEY allows duplicate values but UNIQUE does not",
+      "UNIQUE constraints only apply to numeric columns",
+      "UNIQUE allows NULL values (often more than one, depending on the engine) and a table can have multiple UNIQUE constraints, while there's only one PRIMARY KEY"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Both enforce uniqueness among non-NULL values, but a table can have many UNIQUE constraints alongside exactly one PRIMARY KEY, and UNIQUE columns are typically allowed to contain NULLs (which most engines don't treat as duplicates of each other).",
+    "source": "Generated (based on Constraints (PK/FK/Unique) theory)",
+    "tags": [
+      "unique-constraint"
+    ],
+    "company": [
+      "Netflix",
+      "SAP"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0049",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Constraints (PK/FK/Unique)",
+    "difficulty": "Medium",
+    "question": "What happens on a delete from the parent table when a foreign key is defined with ON DELETE CASCADE?",
+    "options": [
+      "Matching child rows referencing the deleted parent row are automatically deleted too",
+      "The delete is blocked until child rows are manually removed",
+      "Child rows have their foreign key column set to a default value",
+      "The parent delete is silently ignored"
+    ],
+    "correctAnswer": 0,
+    "explanation": "ON DELETE CASCADE propagates the delete: removing a parent row automatically removes every child row that references it via the foreign key, keeping referential integrity without manual cleanup — contrast with ON DELETE SET NULL or the default RESTRICT.",
+    "source": "Generated (based on Constraints (PK/FK/Unique) theory)",
+    "tags": [
+      "on-delete-cascade"
+    ],
+    "company": [
+      "LinkedIn",
+      "Snowflake"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0050",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Constraints (PK/FK/Unique)",
+    "difficulty": "Hard",
+    "question": "A migration adds a FOREIGN KEY from orders.customer_id to customers.id on a live, heavily-written table with existing orphaned rows (customer_id values with no matching customer). What must happen before the constraint can be added, and what validation option minimizes downtime on very large tables?",
+    "options": [
+      "Foreign keys can always be added regardless of existing data, invalid rows are simply ignored",
+      "Orphaned rows must be fixed or removed first; on engines that support it, adding the constraint as NOT VALID and validating it separately (without a long exclusive lock) minimizes downtime versus a single blocking validation",
+      "The table must be dropped and recreated to add any foreign key",
+      "Orphaned rows are automatically deleted when the constraint is created"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A FOREIGN KEY constraint cannot be created while violating rows exist, so those rows must be cleaned up (matched or nulled, if the column is nullable) first; some engines let you add the constraint as NOT VALID immediately (cheap, no full scan) and validate it in a background step afterward, avoiding a long table-locking scan in one shot.",
+    "source": "Generated (based on Constraints (PK/FK/Unique) theory)",
+    "tags": [
+      "foreign-key",
+      "migration",
+      "downtime"
+    ],
+    "company": [
+      "Salesforce",
+      "MongoDB"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0051",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Query Optimization",
+    "difficulty": "Easy",
+    "question": "What does EXPLAIN (or EXPLAIN PLAN) show for a query?",
+    "options": [
+      "The exact runtime in milliseconds guaranteed for every future run",
+      "A list of all indexes in the database",
+      "The execution plan the engine intends to use — access paths, join order, and estimated costs",
+      "The SQL syntax errors present in the query"
+    ],
+    "correctAnswer": 2,
+    "explanation": "EXPLAIN reveals how the optimizer plans to execute the query — which indexes or scans it will use, the join order, and estimated row counts/costs — helping diagnose why a query is slow.",
+    "source": "Generated (based on Query Optimization theory)",
+    "tags": [
+      "explain",
+      "query-plan"
+    ],
+    "company": [
+      "Airbnb",
+      "Databricks"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0052",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Query Optimization",
+    "difficulty": "Easy",
+    "question": "Why does `SELECT *` often hurt performance compared to selecting only needed columns?",
+    "options": [
+      "SELECT * is always rewritten to a syntax error by the optimizer",
+      "SELECT * forces a full table lock for the duration of the query",
+      "SELECT * disables all indexes for that query permanently",
+      "It can prevent using a covering index and forces reading/transferring unnecessary column data"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Pulling every column often requires the engine to fetch full rows from the table (even when an index would have covered a narrower column list) and sends more data over the wire, and it makes the query fragile to schema changes.",
+    "source": "Generated (based on Query Optimization theory)",
+    "tags": [
+      "select-star"
+    ],
+    "company": [
+      "Stripe",
+      "Cisco"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0053",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Query Optimization",
+    "difficulty": "Medium",
+    "question": "A query applies a function to an indexed column, like `WHERE YEAR(created_at) = 2026`. Why can this prevent the index from being used?",
+    "options": [
+      "Wrapping the column in a function usually makes the predicate non-sargable, so the engine can't seek using the plain index on created_at",
+      "Functions in WHERE clauses always run before the query starts and pose no issue",
+      "The index is dropped automatically when a function is applied to it",
+      "This syntax is invalid in SQL and would raise an error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An index on created_at is ordered by the raw column values; applying YEAR() to it means the engine would need to evaluate the function on every row to check the condition, defeating direct index seeking — rewriting as a range (`created_at >= '2026-01-01' AND created_at < '2027-01-01'`) keeps it sargable.",
+    "source": "Generated (based on Query Optimization theory)",
+    "tags": [
+      "sargable",
+      "optimizer"
+    ],
+    "company": [
+      "PayPal",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0054",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Query Optimization",
+    "difficulty": "Medium",
+    "question": "What's the general performance concern with an N+1 query pattern in application code?",
+    "options": [
+      "It refers to needing exactly N+1 indexes for a query to run",
+      "One query fetches a list, then a separate query is issued per row to fetch related data, causing a linear explosion of round trips",
+      "It's a database-level restriction limiting queries to N+1 joins",
+      "It only affects DELETE statements"
+    ],
+    "correctAnswer": 1,
+    "explanation": "N+1 happens when code loads N parent rows and then loops through them issuing one additional query each for related data, resulting in N+1 total round trips instead of one join or batched IN query, which scales poorly as N grows.",
+    "source": "Generated (based on Query Optimization theory)",
+    "tags": [
+      "n-plus-1"
+    ],
+    "company": [
+      "Adobe",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0055",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Query Optimization",
+    "difficulty": "Hard",
+    "question": "A dashboard query joins five tables and takes 8 seconds; EXPLAIN shows the optimizer choosing a suboptimal join order with a large intermediate result before the final filter is applied. Besides adding indexes, what two techniques directly target reducing that intermediate result size?",
+    "options": [
+      "Increasing the database's memory allocation is the only fix and query structure is irrelevant",
+      "Rewriting all joins as subqueries always eliminates intermediate results",
+      "Pushing selective filters earlier (filtering before joining where semantically valid) and reordering joins so the most selective/smallest-result join happens first, shrinking rows carried into later joins",
+      "Removing all WHERE clauses reduces intermediate result size"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Query cost is heavily driven by how large the intermediate result sets are between join steps; filtering as early as possible and ordering joins so the most selective one narrows the row count first (sometimes forced by rewriting or query hints when the optimizer's estimates are off) both directly cut down what later joins have to process.",
+    "source": "Generated (based on Query Optimization theory)",
+    "tags": [
+      "join-order",
+      "query-optimization",
+      "intermediate-results"
+    ],
+    "company": [
+      "SAP",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0056",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "CTEs",
+    "difficulty": "Easy",
+    "question": "What does CTE stand for in SQL?",
+    "options": [
+      "Conditional Table Execution",
+      "Composite Transaction Engine",
+      "Clustered Table Extension",
+      "Common Table Expression"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A Common Table Expression, introduced with WITH, defines a named temporary result set that can be referenced within the same query, improving readability over deeply nested subqueries.",
+    "source": "Generated (based on CTEs theory)",
+    "tags": [
+      "cte-basics"
+    ],
+    "company": [
+      "Snowflake",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0057",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "CTEs",
+    "difficulty": "Easy",
+    "question": "How is a CTE declared in a query?",
+    "options": [
+      "With a WITH clause followed by a name and a query, placed before the main SELECT",
+      "With a CREATE TEMP TABLE statement inside the SELECT",
+      "With an INTO clause after the FROM keyword",
+      "With a DECLARE CURSOR statement"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A CTE starts with `WITH cte_name AS (SELECT ...)` immediately before the statement that uses it, giving a readable, named building block instead of a nested subquery.",
+    "source": "Generated (based on CTEs theory)",
+    "tags": [
+      "cte-syntax"
+    ],
+    "company": [
+      "MongoDB",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0058",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "CTEs",
+    "difficulty": "Medium",
+    "question": "What is the main readability benefit of a CTE over an equivalent nested subquery?",
+    "options": [
+      "CTEs always execute faster than any subquery in every database engine",
+      "It names each logical step and lets the main query reference it, avoiding deep nesting and repeated subquery definitions",
+      "CTEs remove the need for JOIN clauses entirely",
+      "CTEs automatically deduplicate rows"
+    ],
+    "correctAnswer": 1,
+    "explanation": "By breaking a query into named, sequential steps, a CTE reads top-to-bottom like a pipeline instead of forcing the reader to parse inward from a deeply nested subquery, and lets the same intermediate result be referenced more than once by name.",
+    "source": "Generated (based on CTEs theory)",
+    "tags": [
+      "cte-readability"
+    ],
+    "company": [
+      "Databricks",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0059",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "CTEs",
+    "difficulty": "Medium",
+    "question": "What is a recursive CTE typically used for?",
+    "options": [
+      "Running the same query multiple times in parallel for speed",
+      "Automatically retrying a failed query",
+      "Traversing hierarchical or graph-like data, such as an org chart or a bill-of-materials tree",
+      "Converting a table into a view permanently"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A recursive CTE has an anchor member (base case) and a recursive member that references the CTE itself, repeatedly joining back until no new rows are produced — the standard technique for walking parent-child hierarchies of unknown depth.",
+    "source": "Generated (based on CTEs theory)",
+    "tags": [
+      "recursive-cte"
+    ],
+    "company": [
+      "Cisco",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0060",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "CTEs",
+    "difficulty": "Hard",
+    "question": "A recursive CTE walking a manager-employee hierarchy runs indefinitely on production data. What data condition most likely causes this, and what safeguard should be added regardless of data correctness?",
+    "options": [
+      "Recursive CTEs always run indefinitely by design and must be avoided entirely",
+      "The CTE is missing an ORDER BY clause, which causes the infinite loop",
+      "Recursive CTEs cannot be used on self-referencing tables",
+      "A cycle in the reporting data (e.g., two employees each listed as the other's manager) causes infinite recursion; a recursion depth limit or cycle-detection guard should be added defensively"
+    ],
+    "correctAnswer": 3,
+    "explanation": "If the hierarchy data contains a cycle, the recursive member keeps finding \"new\" rows to join on forever since it loops back to already-visited nodes; adding a maximum recursion depth (many engines support one, or a manual counter column) or tracking visited keys prevents runaway execution even if bad data slips in.",
+    "source": "Generated (based on CTEs theory)",
+    "tags": [
+      "recursive-cte",
+      "infinite-loop",
+      "safeguards"
+    ],
+    "company": [
+      "VMware",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0061",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Set Operations (UNION/INTERSECT)",
+    "difficulty": "Easy",
+    "question": "What does UNION do differently from UNION ALL?",
+    "options": [
+      "UNION removes duplicate rows from the combined result; UNION ALL keeps every row including duplicates",
+      "UNION ALL is only valid on numeric columns",
+      "UNION combines columns side by side while UNION ALL stacks rows",
+      "UNION requires both queries to come from the same table"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Both stack the result sets of two queries vertically, but UNION performs an implicit deduplication pass (usually via a sort or hash) after combining, while UNION ALL simply concatenates all rows without checking for duplicates.",
+    "source": "Generated (based on Set Operations (UNION/INTERSECT) theory)",
+    "tags": [
+      "union",
+      "union-all"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0062",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Set Operations (UNION/INTERSECT)",
+    "difficulty": "Easy",
+    "question": "What must be true about the two SELECT statements combined with a set operator like UNION?",
+    "options": [
+      "They must query the exact same table",
+      "They must return the same number of columns with compatible data types in corresponding positions",
+      "They must both include an ORDER BY clause",
+      "They must both use the same table alias"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Set operators line up columns positionally, so both queries need matching column counts and type-compatible columns in the same order, even if the column names differ.",
+    "source": "Generated (based on Set Operations (UNION/INTERSECT) theory)",
+    "tags": [
+      "union-column-compatibility"
+    ],
+    "company": [
+      "Amazon",
+      "LinkedIn"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0063",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Set Operations (UNION/INTERSECT)",
+    "difficulty": "Medium",
+    "question": "What does INTERSECT return when applied to two SELECT results?",
+    "options": [
+      "Every row from both result sets combined",
+      "Only rows that appear in the first result set but not the second",
+      "Only the rows that appear in both result sets",
+      "Rows where any column matches, regardless of the rest"
+    ],
+    "correctAnswer": 2,
+    "explanation": "INTERSECT keeps only rows that are present in both queries' outputs (comparing entire rows), effectively finding the common ground between the two result sets.",
+    "source": "Generated (based on Set Operations (UNION/INTERSECT) theory)",
+    "tags": [
+      "intersect"
+    ],
+    "company": [
+      "Microsoft",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0064",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Set Operations (UNION/INTERSECT)",
+    "difficulty": "Medium",
+    "question": "What does EXCEPT (or MINUS in some engines) return?",
+    "options": [
+      "Rows that appear in the second set but not the first",
+      "All rows from both sets except duplicates",
+      "Rows where every column is NULL",
+      "Rows from the first result set that do not appear in the second result set"
+    ],
+    "correctAnswer": 3,
+    "explanation": "EXCEPT/MINUS computes a set difference: it keeps rows from the left query's output while removing any row that also appears in the right query's output.",
+    "source": "Generated (based on Set Operations (UNION/INTERSECT) theory)",
+    "tags": [
+      "except-minus"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0065",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Set Operations (UNION/INTERSECT)",
+    "difficulty": "Hard",
+    "question": "A query does `SELECT id FROM orders_2025 UNION SELECT id FROM orders_2026` on two 50M-row tables, and the plan shows an expensive sort/hash step purely for deduplication even though id is known to be globally unique across both years by application logic. What's the cheaper equivalent, and why?",
+    "options": [
+      "UNION ALL, since deduplication is unnecessary work when the caller already guarantees no overlap, avoiding the extra sort/hash pass UNION performs",
+      "INTERSECT, since it skips deduplication entirely",
+      "UNION with a LIMIT clause, since limiting rows removes the need to deduplicate",
+      "There is no cheaper equivalent, UNION's cost is fixed regardless of data guarantees"
+    ],
+    "correctAnswer": 0,
+    "explanation": "UNION's extra cost over UNION ALL comes specifically from removing duplicates, which typically needs a sort or hash-based pass over the combined result; if the two sources are already known not to overlap, that dedup step buys nothing and UNION ALL returns the identical result set for a fraction of the cost.",
+    "source": "Generated (based on Set Operations (UNION/INTERSECT) theory)",
+    "tags": [
+      "union-all",
+      "optimization",
+      "set-operations"
+    ],
+    "company": [
+      "Oracle",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0066",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "What is the key difference between CHAR(n) and VARCHAR(n)?",
+    "options": [
+      "VARCHAR(n) is fixed-length while CHAR(n) is variable-length",
+      "CHAR(n) is fixed-length and pads shorter values with spaces; VARCHAR(n) stores only the actual characters up to length n",
+      "CHAR(n) can store more characters than VARCHAR(n)",
+      "VARCHAR(n) cannot store text, only numbers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CHAR always reserves and pads to n characters regardless of the actual string length, while VARCHAR stores a variable-length string up to the declared maximum, generally using less space for shorter values.",
+    "source": "Generated (based on Data Types theory)",
+    "tags": [
+      "char-varchar"
+    ],
+    "company": [
+      "IBM",
+      "PayPal"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0067",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Data Types",
+    "difficulty": "Easy",
+    "question": "Why is DECIMAL/NUMERIC generally preferred over FLOAT for storing monetary amounts?",
+    "options": [
+      "FLOAT cannot store negative numbers",
+      "DECIMAL is always faster to compute with than FLOAT",
+      "DECIMAL stores exact fixed-point values, avoiding the binary floating-point rounding errors that FLOAT can introduce",
+      "FLOAT is deprecated in modern SQL standards"
+    ],
+    "correctAnswer": 2,
+    "explanation": "FLOAT/DOUBLE use binary floating-point representation, which can't exactly represent many decimal fractions (like 0.1), leading to tiny rounding errors that compound in financial calculations — DECIMAL stores an exact base-10 value instead.",
+    "source": "Generated (based on Data Types theory)",
+    "tags": [
+      "decimal",
+      "float",
+      "precision"
+    ],
+    "company": [
+      "Uber",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0068",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Data Types",
+    "difficulty": "Medium",
+    "question": "What's the practical difference between TIMESTAMP and TIMESTAMP WITH TIME ZONE (or the engine's equivalent) in terms of stored value?",
+    "options": [
+      "They store identical values and differ only in display formatting with no underlying difference",
+      "TIMESTAMP WITH TIME ZONE stores a string, while plain TIMESTAMP stores an integer",
+      "Plain TIMESTAMP cannot represent dates before the year 2000",
+      "A timezone-aware timestamp normalizes and stores the instant relative to UTC (and often converts on display), while a plain timestamp stores the literal date/time with no timezone context"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A timezone-aware timestamp type captures a specific moment in time, converting the input to UTC internally and adjusting on read for the session's timezone; a plain timestamp just stores the date/time values as given, with no notion of which timezone they belong to, which invites bugs when data crosses timezones.",
+    "source": "Generated (based on Data Types theory)",
+    "tags": [
+      "timestamp",
+      "timezone"
+    ],
+    "company": [
+      "Netflix",
+      "SAP"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0069",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Data Types",
+    "difficulty": "Medium",
+    "question": "What is a practical downside of using a generic TEXT/VARCHAR(MAX) column for every string field regardless of expected content?",
+    "options": [
+      "It loses documentation of expected value size/shape and can prevent certain optimizations or constraints the engine applies to bounded types",
+      "TEXT columns cannot be indexed under any circumstance",
+      "TEXT columns silently truncate data over 255 characters",
+      "TEXT columns cannot store Unicode characters"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An unbounded TEXT column doesn't communicate intended size limits to future readers or enforce any sanity bound at the database level, and some engines apply different storage/optimization strategies (e.g., inline vs. out-of-line storage, index key size limits) once a column exceeds certain lengths.",
+    "source": "Generated (based on Data Types theory)",
+    "tags": [
+      "text-type",
+      "schema-design"
+    ],
+    "company": [
+      "LinkedIn",
+      "Snowflake"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0070",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Data Types",
+    "difficulty": "Hard",
+    "question": "A schema stores a JSON blob in a JSONB column for flexible attributes but the team keeps needing to filter and sort on two fields inside it, and those queries are slow. What are two schema-level responses, and how do they trade off differently?",
+    "options": [
+      "Convert the entire JSONB column to plain TEXT, which speeds up all queries",
+      "Add expression/GIN indexes directly on the JSONB paths for those two fields for a quick win, or (better long-term) promote those two frequently-queried fields into real typed columns with proper constraints and standard indexes, keeping JSONB only for the truly variable remainder",
+      "Nothing can be done, JSONB columns can never be indexed",
+      "Switch the whole table to a single wide JSON document per row"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Indexing a specific JSON path (via an expression index or a GIN index) speeds up those particular lookups with minimal schema change but keeps query syntax JSON-specific and less type-safe; extracting the hot fields into normal typed columns gives full constraint/index/optimizer support and simpler queries, at the cost of a migration and losing pure schema flexibility for those fields.",
+    "source": "Generated (based on Data Types theory)",
+    "tags": [
+      "jsonb",
+      "indexing",
+      "schema-design"
+    ],
+    "company": [
+      "Salesforce",
+      "MongoDB"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0071",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "NULL Handling",
+    "difficulty": "Easy",
+    "question": "What does NULL represent in SQL?",
+    "options": [
+      "The number zero stored in a numeric column",
+      "An empty string stored in a text column",
+      "An unknown or missing value, distinct from zero, an empty string, or false",
+      "A deleted row marker"
+    ],
+    "correctAnswer": 2,
+    "explanation": "NULL specifically means \"no value is recorded here\" — it is not equivalent to 0, '', or FALSE, and comparisons involving NULL follow three-valued logic rather than ordinary true/false rules.",
+    "source": "Generated (based on NULL Handling theory)",
+    "tags": [
+      "null-basics"
+    ],
+    "company": [
+      "Airbnb",
+      "Databricks"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0072",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "NULL Handling",
+    "difficulty": "Easy",
+    "question": "Why does `WHERE column = NULL` never match any rows, even rows where column is actually NULL?",
+    "options": [
+      "Because NULL values are physically removed from the table by the engine",
+      "Because = NULL is a reserved syntax error in all SQL dialects",
+      "Because column = NULL only works with numeric columns",
+      "Because comparing anything to NULL with = yields UNKNOWN, not TRUE, so it never satisfies a WHERE filter; IS NULL must be used instead"
+    ],
+    "correctAnswer": 3,
+    "explanation": "SQL's three-valued logic means any equality comparison involving NULL evaluates to UNKNOWN rather than TRUE or FALSE, and a WHERE clause only keeps rows where the condition is TRUE — the IS NULL / IS NOT NULL predicates exist specifically to test for NULL correctly.",
+    "source": "Generated (based on NULL Handling theory)",
+    "tags": [
+      "null-comparison",
+      "three-valued-logic"
+    ],
+    "company": [
+      "Stripe",
+      "Cisco"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0073",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "NULL Handling",
+    "difficulty": "Medium",
+    "question": "What does COALESCE(a, b, c) return?",
+    "options": [
+      "The first non-NULL value among a, b, and c, evaluated left to right",
+      "The sum of a, b, and c treating NULLs as zero",
+      "TRUE if all three are NULL, otherwise FALSE",
+      "A random one of the three values"
+    ],
+    "correctAnswer": 0,
+    "explanation": "COALESCE scans its arguments in order and returns the first one that isn't NULL, commonly used to substitute a default/fallback value when the primary column is NULL.",
+    "source": "Generated (based on NULL Handling theory)",
+    "tags": [
+      "coalesce"
+    ],
+    "company": [
+      "PayPal",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0074",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "NULL Handling",
+    "difficulty": "Medium",
+    "question": "How do NULLs behave when included in an ORDER BY, and why might this matter across different database engines?",
+    "options": [
+      "Rows containing NULL in the sort column are always excluded from the result entirely",
+      "NULLs are treated as either the lowest or highest sortable value depending on the engine's default (and direction), and this default differs between engines unless NULLS FIRST/LAST is specified explicitly",
+      "NULLs are always sorted exactly like the value zero",
+      "NULLs cause an ORDER BY clause to raise an error"
+    ],
+    "correctAnswer": 1,
+    "explanation": "SQL leaves NULL ordering position engine-defined by default (e.g., some sort NULLs last for ASC, others sort them first), so query behavior can silently differ when porting between engines — explicit NULLS FIRST or NULLS LAST removes that ambiguity.",
+    "source": "Generated (based on NULL Handling theory)",
+    "tags": [
+      "null-ordering",
+      "portability"
+    ],
+    "company": [
+      "Adobe",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0075",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "NULL Handling",
+    "difficulty": "Hard",
+    "question": "A report computes `SUM(quantity * price)` per order line, but some rows have NULL in price for not-yet-priced items, and the total for orders containing such lines comes out NULL instead of a partial sum. What's happening, and how should it be fixed to get a meaningful partial total?",
+    "options": [
+      "SUM() automatically treats NULL inputs as zero, so this shouldn't happen and indicates a bug elsewhere",
+      "The fix is to change quantity's data type to avoid NULL propagation",
+      "Any arithmetic expression involving a NULL operand evaluates to NULL, so one NULL price nulls that row's product, and SUM then ignores that individual NULL row but the intent (partial total for priced lines, explicit signal for unpriced ones) requires wrapping price in COALESCE(price, 0) or filtering unpriced rows explicitly rather than relying on default NULL propagation",
+      "NULLs in price cause the entire query to error out, not return NULL silently"
+    ],
+    "correctAnswer": 2,
+    "explanation": "quantity * price is NULL whenever price is NULL, and SUM simply skips NULL inputs (it doesn't error), so the aggregate itself isn't broken — the real issue is deciding intent: should unpriced lines contribute 0, or should the report flag those orders separately? COALESCE(price, 0) makes the zero-contribution choice explicit rather than leaving it to NULL-propagation semantics that are easy to misread as \"the whole total is unknown.\"",
+    "source": "Generated (based on NULL Handling theory)",
+    "tags": [
+      "null-propagation",
+      "sum",
+      "coalesce"
+    ],
+    "company": [
+      "SAP",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0076",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Locking & Concurrency",
+    "difficulty": "Easy",
+    "question": "What is the general purpose of row-level locking?",
+    "options": [
+      "To make every query in the database run in the exact order it was submitted",
+      "To permanently prevent a row from ever being read again",
+      "To compress row data for storage efficiency",
+      "To prevent two transactions from making conflicting changes to the same row at the same time"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Row-level locking lets a transaction hold an exclusive (or shared) lock on specific rows it's modifying or reading under certain isolation levels, blocking conflicting concurrent access to just those rows rather than the whole table.",
+    "source": "Generated (based on Locking & Concurrency theory)",
+    "tags": [
+      "row-locking"
+    ],
+    "company": [
+      "Snowflake",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0077",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Locking & Concurrency",
+    "difficulty": "Easy",
+    "question": "What's the difference between a shared lock and an exclusive lock?",
+    "options": [
+      "A shared lock allows other transactions to also read (shared-lock) the same data, while an exclusive lock blocks all other access, including reads under some isolation levels",
+      "A shared lock is held by all transactions in the database simultaneously with no restriction",
+      "An exclusive lock only applies to DELETE statements",
+      "Shared and exclusive locks are the same thing under different names"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Multiple transactions can hold shared locks on the same resource concurrently (typically for reading), but an exclusive lock (usually taken for writes) is incompatible with any other lock on that resource, shared or exclusive.",
+    "source": "Generated (based on Locking & Concurrency theory)",
+    "tags": [
+      "shared-lock",
+      "exclusive-lock"
+    ],
+    "company": [
+      "MongoDB",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0078",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Locking & Concurrency",
+    "difficulty": "Medium",
+    "question": "What is a deadlock in the context of database transactions?",
+    "options": [
+      "A single transaction that takes an unusually long time to commit",
+      "Two or more transactions each hold a lock the other needs, so none can proceed and the database must intervene",
+      "A lock that is never released even after COMMIT",
+      "A query that returns zero rows unexpectedly"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A deadlock occurs when, say, transaction A holds a lock on row 1 and wants row 2, while transaction B holds a lock on row 2 and wants row 1 — neither can advance, so the database detects the cycle and forcibly rolls back one transaction to break it.",
+    "source": "Generated (based on Locking & Concurrency theory)",
+    "tags": [
+      "deadlock"
+    ],
+    "company": [
+      "Databricks",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0079",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Locking & Concurrency",
+    "difficulty": "Medium",
+    "question": "What does `SELECT ... FOR UPDATE` do inside a transaction?",
+    "options": [
+      "It immediately updates the selected rows to their default values",
+      "It only works when combined with an UPDATE statement in the same query",
+      "It reads the selected rows and takes an exclusive lock on them, blocking other transactions from modifying (or, depending on engine, from also locking) those rows until this transaction ends",
+      "It releases all locks held by the current transaction"
+    ],
+    "correctAnswer": 2,
+    "explanation": "FOR UPDATE is used to read rows in preparation for a later update within the same transaction, locking them so a concurrent transaction can't modify (or in some engines, also select-for-update) those same rows until this one commits or rolls back — the basis for a safe compare-and-set pattern.",
+    "source": "Generated (based on Locking & Concurrency theory)",
+    "tags": [
+      "select-for-update"
+    ],
+    "company": [
+      "Cisco",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0080",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Locking & Concurrency",
+    "difficulty": "Hard",
+    "question": "Two transactions both run `UPDATE accounts SET balance = balance - 100 WHERE id IN (1, 2)` but one updates id 1 then 2, and the other updates id 2 then 1, concurrently. What failure results, and what application-level or database-level fix avoids it?",
+    "options": [
+      "This always succeeds without conflict since both transactions target different specific ids within the same statement",
+      "The UPDATE statement automatically reorders ids to prevent this",
+      "This can only be fixed by disabling row-level locking entirely",
+      "A classic deadlock from opposite lock-acquisition order; fixed by always acquiring locks/updating rows in a consistent order (e.g., sort ids ascending before updating) across all transactions, or letting the database's deadlock detector roll one back for a retry"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Transaction A locks row 1 then waits for row 2 (held by B); B locks row 2 then waits for row 1 (held by A) — a lock-order cycle, i.e., a deadlock, which the engine resolves by aborting one transaction; the durable fix is enforcing a consistent lock acquisition order (e.g., always processing ids in ascending order) so transactions can't form a cycle, in addition to having retry logic for the rare cases the detector still intervenes.",
+    "source": "Generated (based on Locking & Concurrency theory)",
+    "tags": [
+      "deadlock",
+      "lock-ordering",
+      "concurrency"
+    ],
+    "company": [
+      "VMware",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0081",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Schema Design",
+    "difficulty": "Easy",
+    "question": "What is a natural key, as opposed to a surrogate key?",
+    "options": [
+      "A key derived from real-world, business-meaningful data already present in the entity, like an email or SSN",
+      "An auto-incrementing integer generated solely for identification purposes",
+      "A key that is always a UUID",
+      "A key that references another table"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A natural key uses existing meaningful attributes of the data itself (e.g., a national ID or ISBN) to identify a row, whereas a surrogate key (like an auto-increment integer or UUID) is an artificial identifier with no business meaning.",
+    "source": "Generated (based on Schema Design theory)",
+    "tags": [
+      "natural-key",
+      "surrogate-key"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0082",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Schema Design",
+    "difficulty": "Easy",
+    "question": "Why do many schema designs prefer a surrogate key (like an auto-increment id) over a natural key as the primary key?",
+    "options": [
+      "Surrogate keys are required by the SQL standard for every table",
+      "Natural keys can change over time or turn out not to be truly unique, which is costly to fix once used as a primary/foreign key everywhere",
+      "Natural keys cannot be indexed",
+      "Surrogate keys take up less storage than any natural key regardless of type"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Business data that seems stable and unique (like an email or a government ID format) can change or later prove non-unique in edge cases; a surrogate key stays stable and meaningless-by-design, isolating the schema's referential structure from real-world data changes.",
+    "source": "Generated (based on Schema Design theory)",
+    "tags": [
+      "surrogate-key",
+      "stability"
+    ],
+    "company": [
+      "Amazon",
+      "LinkedIn"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0083",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Schema Design",
+    "difficulty": "Medium",
+    "question": "In a many-to-many relationship between students and courses, what schema element is typically needed?",
+    "options": [
+      "A single foreign key column added to the students table pointing to one course",
+      "Duplicating the courses table once per student",
+      "A junction (associative) table holding foreign keys to both students and courses, often with its own composite or surrogate key",
+      "A CHECK constraint on the students table listing valid course ids"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A many-to-many relationship can't be represented with a foreign key on either side alone (since each side would need multiple values), so a junction table with one row per student-course pairing, and foreign keys to both, models it correctly.",
+    "source": "Generated (based on Schema Design theory)",
+    "tags": [
+      "junction-table",
+      "many-to-many"
+    ],
+    "company": [
+      "Microsoft",
+      "Salesforce"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0084",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Schema Design",
+    "difficulty": "Medium",
+    "question": "What is \"soft delete\" and what tradeoff does it introduce into schema design?",
+    "options": [
+      "A DELETE statement that only removes half of the matching rows",
+      "A delete that is automatically undone after 24 hours with no configuration",
+      "A delete restricted to only non-primary-key columns",
+      "Marking a row as deleted (e.g., a deleted_at timestamp or is_deleted flag) instead of physically removing it, at the cost of every query needing to filter out soft-deleted rows explicitly"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Soft delete preserves the row (useful for auditing, undo, or referential integrity with dependent data) but pushes the responsibility of excluding \"deleted\" rows onto every subsequent query, view, or index — commonly handled with a default filtered view or a partial index on the non-deleted subset.",
+    "source": "Generated (based on Schema Design theory)",
+    "tags": [
+      "soft-delete"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0085",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Schema Design",
+    "difficulty": "Hard",
+    "question": "A multi-tenant SaaS schema puts all tenants' rows in shared tables with a tenant_id column, versus giving each tenant a separate schema/database. What's the core tradeoff, and what's a common middle-ground mitigation for the shared-table approach's biggest risk?",
+    "options": [
+      "Shared tables are simpler to operate and scale (one schema, easy cross-tenant reporting) but risk a bug leaking data across tenants if a query forgets the tenant_id filter; row-level security policies enforced at the database layer (rather than relying solely on application code to add WHERE tenant_id = ...) mitigate that leak risk",
+      "Separate schemas per tenant have no operational downsides at any scale",
+      "Shared tables cannot use indexes on tenant_id for isolation",
+      "The only mitigation is manually reviewing every query by hand before deployment"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Per-tenant schemas isolate data structurally (a forgotten filter simply can't leak across schemas) but multiply operational overhead — migrations, connection pooling, and cross-tenant analytics all get harder as tenant count grows; the shared-table approach scales operations more easily but shifts isolation to query correctness, which database-enforced row-level security (policies that automatically restrict rows to the current tenant regardless of the query written) directly addresses.",
+    "source": "Generated (based on Schema Design theory)",
+    "tags": [
+      "multi-tenancy",
+      "row-level-security",
+      "tradeoffs"
+    ],
+    "company": [
+      "Oracle",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0086",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "GROUP BY & HAVING",
+    "difficulty": "Easy",
+    "question": "What does GROUP BY do to the rows of a query result?",
+    "options": [
+      "It sorts rows alphabetically without changing row count",
+      "It clusters rows sharing the same value(s) in the specified column(s) so aggregate functions compute per group",
+      "It removes all duplicate rows from the result",
+      "It filters out rows where any column is NULL"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GROUP BY partitions the input rows into groups based on matching values in the grouping columns, and any aggregate function in the SELECT (like COUNT or SUM) is then computed once per group rather than once overall.",
+    "source": "Generated (based on GROUP BY & HAVING theory)",
+    "tags": [
+      "group-by-basics"
+    ],
+    "company": [
+      "IBM",
+      "PayPal"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0087",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "GROUP BY & HAVING",
+    "difficulty": "Easy",
+    "question": "Can a column appear in the SELECT list without being in GROUP BY or wrapped in an aggregate function?",
+    "options": [
+      "Yes, and the engine picks an arbitrary value from the group with no restriction in any SQL standard",
+      "Yes, but only for columns of type TEXT",
+      "No, in standard/strict SQL every selected non-aggregated column must appear in the GROUP BY clause",
+      "No, but only because SELECT * is required instead"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because GROUP BY collapses many rows into one per group, any non-aggregated column in SELECT would be ambiguous (which of many row's values should represent the group) unless it's also part of what defines the group, so strict SQL requires it to appear in GROUP BY.",
+    "source": "Generated (based on GROUP BY & HAVING theory)",
+    "tags": [
+      "group-by-strictness"
+    ],
+    "company": [
+      "Uber",
+      "Adobe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0088",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "GROUP BY & HAVING",
+    "difficulty": "Medium",
+    "question": "Why is HAVING used instead of WHERE to filter on an aggregate result like COUNT(*) > 5?",
+    "options": [
+      "HAVING and WHERE are fully interchangeable in every SQL dialect",
+      "WHERE can filter on aggregates but only for COUNT, not SUM or AVG",
+      "HAVING must always be used instead of WHERE, even for row-level filters",
+      "WHERE filters individual rows before grouping happens, while HAVING filters groups after aggregation, so only HAVING can reference the aggregate's computed value"
+    ],
+    "correctAnswer": 3,
+    "explanation": "WHERE operates before GROUP BY collapses rows, so the aggregate values don't exist yet at that stage; HAVING runs after grouping/aggregation, when COUNT(*), SUM(...), etc. have actual values to filter on.",
+    "source": "Generated (based on GROUP BY & HAVING theory)",
+    "tags": [
+      "having-vs-where"
+    ],
+    "company": [
+      "Netflix",
+      "SAP"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0089",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "GROUP BY & HAVING",
+    "difficulty": "Medium",
+    "question": "In what order does a SQL query logically process WHERE, GROUP BY, and HAVING?",
+    "options": [
+      "WHERE filters rows first, then GROUP BY forms groups, then HAVING filters those groups",
+      "HAVING, then GROUP BY, then WHERE",
+      "GROUP BY, then HAVING, then WHERE",
+      "All three run simultaneously with no defined order"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SQL's logical processing order filters raw rows with WHERE first (cheaper, before aggregation work), then groups the survivors with GROUP BY, and finally applies HAVING to filter the resulting groups based on aggregate values.",
+    "source": "Generated (based on GROUP BY & HAVING theory)",
+    "tags": [
+      "logical-query-processing"
+    ],
+    "company": [
+      "LinkedIn",
+      "Snowflake"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0090",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "GROUP BY & HAVING",
+    "difficulty": "Hard",
+    "question": "A query groups orders by customer_id and filters `HAVING SUM(amount) > 1000`, but the team wants to also exclude customers who were filtered out by an earlier WHERE clause on order_date from ever being counted, while keeping the HAVING threshold correct. Why does simply adding the date condition to WHERE (rather than HAVING) still produce the correct SUM per remaining customer?",
+    "options": [
+      "WHERE only affects which columns are displayed, not which rows are aggregated",
+      "WHERE removes non-matching rows before grouping/aggregation ever runs, so SUM(amount) in HAVING is computed only from the rows that survived the WHERE filter — exactly the intended \"SUM over qualifying orders only\" semantics",
+      "Placing the date filter in WHERE double-counts rows during aggregation",
+      "WHERE and HAVING both run after aggregation so the placement doesn't matter"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because WHERE executes before GROUP BY per SQL's logical processing order, rows excluded by the date condition never participate in forming groups or in the SUM(amount) aggregate at all — so the HAVING SUM(amount) > 1000 check is correctly evaluated only over the orders that passed the date filter, which is exactly the desired behavior without needing any change to HAVING itself.",
+    "source": "Generated (based on GROUP BY & HAVING theory)",
+    "tags": [
+      "where-having-order",
+      "aggregation-semantics"
+    ],
+    "company": [
+      "Salesforce",
+      "MongoDB"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0091",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "DDL vs DML vs DCL",
+    "difficulty": "Easy",
+    "question": "Which category does CREATE TABLE belong to?",
+    "options": [
+      "DML (Data Manipulation Language)",
+      "DCL (Data Control Language)",
+      "DDL (Data Definition Language)",
+      "TCL (Transaction Control Language)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "CREATE TABLE defines the structure of database objects, which is the defining trait of DDL statements (also including ALTER and DROP), as opposed to DML which manipulates the data inside those structures.",
+    "source": "Generated (based on DDL vs DML vs DCL theory)",
+    "tags": [
+      "ddl"
+    ],
+    "company": [
+      "Airbnb",
+      "Databricks"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0092",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "DDL vs DML vs DCL",
+    "difficulty": "Easy",
+    "question": "Which category do INSERT, UPDATE, and DELETE belong to?",
+    "options": [
+      "DDL (Data Definition Language)",
+      "DCL (Data Control Language)",
+      "DQL (Data Query Language) only",
+      "DML (Data Manipulation Language)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "INSERT, UPDATE, and DELETE modify the actual data rows within existing tables, which is exactly what DML statements are defined to do, distinct from DDL's structural changes.",
+    "source": "Generated (based on DDL vs DML vs DCL theory)",
+    "tags": [
+      "dml"
+    ],
+    "company": [
+      "Stripe",
+      "Cisco"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0093",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "DDL vs DML vs DCL",
+    "difficulty": "Medium",
+    "question": "What distinguishes DCL (Data Control Language) statements like GRANT and REVOKE from DML statements?",
+    "options": [
+      "DCL manages permissions and access rights on database objects, while DML manipulates the actual row data within them",
+      "DCL statements can only be run by the database itself, never by a user",
+      "DCL is a subset of DDL with identical behavior",
+      "DCL statements only apply to VIEW objects, not tables"
+    ],
+    "correctAnswer": 0,
+    "explanation": "GRANT and REVOKE control who is allowed to perform which operations on which objects (permissions/security), which is a fundamentally different concern from DML's job of inserting, updating, or deleting the data itself.",
+    "source": "Generated (based on DDL vs DML vs DCL theory)",
+    "tags": [
+      "dcl"
+    ],
+    "company": [
+      "PayPal",
+      "VMware"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0094",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "DDL vs DML vs DCL",
+    "difficulty": "Medium",
+    "question": "Why is DDL like ALTER TABLE ADD COLUMN sometimes described as auto-committing in many database engines, unlike typical DML?",
+    "options": [
+      "DDL statements are always executed by a separate, unrelated database process",
+      "Many engines implicitly commit any open transaction before or after executing DDL, so it usually cannot be rolled back the way an INSERT or UPDATE can within an explicit transaction",
+      "ALTER TABLE cannot be run without first dropping the table",
+      "DDL statements never take any locks on the table involved"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because structural changes affect the entire schema and often can't be cheaply undone, many engines treat DDL as implicitly transactional in a limited way or force a commit around it, meaning a ROLLBACK after an ALTER TABLE may not undo it the way it would undo pending row changes — behavior that varies notably between engines.",
+    "source": "Generated (based on DDL vs DML vs DCL theory)",
+    "tags": [
+      "ddl-autocommit",
+      "transactions"
+    ],
+    "company": [
+      "Adobe",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0095",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "DDL vs DML vs DCL",
+    "difficulty": "Hard",
+    "question": "A migration script runs `ALTER TABLE orders ADD COLUMN status VARCHAR(20) DEFAULT 'pending' NOT NULL;` on a table with 200M existing rows in a database where DDL isn't fully transactional/atomic for large rewrites. What operational risk does this specific statement carry on some engines, and what's a safer migration pattern?",
+    "options": [
+      "This statement is always instantaneous and metadata-only on every database engine regardless of size",
+      "NOT NULL columns cannot have a DEFAULT value, so the statement would fail immediately",
+      "On engines that must rewrite the whole table to add a column with a default and NOT NULL, this can hold a long-lived lock blocking reads/writes for the duration; a safer pattern adds the column nullable with no default first (a metadata-only change on many engines), backfills the value in batches, then adds the NOT NULL/default constraint afterward",
+      "ADD COLUMN operations never require any table lock on any engine"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Depending on engine and version, adding a column with both a default value and a NOT NULL constraint can force a full table rewrite (to populate the default for every existing row) while holding a blocking lock; splitting the change into (1) add nullable column, (2) backfill in small batches, (3) add NOT NULL/default afterward avoids one long lock in favor of many short, low-impact operations.",
+    "source": "Generated (based on DDL vs DML vs DCL theory)",
+    "tags": [
+      "ddl",
+      "migration",
+      "downtime"
+    ],
+    "company": [
+      "SAP",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "sql_0096",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Database Isolation Levels",
+    "difficulty": "Easy",
+    "question": "What problem does a \"dirty read\" describe?",
+    "options": [
+      "A transaction reads the same row twice and gets two different values within itself",
+      "A transaction reads data that was deleted years ago",
+      "A transaction fails to read any data due to a syntax error",
+      "A transaction reads data written by another transaction that hasn't committed yet, and that data might later be rolled back"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A dirty read happens when isolation is weak enough to let one transaction see another's uncommitted changes; if the writer later rolls back, the reader acted on data that never truly existed in the database.",
+    "source": "Generated (based on Database Isolation Levels theory)",
+    "tags": [
+      "dirty-read"
+    ],
+    "company": [
+      "Snowflake",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0097",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Database Isolation Levels",
+    "difficulty": "Easy",
+    "question": "Which is the strictest standard SQL isolation level?",
+    "options": [
+      "SERIALIZABLE",
+      "READ UNCOMMITTED",
+      "READ COMMITTED",
+      "REPEATABLE READ"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SERIALIZABLE is the strongest of the four standard SQL isolation levels, guaranteeing that concurrent transactions produce a result equivalent to running them one at a time in some serial order, at the cost of more blocking/aborts.",
+    "source": "Generated (based on Database Isolation Levels theory)",
+    "tags": [
+      "serializable"
+    ],
+    "company": [
+      "MongoDB",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "sql_0098",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Database Isolation Levels",
+    "difficulty": "Medium",
+    "question": "What phenomenon does REPEATABLE READ prevent that READ COMMITTED does not?",
+    "options": [
+      "A dirty read of another transaction's uncommitted data",
+      "A non-repeatable read — re-reading the same row within a transaction and seeing a value changed by another committed transaction",
+      "A phantom row appearing in a range query on every standard implementation",
+      "A deadlock between two transactions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "READ COMMITTED only guarantees each individual read sees committed data at the time of that read, so re-reading the same row later in the same transaction can show a different value if another transaction committed a change in between; REPEATABLE READ guarantees that a row, once read, returns the same value for the rest of the transaction.",
+    "source": "Generated (based on Database Isolation Levels theory)",
+    "tags": [
+      "repeatable-read",
+      "non-repeatable-read"
+    ],
+    "company": [
+      "Databricks",
+      "Oracle"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0099",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Database Isolation Levels",
+    "difficulty": "Medium",
+    "question": "What is a \"phantom read\"?",
+    "options": [
+      "A row that appears to exist but returns NULL for every column",
+      "A read that returns data from a table that was already dropped",
+      "A transaction re-runs the same range query and sees new rows that another committed transaction inserted matching the range condition",
+      "A read that silently returns cached, stale data forever"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A phantom read is specifically about row count/set changes across a range predicate — re-running `WHERE amount > 100` within the same transaction returns extra \"phantom\" rows that a concurrent transaction inserted and committed in between, a phenomenon SERIALIZABLE (and, for inserts, some REPEATABLE READ implementations) is designed to prevent.",
+    "source": "Generated (based on Database Isolation Levels theory)",
+    "tags": [
+      "phantom-read"
+    ],
+    "company": [
+      "Cisco",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "sql_0100",
+    "level": "Level 11",
+    "category": "SQL & Databases",
+    "topic": "Database Isolation Levels",
+    "difficulty": "Hard",
+    "question": "A system runs at REPEATABLE READ (not SERIALIZABLE) and two concurrent transactions both read the same aggregate (e.g., COUNT of pending orders under 100) to decide independently whether to insert a new order, and both proceed to insert, producing 101 pending orders when a business rule caps it at 100. Which isolation gap allowed this, and what specifically about SERIALIZABLE would have stopped it?",
+    "options": [
+      "This is a plain dirty read, and READ COMMITTED would have prevented it entirely",
+      "REPEATABLE READ already guarantees this cannot happen on any engine, so the scenario is impossible",
+      "The fix requires abandoning transactions entirely and enforcing the cap only in application code",
+      "A write skew / phantom-related anomaly, where each transaction's read was individually consistent but their combined writes violated an invariant depending on the other's data; SERIALIZABLE would detect the read-write conflict between the two transactions' overlapping read/insert sets and abort one, forcing a retry that re-reads the updated count"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is the classic write-skew anomaly: REPEATABLE READ (in snapshot-isolation-style implementations) guarantees each transaction sees a consistent snapshot, but it doesn't detect that transaction A's insert invalidates the premise transaction B's decision was based on; true SERIALIZABLE isolation tracks these read/write dependencies between concurrent transactions and aborts one when a cycle would violate serializability, forcing a retry against the now-updated count instead of letting both commit.",
+    "source": "Generated (based on Database Isolation Levels theory)",
+    "tags": [
+      "write-skew",
+      "serializable",
+      "phantom-read"
+    ],
+    "company": [
+      "VMware",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  }
+]

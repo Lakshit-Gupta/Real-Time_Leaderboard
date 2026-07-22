@@ -9,7 +9,8 @@
     "lint": "eslint",
     "db:migrate": "node scripts/migrate.mjs",
     "db:rebuild": "node scripts/rebuild-leaderboards.mjs",
-    "migrate:redis": "node scripts/migrate-redis-to-pg.mjs"
+    "migrate:redis": "node scripts/migrate-redis-to-pg.mjs",
+    "questions:validate": "node scripts/validate-questions.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",

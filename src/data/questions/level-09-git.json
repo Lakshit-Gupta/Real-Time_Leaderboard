@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "git_0001",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Basics",
+    "difficulty": "Easy",
+    "question": "Which command initializes a brand-new, empty Git repository in the current directory?",
+    "options": [
+      "git init",
+      "git start",
+      "git create",
+      "git new"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git init creates a new .git directory containing all the metadata and object database needed to track the current folder as a repository.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Init",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0002",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Basics",
+    "difficulty": "Easy",
+    "question": "What kind of version control system is Git?",
+    "options": [
+      "A centralized version control system",
+      "A distributed version control system",
+      "A file backup service",
+      "A cloud storage provider"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Git is distributed: every clone contains the full history, so developers can commit, branch, and inspect history locally without a central server.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Concepts",
+      "Basics"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0003",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Basics",
+    "difficulty": "Medium",
+    "question": "What does 'git clone <url>' primarily do?",
+    "options": [
+      "Copies only the latest file versions without history",
+      "Creates an empty repo linked to the URL",
+      "Downloads a full copy of a remote repository including its history and sets up an origin remote",
+      "Pushes your local repo to the given URL"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git clone downloads the entire repository (all objects and refs), checks out the default branch, and configures the source URL as the 'origin' remote.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Clone",
+      "Remotes"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0004",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Basics",
+    "difficulty": "Medium",
+    "question": "Where does Git store the object database and configuration for a repository?",
+    "options": [
+      "In a remote server exclusively",
+      "In the system registry",
+      "In a .gitconfig file only",
+      "In a hidden .git directory at the repository root"
+    ],
+    "correctAnswer": 3,
+    "explanation": "All of a repo's objects, refs, and local config live in the hidden .git folder; deleting it removes Git tracking while leaving working files intact.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Internals",
+      "Basics"
+    ],
+    "company": [
+      "Microsoft",
+      "IBM"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0005",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Basics",
+    "difficulty": "Hard",
+    "question": "Git internally stores content as objects. Which four object types make up Git's object model?",
+    "options": [
+      "blob, tree, commit, tag",
+      "file, folder, snapshot, ref",
+      "chunk, index, branch, head",
+      "node, edge, patch, delta"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Git's object model uses blobs (file content), trees (directory listings), commits (snapshots with metadata), and annotated tags — all addressed by SHA hashes.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Internals",
+      "Objects"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0006",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Staging Area",
+    "difficulty": "Easy",
+    "question": "Which command adds a file's current changes to the staging area?",
+    "options": [
+      "git stage-file",
+      "git add <file>",
+      "git commit <file>",
+      "git track <file>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git add moves changes into the staging area (index), marking exactly what will go into the next commit.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Add",
+      "Staging"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0007",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Staging Area",
+    "difficulty": "Easy",
+    "question": "The staging area in Git is also commonly known as what?",
+    "options": [
+      "The stash",
+      "The reflog",
+      "The index",
+      "The pack"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The staging area is called the index; it records a snapshot of what the next commit will contain, sitting between the working tree and the repository.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Index",
+      "Staging"
+    ],
+    "company": [
+      "Meta",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0008",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Staging Area",
+    "difficulty": "Medium",
+    "question": "You edit a file, run 'git add' on it, then edit it again. What happens if you commit now?",
+    "options": [
+      "Both edits are committed automatically",
+      "The commit fails with a conflict",
+      "Nothing is committed because the file changed",
+      "Only the changes that were staged (the first edit) are committed"
+    ],
+    "correctAnswer": 3,
+    "explanation": "git add snapshots the file at that moment. Later edits are unstaged, so a commit records only the staged version; the newer edit stays in the working tree.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Index",
+      "Workflow"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0009",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Staging Area",
+    "difficulty": "Medium",
+    "question": "Which command interactively lets you stage only selected chunks (hunks) of a modified file?",
+    "options": [
+      "git add -p",
+      "git add --all",
+      "git stage --partial",
+      "git commit -p"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git add -p (patch mode) walks through each hunk of changes so you can stage some and leave others, enabling focused, logically-grouped commits.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Add",
+      "Workflow"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0010",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Staging Area",
+    "difficulty": "Hard",
+    "question": "A file is staged with 'git add'. Which command unstages it while keeping the working-tree changes intact (modern Git)?",
+    "options": [
+      "git rm <file>",
+      "git restore --staged <file>",
+      "git checkout <file>",
+      "git clean <file>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git restore --staged removes the file from the index (unstages it) but leaves your working-tree edits untouched; the older equivalent is git reset HEAD <file>.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Restore",
+      "Staging"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0011",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Commits",
+    "difficulty": "Easy",
+    "question": "Which command records staged changes into the repository history?",
+    "options": [
+      "git record",
+      "git save",
+      "git commit",
+      "git push"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git commit takes the staged snapshot and stores it permanently as a new commit object, complete with author, timestamp, and message.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Commit",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0012",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Commits",
+    "difficulty": "Easy",
+    "question": "What does the -m flag do in 'git commit -m \"message\"'?",
+    "options": [
+      "Merges before committing",
+      "Amends the previous commit",
+      "Marks the commit as a milestone",
+      "Supplies the commit message inline without opening an editor"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The -m flag lets you provide the commit message directly on the command line, skipping the default text editor.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Commit",
+      "CLI"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0013",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Commits",
+    "difficulty": "Medium",
+    "question": "What does 'git commit --amend' do?",
+    "options": [
+      "Replaces the most recent commit with a new one, letting you change its message or contents",
+      "Creates a second commit on top of the last one",
+      "Reverts the last commit",
+      "Merges the last two commits into main"
+    ],
+    "correctAnswer": 0,
+    "explanation": "--amend rewrites the latest commit into a brand-new commit (new SHA), useful for fixing a message or including a forgotten file — avoid it on already-pushed commits.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Amend",
+      "History"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0014",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Commits",
+    "difficulty": "Medium",
+    "question": "Every non-initial commit stores a reference to what, forming the history chain?",
+    "options": [
+      "The remote URL",
+      "Its parent commit(s)",
+      "The current branch name",
+      "The staging index only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A commit points to its parent(s), so the commit graph is built by following parent links; merge commits have two or more parents.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Internals",
+      "History"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0015",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Commits",
+    "difficulty": "Hard",
+    "question": "Why is a Git commit SHA-1 (or SHA-256) hash considered to represent an immutable snapshot?",
+    "options": [
+      "Because Git locks the file on disk",
+      "Because commits are encrypted",
+      "Because the hash is derived from the commit's full content including tree, parent, author, and message — any change yields a different hash",
+      "Because the server signs every commit"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The commit's identity is a hash over its content and metadata. Altering anything (even the message) produces a new hash, so history can be verified but not silently edited.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Internals",
+      "Hashing"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0016",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching",
+    "difficulty": "Easy",
+    "question": "What is a branch in Git, fundamentally?",
+    "options": [
+      "A full copy of the repository",
+      "A remote server connection",
+      "A backup of the working directory",
+      "A lightweight, movable pointer to a commit"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A branch is just a movable reference (pointer) to a commit. Creating one is cheap because it only writes a small ref file, not a copy of files.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Branch",
+      "Concepts"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0017",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching",
+    "difficulty": "Easy",
+    "question": "Which command creates a new branch and switches to it in one step (modern Git)?",
+    "options": [
+      "git switch -c <name>",
+      "git branch --go <name>",
+      "git checkout --new <name>",
+      "git move <name>"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git switch -c creates the branch and checks it out at once; the older equivalent is git checkout -b <name>.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Switch",
+      "Branch"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0018",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching",
+    "difficulty": "Medium",
+    "question": "You run 'git branch feature' but keep committing. Where do the new commits go?",
+    "options": [
+      "To the feature branch",
+      "To the branch you are currently on, not feature",
+      "To both branches",
+      "To the remote automatically"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git branch only creates the pointer; it does not switch to it. New commits advance whatever branch HEAD currently points to, leaving 'feature' where it was.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Branch",
+      "HEAD"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0019",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching",
+    "difficulty": "Medium",
+    "question": "How do you safely delete a local branch that has already been merged?",
+    "options": [
+      "git remove <name>",
+      "git branch -D <name>",
+      "git branch -d <name>",
+      "git delete branch <name>"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git branch -d deletes a branch only if it is fully merged, guarding against losing work; -D forces deletion regardless of merge status.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Branch",
+      "CLI"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0020",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching",
+    "difficulty": "Hard",
+    "question": "Deleting a branch pointer that had unmerged commits seems to lose them. How can those commits usually still be recovered?",
+    "options": [
+      "They cannot be recovered at all",
+      "By running git pull again",
+      "By reinstalling Git",
+      "Via the reflog and git checkout/branch on the dangling commit SHA before garbage collection removes it"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The commits become unreachable but persist as dangling objects. The reflog still records the old tip SHA, so you can recreate a branch there until gc prunes them.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Recovery",
+      "Reflog"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0021",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge vs Rebase",
+    "difficulty": "Easy",
+    "question": "What does 'git merge' generally do?",
+    "options": [
+      "Combines the histories of two branches, often creating a merge commit",
+      "Rewrites commit history linearly",
+      "Deletes the source branch",
+      "Moves commits onto a new base"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git merge joins two branch histories together; when they have diverged it creates a merge commit with two parents, preserving both lines of development.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Merge",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0022",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge vs Rebase",
+    "difficulty": "Easy",
+    "question": "What does 'git rebase' do to a series of commits?",
+    "options": [
+      "Deletes them permanently",
+      "Reapplies them on top of a different base commit, creating new commits",
+      "Merges them without any new commits",
+      "Compresses them into the remote"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rebase takes your commits and replays them onto a new base, producing new commits with new SHAs and yielding a linear history.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Rebase",
+      "Basics"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0023",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge vs Rebase",
+    "difficulty": "Medium",
+    "question": "Which statement best contrasts merge and rebase?",
+    "options": [
+      "Both always produce identical graphs",
+      "Merge rewrites history; rebase preserves it",
+      "Merge preserves history and adds a merge commit; rebase rewrites history for a linear graph",
+      "Rebase is only for remotes; merge only for locals"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Merge is non-destructive and keeps the true branching history via a merge commit; rebase moves commits to make history linear but rewrites them (new SHAs).",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Merge",
+      "Rebase"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0024",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge vs Rebase",
+    "difficulty": "Medium",
+    "question": "What is a 'fast-forward' merge?",
+    "options": [
+      "A merge that discards commits",
+      "A merge that resolves conflicts automatically by force",
+      "A rebase in disguise",
+      "When the target branch has no new commits, so its pointer simply advances to the source tip without a merge commit"
+    ],
+    "correctAnswer": 3,
+    "explanation": "If the base branch hasn't diverged, Git can just move its pointer forward to the feature tip — no merge commit is needed. Use --no-ff to force one.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Merge",
+      "FastForward"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0025",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge vs Rebase",
+    "difficulty": "Hard",
+    "question": "Why is rebasing commits that have already been pushed to a shared branch discouraged?",
+    "options": [
+      "It rewrites commit SHAs, so collaborators' histories diverge, causing painful conflicts and duplicate commits on their next pull",
+      "It deletes the remote branch",
+      "It is slower than merge",
+      "It corrupts the object database"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Rebase replaces shared commits with new ones. Teammates still hold the originals, so their pull creates divergence and duplicates — the golden rule: don't rebase public history.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Rebase",
+      "Pitfalls"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0026",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Remotes",
+    "difficulty": "Easy",
+    "question": "What is the conventional name Git gives to the default remote after cloning?",
+    "options": [
+      "source",
+      "origin",
+      "upstream",
+      "remote"
+    ],
+    "correctAnswer": 1,
+    "explanation": "By convention the remote you cloned from is named 'origin'. It's just a short alias for the remote repository URL.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Remotes",
+      "Clone"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0027",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Remotes",
+    "difficulty": "Easy",
+    "question": "Which command uploads your local commits to a remote branch?",
+    "options": [
+      "git upload",
+      "git send",
+      "git push",
+      "git commit --remote"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git push transfers local commits and updates the corresponding branch on the remote repository.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Push",
+      "Remotes"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0028",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Remotes",
+    "difficulty": "Medium",
+    "question": "What is the key difference between 'git fetch' and 'git pull'?",
+    "options": [
+      "fetch merges automatically; pull does not",
+      "pull only works offline",
+      "They are identical",
+      "fetch downloads remote changes without merging; pull fetches and then merges (or rebases) into your branch"
+    ],
+    "correctAnswer": 3,
+    "explanation": "git fetch updates your remote-tracking refs but leaves your working branch alone. git pull is fetch followed by an automatic merge or rebase into the current branch.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Fetch",
+      "Pull"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0029",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Remotes",
+    "difficulty": "Medium",
+    "question": "What does a remote-tracking branch like 'origin/main' represent?",
+    "options": [
+      "A local snapshot of where main was on the remote at your last fetch",
+      "Your local main branch",
+      "A branch that lives only on the server",
+      "The staging area for pushes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "origin/main is a read-only pointer reflecting the remote's main as of your most recent fetch/pull; it updates only when you communicate with the remote.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Remotes",
+      "Tracking"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0030",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Remotes",
+    "difficulty": "Hard",
+    "question": "A push is rejected as 'non-fast-forward'. What is the correct, safe response?",
+    "options": [
+      "Immediately run git push --force",
+      "Fetch/pull to integrate the remote commits (merge or rebase), resolve conflicts, then push",
+      "Delete the remote branch and recreate it",
+      "Run git gc"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The rejection means the remote has commits you lack. Integrate them first (pull with merge or rebase), then push. Force-push would overwrite teammates' work.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Push",
+      "Conflicts"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0031",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reset vs Revert",
+    "difficulty": "Easy",
+    "question": "What does 'git revert <commit>' do?",
+    "options": [
+      "Deletes the commit from history",
+      "Resets the branch pointer backward",
+      "Creates a new commit that undoes the changes of the target commit",
+      "Removes the file from tracking"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git revert is a forward, non-destructive undo: it makes a new commit applying the inverse of the target commit, keeping history intact — safe on shared branches.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Revert",
+      "Undo"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0032",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reset vs Revert",
+    "difficulty": "Easy",
+    "question": "Which command moves the current branch pointer to a different commit?",
+    "options": [
+      "git revert",
+      "git clean",
+      "git checkout --file",
+      "git reset"
+    ],
+    "correctAnswer": 3,
+    "explanation": "git reset moves the branch (and HEAD) to a specified commit; depending on the mode it also updates the index and working tree.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reset",
+      "Basics"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0033",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reset vs Revert",
+    "difficulty": "Medium",
+    "question": "How do 'git reset --soft', '--mixed', and '--hard' differ?",
+    "options": [
+      "soft keeps index+worktree, mixed resets index but keeps worktree, hard resets index and worktree",
+      "They are aliases for the same behavior",
+      "soft deletes files, hard keeps them",
+      "Only hard moves the branch pointer"
+    ],
+    "correctAnswer": 0,
+    "explanation": "All move the branch pointer. --soft leaves staged changes and files; --mixed (default) unstages but keeps files; --hard discards both staged and working-tree changes.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reset",
+      "Modes"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0034",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reset vs Revert",
+    "difficulty": "Medium",
+    "question": "For undoing a commit that has already been pushed to a shared branch, which is preferred and why?",
+    "options": [
+      "reset --hard, because it is faster",
+      "revert, because it adds an undo commit without rewriting shared history",
+      "reset --soft, because it hides the change",
+      "Either one is equally safe"
+    ],
+    "correctAnswer": 1,
+    "explanation": "revert doesn't rewrite history — it appends an inverse commit — so collaborators aren't disrupted. reset rewrites history and is unsafe on shared branches.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Revert",
+      "Shared"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0035",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reset vs Revert",
+    "difficulty": "Hard",
+    "question": "You ran 'git reset --hard HEAD~3' and lost three commits of local work. What is the best recovery path?",
+    "options": [
+      "The work is permanently gone",
+      "Run git revert HEAD~3",
+      "Find the old HEAD SHA in the reflog and reset/checkout back to it",
+      "Re-clone the repository"
+    ],
+    "correctAnswer": 2,
+    "explanation": "reset --hard discards working changes, but the previous commits remain reachable via the reflog. Locate the pre-reset SHA there and reset --hard back to it.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reset",
+      "Recovery"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0036",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Stash",
+    "difficulty": "Easy",
+    "question": "What does 'git stash' do?",
+    "options": [
+      "Commits your changes permanently",
+      "Pushes changes to origin",
+      "Deletes uncommitted changes",
+      "Saves uncommitted changes aside and reverts the working directory to a clean state"
+    ],
+    "correctAnswer": 3,
+    "explanation": "git stash records your modified tracked files and staged changes onto a stack, then cleans the working directory so you can switch context.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Stash",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0037",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Stash",
+    "difficulty": "Easy",
+    "question": "Which command reapplies the most recently stashed changes and removes them from the stash stack?",
+    "options": [
+      "git stash pop",
+      "git stash apply",
+      "git stash drop",
+      "git stash show"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git stash pop applies the top stash and then deletes it from the stack; git stash apply reapplies but keeps the entry.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Stash",
+      "CLI"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0038",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Stash",
+    "difficulty": "Medium",
+    "question": "By default, which files does 'git stash' NOT include?",
+    "options": [
+      "Modified tracked files",
+      "Untracked and ignored files",
+      "Staged changes",
+      "Files in the current branch"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Plain git stash saves tracked modifications and staged changes but leaves untracked/ignored files behind. Use -u (--include-untracked) to also stash untracked files.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Stash",
+      "Untracked"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0039",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Stash",
+    "difficulty": "Medium",
+    "question": "What is the difference between 'git stash apply' and 'git stash pop'?",
+    "options": [
+      "They are identical",
+      "pop keeps the entry; apply removes it",
+      "apply keeps the stash entry; pop removes it after applying",
+      "apply works only on the newest stash"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Both restore stashed changes, but apply leaves the stash on the stack (useful to apply to multiple branches), while pop deletes it once applied successfully.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Stash",
+      "CLI"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0040",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Stash",
+    "difficulty": "Hard",
+    "question": "You popped a stash and hit merge conflicts; the stash was NOT dropped. After resolving, how do you clean up?",
+    "options": [
+      "Nothing is needed",
+      "Delete the .git/stash file",
+      "Run git stash pop again",
+      "Manually run git stash drop to remove the entry Git kept due to the conflict"
+    ],
+    "correctAnswer": 3,
+    "explanation": "When pop conflicts, Git keeps the stash entry to be safe. After you resolve and stage the changes, remove the leftover entry manually with git stash drop.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Stash",
+      "Conflicts"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0041",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Cherry-pick",
+    "difficulty": "Easy",
+    "question": "What does 'git cherry-pick <commit>' do?",
+    "options": [
+      "Applies the changes from a specific commit onto the current branch as a new commit",
+      "Merges two whole branches",
+      "Deletes the specified commit",
+      "Renames a commit"
+    ],
+    "correctAnswer": 0,
+    "explanation": "cherry-pick takes one (or more) individual commits and reapplies their changes onto your current branch, creating new commits with new SHAs.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "CherryPick",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0042",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Cherry-pick",
+    "difficulty": "Easy",
+    "question": "A cherry-picked commit gets what, compared to the original commit?",
+    "options": [
+      "The same SHA hash",
+      "A new, different SHA hash",
+      "No commit at all",
+      "The remote's SHA"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because the commit is reapplied onto a different parent, its metadata changes and it receives a new SHA even though the code changes are the same.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "CherryPick",
+      "Internals"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0043",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Cherry-pick",
+    "difficulty": "Medium",
+    "question": "When is cherry-pick especially useful?",
+    "options": [
+      "Merging an entire long-lived branch",
+      "Deleting history",
+      "Porting a specific bug-fix commit to a release branch without merging everything else",
+      "Creating tags"
+    ],
+    "correctAnswer": 2,
+    "explanation": "cherry-pick shines for selectively moving a single fix (e.g., a hotfix) to another branch such as a maintenance/release line, without bringing unrelated commits.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "CherryPick",
+      "Workflow"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0044",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Cherry-pick",
+    "difficulty": "Medium",
+    "question": "What does the -x flag add when cherry-picking?",
+    "options": [
+      "It forces the pick",
+      "It picks multiple commits",
+      "It skips conflicts",
+      "It appends a line noting the original commit SHA to the message"
+    ],
+    "correctAnswer": 3,
+    "explanation": "cherry-pick -x records '(cherry picked from commit <sha>)' in the new commit message, keeping a trace back to the source commit — handy for backports.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "CherryPick",
+      "CLI"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0045",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Cherry-pick",
+    "difficulty": "Hard",
+    "question": "Repeatedly cherry-picking commits between two long-lived branches can cause what problem later?",
+    "options": [
+      "Duplicate-change conflicts when the branches are eventually merged, since the same logical change exists under two SHAs",
+      "Faster merges",
+      "Automatic deletion of commits",
+      "Loss of the reflog"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Cherry-picking duplicates a change under a new SHA. When the branches later merge, Git may see the same content twice and produce confusing conflicts.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "CherryPick",
+      "Pitfalls"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0046",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Tags",
+    "difficulty": "Easy",
+    "question": "What is a Git tag most commonly used for?",
+    "options": [
+      "Temporary work-in-progress saves",
+      "Marking specific points in history, such as release versions like v1.0",
+      "Storing credentials",
+      "Ignoring files"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tags label a particular commit with a memorable name, typically to mark releases (v1.0.0) so they're easy to find and check out later.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Tags",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0047",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Tags",
+    "difficulty": "Easy",
+    "question": "Which command lists all tags in a repository?",
+    "options": [
+      "git list-tags",
+      "git tags --all",
+      "git tag",
+      "git show-tags"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Running git tag with no arguments prints the list of existing tags; you can filter with git tag -l '<pattern>'.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Tags",
+      "CLI"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0048",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Tags",
+    "difficulty": "Medium",
+    "question": "What is the difference between a lightweight tag and an annotated tag?",
+    "options": [
+      "Lightweight tags cannot be pushed",
+      "Lightweight tags are signed; annotated are not",
+      "They are identical",
+      "Annotated tags store extra metadata (tagger, date, message) as a full object; lightweight tags are just a name pointing at a commit"
+    ],
+    "correctAnswer": 3,
+    "explanation": "An annotated tag (-a) is a full Git object with author, date, message, and optional GPG signature; a lightweight tag is merely a ref pointing to a commit.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Tags",
+      "Types"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0049",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Tags",
+    "difficulty": "Medium",
+    "question": "By default, does 'git push' send your local tags to the remote?",
+    "options": [
+      "No — tags must be pushed explicitly with git push <remote> <tag> or --tags",
+      "Yes, always",
+      "Only annotated tags are pushed",
+      "Only lightweight tags are pushed"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A normal push does not transfer tags. You push a specific tag by name, or all of them with git push --tags / git push --follow-tags.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Tags",
+      "Push"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0050",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Tags",
+    "difficulty": "Hard",
+    "question": "You need a release tag whose authenticity can be cryptographically verified. Which tag do you create?",
+    "options": [
+      "A lightweight tag",
+      "A GPG-signed annotated tag (git tag -s)",
+      "A branch instead",
+      "An untracked tag"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git tag -s creates a signed annotated tag; the GPG signature lets others verify who created the release tag with git tag -v, which lightweight tags cannot provide.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Tags",
+      "Security"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0051",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "HEAD & Detached HEAD",
+    "difficulty": "Easy",
+    "question": "What does HEAD normally point to in Git?",
+    "options": [
+      "The remote server",
+      "The staging area",
+      "The current branch (and thus the commit you have checked out)",
+      "The oldest commit"
+    ],
+    "correctAnswer": 2,
+    "explanation": "HEAD is a symbolic reference to your current branch, which in turn points to a commit; it tells Git what you have checked out.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "HEAD",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0052",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "HEAD & Detached HEAD",
+    "difficulty": "Easy",
+    "question": "What does 'HEAD~1' refer to?",
+    "options": [
+      "The next commit after HEAD",
+      "The initial commit",
+      "The remote HEAD",
+      "The first parent of HEAD (one commit back)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "HEAD~1 (or HEAD~) means the commit one step back along the first-parent line — the parent of the currently checked-out commit.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "HEAD",
+      "Navigation"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0053",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "HEAD & Detached HEAD",
+    "difficulty": "Medium",
+    "question": "What is a 'detached HEAD' state?",
+    "options": [
+      "HEAD points directly at a specific commit instead of a branch",
+      "A corrupted repository",
+      "A branch with no commits",
+      "A merge conflict"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When you check out a commit (or tag) directly, HEAD references that commit rather than a branch. New commits made here aren't on any branch.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "HEAD",
+      "Detached"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0054",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "HEAD & Detached HEAD",
+    "difficulty": "Medium",
+    "question": "Why can commits made in a detached HEAD state be lost?",
+    "options": [
+      "Git deletes them immediately",
+      "They belong to no branch, so switching away leaves them unreferenced and eligible for garbage collection",
+      "They are pushed to origin automatically",
+      "They overwrite HEAD~1"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Without a branch pointing to them, detached-HEAD commits are only reachable via the reflog. Once you switch branches they can be pruned by gc if not saved.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "HEAD",
+      "Pitfalls"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0055",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "HEAD & Detached HEAD",
+    "difficulty": "Hard",
+    "question": "You made several valuable commits in a detached HEAD, then ran 'git switch main'. How do you preserve that work?",
+    "options": [
+      "It is unrecoverable",
+      "Run git commit --amend",
+      "Create a branch at the detached commit — e.g. git branch <name> <sha> using the SHA from reflog or the switch warning",
+      "Push main again"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Git warns and prints the detached commit SHA when you leave. Create a branch there (git branch/switch -c <name> <sha>), or recover the SHA from the reflog.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "HEAD",
+      "Recovery"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0056",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge Conflicts",
+    "difficulty": "Easy",
+    "question": "When does a merge conflict occur?",
+    "options": [
+      "Whenever two branches are merged",
+      "When you push to a remote",
+      "When a branch is deleted",
+      "When the same lines of a file were changed differently in the two branches being combined"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Git auto-merges non-overlapping changes. A conflict arises when both branches modified the same region of a file and Git can't decide which to keep.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Conflicts",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0057",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge Conflicts",
+    "difficulty": "Easy",
+    "question": "In a conflicted file, what do the '<<<<<<<', '=======', and '>>>>>>>' markers separate?",
+    "options": [
+      "Your current-branch changes from the incoming-branch changes",
+      "Comments from code",
+      "Old files from new files",
+      "Staged from unstaged"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The markers delimit conflict hunks: content between <<<<<<< and ======= is HEAD/current, and between ======= and >>>>>>> is the incoming branch.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Conflicts",
+      "Markers"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0058",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge Conflicts",
+    "difficulty": "Medium",
+    "question": "After manually editing conflicted files to resolve them, what must you do to complete the merge?",
+    "options": [
+      "Nothing, Git auto-detects it",
+      "Stage the resolved files (git add) and then commit (or git merge --continue)",
+      "Run git reset --hard",
+      "Delete the conflict markers only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Removing markers isn't enough — you must git add the resolved files to tell Git the conflict is settled, then commit to finalize the merge.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Conflicts",
+      "Resolution"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0059",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge Conflicts",
+    "difficulty": "Medium",
+    "question": "Which command aborts an in-progress merge and returns to the pre-merge state?",
+    "options": [
+      "git revert HEAD",
+      "git reset --soft",
+      "git merge --abort",
+      "git merge --stop"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git merge --abort cancels a conflicted merge and restores the working tree and index to how they were before the merge began.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Conflicts",
+      "Abort"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0060",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Merge Conflicts",
+    "difficulty": "Hard",
+    "question": "What does enabling 'git rerere' provide during repeated conflict resolution?",
+    "options": [
+      "It disables all conflicts",
+      "It rebases automatically",
+      "It forces one side to win",
+      "It records how you resolved a conflict and auto-reapplies the same resolution when the identical conflict recurs"
+    ],
+    "correctAnswer": 3,
+    "explanation": "rerere (reuse recorded resolution) remembers your manual conflict resolutions and replays them for identical conflicts later — very handy during long-lived rebases.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Conflicts",
+      "Rerere"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0061",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Log",
+    "difficulty": "Easy",
+    "question": "What does 'git log' display?",
+    "options": [
+      "The commit history of the current branch",
+      "The staging area contents",
+      "Only untracked files",
+      "Remote configuration"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git log shows the sequence of commits reachable from HEAD, newest first, with author, date, and message for each.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Log",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0062",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Log",
+    "difficulty": "Easy",
+    "question": "Which option condenses each commit in the log to a single line?",
+    "options": [
+      "git log --short",
+      "git log --oneline",
+      "git log --brief",
+      "git log --compact"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git log --oneline prints an abbreviated SHA and the first line of each commit message, giving a compact overview of history.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Log",
+      "CLI"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0063",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Log",
+    "difficulty": "Medium",
+    "question": "Which command visualizes branch and merge structure as an ASCII graph?",
+    "options": [
+      "git log --branches-only",
+      "git log --tree",
+      "git log --graph",
+      "git log --map"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git log --graph draws lines connecting commits to show branching and merging; it's often combined with --oneline --all for a full picture.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Log",
+      "Graph"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0064",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Log",
+    "difficulty": "Medium",
+    "question": "How can you see the actual code changes (diffs) introduced by each commit in the log?",
+    "options": [
+      "git log --raw-only",
+      "git log --stat-only",
+      "git log --names",
+      "git log -p"
+    ],
+    "correctAnswer": 3,
+    "explanation": "git log -p (or --patch) shows the patch/diff for each commit, letting you review exactly what changed line by line through history.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Log",
+      "Diff"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0065",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Log",
+    "difficulty": "Hard",
+    "question": "Which git log invocation finds commits whose diff added or removed a specific string, useful for tracking when code was introduced?",
+    "options": [
+      "git log -S'<string>' (the pickaxe)",
+      "git log --author",
+      "git log --since",
+      "git log --grep only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The pickaxe git log -S searches the content of changes, listing commits where the count of the given string changed — ideal for locating when a line appeared or vanished.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Log",
+      "Search"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0066",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Diff",
+    "difficulty": "Easy",
+    "question": "With no arguments, what does 'git diff' show?",
+    "options": [
+      "Differences between two branches",
+      "Differences between the working tree and the staging area (unstaged changes)",
+      "The commit history",
+      "Remote differences"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Plain git diff compares your working-directory files against the index, revealing changes you have made but not yet staged.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Diff",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0067",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Diff",
+    "difficulty": "Easy",
+    "question": "Which command shows the changes that are staged and ready to be committed?",
+    "options": [
+      "git diff --all",
+      "git diff HEAD~1",
+      "git diff --staged (or --cached)",
+      "git diff --remote"
+    ],
+    "correctAnswer": 2,
+    "explanation": "git diff --staged (alias --cached) compares the index against the last commit (HEAD), showing exactly what your next commit will record.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Diff",
+      "Staged"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0068",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Diff",
+    "difficulty": "Medium",
+    "question": "What does 'git diff branchA..branchB' show?",
+    "options": [
+      "Every commit in both",
+      "Nothing unless merged",
+      "Only merge commits",
+      "Changes that turn branchA's tip into branchB's tip"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The two-dot form compares the two endpoint snapshots, showing the net difference from branchA's tip to branchB's tip.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Diff",
+      "Branches"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0069",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Diff",
+    "difficulty": "Medium",
+    "question": "How do you view the diff of what a specific commit changed relative to its parent?",
+    "options": [
+      "git diff <commit>^ <commit> (or git show <commit>)",
+      "git log <commit>",
+      "git blame <commit>",
+      "git diff --remote"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git diff <commit>^ <commit> compares a commit to its parent; git show <commit> is a convenient shortcut that displays the same patch plus metadata.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Diff",
+      "Commit"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0070",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Diff",
+    "difficulty": "Hard",
+    "question": "What is the difference between 'git diff A..B' and 'git diff A...B'?",
+    "options": [
+      "They are identical",
+      "Two dots compares the two tips directly; three dots compares B against the merge-base (common ancestor) of A and B",
+      "Three dots ignores whitespace",
+      "Two dots only works on merges"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A..B diffs the endpoints. A...B diffs from the common ancestor (merge-base) to B, i.e., what B changed since the branches diverged — matching how PRs are shown.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Diff",
+      "Ranges"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0071",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": ".gitignore",
+    "difficulty": "Easy",
+    "question": "What is the purpose of a .gitignore file?",
+    "options": [
+      "To delete files",
+      "To encrypt files",
+      "To specify intentionally untracked files that Git should ignore",
+      "To list contributors"
+    ],
+    "correctAnswer": 2,
+    "explanation": ".gitignore lists patterns for files/directories Git should not track, such as build artifacts, dependencies, and secrets, keeping them out of the repository.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Gitignore",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0072",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": ".gitignore",
+    "difficulty": "Easy",
+    "question": "Which pattern in .gitignore ignores all files ending in .log?",
+    "options": [
+      "log/*",
+      "log.*",
+      "!.log",
+      "*.log"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The glob *.log matches any file with the .log extension in the directories where the rule applies.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Gitignore",
+      "Patterns"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0073",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": ".gitignore",
+    "difficulty": "Medium",
+    "question": "A file is already tracked by Git. You add it to .gitignore. What happens?",
+    "options": [
+      "It stays tracked; .gitignore only affects untracked files, so you must git rm --cached it to stop tracking",
+      "It is immediately untracked",
+      "It is deleted from disk",
+      "Git throws an error"
+    ],
+    "correctAnswer": 0,
+    "explanation": ".gitignore is only consulted for untracked files. To stop tracking an already-committed file you must remove it from the index with git rm --cached and commit.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Gitignore",
+      "Tracked"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0074",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": ".gitignore",
+    "difficulty": "Medium",
+    "question": "What does a leading '!' do in a .gitignore pattern, e.g. '!important.log'?",
+    "options": [
+      "Ignores the file more strongly",
+      "Negates a previous ignore rule, re-including the matched file",
+      "Comments out the line",
+      "Ignores only in subdirectories"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A '!' prefix negates an earlier pattern, un-ignoring the file — though it cannot re-include a file if its parent directory is entirely ignored.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Gitignore",
+      "Negation"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0075",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": ".gitignore",
+    "difficulty": "Hard",
+    "question": "A pattern with a trailing slash and a leading slash, like '/build/', means what?",
+    "options": [
+      "Ignore build anywhere in the tree",
+      "Ignore all directories",
+      "Ignore only the 'build' directory located at the repository root, not nested build folders",
+      "Ignore files named build only"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A leading slash anchors the pattern to the .gitignore's location (repo root here), and the trailing slash restricts the match to directories — so only the root-level build/ is ignored.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Gitignore",
+      "Anchoring"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0076",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Hooks",
+    "difficulty": "Easy",
+    "question": "What are Git hooks in a repository?",
+    "options": [
+      "Remote branches",
+      "Types of tags",
+      "Special commit messages",
+      "Scripts that Git runs automatically at certain points in the Git lifecycle"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Hooks are executable scripts triggered by Git events (e.g., before a commit or push), letting you automate checks or actions in the workflow.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Hooks",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0077",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Hooks",
+    "difficulty": "Easy",
+    "question": "In which directory do a repository's hook scripts live by default?",
+    "options": [
+      ".git/hooks",
+      ".git/config",
+      ".githooks",
+      ".git/refs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Sample and active hook scripts reside in .git/hooks. Git runs the appropriately named executable there when the corresponding event fires.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Hooks",
+      "Location"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0078",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Hooks",
+    "difficulty": "Medium",
+    "question": "Which hook runs before a commit is created and can block it by exiting non-zero?",
+    "options": [
+      "post-commit",
+      "pre-commit",
+      "pre-push",
+      "commit-msg"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The pre-commit hook fires before the commit is recorded; a non-zero exit aborts the commit, making it ideal for linting or running quick tests.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Hooks",
+      "PreCommit"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0079",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Hooks",
+    "difficulty": "Medium",
+    "question": "Why are hooks in .git/hooks not shared automatically when someone clones the repo?",
+    "options": [
+      "They are encrypted",
+      "They require a license",
+      "The .git directory (including hooks) is local and not part of the tracked, cloned content",
+      "Git strips them on push"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Hooks live inside the local .git folder, which isn't versioned or transferred on clone. Teams share hooks via a tracked directory plus core.hooksPath or a tool like Husky.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Hooks",
+      "Sharing"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0080",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Hooks",
+    "difficulty": "Hard",
+    "question": "What distinguishes client-side hooks from server-side hooks like pre-receive?",
+    "options": [
+      "There is no difference",
+      "Client hooks cannot be bypassed",
+      "Server-side hooks run first",
+      "Client-side hooks run on the developer's machine (commit, push events); server-side hooks like pre-receive run on the remote to accept or reject pushed updates"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Client-side hooks (pre-commit, pre-push) run locally and are easily bypassed. Server-side hooks (pre-receive, update, post-receive) run on the server and can enforce policy that clients cannot skip.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Hooks",
+      "ServerSide"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0081",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Submodules",
+    "difficulty": "Easy",
+    "question": "What is a Git submodule in a project?",
+    "options": [
+      "A repository embedded inside another repository at a specific commit",
+      "A hidden branch",
+      "A type of tag",
+      "A compressed pack file"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A submodule lets you include another Git repository within your project, pinned to a specific commit, while keeping the two histories separate.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Submodules",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0082",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Submodules",
+    "difficulty": "Easy",
+    "question": "Which command adds a submodule to a repository?",
+    "options": [
+      "git add --sub <url>",
+      "git submodule add <url>",
+      "git submodule new <url>",
+      "git clone --sub <url>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git submodule add <url> [path] registers the external repo as a submodule and records it in the .gitmodules file.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Submodules",
+      "CLI"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0083",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Submodules",
+    "difficulty": "Medium",
+    "question": "After cloning a repo that contains submodules, why might the submodule directories be empty?",
+    "options": [
+      "The submodules were deleted",
+      "They are always empty",
+      "Submodule contents aren't fetched by default; you must run git submodule update --init --recursive (or clone with --recurse-submodules)",
+      "The URL was wrong"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A normal clone records submodule references but leaves their folders empty. Initialize and fetch them with git submodule update --init --recursive.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Submodules",
+      "Clone"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0084",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Submodules",
+    "difficulty": "Medium",
+    "question": "What does the parent repository actually store for each submodule?",
+    "options": [
+      "A full copy of the submodule's files",
+      "Nothing",
+      "Only the submodule's URL",
+      "A pointer to a specific commit SHA in the submodule's repository"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The superproject records the exact commit (gitlink) each submodule should be checked out to, so everyone gets a consistent, pinned version.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Submodules",
+      "Internals"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0085",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Submodules",
+    "difficulty": "Hard",
+    "question": "You updated code inside a submodule and committed there. Why does the parent repo still show changes?",
+    "options": [
+      "The parent tracks the submodule's commit SHA, so you must commit the updated pointer in the parent repo too",
+      "Git is broken",
+      "Submodules can't be committed",
+      "You must delete .gitmodules"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Committing in the submodule advances its HEAD; the parent still points at the old SHA. You must stage and commit the new submodule commit reference in the superproject.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Submodules",
+      "Workflow"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0086",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Bisect",
+    "difficulty": "Easy",
+    "question": "What is 'git bisect' used for?",
+    "options": [
+      "Splitting a branch in two",
+      "Finding the commit that introduced a bug via binary search through history",
+      "Merging two branches",
+      "Deleting old commits"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git bisect performs a binary search across the commit range, quickly narrowing down which commit first introduced a regression.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Bisect",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0087",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Bisect",
+    "difficulty": "Easy",
+    "question": "Which two states do you mark to begin a bisect session?",
+    "options": [
+      "two remotes",
+      "two bad commits",
+      "one good commit and one bad commit",
+      "two tags only"
+    ],
+    "correctAnswer": 2,
+    "explanation": "You tell Git a known-good commit and a known-bad commit; it then checks out midpoints for you to test until the first bad commit is isolated.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Bisect",
+      "Workflow"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0088",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Bisect",
+    "difficulty": "Medium",
+    "question": "During a manual bisect, after testing each checked-out commit, what do you tell Git?",
+    "options": [
+      "git bisect push",
+      "git commit each time",
+      "git bisect merge",
+      "git bisect good or git bisect bad, based on whether the bug is present"
+    ],
+    "correctAnswer": 3,
+    "explanation": "You label each midpoint commit good or bad; Git uses your answers to halve the remaining range until it reports the first bad commit.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Bisect",
+      "CLI"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0089",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Bisect",
+    "difficulty": "Medium",
+    "question": "How can bisect be fully automated?",
+    "options": [
+      "With git bisect run <script>, where the script's exit code signals good (0) or bad (non-zero)",
+      "It cannot be automated",
+      "By using git bisect --auto",
+      "By pushing to CI"
+    ],
+    "correctAnswer": 0,
+    "explanation": "git bisect run executes your test script at each step; exit code 0 marks the commit good and non-zero marks it bad, letting Git find the culprit hands-free.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Bisect",
+      "Automation"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0090",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Git Bisect",
+    "difficulty": "Hard",
+    "question": "After a bisect session identifies the bad commit, what should you run to return HEAD to its original position?",
+    "options": [
+      "git bisect stop",
+      "git bisect reset",
+      "git checkout HEAD",
+      "git bisect end"
+    ],
+    "correctAnswer": 1,
+    "explanation": "git bisect reset ends the session and restores HEAD (and the working tree) to where you were before bisecting began; forgetting it leaves you on a bisect checkout.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Bisect",
+      "Cleanup"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0091",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reflog",
+    "difficulty": "Easy",
+    "question": "What does 'git reflog' record?",
+    "options": [
+      "Remote fetch logs only",
+      "The commit messages only",
+      "A local history of where HEAD and branch references have pointed over time",
+      "The staging area"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The reflog tracks updates to HEAD and branch tips locally, so you can see and return to previous states even after resets or rebases.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reflog",
+      "Basics"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0092",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reflog",
+    "difficulty": "Easy",
+    "question": "Is the reflog stored locally or shared with remotes?",
+    "options": [
+      "Shared with all remotes",
+      "Stored in .gitignore",
+      "Stored on the server",
+      "Stored locally only, not pushed or cloned"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The reflog is a per-repository local record; it isn't transferred by push, fetch, or clone, so it reflects only your own actions.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reflog",
+      "Scope"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0093",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reflog",
+    "difficulty": "Medium",
+    "question": "How does the reflog help recover from a bad 'git reset --hard'?",
+    "options": [
+      "It shows the SHA of the commit HEAD pointed to before the reset, which you can reset/checkout back to",
+      "It re-downloads from origin",
+      "It undoes the reset automatically",
+      "It cannot help"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Every HEAD move is logged, so git reflog reveals the pre-reset commit SHA. You can then git reset --hard <sha> to restore the lost state.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reflog",
+      "Recovery"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0094",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reflog",
+    "difficulty": "Medium",
+    "question": "What does the reference 'HEAD@{2}' mean in reflog syntax?",
+    "options": [
+      "The commit two parents back",
+      "Where HEAD pointed two moves ago in the reflog",
+      "The second branch",
+      "The second remote"
+    ],
+    "correctAnswer": 1,
+    "explanation": "HEAD@{n} addresses a prior position of HEAD by reflog index; HEAD@{2} is where HEAD was two recorded moves ago, distinct from HEAD~2 (two parents back).",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reflog",
+      "Syntax"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0095",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Reflog",
+    "difficulty": "Hard",
+    "question": "Why might a 'lost' commit eventually become truly unrecoverable even though it once appeared in the reflog?",
+    "options": [
+      "Reflog entries never expire",
+      "Commits are deleted on push",
+      "Reflog entries expire (default ~90 days for reachable, 30 for unreachable) and git gc then prunes the now-unreferenced objects",
+      "The remote overwrites them"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Reflog entries expire after a configurable time (gc.reflogExpire). Once expired, the commit is unreferenced, and a garbage-collection run can permanently prune it.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Reflog",
+      "GC"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "git_0096",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching Workflows",
+    "difficulty": "Easy",
+    "question": "In a feature-branch workflow, where is new feature work typically done?",
+    "options": [
+      "Directly on the main branch",
+      "On a detached HEAD",
+      "On the remote only",
+      "On a dedicated branch created off main, then merged back via a pull request"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Feature-branch workflow isolates each change on its own branch off main; the branch is reviewed and merged (often through a pull/merge request) when ready.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Workflow",
+      "FeatureBranch"
+    ],
+    "company": [
+      "Amazon",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0097",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching Workflows",
+    "difficulty": "Easy",
+    "question": "What is the main idea of trunk-based development?",
+    "options": [
+      "Developers integrate small changes into a single main branch (trunk) frequently, avoiding long-lived branches",
+      "Long-lived release branches for months",
+      "No branches are ever used",
+      "Every feature has a permanent branch"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Trunk-based development favors short-lived branches and frequent merges to a shared trunk, reducing merge pain and supporting continuous integration.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Workflow",
+      "TrunkBased"
+    ],
+    "company": [
+      "Microsoft",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "git_0098",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching Workflows",
+    "difficulty": "Medium",
+    "question": "In the classic Git Flow model, what is the 'develop' branch used for?",
+    "options": [
+      "Production releases only",
+      "Integrating completed features as the ongoing next-release line, separate from the stable main/master",
+      "Hotfixes exclusively",
+      "Storing tags"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Git Flow uses develop as the integration branch for features heading to the next release, while main/master holds production-ready, released code.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Workflow",
+      "GitFlow"
+    ],
+    "company": [
+      "Amazon",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0099",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching Workflows",
+    "difficulty": "Medium",
+    "question": "What is the purpose of a 'hotfix' branch in Git Flow?",
+    "options": [
+      "Adding large new features",
+      "Storing experiments forever",
+      "Quickly patching a production issue by branching from main, then merging back to both main and develop",
+      "Renaming the repo"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A hotfix branch is cut from main to fix an urgent production bug; the fix is merged back into main (and tagged) and also into develop to keep lines in sync.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Workflow",
+      "Hotfix"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "git_0100",
+    "level": "Level 9",
+    "category": "Git & Version Control",
+    "topic": "Branching Workflows",
+    "difficulty": "Hard",
+    "question": "Why do many teams prefer trunk-based development with feature flags over long-lived feature branches?",
+    "options": [
+      "It avoids all testing",
+      "It eliminates the main branch",
+      "It removes the need for code review",
+      "Short-lived integration reduces large, painful merges and merge-conflict drift, while feature flags let unfinished code ship dark and be toggled on later"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Long-lived branches drift far from main and cause huge, risky merges. Trunk-based work integrates frequently; feature flags keep incomplete features hidden until enabled, decoupling deploy from release.",
+    "source": "Generated (based on Git version-control theory)",
+    "tags": [
+      "Workflow",
+      "FeatureFlags"
+    ],
+    "company": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  }
+]

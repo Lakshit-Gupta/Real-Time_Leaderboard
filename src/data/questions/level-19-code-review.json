@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "cr_0001",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Review Etiquette",
+    "difficulty": "Easy",
+    "question": "What is the primary goal of leaving review comments?",
+    "options": [
+      "Improve code quality and share knowledge",
+      "Show off superior skill",
+      "Delay the merge",
+      "Assert authority over the author"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reviews exist to improve quality and spread understanding, not to score points.",
+    "source": "Generated (based on Code Review Etiquette theory)",
+    "tags": [
+      "Code Review",
+      "Etiquette"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0002",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Review Etiquette",
+    "difficulty": "Easy",
+    "question": "Which phrasing is preferred in a review comment?",
+    "options": [
+      "\"This is wrong\"",
+      "\"Consider extracting this into a helper function\"",
+      "\"Why would you do this\"",
+      "\"Bad code\""
+    ],
+    "correctAnswer": 1,
+    "explanation": "Suggestive, specific phrasing invites discussion instead of triggering defensiveness.",
+    "source": "Generated (based on Code Review Etiquette theory)",
+    "tags": [
+      "Code Review",
+      "Etiquette"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0003",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Review Etiquette",
+    "difficulty": "Medium",
+    "question": "A reviewer disagrees with a stylistic choice that has no functional impact. What is the best action?",
+    "options": [
+      "Block the PR until changed",
+      "Rewrite the code themselves silently",
+      "Note it as a nitpick and let the author decide",
+      "Escalate to the manager"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Non-blocking style opinions should be labeled as nitpicks, leaving the final call to the author.",
+    "source": "Generated (based on Code Review Etiquette theory)",
+    "tags": [
+      "Code Review",
+      "Etiquette"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0004",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Review Etiquette",
+    "difficulty": "Medium",
+    "question": "Why should reviewers avoid comments like \"just\" or \"simply\" when suggesting changes?",
+    "options": [
+      "They make comments too short",
+      "They are grammatically incorrect",
+      "They violate style guides",
+      "They minimize the effort involved and can feel dismissive"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Words like \"just\" can trivialize work that may not be simple, discouraging the author.",
+    "source": "Generated (based on Code Review Etiquette theory)",
+    "tags": [
+      "Code Review",
+      "Etiquette"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0005",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Review Etiquette",
+    "difficulty": "Hard",
+    "question": "A large PR touches 40 files with mixed refactoring and a bug fix. What review strategy best manages risk?",
+    "options": [
+      "Ask the author to split it into a refactor PR and a focused fix PR",
+      "Approve quickly to unblock the author",
+      "Review only the bug fix and ignore the rest",
+      "Reject outright for being too large"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Splitting orthogonal changes lets each be reviewed and reverted independently, reducing risk.",
+    "source": "Generated (based on Code Review Etiquette theory)",
+    "tags": [
+      "Code Review",
+      "Etiquette"
+    ],
+    "company": [
+      "Google",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0006",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting SQL Injection",
+    "difficulty": "Easy",
+    "question": "Which pattern in a code review is a red flag for SQL injection?",
+    "options": [
+      "Use of parameterized queries",
+      "String concatenation of user input into a query",
+      "Use of an ORM query builder",
+      "Prepared statement with bind variables"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Concatenating raw input into SQL text is the classic injection vector.",
+    "source": "Generated (based on Spotting SQL Injection theory)",
+    "tags": [
+      "Security",
+      "SQL Injection"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0007",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting SQL Injection",
+    "difficulty": "Easy",
+    "question": "What should a reviewer request when they see `\"SELECT * FROM users WHERE name = '\" + name + \"'\"`?",
+    "options": [
+      "Escape only single quotes manually",
+      "Add a comment explaining the risk",
+      "Replace with a parameterized query",
+      "Wrap in a try/catch"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Parameterization is the durable fix; manual escaping is fragile and easy to bypass.",
+    "source": "Generated (based on Spotting SQL Injection theory)",
+    "tags": [
+      "Security",
+      "SQL Injection"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0008",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting SQL Injection",
+    "difficulty": "Medium",
+    "question": "A PR uses an ORM but calls a raw SQL escape hatch for a complex report. What should the reviewer check?",
+    "options": [
+      "Whether the ORM version is up to date",
+      "Whether the query returns JSON",
+      "Whether the query has an index hint",
+      "Whether the raw query still uses bound parameters"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Escape hatches bypass ORM protections, so parameter binding must be verified manually.",
+    "source": "Generated (based on Spotting SQL Injection theory)",
+    "tags": [
+      "Security",
+      "SQL Injection"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0009",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting SQL Injection",
+    "difficulty": "Medium",
+    "question": "Why is input validation alone insufficient defense against SQL injection?",
+    "options": [
+      "Validation can miss encoding tricks and edge cases that parameterization prevents structurally",
+      "Validation is too slow",
+      "Validation breaks unicode input",
+      "Validation requires a separate service"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Blocklist-style validation is bypassable; parameterized queries remove the injection vector entirely.",
+    "source": "Generated (based on Spotting SQL Injection theory)",
+    "tags": [
+      "Security",
+      "SQL Injection"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0010",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting SQL Injection",
+    "difficulty": "Hard",
+    "question": "A stored procedure builds a dynamic SQL string from a sortable column name parameter. What review guidance best mitigates injection while keeping the feature?",
+    "options": [
+      "Trust framework-level escaping of the column name",
+      "Whitelist the allowed column names against an enum before interpolating",
+      "Rely on database user permissions alone",
+      "Log the query for later audit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Identifiers like column/table names cannot be parameterized, so a strict whitelist is the correct mitigation.",
+    "source": "Generated (based on Spotting SQL Injection theory)",
+    "tags": [
+      "Security",
+      "SQL Injection"
+    ],
+    "company": [
+      "Amazon",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0011",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting Race Conditions in Review",
+    "difficulty": "Easy",
+    "question": "What review red flag suggests a possible race condition?",
+    "options": [
+      "Use of an immutable data structure",
+      "A pure function with no shared state",
+      "Read-then-write on shared state without a lock",
+      "A single-threaded script"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Unsynchronized read-modify-write on shared mutable state is the classic race pattern.",
+    "source": "Generated (based on Spotting Race Conditions in Review theory)",
+    "tags": [
+      "Concurrency",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0012",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting Race Conditions in Review",
+    "difficulty": "Easy",
+    "question": "Which change most directly reduces race condition risk in a counter increment?",
+    "options": [
+      "Adding a comment above the increment",
+      "Increasing the variable's scope",
+      "Renaming the variable",
+      "Using an atomic increment operation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Atomic operations remove the window where two threads interleave read and write.",
+    "source": "Generated (based on Spotting Race Conditions in Review theory)",
+    "tags": [
+      "Concurrency",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0013",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting Race Conditions in Review",
+    "difficulty": "Medium",
+    "question": "A reviewer sees a check-then-act pattern on a file's existence before creating it. What is the concern?",
+    "options": [
+      "Another process could create the file between the check and the act",
+      "The check is redundant and slow",
+      "The code violates naming conventions",
+      "The file system call is deprecated"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Check-then-act is inherently racy unless the check and act are combined atomically (e.g. exclusive create).",
+    "source": "Generated (based on Spotting Race Conditions in Review theory)",
+    "tags": [
+      "Concurrency",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0014",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting Race Conditions in Review",
+    "difficulty": "Medium",
+    "question": "Why might a code review flag a lock acquired in one order in one function and a different order elsewhere?",
+    "options": [
+      "It causes a compile warning",
+      "Inconsistent lock ordering can cause deadlock",
+      "It slows down single-threaded tests",
+      "It violates naming conventions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Acquiring multiple locks in inconsistent order across code paths is a classic deadlock cause.",
+    "source": "Generated (based on Spotting Race Conditions in Review theory)",
+    "tags": [
+      "Concurrency",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0015",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Spotting Race Conditions in Review",
+    "difficulty": "Hard",
+    "question": "A PR adds a cache that lazily initializes a value with a double-checked null check but no memory barrier equivalent. What should the reviewer flag?",
+    "options": [
+      "The cache uses too much memory",
+      "The null check is redundant",
+      "The pattern may allow a partially constructed object to be visible to another thread",
+      "The lazy initialization is unnecessary"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Double-checked locking without proper synchronization/visibility guarantees can expose partially built objects on some memory models.",
+    "source": "Generated (based on Spotting Race Conditions in Review theory)",
+    "tags": [
+      "Concurrency",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0016",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Naming Conventions",
+    "difficulty": "Easy",
+    "question": "Which variable name would a reviewer likely flag as too vague?",
+    "options": [
+      "userEmail",
+      "orderTotal",
+      "isActive",
+      "data"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Generic names like \"data\" fail to convey intent, forcing readers to trace usage.",
+    "source": "Generated (based on Naming Conventions theory)",
+    "tags": [
+      "Naming",
+      "Readability"
+    ],
+    "company": [
+      "Google",
+      "Airbnb"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0017",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Naming Conventions",
+    "difficulty": "Easy",
+    "question": "Why do reviewers prefer boolean variables prefixed with \"is\", \"has\", or \"can\"?",
+    "options": [
+      "It signals the variable holds a true/false value at a glance",
+      "It is required by all compilers",
+      "It shortens the variable name",
+      "It improves runtime performance"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Prefix conventions make boolean intent readable without inspecting the type.",
+    "source": "Generated (based on Naming Conventions theory)",
+    "tags": [
+      "Naming",
+      "Readability"
+    ],
+    "company": [
+      "Google",
+      "Airbnb"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0018",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Naming Conventions",
+    "difficulty": "Medium",
+    "question": "A function named `processData` is flagged in review. What is the core issue?",
+    "options": [
+      "The name is too long",
+      "The name does not describe what processing actually happens",
+      "The name uses camelCase",
+      "The name includes a verb"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Vague verbs like \"process\" tell the reader nothing about the actual transformation performed.",
+    "source": "Generated (based on Naming Conventions theory)",
+    "tags": [
+      "Naming",
+      "Readability"
+    ],
+    "company": [
+      "Google",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0019",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Naming Conventions",
+    "difficulty": "Medium",
+    "question": "Why might a reviewer object to abbreviations like `usrCnt` in a public API?",
+    "options": [
+      "Abbreviations are always slower to parse by compilers",
+      "Abbreviations break serialization",
+      "Abbreviations reduce readability and searchability for other developers",
+      "Abbreviations are not allowed by any language"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Non-standard abbreviations hurt grep-ability and impose a decoding cost on every reader.",
+    "source": "Generated (based on Naming Conventions theory)",
+    "tags": [
+      "Naming",
+      "Readability"
+    ],
+    "company": [
+      "Google",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0020",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Naming Conventions",
+    "difficulty": "Hard",
+    "question": "A codebase mixes `getUser` (synchronous) and `getUserAsync` inconsistently, sometimes dropping the suffix on async methods. What review guidance best addresses this?",
+    "options": [
+      "Rename all methods to `getUser2`",
+      "Remove the suffix entirely from every method",
+      "Let each developer choose their own convention",
+      "Establish and enforce a consistent naming convention for sync vs async across the codebase"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Consistent, codebase-wide naming for sync/async prevents accidental misuse of blocking calls in async contexts.",
+    "source": "Generated (based on Naming Conventions theory)",
+    "tags": [
+      "Naming",
+      "Readability"
+    ],
+    "company": [
+      "Google",
+      "Airbnb"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0021",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "DRY Violations",
+    "difficulty": "Easy",
+    "question": "What does a reviewer typically flag as a DRY violation?",
+    "options": [
+      "The same logic block copy-pasted in multiple places",
+      "A single well-named helper function",
+      "A short one-line utility",
+      "A constant declared once"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Repeated logic in multiple locations means every future change must be made in each copy.",
+    "source": "Generated (based on DRY Violations theory)",
+    "tags": [
+      "DRY",
+      "Duplication"
+    ],
+    "company": [
+      "Microsoft",
+      "Spotify"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0022",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "DRY Violations",
+    "difficulty": "Easy",
+    "question": "What is the main risk of leaving duplicated business logic unaddressed?",
+    "options": [
+      "The code compiles slower",
+      "One copy gets updated and the others silently drift out of sync",
+      "The duplicated code always runs faster",
+      "It increases test coverage automatically"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Duplication creates multiple sources of truth that can diverge when only one location is fixed.",
+    "source": "Generated (based on DRY Violations theory)",
+    "tags": [
+      "DRY",
+      "Duplication"
+    ],
+    "company": [
+      "Microsoft",
+      "Spotify"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0023",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "DRY Violations",
+    "difficulty": "Medium",
+    "question": "A reviewer sees three similar but not identical validation functions. What is the right response?",
+    "options": [
+      "Immediately merge them into one regardless of differences",
+      "Ignore it since three is not many",
+      "Assess whether the differences are meaningful before merging into one function",
+      "Ask the author to add more duplication for consistency"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Premature merging of superficially similar code can hide meaningful behavioral differences; review the deltas first.",
+    "source": "Generated (based on DRY Violations theory)",
+    "tags": [
+      "DRY",
+      "Duplication"
+    ],
+    "company": [
+      "Microsoft",
+      "Spotify"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0024",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "DRY Violations",
+    "difficulty": "Medium",
+    "question": "Why can over-applying DRY early in a project be counterproductive?",
+    "options": [
+      "It makes code run slower",
+      "It violates every style guide",
+      "It always increases the number of files",
+      "It can force premature abstractions around requirements that have not stabilized"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Abstracting too early can lock in incorrect assumptions before the real pattern is understood.",
+    "source": "Generated (based on DRY Violations theory)",
+    "tags": [
+      "DRY",
+      "Duplication"
+    ],
+    "company": [
+      "Microsoft",
+      "Spotify"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0025",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "DRY Violations",
+    "difficulty": "Hard",
+    "question": "Two modules independently implement near-identical retry logic with subtly different backoff constants. What review approach best balances DRY with domain differences?",
+    "options": [
+      "Extract a shared retry utility parameterized by backoff configuration",
+      "Force both modules to use identical constants",
+      "Leave both copies untouched to avoid coupling",
+      "Delete one implementation arbitrarily"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A parameterized shared utility removes duplication while preserving each caller's legitimate configuration differences.",
+    "source": "Generated (based on DRY Violations theory)",
+    "tags": [
+      "DRY",
+      "Duplication"
+    ],
+    "company": [
+      "Microsoft",
+      "Spotify"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0026",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Function Length and Complexity",
+    "difficulty": "Easy",
+    "question": "What review signal suggests a function has grown too complex?",
+    "options": [
+      "A single return statement",
+      "Deeply nested conditionals spanning many responsibilities",
+      "A descriptive docstring",
+      "Use of early returns"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Deep nesting across many responsibilities usually means the function should be split.",
+    "source": "Generated (based on Function Length and Complexity theory)",
+    "tags": [
+      "Complexity",
+      "Readability"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0027",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Function Length and Complexity",
+    "difficulty": "Easy",
+    "question": "Which refactor is commonly suggested for an overly long function?",
+    "options": [
+      "Add more inline comments explaining each block",
+      "Rename the function to something longer",
+      "Extract cohesive chunks into smaller, named helper functions",
+      "Wrap the whole function in a try/catch"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Extraction into named helpers restores readability without changing behavior.",
+    "source": "Generated (based on Function Length and Complexity theory)",
+    "tags": [
+      "Complexity",
+      "Readability"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0028",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Function Length and Complexity",
+    "difficulty": "Medium",
+    "question": "Why is cyclomatic complexity a useful metric during review?",
+    "options": [
+      "It measures the number of lines only",
+      "It measures compile time",
+      "It measures memory usage",
+      "It estimates the number of independent paths, correlating with test and bug risk"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Higher cyclomatic complexity means more paths to test and more places for bugs to hide.",
+    "source": "Generated (based on Function Length and Complexity theory)",
+    "tags": [
+      "Complexity",
+      "Readability"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0029",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Function Length and Complexity",
+    "difficulty": "Medium",
+    "question": "A function has 6 boolean parameters. What is the typical review concern?",
+    "options": [
+      "Call sites become unreadable and error-prone to order correctly",
+      "Boolean parameters are always deprecated",
+      "The function will not compile",
+      "The function cannot be tested"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Long boolean parameter lists lead to easily swapped arguments and unreadable call sites; an options object is often clearer.",
+    "source": "Generated (based on Function Length and Complexity theory)",
+    "tags": [
+      "Complexity",
+      "Readability"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0030",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Function Length and Complexity",
+    "difficulty": "Hard",
+    "question": "A reviewer wants to keep a naturally sequential algorithm readable without artificially splitting it into meaningless helper functions. What is the best guidance?",
+    "options": [
+      "Split it into ten single-line functions regardless of cohesion",
+      "Improve readability via well-named local variables and comments over forced extraction",
+      "Add a global flag to track progress",
+      "Rewrite it in a different language"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Length alone is not the enemy — the split should follow genuine responsibility boundaries, not be forced onto naturally sequential logic.",
+    "source": "Generated (based on Function Length and Complexity theory)",
+    "tags": [
+      "Complexity",
+      "Readability"
+    ],
+    "company": [
+      "Amazon",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0031",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Comment Quality",
+    "difficulty": "Easy",
+    "question": "Which comment would a reviewer flag as unnecessary?",
+    "options": [
+      "A comment explaining a non-obvious workaround",
+      "A comment linking to a relevant ticket for context",
+      "\"// increment i\" above `i++`",
+      "A comment warning about a subtle edge case"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Comments restating obvious code add noise without value.",
+    "source": "Generated (based on Comment Quality theory)",
+    "tags": [
+      "Comments",
+      "Documentation"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0032",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Comment Quality",
+    "difficulty": "Easy",
+    "question": "What makes a comment valuable during review?",
+    "options": [
+      "It repeats the function name",
+      "It is written in all caps",
+      "It is as long as possible",
+      "It explains why, not what, especially for non-obvious decisions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Good comments capture reasoning that the code itself cannot express.",
+    "source": "Generated (based on Comment Quality theory)",
+    "tags": [
+      "Comments",
+      "Documentation"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0033",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Comment Quality",
+    "difficulty": "Medium",
+    "question": "A reviewer finds a comment that no longer matches the code below it. What is the risk?",
+    "options": [
+      "Future readers will trust the stale comment and misunderstand the behavior",
+      "Stale comments always cause compile errors",
+      "Stale comments are automatically removed by linters",
+      "There is no risk, comments are ignored at runtime"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Comments are not verified by compilers, so drift between comment and code silently misleads readers.",
+    "source": "Generated (based on Comment Quality theory)",
+    "tags": [
+      "Comments",
+      "Documentation"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0034",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Comment Quality",
+    "difficulty": "Medium",
+    "question": "Why might a reviewer ask for a comment instead of just approving obscure code?",
+    "options": [
+      "To make the file longer for metrics",
+      "To capture the non-obvious reasoning before it is lost to time",
+      "To slow down the PR",
+      "Because comments are mandatory by law"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Preserving reasoning at the time of writing is far cheaper than reconstructing it later.",
+    "source": "Generated (based on Comment Quality theory)",
+    "tags": [
+      "Comments",
+      "Documentation"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0035",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Comment Quality",
+    "difficulty": "Hard",
+    "question": "A commented-out block of old code has been left in a file for months. What is the best review recommendation?",
+    "options": [
+      "Leave it in case it is needed again soon",
+      "Move it to a separate comments-only file",
+      "Delete it and rely on version control history to recover it if ever needed",
+      "Convert it into a docstring"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Version control already preserves history; dead commented-out code just adds clutter and confusion.",
+    "source": "Generated (based on Comment Quality theory)",
+    "tags": [
+      "Comments",
+      "Documentation"
+    ],
+    "company": [
+      "Google",
+      "Meta"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0036",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Error Handling Review",
+    "difficulty": "Easy",
+    "question": "What is a common error-handling red flag in review?",
+    "options": [
+      "Logging an exception with context before rethrowing",
+      "Wrapping a risky call in a try/catch",
+      "Returning a specific error code",
+      "An empty catch block that swallows exceptions silently"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Silently swallowing exceptions hides failures and makes debugging much harder later.",
+    "source": "Generated (based on Error Handling Review theory)",
+    "tags": [
+      "Error Handling",
+      "Reliability"
+    ],
+    "company": [
+      "Stripe",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0037",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Error Handling Review",
+    "difficulty": "Easy",
+    "question": "Why do reviewers prefer specific exception types over catching a generic `Exception`?",
+    "options": [
+      "Specific types avoid accidentally catching unrelated errors",
+      "Generic exceptions are always slower",
+      "Specific types are required by every language",
+      "Generic catches are illegal in production"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Catching broadly can mask bugs unrelated to the intended failure case.",
+    "source": "Generated (based on Error Handling Review theory)",
+    "tags": [
+      "Error Handling",
+      "Reliability"
+    ],
+    "company": [
+      "Stripe",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0038",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Error Handling Review",
+    "difficulty": "Medium",
+    "question": "A PR catches an exception and returns `null` without logging. What should the reviewer ask?",
+    "options": [
+      "Whether null is a valid JSON value",
+      "Whether the caller can safely distinguish a null result from an actual error",
+      "Whether the function is public",
+      "Whether the exception class has a subclass"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Swallowing errors into an ambiguous null return can propagate failures silently downstream.",
+    "source": "Generated (based on Error Handling Review theory)",
+    "tags": [
+      "Error Handling",
+      "Reliability"
+    ],
+    "company": [
+      "Stripe",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0039",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Error Handling Review",
+    "difficulty": "Medium",
+    "question": "Why is retrying on every exception type without distinction risky?",
+    "options": [
+      "Retrying always fixes any error eventually",
+      "Retrying is forbidden by REST standards",
+      "Non-transient errors get retried uselessly, wasting time and potentially worsening load",
+      "It always causes a stack overflow"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Blind retries on permanent errors (e.g. bad input) add latency and load without any chance of success.",
+    "source": "Generated (based on Error Handling Review theory)",
+    "tags": [
+      "Error Handling",
+      "Reliability"
+    ],
+    "company": [
+      "Stripe",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0040",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Error Handling Review",
+    "difficulty": "Hard",
+    "question": "A distributed service PR handles downstream timeouts by retrying immediately in a tight loop. What review concern is most important?",
+    "options": [
+      "The loop uses too much memory",
+      "The retry count is not logged",
+      "The function name is unclear",
+      "Lack of backoff can amplify load on an already struggling downstream service"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Tight retry loops without backoff can turn a partial outage into a full cascading failure (retry storm).",
+    "source": "Generated (based on Error Handling Review theory)",
+    "tags": [
+      "Error Handling",
+      "Reliability"
+    ],
+    "company": [
+      "Stripe",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0041",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Test Coverage in PRs",
+    "difficulty": "Easy",
+    "question": "What review question is most relevant when a PR adds new logic but no tests?",
+    "options": [
+      "How is this behavior verified, and what happens if it regresses later?",
+      "Is the code formatted correctly?",
+      "Is the variable naming consistent?",
+      "Is the PR description long enough?"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Untested logic has no safety net against future regressions.",
+    "source": "Generated (based on Test Coverage in PRs theory)",
+    "tags": [
+      "Testing",
+      "Code Review"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0042",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Test Coverage in PRs",
+    "difficulty": "Easy",
+    "question": "Which test addition would a reviewer most want to see for a bug fix PR?",
+    "options": [
+      "A test unrelated to the fix",
+      "A regression test that reproduces the original bug",
+      "A test that only checks formatting",
+      "No test, since the fix is obviously correct"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A regression test proves the bug is fixed and prevents it from silently reappearing.",
+    "source": "Generated (based on Test Coverage in PRs theory)",
+    "tags": [
+      "Testing",
+      "Code Review"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0043",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Test Coverage in PRs",
+    "difficulty": "Medium",
+    "question": "A PR has 100% line coverage but a reviewer still requests more tests. Why might that be reasonable?",
+    "options": [
+      "100% coverage is impossible to achieve",
+      "Coverage tools are always inaccurate",
+      "Line coverage does not guarantee edge cases or branch combinations are tested",
+      "More tests always mean better code regardless of scenario"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Line coverage can hide untested branch combinations and edge cases the metric does not capture.",
+    "source": "Generated (based on Test Coverage in PRs theory)",
+    "tags": [
+      "Testing",
+      "Code Review"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0044",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Test Coverage in PRs",
+    "difficulty": "Medium",
+    "question": "Why might a reviewer ask for a test around an off-by-one boundary?",
+    "options": [
+      "Boundary tests are required by the compiler",
+      "Boundary values always crash the program",
+      "It has nothing to do with correctness",
+      "Boundary values are the most common source of subtle logic bugs"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Boundary conditions (empty, first, last, one-past-end) are classic hotspots for logic errors.",
+    "source": "Generated (based on Test Coverage in PRs theory)",
+    "tags": [
+      "Testing",
+      "Code Review"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0045",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Test Coverage in PRs",
+    "difficulty": "Hard",
+    "question": "A PR mocks a downstream service so thoroughly that the mock encodes the exact behavior being tested. What review concern is raised?",
+    "options": [
+      "The test may pass even if the real integration is broken, giving false confidence",
+      "Mocks are always forbidden in unit tests",
+      "The test runs too slowly",
+      "The mock library is deprecated"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Over-mocking can make a test tautological, verifying the mock rather than real integration behavior.",
+    "source": "Generated (based on Test Coverage in PRs theory)",
+    "tags": [
+      "Testing",
+      "Code Review"
+    ],
+    "company": [
+      "Microsoft",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0046",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Backward Compatibility",
+    "difficulty": "Easy",
+    "question": "What review flag suggests a breaking API change?",
+    "options": [
+      "Adding a new optional field",
+      "Removing or renaming a public field that existing clients depend on",
+      "Adding a new endpoint",
+      "Improving internal performance"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Removing or renaming public fields breaks any client relying on the old shape.",
+    "source": "Generated (based on Backward Compatibility theory)",
+    "tags": [
+      "API Design",
+      "Compatibility"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0047",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Backward Compatibility",
+    "difficulty": "Easy",
+    "question": "Why do reviewers favor additive changes over field removal in public APIs?",
+    "options": [
+      "Additive changes are always faster to implement",
+      "Removal is illegal under REST",
+      "Additive changes do not break existing consumers",
+      "Additive changes require no versioning"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Adding new optional fields keeps old clients working while enabling new functionality.",
+    "source": "Generated (based on Backward Compatibility theory)",
+    "tags": [
+      "API Design",
+      "Compatibility"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0048",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Backward Compatibility",
+    "difficulty": "Medium",
+    "question": "A PR changes a field type from string to integer in a public response. What should reviewers require?",
+    "options": [
+      "Nothing, since integers are more efficient",
+      "A comment explaining the type change",
+      "Approval from the QA team only",
+      "A versioned rollout or new field, since this silently breaks existing consumers"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Changing an existing field's type breaks client-side parsing without any warning, requiring a compatible migration path.",
+    "source": "Generated (based on Backward Compatibility theory)",
+    "tags": [
+      "API Design",
+      "Compatibility"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0049",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Backward Compatibility",
+    "difficulty": "Medium",
+    "question": "Why might a reviewer ask for a deprecation period rather than immediate removal of an endpoint?",
+    "options": [
+      "It gives consumers time to migrate before the old endpoint disappears",
+      "Deprecation periods are required by law",
+      "It has no benefit, just extra work",
+      "It automatically documents the API"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A grace period lets external and internal consumers migrate without a hard, coordinated cutover.",
+    "source": "Generated (based on Backward Compatibility theory)",
+    "tags": [
+      "API Design",
+      "Compatibility"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0050",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Backward Compatibility",
+    "difficulty": "Hard",
+    "question": "A PR changes default sort order in a paginated list endpoint without a version bump. Why is this risky even though the schema is unchanged?",
+    "options": [
+      "Sort order never affects client behavior",
+      "Consumers relying on implicit ordering may silently break even though the response shape is identical",
+      "Pagination is unaffected by sort order",
+      "Default parameters cannot be changed in any API"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Behavioral changes like default ordering can break consumers just as much as schema changes, even without a shape difference.",
+    "source": "Generated (based on Backward Compatibility theory)",
+    "tags": [
+      "API Design",
+      "Compatibility"
+    ],
+    "company": [
+      "Google",
+      "Stripe"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0051",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Security Review Basics",
+    "difficulty": "Easy",
+    "question": "What is a basic security red flag during code review?",
+    "options": [
+      "A parameterized database query",
+      "An environment variable for configuration",
+      "A hardcoded API key or password in source code",
+      "A rate limiter on a public endpoint"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Hardcoded secrets in source risk permanent exposure via version history.",
+    "source": "Generated (based on Security Review Basics theory)",
+    "tags": [
+      "Security",
+      "Code Review"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0052",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Security Review Basics",
+    "difficulty": "Easy",
+    "question": "Why should reviewers flag user input rendered directly into HTML without escaping?",
+    "options": [
+      "It always slows down page rendering",
+      "It breaks CSS styling",
+      "It is a deprecated HTML feature",
+      "It can enable cross-site scripting (XSS)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Unescaped user input rendered as HTML is the core mechanism behind stored/reflected XSS.",
+    "source": "Generated (based on Security Review Basics theory)",
+    "tags": [
+      "Security",
+      "Code Review"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0053",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Security Review Basics",
+    "difficulty": "Medium",
+    "question": "A PR adds a new endpoint that trusts a client-supplied `role` field to grant admin access. What is the concern?",
+    "options": [
+      "Authorization decisions must be derived server-side, not trusted from client input",
+      "Client-supplied fields are always encrypted",
+      "JSON fields cannot represent roles",
+      "The endpoint needs more logging"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Trusting client-supplied authorization data lets any caller grant themselves elevated privileges.",
+    "source": "Generated (based on Security Review Basics theory)",
+    "tags": [
+      "Security",
+      "Code Review"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0054",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Security Review Basics",
+    "difficulty": "Medium",
+    "question": "Why do reviewers flag verbose stack traces returned directly to API clients in production?",
+    "options": [
+      "They make responses too large",
+      "They can leak internal implementation details useful to attackers",
+      "They are only a performance concern",
+      "They violate JSON schema rules"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Stack traces can reveal file paths, library versions, and logic that aid an attacker's reconnaissance.",
+    "source": "Generated (based on Security Review Basics theory)",
+    "tags": [
+      "Security",
+      "Code Review"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0055",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Security Review Basics",
+    "difficulty": "Hard",
+    "question": "A PR introduces a redirect endpoint that forwards to any `url` query parameter provided by the caller. What vulnerability class should the reviewer flag?",
+    "options": [
+      "SQL injection",
+      "Buffer overflow",
+      "Open redirect, which can be used in phishing by disguising a malicious link as trusted",
+      "Race condition"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Unrestricted redirect targets let attackers craft links that appear to originate from the trusted domain but redirect to a malicious one.",
+    "source": "Generated (based on Security Review Basics theory)",
+    "tags": [
+      "Security",
+      "Code Review"
+    ],
+    "company": [
+      "Amazon",
+      "Cloudflare"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0056",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Performance Red Flags",
+    "difficulty": "Easy",
+    "question": "What is a common performance red flag in review?",
+    "options": [
+      "A single batched query outside the loop",
+      "An indexed lookup",
+      "A cached computed value",
+      "A database query executed inside a loop (N+1 pattern)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The N+1 query pattern issues one query per iteration instead of a single batched query.",
+    "source": "Generated (based on Performance Red Flags theory)",
+    "tags": [
+      "Performance",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0057",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Performance Red Flags",
+    "difficulty": "Easy",
+    "question": "Why might a reviewer flag string concatenation in a large loop in some languages?",
+    "options": [
+      "Repeated concatenation can create excessive intermediate allocations",
+      "String concatenation is always forbidden",
+      "It changes the string's type",
+      "It cannot be tested"
+    ],
+    "correctAnswer": 0,
+    "explanation": "In languages with immutable strings, naive concatenation in a loop can be quadratic in allocations.",
+    "source": "Generated (based on Performance Red Flags theory)",
+    "tags": [
+      "Performance",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0058",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Performance Red Flags",
+    "difficulty": "Medium",
+    "question": "A PR loads an entire large table into memory to filter a few rows. What should the reviewer suggest?",
+    "options": [
+      "Increase the server's memory allocation",
+      "Push the filter down into the database query itself",
+      "Cache the entire table in a global variable",
+      "Split the loading into two loops"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Filtering at the database layer avoids transferring and holding unnecessary data in application memory.",
+    "source": "Generated (based on Performance Red Flags theory)",
+    "tags": [
+      "Performance",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0059",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Performance Red Flags",
+    "difficulty": "Medium",
+    "question": "Why is an unindexed column used in a frequent WHERE clause a review concern?",
+    "options": [
+      "It always breaks the query syntax",
+      "Unindexed columns cannot store strings",
+      "It forces a full table scan, degrading performance as data grows",
+      "It doubles storage cost automatically"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Without an index, the database must scan every row to filter, which scales poorly with table growth.",
+    "source": "Generated (based on Performance Red Flags theory)",
+    "tags": [
+      "Performance",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0060",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Performance Red Flags",
+    "difficulty": "Hard",
+    "question": "A PR adds a synchronous network call inside a hot per-request code path with no timeout set. What is the primary review concern?",
+    "options": [
+      "It uses too much CPU",
+      "It cannot be unit tested",
+      "It violates naming conventions",
+      "A slow or hanging dependency could exhaust the request thread/connection pool and cascade"
+    ],
+    "correctAnswer": 3,
+    "explanation": "An unbounded blocking call in a hot path risks resource exhaustion and cascading failure under dependency slowness.",
+    "source": "Generated (based on Performance Red Flags theory)",
+    "tags": [
+      "Performance",
+      "Code Review"
+    ],
+    "company": [
+      "Netflix",
+      "Uber"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0061",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "API Design Review",
+    "difficulty": "Easy",
+    "question": "What review concern applies to an endpoint that returns different shapes for success and error with the same status code?",
+    "options": [
+      "Inconsistent response shapes make client parsing unreliable",
+      "It is always faster to parse",
+      "It is required by REST",
+      "It has no downside"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Predictable, consistent response shapes are essential for reliable client-side handling.",
+    "source": "Generated (based on API Design Review theory)",
+    "tags": [
+      "API Design",
+      "Code Review"
+    ],
+    "company": [
+      "Stripe",
+      "Twilio"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0062",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "API Design Review",
+    "difficulty": "Easy",
+    "question": "Why do reviewers favor plural nouns for collection endpoints, e.g. `/users`?",
+    "options": [
+      "Plural nouns are required by HTTP",
+      "It follows a widely understood REST convention for collections",
+      "Singular nouns cause errors",
+      "It reduces payload size"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Conventional pluralization for collections improves API predictability for consumers.",
+    "source": "Generated (based on API Design Review theory)",
+    "tags": [
+      "API Design",
+      "Code Review"
+    ],
+    "company": [
+      "Stripe",
+      "Twilio"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0063",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "API Design Review",
+    "difficulty": "Medium",
+    "question": "A new endpoint accepts an unbounded array in the request body with no size limit. What should the reviewer flag?",
+    "options": [
+      "Arrays are not allowed in JSON",
+      "The endpoint needs a GraphQL wrapper",
+      "Lack of a size limit could enable resource exhaustion via oversized payloads",
+      "Arrays always need pagination metadata"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Unbounded input arrays are a common vector for denial-of-service via oversized requests.",
+    "source": "Generated (based on API Design Review theory)",
+    "tags": [
+      "API Design",
+      "Code Review"
+    ],
+    "company": [
+      "Stripe",
+      "Twilio"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0064",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "API Design Review",
+    "difficulty": "Medium",
+    "question": "Why might a reviewer push back on returning HTTP 200 for a business-logic failure?",
+    "options": [
+      "200 is reserved for GET requests only",
+      "200 responses cannot include a body",
+      "It violates JSON syntax",
+      "It misleads clients and monitoring that rely on status codes to detect failures"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Using status codes accurately lets clients, proxies, and monitoring correctly distinguish success from failure.",
+    "source": "Generated (based on API Design Review theory)",
+    "tags": [
+      "API Design",
+      "Code Review"
+    ],
+    "company": [
+      "Stripe",
+      "Twilio"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0065",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "API Design Review",
+    "difficulty": "Hard",
+    "question": "A PR introduces a new required field to an existing public request body without a version bump. What is the primary risk?",
+    "options": [
+      "Every existing client omitting the new field will start failing requests",
+      "Required fields are always backward compatible",
+      "JSON schemas cannot enforce required fields",
+      "It only affects internal callers"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Adding a new required field to an existing contract is a breaking change for every client unaware of it.",
+    "source": "Generated (based on API Design Review theory)",
+    "tags": [
+      "API Design",
+      "Code Review"
+    ],
+    "company": [
+      "Stripe",
+      "Twilio"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0066",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Magic Numbers",
+    "difficulty": "Easy",
+    "question": "What is a \"magic number\" that a reviewer would flag?",
+    "options": [
+      "A named constant `SECONDS_PER_DAY`",
+      "An unexplained literal like `86400` used directly in logic",
+      "A configuration value read from environment",
+      "A well-documented enum value"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Unexplained literals force readers to guess their meaning and purpose.",
+    "source": "Generated (based on Magic Numbers theory)",
+    "tags": [
+      "Readability",
+      "Maintainability"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0067",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Magic Numbers",
+    "difficulty": "Easy",
+    "question": "Why do reviewers ask for magic numbers to be replaced with named constants?",
+    "options": [
+      "Named constants are always faster at runtime",
+      "It is required for the code to compile",
+      "Named constants document intent and are easy to update in one place",
+      "Magic numbers cause type errors"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Named constants centralize meaning and make future changes safer and clearer.",
+    "source": "Generated (based on Magic Numbers theory)",
+    "tags": [
+      "Readability",
+      "Maintainability"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0068",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Magic Numbers",
+    "difficulty": "Medium",
+    "question": "A PR hardcodes `0.075` as a tax rate directly in a pricing calculation. What is the review concern?",
+    "options": [
+      "Decimal literals are not supported in most languages",
+      "It will cause floating point errors always",
+      "It cannot be unit tested",
+      "Rate changes require hunting through code instead of updating one named value"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A hardcoded rate scattered through logic is error-prone to update consistently when the business value changes.",
+    "source": "Generated (based on Magic Numbers theory)",
+    "tags": [
+      "Readability",
+      "Maintainability"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0069",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Magic Numbers",
+    "difficulty": "Medium",
+    "question": "Why might repeated magic numbers in different files be worse than a single occurrence?",
+    "options": [
+      "A future change may update some occurrences but miss others, causing inconsistency",
+      "Multiple occurrences always cause a syntax error",
+      "It has no additional risk beyond one occurrence",
+      "It automatically triggers a merge conflict"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Multiple untracked copies of the same value are a classic source of partial, inconsistent updates.",
+    "source": "Generated (based on Magic Numbers theory)",
+    "tags": [
+      "Readability",
+      "Maintainability"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0070",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Magic Numbers",
+    "difficulty": "Hard",
+    "question": "A reviewer sees a retry count of `3` used consistently across a module but wants it extracted anyway. What is the strongest justification?",
+    "options": [
+      "It will change the retry behavior",
+      "Centralizing it clarifies intent and lets tuning happen in one place without hunting for every occurrence",
+      "It is required by the language",
+      "It has no real benefit at that point"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Even a consistently-used literal benefits from a named constant, since it documents intent and eases future tuning.",
+    "source": "Generated (based on Magic Numbers theory)",
+    "tags": [
+      "Readability",
+      "Maintainability"
+    ],
+    "company": [
+      "Google",
+      "Amazon"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0071",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Nested Conditionals",
+    "difficulty": "Easy",
+    "question": "What common refactor addresses deeply nested if/else chains?",
+    "options": [
+      "Adding more nested else blocks",
+      "Removing all comments",
+      "Early returns (guard clauses) to flatten the structure",
+      "Converting to a single giant switch"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Guard clauses let a function exit early on invalid or edge cases, flattening remaining logic.",
+    "source": "Generated (based on Nested Conditionals theory)",
+    "tags": [
+      "Readability",
+      "Complexity"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0072",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Nested Conditionals",
+    "difficulty": "Easy",
+    "question": "Why do reviewers flag conditionals nested more than 3-4 levels deep?",
+    "options": [
+      "Deep nesting always runs slower",
+      "It is illegal in most languages",
+      "It cannot be tested",
+      "Deep nesting is hard to read and easy to introduce logic bugs in"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Each nested level multiplies the mental state a reader must track, raising bug risk.",
+    "source": "Generated (based on Nested Conditionals theory)",
+    "tags": [
+      "Readability",
+      "Complexity"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0073",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Nested Conditionals",
+    "difficulty": "Medium",
+    "question": "A function has an `if` inside a `for` inside an `if` inside another `if`. What review approach helps most?",
+    "options": [
+      "Extract inner blocks into named helper functions",
+      "Add print statements to trace execution",
+      "Wrap the whole thing in a try/catch",
+      "Rename the outer variables"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Extraction gives each level of logic a name, replacing structural nesting with descriptive function calls.",
+    "source": "Generated (based on Nested Conditionals theory)",
+    "tags": [
+      "Readability",
+      "Complexity"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0074",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Nested Conditionals",
+    "difficulty": "Medium",
+    "question": "Why might a reviewer suggest a strategy/lookup-table pattern over a long if/else-if chain?",
+    "options": [
+      "It always improves runtime performance drastically",
+      "It replaces branching logic with data lookup, often improving readability and extensibility",
+      "It is required by every style guide",
+      "It eliminates the need for tests"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A lookup-table or strategy pattern can turn a rigid conditional chain into more extensible, readable data-driven logic.",
+    "source": "Generated (based on Nested Conditionals theory)",
+    "tags": [
+      "Readability",
+      "Complexity"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0075",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Nested Conditionals",
+    "difficulty": "Hard",
+    "question": "A deeply nested conditional handles five mutually exclusive business rules for pricing. What review guidance best preserves correctness while improving clarity?",
+    "options": [
+      "Merge all rules into one boolean expression",
+      "Remove the nesting by deleting rules",
+      "Extract each rule into a clearly named predicate function and flatten with guard clauses",
+      "Convert to recursion for the same logic"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Naming and flattening each rule preserves behavior while making the mutually exclusive conditions individually readable.",
+    "source": "Generated (based on Nested Conditionals theory)",
+    "tags": [
+      "Readability",
+      "Complexity"
+    ],
+    "company": [
+      "Meta",
+      "Airbnb"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0076",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Duplication Detection",
+    "difficulty": "Easy",
+    "question": "What tool category helps automatically detect duplicated code in review?",
+    "options": [
+      "A load testing tool",
+      "A database migration tool",
+      "A CSS preprocessor",
+      "Static analysis / linters with duplication detection"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Static analysis and duplication-detection linters can flag copy-pasted blocks automatically.",
+    "source": "Generated (based on Code Duplication Detection theory)",
+    "tags": [
+      "Duplication",
+      "Tooling"
+    ],
+    "company": [
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0077",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Duplication Detection",
+    "difficulty": "Easy",
+    "question": "Why is copy-pasting a block of code as a \"quick fix\" flagged in review?",
+    "options": [
+      "It creates a second place that must be kept in sync with the original",
+      "It is always slower to write",
+      "It changes the license of the code",
+      "It cannot be committed to git"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Copy-paste duplication multiplies maintenance burden whenever the shared logic needs a fix.",
+    "source": "Generated (based on Code Duplication Detection theory)",
+    "tags": [
+      "Duplication",
+      "Tooling"
+    ],
+    "company": [
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0078",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Duplication Detection",
+    "difficulty": "Medium",
+    "question": "A reviewer finds near-identical code with only a few different variable names. What question is most useful?",
+    "options": [
+      "Should the variable names be made identical too?",
+      "Can the differing parts be parameterized into a shared function?",
+      "Should both copies be deleted?",
+      "Should this be converted to a global variable?"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Near-duplicate code with small variations is usually parameterizable into one shared implementation.",
+    "source": "Generated (based on Code Duplication Detection theory)",
+    "tags": [
+      "Duplication",
+      "Tooling"
+    ],
+    "company": [
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0079",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Duplication Detection",
+    "difficulty": "Medium",
+    "question": "Why can automated duplication detection produce false positives?",
+    "options": [
+      "Automated tools are always 100% accurate",
+      "Duplication tools do not work on typed languages",
+      "Structurally similar code can be coincidental rather than truly redundant",
+      "False positives are impossible in static analysis"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Superficially similar code blocks are not always semantically related, so human judgment on flagged matches is still needed.",
+    "source": "Generated (based on Code Duplication Detection theory)",
+    "tags": [
+      "Duplication",
+      "Tooling"
+    ],
+    "company": [
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0080",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Code Duplication Detection",
+    "difficulty": "Hard",
+    "question": "Two teams maintain nearly identical validation logic in separate services with no shared library. What is the most durable review recommendation?",
+    "options": [
+      "Keep both instances to preserve team autonomy indefinitely",
+      "Delete one team's implementation without consultation",
+      "Ignore it since cross-team duplication is unavoidable",
+      "Extract the shared logic into a common library that both services depend on"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A shared library is the durable fix for cross-team duplication, letting both benefit from a single, correctly maintained source.",
+    "source": "Generated (based on Code Duplication Detection theory)",
+    "tags": [
+      "Duplication",
+      "Tooling"
+    ],
+    "company": [
+      "Microsoft",
+      "Google"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0081",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Reviewing Large PRs",
+    "difficulty": "Easy",
+    "question": "What is a common recommendation for a PR spanning thousands of lines?",
+    "options": [
+      "Ask the author to split it into smaller, logically independent PRs",
+      "Approve it immediately to save time",
+      "Reject it without reading any of it",
+      "Assign it to the most junior reviewer"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Splitting large PRs into smaller units makes each change reviewable and independently revertible.",
+    "source": "Generated (based on Reviewing Large PRs theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0082",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Reviewing Large PRs",
+    "difficulty": "Easy",
+    "question": "Why are large PRs harder to review effectively?",
+    "options": [
+      "Large PRs always contain more bugs by definition",
+      "Reviewer attention and thoroughness drop as diff size grows",
+      "Git cannot display diffs beyond a certain size",
+      "Large PRs are automatically rejected by CI"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Studies and practical experience show review effectiveness declines sharply as diff size increases.",
+    "source": "Generated (based on Reviewing Large PRs theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0083",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Reviewing Large PRs",
+    "difficulty": "Medium",
+    "question": "A large PR mixes a risky refactor with a small config change. What is the best review approach?",
+    "options": [
+      "Approve the whole PR since the config change is small",
+      "Reject the whole PR outright",
+      "Request the config change be split out and land separately",
+      "Merge the refactor first and review the config later"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Separating low-risk from high-risk changes lets each be reviewed and, if needed, rolled back independently.",
+    "source": "Generated (based on Reviewing Large PRs theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0084",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Reviewing Large PRs",
+    "difficulty": "Medium",
+    "question": "Why might a reviewer request a summary comment at the top of a large PR describing the change's intent?",
+    "options": [
+      "It is required by version control systems",
+      "It replaces the need for any code comments",
+      "It speeds up the CI pipeline",
+      "It gives reviewers context before diving into a large diff, improving review quality"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A clear intent summary orients reviewers before they parse potentially hundreds of changed lines.",
+    "source": "Generated (based on Reviewing Large PRs theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0085",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Reviewing Large PRs",
+    "difficulty": "Hard",
+    "question": "An author argues a 3000-line PR \"can't be split\" because it is one atomic schema migration plus dependent code. What is a reasonable review compromise?",
+    "options": [
+      "Review the migration and dependent code as separate logical passes within the same PR, with clear internal sectioning",
+      "Refuse to review until it is under 500 lines regardless of context",
+      "Merge without review to save time",
+      "Ask a bot to auto-approve it"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Some changes are genuinely atomic; in that case, structuring the review into clear logical passes helps manage complexity without forcing an artificial split.",
+    "source": "Generated (based on Reviewing Large PRs theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0086",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Constructive Review Comments",
+    "difficulty": "Easy",
+    "question": "Which review comment is most constructive?",
+    "options": [
+      "\"This is bad.\"",
+      "\"This loop re-fetches the list each iteration — could we hoist it out?\"",
+      "\"Why did you even write this?\"",
+      "\"Rewrite this.\""
+    ],
+    "correctAnswer": 1,
+    "explanation": "Constructive comments name the specific issue and suggest a concrete path forward.",
+    "source": "Generated (based on Constructive Review Comments theory)",
+    "tags": [
+      "Communication",
+      "Code Review"
+    ],
+    "company": [
+      "Spotify",
+      "Atlassian"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0087",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Constructive Review Comments",
+    "difficulty": "Easy",
+    "question": "Why should reviewers explain the reasoning behind a requested change?",
+    "options": [
+      "It makes the PR take longer to merge",
+      "It is required for CI to pass",
+      "It helps the author learn and apply the lesson to future code",
+      "It has no real benefit"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Explaining \"why\" turns a review into a learning opportunity, not just a gate to pass.",
+    "source": "Generated (based on Constructive Review Comments theory)",
+    "tags": [
+      "Communication",
+      "Code Review"
+    ],
+    "company": [
+      "Spotify",
+      "Atlassian"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0088",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Constructive Review Comments",
+    "difficulty": "Medium",
+    "question": "A reviewer disagrees strongly with an architectural choice already made in a merged dependency. What is appropriate?",
+    "options": [
+      "Block the current PR indefinitely until the old decision is reversed",
+      "Silently approve without comment",
+      "Rewrite the dependency without discussion",
+      "Raise it as a separate discussion/ticket rather than blocking the unrelated PR"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Blocking an unrelated PR over a prior decision derails the current review; raise architectural disagreements separately.",
+    "source": "Generated (based on Constructive Review Comments theory)",
+    "tags": [
+      "Communication",
+      "Code Review"
+    ],
+    "company": [
+      "Spotify",
+      "Atlassian"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0089",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Constructive Review Comments",
+    "difficulty": "Medium",
+    "question": "Why is tone particularly important in asynchronous, text-only code review?",
+    "options": [
+      "Text lacks vocal tone cues, so wording alone determines how a comment is perceived",
+      "Tone has no effect on collaboration",
+      "Async review requires no wording care since no one reads carefully",
+      "Formal tone is required by every workplace"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Without vocal or facial cues, word choice carries the entire emotional weight of a comment.",
+    "source": "Generated (based on Constructive Review Comments theory)",
+    "tags": [
+      "Communication",
+      "Code Review"
+    ],
+    "company": [
+      "Spotify",
+      "Atlassian"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0090",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Constructive Review Comments",
+    "difficulty": "Hard",
+    "question": "A junior developer receives many blocking comments on their first PR. What review practice best balances quality and morale?",
+    "options": [
+      "Give no feedback to avoid discouragement",
+      "Distinguish must-fix issues from optional suggestions, and pair a private conversation with the written feedback if volume is high",
+      "Approve regardless of issues to be kind",
+      "Send all feedback anonymously"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Clearly separating blocking from optional feedback, plus a supportive conversation, keeps quality bars high without demoralizing new contributors.",
+    "source": "Generated (based on Constructive Review Comments theory)",
+    "tags": [
+      "Communication",
+      "Code Review"
+    ],
+    "company": [
+      "Spotify",
+      "Atlassian"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0091",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Approving vs Requesting Changes",
+    "difficulty": "Easy",
+    "question": "When should a reviewer use \"request changes\" rather than a comment?",
+    "options": [
+      "For any comment at all, regardless of severity",
+      "Never, comments are always sufficient",
+      "When there is a blocking issue that must be fixed before merge",
+      "Only for typos"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\"Request changes\" should signal a genuine blocker, not just a suggestion or preference.",
+    "source": "Generated (based on Approving vs Requesting Changes theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "GitHub",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0092",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Approving vs Requesting Changes",
+    "difficulty": "Easy",
+    "question": "What does \"approve with comments\" typically signal?",
+    "options": [
+      "The PR must not be merged",
+      "The reviewer refuses to look further",
+      "The PR has failing tests",
+      "The PR is acceptable to merge, with minor optional suggestions noted"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This status lets authors merge while still receiving optional, non-blocking feedback.",
+    "source": "Generated (based on Approving vs Requesting Changes theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "GitHub",
+      "Microsoft"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0093",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Approving vs Requesting Changes",
+    "difficulty": "Medium",
+    "question": "A reviewer approves a PR but privately still has concerns about a minor style choice. What is the appropriate action?",
+    "options": [
+      "Leave a non-blocking comment noting the concern alongside the approval",
+      "Say nothing to avoid conflict",
+      "Block the PR anyway despite approving",
+      "Ask a different reviewer to block it"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Approving while noting non-blocking concerns keeps the process moving and preserves useful feedback.",
+    "source": "Generated (based on Approving vs Requesting Changes theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "GitHub",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0094",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Approving vs Requesting Changes",
+    "difficulty": "Medium",
+    "question": "Why can overuse of \"request changes\" for minor nitpicks slow down a team?",
+    "options": [
+      "It has no downside for team velocity",
+      "It forces unnecessary review cycles for issues that do not actually block correctness or safety",
+      "It always improves code quality regardless of severity",
+      "It replaces the need for CI"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Treating every nitpick as blocking adds review round-trips that do not correspond to real risk.",
+    "source": "Generated (based on Approving vs Requesting Changes theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "GitHub",
+      "Microsoft"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0095",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Approving vs Requesting Changes",
+    "difficulty": "Hard",
+    "question": "Two reviewers disagree: one approves, one requests changes on the same architectural point. What is the best resolution process?",
+    "options": [
+      "Merge immediately since one approval exists",
+      "Let CI decide by running more tests",
+      "A synchronous discussion (or a designated tech lead) to resolve the disagreement rather than leaving it unresolved in the PR thread",
+      "Have the author pick whichever reviewer they prefer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Genuine reviewer disagreement on substance is best resolved through direct discussion or an agreed tie-breaker, not by chance.",
+    "source": "Generated (based on Approving vs Requesting Changes theory)",
+    "tags": [
+      "Process",
+      "Code Review"
+    ],
+    "company": [
+      "GitHub",
+      "Microsoft"
+    ],
+    "estimatedTime": 60
+  },
+  {
+    "id": "cr_0096",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Automated Linting vs Human Review",
+    "difficulty": "Easy",
+    "question": "What class of issues are linters best suited to catch?",
+    "options": [
+      "Whether the business logic is correct",
+      "Whether the architecture fits future requirements",
+      "Whether the API design is intuitive",
+      "Formatting, style, and simple static-analysis rule violations"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Linters excel at mechanical, rule-based checks but cannot judge higher-level design or intent.",
+    "source": "Generated (based on Automated Linting vs Human Review theory)",
+    "tags": [
+      "Tooling",
+      "Process"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0097",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Automated Linting vs Human Review",
+    "difficulty": "Easy",
+    "question": "Why should reviewers avoid manually commenting on issues a linter already flags in CI?",
+    "options": [
+      "It duplicates effort the tooling already handles automatically",
+      "Linters are always wrong",
+      "Manual comments about style are illegal",
+      "Linters cannot run in CI"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Letting tooling own mechanical style enforcement frees human reviewers to focus on logic and design.",
+    "source": "Generated (based on Automated Linting vs Human Review theory)",
+    "tags": [
+      "Tooling",
+      "Process"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 30
+  },
+  {
+    "id": "cr_0098",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Automated Linting vs Human Review",
+    "difficulty": "Medium",
+    "question": "A team's linter has no rule against a subtle security anti-pattern. What is the correct interpretation?",
+    "options": [
+      "Since the linter passed, the code must be safe",
+      "Linting is necessary but not sufficient; human review still must catch what tooling cannot detect",
+      "The security concern is not real",
+      "Add a rule immediately without evaluating false-positive risk"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Linters only catch what they are configured to catch — human judgment remains essential for issues outside the ruleset.",
+    "source": "Generated (based on Automated Linting vs Human Review theory)",
+    "tags": [
+      "Tooling",
+      "Process"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0099",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Automated Linting vs Human Review",
+    "difficulty": "Medium",
+    "question": "Why might a team invest in a custom lint rule after a recurring review comment appears repeatedly across PRs?",
+    "options": [
+      "Custom rules are required by most style guides",
+      "It eliminates the need for any future code review",
+      "Automating the check saves reviewer time and enforces it consistently going forward",
+      "It guarantees the bug can never happen again"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Turning a recurring manual comment into an automated rule is a common way to systematize learned review feedback.",
+    "source": "Generated (based on Automated Linting vs Human Review theory)",
+    "tags": [
+      "Tooling",
+      "Process"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 45
+  },
+  {
+    "id": "cr_0100",
+    "level": "Level 19",
+    "category": "Code Review",
+    "topic": "Automated Linting vs Human Review",
+    "difficulty": "Hard",
+    "question": "A team wants to auto-approve PRs when all linters and tests pass, skipping human review entirely. What is the strongest argument against this for non-trivial changes?",
+    "options": [
+      "Linters and tests are inherently unreliable and randomly fail",
+      "Human review is required by international law",
+      "Auto-approval is technically impossible to implement",
+      "Linters and tests cannot evaluate design fit, business correctness, or subtle risk that experienced humans catch"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Automated checks validate mechanical correctness and known patterns, but cannot substitute for human judgment on design and business-logic risk.",
+    "source": "Generated (based on Automated Linting vs Human Review theory)",
+    "tags": [
+      "Tooling",
+      "Process"
+    ],
+    "company": [
+      "Google",
+      "Netflix"
+    ],
+    "estimatedTime": 60
+  }
+]
