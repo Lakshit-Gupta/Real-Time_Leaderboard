@@ -310,6 +310,28 @@ export async function saveUser(user: UserState): Promise<void> {
 }
 
 /**
+ * Persist an updated UserState without bumping state_version.
+ * Used by getNextQuestion which only updates lastQuestionId — bumping the
+ * version there would cause 409 conflicts on the subsequent answer.
+ */
+export async function saveUserState(user: UserState): Promise<void> {
+  try {
+    await pool.query(
+      `UPDATE user_state SET ${UPDATE_STATE_SET} WHERE user_id = $1`,
+      userStateParams(user)
+    );
+  } catch (err) {
+    if (!ALLOW_MEMORY_FALLBACK) throw new DatabaseUnavailableError(err);
+
+    console.error('Postgres error in saveUserState, falling back to memory:', err);
+    users.set(user.userId, user);
+    return;
+  }
+
+  await syncRedis(user);
+}
+
+/**
  * Persist an updated UserState back into the store (alias for backwards compatibility).
  */
 export async function updateUser(user: UserState): Promise<void> {

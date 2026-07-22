@@ -12,10 +12,9 @@ import {
   pushRecentResult,
   markQuestionAnswered,
   clearAnsweredIds,
-  updateUser,
   toPublicUserState,
   processAnswerAtomic,
-  saveUser,
+  saveUserState,
 } from "./store";
 
 import { getQuestionById, type Question, getAllQuestions } from "./questions";
@@ -199,7 +198,7 @@ export async function getNextQuestion(userId: string): Promise<NextQuestionResul
       console.log(`[StreakDecay] userId=${userId} streak halved to ${user.streak}`);
     }
     user.lastAnswerAt = now;
-    await saveUser(user);
+    await saveUserState(user);
   }
   
   const allQuestions = getAllQuestions();
@@ -245,9 +244,9 @@ export async function getNextQuestion(userId: string): Promise<NextQuestionResul
     selected = candidates[Math.floor(Math.random() * candidates.length)];
   }
 
-  // Update last question tracking
+  // Update last question tracking (no state_version bump — that's only for answers)
   user.lastQuestionId = selected.id;
-  await updateUser(user);
+  await saveUserState(user);
 
   // Return question WITHOUT correctIndex (never sent to client)
   return {
